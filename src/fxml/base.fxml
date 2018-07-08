@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXSlider?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<SplitPane dividerPositions="0.22" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="631.0" prefWidth="1197.0" stylesheets="@../css/base.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+  <items>
+    <AnchorPane id="leftPane" fx:id="paneLeft" minHeight="0.0" minWidth="0.0" prefHeight="454.0" prefWidth="238.0" stylesheets="@../css/base.css">
+         <children>
+            <AnchorPane fx:id="paneMenuHolder" layoutY="180.0" prefHeight="449.0" prefWidth="212.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="180.0">
+               <children>
+                  <JFXButton alignment="BASELINE_LEFT" graphicTextGap="60.0" prefHeight="75.0" prefWidth="238.0" ripplerFill="WHITE" text="Inventory Items" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <graphic>
+                        <MaterialDesignIconView fill="WHITE" glyphName="BASKET" size="30" />
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <tooltip>
+                        <Tooltip text="Add, delete, update Inventory Items" />
+                     </tooltip>
+                  </JFXButton>
+                  <JFXButton alignment="BASELINE_LEFT" graphicTextGap="60.0" layoutY="75.0" prefHeight="75.0" prefWidth="238.0" ripplerFill="WHITE" text="Customers" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <graphic>
+                        <MaterialDesignIconView fill="WHITE" glyphName="ACCOUNT_CIRCLE" size="30" />
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <tooltip>
+                        <Tooltip text="Add new, delete, list all Customers" />
+                     </tooltip>
+                  </JFXButton>
+                  <JFXButton alignment="BASELINE_LEFT" graphicTextGap="60.0" layoutX="2.0" layoutY="300.0" prefHeight="75.0" prefWidth="238.0" ripplerFill="WHITE" text="Accounts" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <graphic>
+                        <MaterialDesignIconView fill="WHITE" glyphName="BASKET" size="30" textAlignment="JUSTIFY" />
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <tooltip>
+                        <Tooltip text="Show Accounts" />
+                     </tooltip>
+                  </JFXButton>
+                  <JFXButton alignment="BASELINE_LEFT" graphicTextGap="60.0" layoutY="225.0" prefHeight="75.0" prefWidth="238.0" ripplerFill="WHITE" text="Rentals" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <graphic>
+                        <MaterialDesignIconView fill="WHITE" glyphName="BACKUP_RESTORE" size="30" />
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <tooltip>
+                        <Tooltip text="Rental list" />
+                     </tooltip>
+                  </JFXButton>
+                  <JFXButton alignment="BASELINE_LEFT" graphicTextGap="60.0" layoutY="150.0" prefHeight="75.0" prefWidth="238.0" ripplerFill="WHITE" text="Sells" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="BAR_CHART" size="30" />
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <tooltip>
+                        <Tooltip text="Go through sell history" />
+                     </tooltip>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <JFXSlider layoutX="207.0" layoutY="273.0" />
+         </children></AnchorPane>
+  </items>
+</SplitPane>

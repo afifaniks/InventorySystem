@@ -1,0 +1,32 @@
+/**
+ * Author: Afif Al Mamun
+ * Written on: 08-Jul-18
+ * Project: TeslaRentalInventory
+ **/
+.split-pane > .split-pane-divider {
+    -fx-padding: 0 0.001;
+}
+
+.root {
+    -fx-background-color: #ffffff;
+}
+
+#paneMenuHolder {
+    -fx-background-color: #00796B;
+}
+
+.button {
+    -fx-background-color: #00796B;
+    -fx-text-fill: #ffffff;
+    -fx-text-alignment: right;
+    -fx-font-size: 15px;
+    -fx-border-radius: 0 0 0 0;
+}
+
+.button:pressed {
+    -fx-background-color: #006064;
+}
+
+.button:hover {
+    -fx-background-color: #00695C;
+}
