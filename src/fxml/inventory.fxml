@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="463.0" prefWidth="711.0" stylesheets="/css/base.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Inventory">
+   <children>
+      <Label layoutX="423.0" layoutY="206.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="51.0" prefWidth="80.0" text="Label" AnchorPane.bottomAnchor="206.0" AnchorPane.leftAnchor="423.0" AnchorPane.rightAnchor="208.0" AnchorPane.topAnchor="206.0" />
+   </children>
+</AnchorPane>

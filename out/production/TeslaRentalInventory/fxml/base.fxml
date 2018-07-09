@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXSlider?>
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
 <?import javafx.geometry.Insets?>
@@ -10,13 +9,13 @@
 <?import javafx.scene.control.Tooltip?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<SplitPane dividerPositions="0.22" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="631.0" prefWidth="1197.0" stylesheets="@../css/base.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<SplitPane dividerPositions="0.2268" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="631.0" prefWidth="1197.0" stylesheets="@../css/base.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Base">
   <items>
     <AnchorPane id="leftPane" fx:id="paneLeft" minHeight="0.0" minWidth="0.0" prefHeight="454.0" prefWidth="238.0" stylesheets="@../css/base.css">
          <children>
             <AnchorPane fx:id="paneMenuHolder" layoutY="180.0" prefHeight="449.0" prefWidth="212.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="180.0">
                <children>
-                  <JFXButton alignment="BASELINE_LEFT" graphicTextGap="60.0" prefHeight="75.0" prefWidth="238.0" ripplerFill="WHITE" text="Inventory Items" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <JFXButton alignment="BASELINE_LEFT" graphicTextGap="60.0" onAction="#test" prefHeight="75.0" prefWidth="238.0" ripplerFill="WHITE" text="Inventory Items" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <graphic>
                         <MaterialDesignIconView fill="WHITE" glyphName="BASKET" size="30" />
                      </graphic>
@@ -89,9 +88,6 @@
                </children>
             </AnchorPane>
          </children></AnchorPane>
-    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
-         <children>
-            <JFXSlider layoutX="207.0" layoutY="273.0" />
-         </children></AnchorPane>
+    <AnchorPane fx:id="paneRight" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
   </items>
 </SplitPane>

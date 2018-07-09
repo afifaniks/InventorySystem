@@ -3,6 +3,7 @@
  * Written on: 08-Jul-18
  * Project: TeslaRentalInventory
  **/
+
 .split-pane > .split-pane-divider {
     -fx-padding: 0 0.001;
 }
