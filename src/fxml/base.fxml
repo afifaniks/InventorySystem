@@ -5,17 +5,21 @@
 <?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<SplitPane dividerPositions="0.2268" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="631.0" prefWidth="1197.0" stylesheets="@../css/base.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Base">
+<SplitPane dividerPositions="0.21" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1197.0" stylesheets="@../css/base.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Base">
   <items>
-    <AnchorPane id="leftPane" fx:id="paneLeft" minHeight="0.0" minWidth="0.0" prefHeight="454.0" prefWidth="238.0" stylesheets="@../css/base.css">
+    <AnchorPane id="leftPane" fx:id="paneLeft" maxWidth="350.0" minHeight="0.0" minWidth="75.0" prefHeight="454.0" prefWidth="238.0" stylesheets="@../css/base.css">
          <children>
             <AnchorPane fx:id="paneMenuHolder" layoutY="180.0" prefHeight="449.0" prefWidth="212.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="180.0">
                <children>
-                  <JFXButton alignment="BASELINE_LEFT" graphicTextGap="60.0" onAction="#test" prefHeight="75.0" prefWidth="238.0" ripplerFill="WHITE" text="Inventory Items" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <JFXButton fx:id="btnInventoryItem" alignment="BASELINE_LEFT" graphicTextGap="40.0" onAction="#btnNavigators" prefHeight="60.0" prefWidth="238.0" ripplerFill="WHITE" text="Items" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="8.0">
                      <graphic>
                         <MaterialDesignIconView fill="WHITE" glyphName="BASKET" size="30" />
                      </graphic>
@@ -29,7 +33,7 @@
                         <Tooltip text="Add, delete, update Inventory Items" />
                      </tooltip>
                   </JFXButton>
-                  <JFXButton alignment="BASELINE_LEFT" graphicTextGap="60.0" layoutY="75.0" prefHeight="75.0" prefWidth="238.0" ripplerFill="WHITE" text="Customers" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                  <JFXButton fx:id="btnCustomers" alignment="BASELINE_LEFT" graphicTextGap="40.0" layoutX="8.0" layoutY="68.0" onAction="#btnNavigators" prefHeight="60.0" prefWidth="238.0" ripplerFill="WHITE" text="Customers" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0">
                      <graphic>
                         <MaterialDesignIconView fill="WHITE" glyphName="ACCOUNT_CIRCLE" size="30" />
                      </graphic>
@@ -43,21 +47,7 @@
                         <Tooltip text="Add new, delete, list all Customers" />
                      </tooltip>
                   </JFXButton>
-                  <JFXButton alignment="BASELINE_LEFT" graphicTextGap="60.0" layoutX="2.0" layoutY="300.0" prefHeight="75.0" prefWidth="238.0" ripplerFill="WHITE" text="Accounts" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
-                     <graphic>
-                        <MaterialDesignIconView fill="WHITE" glyphName="BASKET" size="30" textAlignment="JUSTIFY" />
-                     </graphic>
-                     <opaqueInsets>
-                        <Insets />
-                     </opaqueInsets>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                     <tooltip>
-                        <Tooltip text="Show Accounts" />
-                     </tooltip>
-                  </JFXButton>
-                  <JFXButton alignment="BASELINE_LEFT" graphicTextGap="60.0" layoutY="225.0" prefHeight="75.0" prefWidth="238.0" ripplerFill="WHITE" text="Rentals" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                  <JFXButton fx:id="btnRentals" alignment="BASELINE_LEFT" graphicTextGap="40.0" layoutX="8.0" layoutY="188.0" onAction="#btnNavigators" prefHeight="60.0" prefWidth="238.0" ripplerFill="WHITE" text="Rentals" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0">
                      <graphic>
                         <MaterialDesignIconView fill="WHITE" glyphName="BACKUP_RESTORE" size="30" />
                      </graphic>
@@ -71,9 +61,9 @@
                         <Tooltip text="Rental list" />
                      </tooltip>
                   </JFXButton>
-                  <JFXButton alignment="BASELINE_LEFT" graphicTextGap="60.0" layoutY="150.0" prefHeight="75.0" prefWidth="238.0" ripplerFill="WHITE" text="Sells" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                  <JFXButton fx:id="btnSells" alignment="BASELINE_LEFT" graphicTextGap="40.0" layoutX="8.0" layoutY="128.0" onAction="#btnNavigators" prefHeight="60.0" prefWidth="238.0" ripplerFill="WHITE" text="Sells" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0">
                      <graphic>
-                        <FontAwesomeIconView fill="WHITE" glyphName="BAR_CHART" size="30" />
+                        <FontAwesomeIconView fill="WHITE" glyphName="LINE_CHART" size="30" wrappingWidth="32.28571319580078" />
                      </graphic>
                      <opaqueInsets>
                         <Insets />
@@ -85,9 +75,70 @@
                         <Tooltip text="Go through sell history" />
                      </tooltip>
                   </JFXButton>
+                  <JFXButton fx:id="btnAccounts1" alignment="BASELINE_LEFT" graphicTextGap="40.0" layoutX="9.0" layoutY="308.0" onAction="#btnNavigators" prefHeight="60.0" prefWidth="238.0" ripplerFill="WHITE" text="Administrative" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0">
+                     <graphic>
+                        <MaterialDesignIconView fill="RED" glyphName="ACCOUNT_KEY" size="30" textAlignment="JUSTIFY" />
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <tooltip>
+                        <Tooltip text="Show Accounts" />
+                     </tooltip>
+                  </JFXButton>
+                  <JFXButton fx:id="btnSells1" alignment="BASELINE_LEFT" graphicTextGap="40.0" layoutX="17.0" layoutY="248.0" onAction="#btnNavigators" prefHeight="60.0" prefWidth="238.0" ripplerFill="WHITE" text="Accounts" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="MONEY" size="30" wrappingWidth="30.571430206298828" />
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <tooltip>
+                        <Tooltip text="Go through sell history" />
+                     </tooltip>
+                  </JFXButton>
+                  <AnchorPane fx:id="paneAccountSection" layoutX="20.0" layoutY="381.0" prefHeight="116.0" prefWidth="211.0" AnchorPane.bottomAnchor="21.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0">
+                     <children>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="14.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="29.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="171.0" AnchorPane.topAnchor="37.0">
+                           <image>
+                              <Image url="@../resource/icons/Accounts_main.png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="74.0" layoutY="62.0" prefHeight="21.0" prefWidth="83.0" text="Access Level:" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="74.0" AnchorPane.rightAnchor="78.0">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="74.0" layoutY="77.0" prefHeight="21.0" prefWidth="83.0" text="Level" textAlignment="CENTER" textFill="#00ff22" AnchorPane.leftAnchor="74.0" AnchorPane.rightAnchor="78.0">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="74.0" layoutY="19.0" prefHeight="21.0" prefWidth="83.0" text="Logged in as:" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="74.0" AnchorPane.rightAnchor="78.0">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="74.0" layoutY="34.0" prefHeight="21.0" prefWidth="83.0" text="username" textAlignment="CENTER" textFill="#00ff22" AnchorPane.leftAnchor="74.0" AnchorPane.rightAnchor="78.0">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
                </children>
             </AnchorPane>
          </children></AnchorPane>
-    <AnchorPane fx:id="paneRight" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <AnchorPane prefHeight="75.0" prefWidth="923.0" />
+            <AnchorPane fx:id="paneRight" layoutX="6.0" layoutY="75.0" prefHeight="553.0" prefWidth="923.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="75.0" />
+         </children></AnchorPane>
   </items>
 </SplitPane>

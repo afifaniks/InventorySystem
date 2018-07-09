@@ -16,6 +16,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class Main extends Application {
 
@@ -24,17 +25,18 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
 
-        Parent root = FXMLLoader.load(getClass().getResource("/fxml/base.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/login.fxml"));
         Scene scene = new Scene(root);
 
-        String css = this.getClass().getResource("/css/base.css").toExternalForm();
-        scene.getStylesheets().add(css);
+//        String css = this.getClass().getResource("/css/base.css").toExternalForm();
+//        scene.getStylesheets().add(css);
 
 
 
-        primaryStage.setTitle("Tesla Rental Inventory");
+        primaryStage.setTitle("Log In Prompt");
         primaryStage.setScene(scene);
-
+        primaryStage.setResizable(false);
+       // primaryStage.initStyle(StageStyle.UNDECORATED);
         primaryStage.show();
 
     }
