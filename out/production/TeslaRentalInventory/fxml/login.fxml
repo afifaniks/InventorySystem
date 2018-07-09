@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="paneLogIn" prefHeight="421.0" prefWidth="663.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LogIn">
+   <children>
+      <StackPane fx:id="stackPane" prefHeight="421.0" prefWidth="663.0" />
+      <JFXButton fx:id="btnLogIn" layoutX="501.0" layoutY="294.0" onAction="#ctrlLogInCheck" prefHeight="51.0" prefWidth="112.0" text="Log In" />
+      <JFXTextField fx:id="txtUsername" focusColor="#243035" labelFloat="true" layoutX="206.0" layoutY="145.0" prefHeight="30.0" prefWidth="295.0" promptText="username">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXPasswordField fx:id="txtPassword" focusColor="#243035" labelFloat="true" layoutX="206.0" layoutY="220.0" prefHeight="30.0" prefWidth="295.0" promptText="password">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXPasswordField>
+   </children>
+</AnchorPane>

@@ -24,14 +24,11 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/login.fxml"));
         Scene scene = new Scene(root);
 
-//        String css = this.getClass().getResource("/css/base.css").toExternalForm();
-//        scene.getStylesheets().add(css);
-
-
+        String css = this.getClass().getResource("/css/login.css").toExternalForm();
+        scene.getStylesheets().add(css);
 
         primaryStage.setTitle("Log In Prompt");
         primaryStage.setScene(scene);

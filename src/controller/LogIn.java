@@ -1,15 +1,17 @@
 package controller;
 
-import com.jfoenix.controls.JFXButton;
-import com.jfoenix.controls.JFXPasswordField;
-import com.jfoenix.controls.JFXTextField;
+import com.jfoenix.controls.*;
 import com.mysql.cj.protocol.Resultset;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Dialog;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.StackPane;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -30,7 +32,13 @@ public class LogIn {
     private AnchorPane topPane;
 
     @FXML
+    private AnchorPane paneLogIn;
+
+    @FXML
     private JFXTextField txtUsername;
+
+    @FXML
+    StackPane stackPane;
 
     @FXML
     private JFXPasswordField txtPassword;
@@ -59,8 +67,10 @@ public class LogIn {
             base.setTitle("Tesla Rental Inventory");
             base.setScene(scene);
             base.show();
-        } else
-            System.out.println(0);
+        } else {
+            System.out.println("Error");
+        }
+
 
 
 
