@@ -6,17 +6,11 @@ package sample;
  * Project: TeslaRentalInventory
  **/
 
-import com.jfoenix.controls.JFXButton;
 import javafx.application.Application;
-import javafx.beans.InvalidationListener;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 
 public class Main extends Application {
 

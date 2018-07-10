@@ -11,34 +11,34 @@
 
 <AnchorPane fx:id="paneLogIn" prefHeight="421.0" prefWidth="663.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LogIn">
    <children>
-      <JFXTextField fx:id="txtUsername" focusColor="#243035" labelFloat="true" layoutX="158.0" layoutY="134.0" prefHeight="30.0" prefWidth="311.0" promptText="username">
+      <JFXTextField fx:id="txtUsername" focusColor="#243035" labelFloat="true" layoutX="158.0" layoutY="134.0" onKeyPressed="#onEnterKey" prefHeight="30.0" prefWidth="311.0" promptText="username">
          <font>
             <Font size="14.0" />
          </font>
       </JFXTextField>
-      <JFXButton fx:id="btnLogIn" layoutX="453.0" layoutY="328.0" onAction="#ctrlLogInCheck" prefHeight="51.0" prefWidth="112.0" text="Log In" />
-      <JFXPasswordField fx:id="txtPassword" focusColor="#243035" labelFloat="true" layoutX="158.0" layoutY="209.0" prefHeight="30.0" prefWidth="311.0" promptText="password">
+      <JFXPasswordField fx:id="txtPassword" focusColor="#243035" labelFloat="true" layoutX="158.0" layoutY="209.0" onKeyPressed="#onEnterKey" prefHeight="30.0" prefWidth="311.0" promptText="password">
          <font>
             <Font size="14.0" />
          </font>
       </JFXPasswordField>
-      <JFXTextField fx:id="txtPasswordShown" focusColor="#243035" labelFloat="true" layoutX="158.0" layoutY="209.0" prefHeight="30.0" prefWidth="295.0" promptText="password">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </JFXTextField>
-      <JFXCheckBox fx:id="chkPasswordMask" checkedColor="#263238" layoutX="437.0" layoutY="215.0" onAction="#chkPasswordMaskAction" prefHeight="18.0" prefWidth="16.0" text=" ">
+      <JFXCheckBox fx:id="chkPasswordMask" checkedColor="#263238" layoutX="473.0" layoutY="216.0" onAction="#chkPasswordMaskAction" prefHeight="8.0" prefWidth="4.0" text=" ">
          <tooltip>
             <Tooltip text="Show/Hide Password" />
          </tooltip>
       </JFXCheckBox>
+      <JFXButton fx:id="btnLogIn" layoutX="453.0" layoutY="328.0" onAction="#ctrlLogInCheck" onKeyPressed="#onEnterKey" prefHeight="51.0" prefWidth="112.0" text="Log In" />
+      <JFXTextField fx:id="txtPasswordShown" focusColor="#243035" labelFloat="true" layoutX="158.0" layoutY="209.0" onKeyPressed="#onEnterKey" prefHeight="30.0" prefWidth="311.0" promptText="password">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
       <AnchorPane fx:id="topPane" prefHeight="81.0" prefWidth="663.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-      <Label fx:id="lblWarnUsername" layoutX="472.0" layoutY="134.0" prefHeight="30.0" prefWidth="137.0" text="field requird!" textFill="RED" visible="false">
+      <Label fx:id="lblWarnUsername" layoutX="473.0" layoutY="134.0" prefHeight="30.0" prefWidth="137.0" text="field requird!" textFill="RED" visible="false">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label fx:id="lblWarnPassword" focusTraversable="false" layoutX="472.0" layoutY="209.0" prefHeight="30.0" prefWidth="137.0" text="field requird!" textFill="RED" visible="false">
+      <Label fx:id="lblWarnPassword" focusTraversable="false" layoutX="498.0" layoutY="210.0" prefHeight="30.0" prefWidth="137.0" text="field requird!" textFill="RED" visible="false">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
