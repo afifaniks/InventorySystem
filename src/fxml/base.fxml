@@ -75,7 +75,7 @@
                         <Tooltip text="Go through sell history" />
                      </tooltip>
                   </JFXButton>
-                  <JFXButton fx:id="btnAccounts1" alignment="BASELINE_LEFT" graphicTextGap="40.0" layoutX="9.0" layoutY="308.0" onAction="#btnNavigators" prefHeight="60.0" prefWidth="238.0" ripplerFill="WHITE" text="Administrative" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0">
+                  <JFXButton fx:id="btnAdmin" alignment="BASELINE_LEFT" graphicTextGap="40.0" layoutX="9.0" layoutY="308.0" onAction="#btnNavigators" prefHeight="60.0" prefWidth="238.0" ripplerFill="WHITE" text="Administrative" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0">
                      <graphic>
                         <MaterialDesignIconView fill="RED" glyphName="ACCOUNT_KEY" size="30" textAlignment="JUSTIFY" />
                      </graphic>
@@ -115,7 +115,7 @@
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Label>
-                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="74.0" layoutY="77.0" prefHeight="21.0" prefWidth="83.0" text="Level" textAlignment="CENTER" textFill="#00ff22" AnchorPane.leftAnchor="74.0" AnchorPane.rightAnchor="78.0">
+                        <Label fx:id="lblAccessLevel" alignment="CENTER" contentDisplay="CENTER" layoutX="74.0" layoutY="77.0" prefHeight="21.0" prefWidth="83.0" text="Level" textAlignment="CENTER" textFill="#00ff22" AnchorPane.leftAnchor="74.0" AnchorPane.rightAnchor="78.0">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
@@ -125,7 +125,7 @@
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Label>
-                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="74.0" layoutY="34.0" prefHeight="21.0" prefWidth="83.0" text="username" textAlignment="CENTER" textFill="#00ff22" AnchorPane.leftAnchor="74.0" AnchorPane.rightAnchor="78.0">
+                        <Label fx:id="lblUsername" alignment="CENTER" contentDisplay="CENTER" layoutX="74.0" layoutY="34.0" prefHeight="21.0" prefWidth="83.0" text="username" textAlignment="CENTER" textFill="#00ff22" AnchorPane.leftAnchor="74.0" AnchorPane.rightAnchor="78.0">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>

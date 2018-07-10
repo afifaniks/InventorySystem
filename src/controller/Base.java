@@ -4,20 +4,31 @@ import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
+import javafx.scene.control.Tooltip;
 import javafx.scene.layout.AnchorPane;
 
 import javax.swing.*;
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
 /**
  * Author: Afif Al Mamun
  * Written on: 08-Jul-18
  * Project: TeslaRentalInventory
  **/
-public class Base {
+public class Base implements Initializable{
 
     @FXML
     private AnchorPane paneRight;
+
+    @FXML
+    private Label lblAccessLevel;
+
+    @FXML
+    private Label lblUsername;
 
     @FXML
     private JFXButton btnCustomers;
@@ -29,15 +40,25 @@ public class Base {
     private JFXButton btnAccounts;
 
     @FXML
+    private JFXButton btnAdmin;
+
+    @FXML
     private JFXButton btnRentals;
 
     @FXML
     private JFXButton btnSells;
 
+    private static String username = "";
+    private static String accessLevel = "";
+
     private AnchorPane paneInventory = null;
     private JFXButton temp = null;
     private JFXButton recover = null;
     private final static String INVENTORY_URL = "/fxml/inventory.fxml";
+
+    //This method will help to set appropriate right pane
+    //respective to the left pane selection and will make it responsive if
+    //any window resize occurs
 
     @FXML
     private void ctrlRightPane(String URL) throws IOException {
@@ -67,6 +88,10 @@ public class Base {
         paneInventory.setPrefHeight(paneRight.getHeight());
     }
 
+    //The method here is universal method for all the navigators from left
+    //pane which will identify the selection by user and
+    //set the respective right pane FXML
+
     @FXML
     void btnNavigators(ActionEvent event) {
         borderSelector(event);
@@ -83,7 +108,7 @@ public class Base {
     }
 
 
-    //This method will create a border around selected navigator
+    //This method will mark selected navigator
     //from left navigation pane and will remove it if another
     //navition button is clicked.
 
@@ -91,13 +116,27 @@ public class Base {
         JFXButton btn = (JFXButton)event.getSource();
 
         if(temp == null) {
-            temp = btn;
+            temp = btn; //Saving current button properties
         } else {
-            temp.setStyle("");
-            temp = btn;
+            temp.setStyle(""); //Resetting previous selected button properties
+            temp = btn; //Saving current button properties
         }
 
         btn.setStyle("-fx-background-color: #455A64");
     }
 
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        username = LogIn.loggerUsername;
+        accessLevel = LogIn.loggerAccessLevel;
+
+        lblUsername.setText(username.toUpperCase());
+        lblAccessLevel.setText(accessLevel);
+
+        //Controling access by checking access level of user
+        if(accessLevel.equals("Employee")) {
+            btnAdmin.setDisable(true);
+
+        }
+    }
 }
