@@ -93,6 +93,9 @@ public class LogIn implements Initializable{
         txtPassword.setOnMouseClicked(event -> {
             lblWarnPassword.setVisible(false);
         });
+
+        txtUsername.setText("kamla");
+        txtPassword.setText("0000");
     }
 
     private void userLogger() {

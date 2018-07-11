@@ -137,7 +137,7 @@
          </children></AnchorPane>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
          <children>
-            <AnchorPane prefHeight="75.0" prefWidth="923.0" />
+            <AnchorPane fx:id="topPane" prefHeight="75.0" prefWidth="923.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
             <AnchorPane fx:id="paneRight" layoutX="6.0" layoutY="75.0" prefHeight="553.0" prefWidth="923.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="75.0" />
          </children></AnchorPane>
   </items>

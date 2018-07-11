@@ -51,10 +51,11 @@ public class Base implements Initializable{
     private static String username = "";
     private static String accessLevel = "";
 
-    private AnchorPane paneInventory = null;
+    private AnchorPane newRightPane = null;
     private JFXButton temp = null;
     private JFXButton recover = null;
     private final static String INVENTORY_URL = "/fxml/inventory.fxml";
+    private final static String CUSTOMER_URL = "/fxml/customer.fxml";
 
     //This method will help to set appropriate right pane
     //respective to the left pane selection and will make it responsive if
@@ -63,12 +64,14 @@ public class Base implements Initializable{
     @FXML
     private void ctrlRightPane(String URL) throws IOException {
         try {
-            paneInventory = FXMLLoader.load(getClass().getResource(URL));
+            paneRight.getChildren().clear(); //Removing previous nodes
+            newRightPane = FXMLLoader.load(getClass().getResource(URL));
 
-            paneInventory.setPrefHeight(paneRight.getHeight());
-            paneInventory.setPrefWidth(paneRight.getWidth());
+            newRightPane.setPrefHeight(paneRight.getHeight());
+            newRightPane.setPrefWidth(paneRight.getWidth());
 
-            paneRight.getChildren().add(paneInventory);
+
+            paneRight.getChildren().add(newRightPane);
 
             //Listener to monitor any window size change
             paneRight.layoutBoundsProperty().addListener((obs, oldVal, newVal) -> {
@@ -84,8 +87,8 @@ public class Base implements Initializable{
     //relative to it's parent whenever window is resized
 
     private void autoResizePane() {
-        paneInventory.setPrefWidth(paneRight.getWidth());
-        paneInventory.setPrefHeight(paneRight.getHeight());
+        newRightPane.setPrefWidth(paneRight.getWidth());
+        newRightPane.setPrefHeight(paneRight.getHeight());
     }
 
     //The method here is universal method for all the navigators from left
@@ -101,6 +104,12 @@ public class Base implements Initializable{
         if(btn.getText().equals(btnInventoryItem.getText())) {
             try {
                 ctrlRightPane(INVENTORY_URL);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } else if(btn.getText().equals(btnCustomers.getText())) {
+            try {
+                ctrlRightPane(CUSTOMER_URL);
             } catch (IOException e) {
                 e.printStackTrace();
             }
