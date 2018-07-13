@@ -5,3 +5,11 @@
 #topPane {
     -fx-background-color:  #37474f;
 }
+
+.button {
+    -fx-background-color: #263238;
+    -fx-text-fill: white;
+    -fx-text-alignment: center;
+    -fx-font-size: 15px;
+    -fx-background-radius: 30 30 30 30;
+}
