@@ -10,22 +10,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/54e82ff4-8867-4aa8-87f3-225b6b3a6786.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/54e82ff4-8867-4aa8-87f3-225b6b3a6786.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/controller/Dashboard.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/css/dashboard.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/fxml/dashboard.fxml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/controller/Base.class" afterPath="$PROJECT_DIR$/out/production/TeslaRentalInventory/controller/Base.class" />
       <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/controller/Customer.class" afterPath="$PROJECT_DIR$/out/production/TeslaRentalInventory/controller/Customer.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/controller/LogIn.class" afterPath="$PROJECT_DIR$/out/production/TeslaRentalInventory/controller/LogIn.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/css/base.css" afterPath="$PROJECT_DIR$/out/production/TeslaRentalInventory/css/base.css" />
-      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/css/customer.css" afterPath="$PROJECT_DIR$/out/production/TeslaRentalInventory/css/customer.css" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/fxml/base.fxml" afterPath="$PROJECT_DIR$/out/production/TeslaRentalInventory/fxml/base.fxml" />
       <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/fxml/customer.fxml" afterPath="$PROJECT_DIR$/out/production/TeslaRentalInventory/fxml/customer.fxml" />
-      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/fxml/inventory.fxml" afterPath="$PROJECT_DIR$/out/production/TeslaRentalInventory/fxml/inventory.fxml" />
-      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/sample/Dialog.class" afterPath="$PROJECT_DIR$/out/production/TeslaRentalInventory/sample/Dialog.class" />
+      <change beforePath="$PROJECT_DIR$/src/controller/Base.java" afterPath="$PROJECT_DIR$/src/controller/Base.java" />
       <change beforePath="$PROJECT_DIR$/src/controller/Customer.java" afterPath="$PROJECT_DIR$/src/controller/Customer.java" />
-      <change beforePath="$PROJECT_DIR$/src/controller/LogIn.java" afterPath="$PROJECT_DIR$/src/controller/LogIn.java" />
-      <change beforePath="$PROJECT_DIR$/src/css/base.css" afterPath="$PROJECT_DIR$/src/css/base.css" />
-      <change beforePath="$PROJECT_DIR$/src/css/customer.css" afterPath="$PROJECT_DIR$/src/css/customer.css" />
       <change beforePath="$PROJECT_DIR$/src/fxml/base.fxml" afterPath="$PROJECT_DIR$/src/fxml/base.fxml" />
       <change beforePath="$PROJECT_DIR$/src/fxml/customer.fxml" afterPath="$PROJECT_DIR$/src/fxml/customer.fxml" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Dialog.java" afterPath="$PROJECT_DIR$/src/sample/Dialog.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -118,19 +114,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="customer.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fxml/customer.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="17" column="141" lean-forward="false" selection-start-line="17" selection-start-column="141" selection-end-line="17" selection-end-column="141" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="base.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/css/base.css">
           <provider selected="true" editor-type-id="text-editor">
@@ -166,11 +149,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Customer.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Customer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controller/Customer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="59" column="83" lean-forward="false" selection-start-line="59" selection-start-column="83" selection-end-line="59" selection-end-column="83" />
+            <state relative-caret-position="-312">
+              <caret line="62" column="0" lean-forward="true" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -178,23 +161,44 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Dialog.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/Dialog.java">
+      <file leaf-file-name="dashboard.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fxml/dashboard.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="29" column="37" lean-forward="false" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="152">
+              <caret line="14" column="43" lean-forward="false" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Base.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="dashboard.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/css/dashboard.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="38">
+              <caret line="2" column="32" lean-forward="false" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Dashboard.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controller/Dashboard.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="7" column="22" lean-forward="false" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Base.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/controller/Base.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="91">
-              <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+            <state relative-caret-position="405">
+              <caret line="164" column="12" lean-forward="false" selection-start-line="164" selection-start-column="12" selection-end-line="164" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -216,15 +220,19 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
-        <option value="CSS File" />
         <option value="Class" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>initi</find>
+      <find>btnHome</find>
     </findStrings>
+    <replaceStrings>
+      <replace>btnDashboard</replace>
+    </replaceStrings>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -262,12 +270,14 @@
         <option value="$PROJECT_DIR$/src/fxml/login.fxml" />
         <option value="$PROJECT_DIR$/src/sample/Main.java" />
         <option value="$PROJECT_DIR$/src/fxml/customer.fxml" />
-        <option value="$PROJECT_DIR$/src/controller/Base.java" />
         <option value="$PROJECT_DIR$/src/controller/LogIn.java" />
         <option value="$PROJECT_DIR$/src/sample/Dialog.java" />
         <option value="$PROJECT_DIR$/src/css/customer.css" />
         <option value="$PROJECT_DIR$/src/css/base.css" />
         <option value="$PROJECT_DIR$/src/controller/Customer.java" />
+        <option value="$PROJECT_DIR$/src/fxml/home.fxml" />
+        <option value="$PROJECT_DIR$/src/css/home.css" />
+        <option value="$PROJECT_DIR$/src/controller/Base.java" />
       </list>
     </option>
   </component>
@@ -384,15 +394,15 @@
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/fontawesomefx-glyphsbrowser-master" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Progs\TeslaRentalInventory\src\fxml" />
-      <recent name="D:\Progs\TeslaRentalInventory\src\css" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Progs\TeslaRentalInventory\src\resource\icons" />
       <recent name="D:\Progs\TeslaRentalInventory\src\resource" />
       <recent name="D:\Progs\TeslaRentalInventory\src\css" />
       <recent name="D:\Progs\TeslaRentalInventory\src\fxml" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Progs\TeslaRentalInventory\src\fxml" />
+      <recent name="D:\Progs\TeslaRentalInventory\src\css" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -554,7 +564,7 @@
       <workItem from="1531471496659" duration="1062000" />
       <workItem from="1531500409106" duration="7000" />
       <workItem from="1531503522008" duration="2393000" />
-      <workItem from="1531583488546" duration="12998000" />
+      <workItem from="1531583488546" duration="19286000" />
     </task>
     <task id="LOCAL-00001" summary="Multiple view added.">
       <created>1531118175694</created>
@@ -574,7 +584,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="111860000" />
+    <option name="totallyTimeSpent" value="118148000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -589,12 +599,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16080402" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36683416" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36683416" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998326" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18730886" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0795107" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0795107" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -665,36 +675,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/controller/LogIn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1045">
-          <caret line="70" column="37" lean-forward="false" selection-start-line="70" selection-start-column="37" selection-end-line="70" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1461#1462#0" expanded="true" />
-            <element signature="e#1489#1490#0" expanded="true" />
-            <marker date="1531505531737" expanded="true" signature="3416:3506" ph="SELECT * FRO... accessInfo" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="35" column="47" lean-forward="false" selection-start-line="35" selection-start-column="47" selection-end-line="35" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fxml/login.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/Inventory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
@@ -909,13 +889,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/Dialog.java" />
     <entry file="file://$PROJECT_DIR$/src/fxml/test.fxml" />
-    <entry file="file://$PROJECT_DIR$/src/controller/Inventory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="6" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/54e82ff4-8867-4aa8-87f3-225b6b3a6786/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
@@ -972,19 +945,8 @@
         <state relative-caret-position="177">
           <caret line="29" column="37" lean-forward="false" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fxml/customer.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="17" column="141" lean-forward="false" selection-start-line="17" selection-start-column="141" selection-end-line="17" selection-end-column="141" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -992,14 +954,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="53">
           <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="19" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/Base.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1017,10 +971,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/Inventory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="6" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/Dashboard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="22" lean-forward="false" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/css/customer.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
           <caret line="8" column="9" lean-forward="false" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fxml/customer.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="17" column="141" lean-forward="false" selection-start-line="17" selection-start-column="141" selection-end-line="17" selection-end-column="141" />
           <folding />
         </state>
       </provider>
@@ -1033,13 +1014,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/fxml/dashboard.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="14" column="43" lean-forward="false" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/Customer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="59" column="83" lean-forward="false" selection-start-line="59" selection-start-column="83" selection-end-line="59" selection-end-column="83" />
+        <state relative-caret-position="-312">
+          <caret line="62" column="0" lean-forward="true" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/css/dashboard.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="32" lean-forward="false" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/Base.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="164" column="12" lean-forward="false" selection-start-line="164" selection-start-column="12" selection-end-line="164" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>

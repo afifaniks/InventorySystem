@@ -57,6 +57,7 @@ public class Customer implements Initializable {
         ImagePattern img = new ImagePattern(new Image("/resource/icons/10407479_1396350623998299_689954862227931112_n.jpg"));
         imgCustomerPhoto.setFill(img);
 
+        //Tooltip will be activated on Customer's photo if hovered
         Tooltip tooltip = new Tooltip("Double Click to Change Avatar in 'Edit Mode'");
         Tooltip.install(imgCustomerPhoto, tooltip);
 

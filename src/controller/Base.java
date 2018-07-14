@@ -25,6 +25,9 @@ public class Base implements Initializable{
     private AnchorPane paneRight;
 
     @FXML
+    private JFXButton btnDashboard;
+
+    @FXML
     private Label lblAccessLevel;
 
     @FXML
@@ -56,6 +59,7 @@ public class Base implements Initializable{
     private JFXButton recover = null;
     private final static String INVENTORY_URL = "/fxml/inventory.fxml";
     private final static String CUSTOMER_URL = "/fxml/customer.fxml";
+    private final static String DASHBOARD_URL = "/fxml/dashboard.fxml";
 
     //This method will help to set appropriate right pane
     //respective to the left pane selection and will make it responsive if
@@ -113,6 +117,12 @@ public class Base implements Initializable{
             } catch (IOException e) {
                 e.printStackTrace();
             }
+        } else if(btn.getText().equals(btnDashboard.getText())) {
+            try {
+                ctrlRightPane(DASHBOARD_URL);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -146,6 +156,13 @@ public class Base implements Initializable{
         if(accessLevel.equals("Employee")) {
             btnAdmin.setDisable(true);
 
+        }
+
+        //Setting Dashboard on RightPane
+        try {
+            ctrlRightPane(DASHBOARD_URL);
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }

@@ -15,26 +15,26 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="570.0" prefWidth="1061.0" stylesheets="@../css/customer.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Customer">
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="661.0" prefWidth="1107.0" stylesheets="@../css/customer.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Customer">
    <children>
-      <Pane fx:id="topPane" prefHeight="146.0" prefWidth="1061.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <Pane fx:id="topPane" prefHeight="182.0" prefWidth="1122.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
-            <Label layoutX="306.0" layoutY="88.0" prefHeight="44.0" prefWidth="78.0" text="Name:" textFill="WHITE">
+            <Label layoutX="300.0" layoutY="114.0" prefHeight="44.0" prefWidth="78.0" text="Name:" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
             </Label>
-            <JFXTextField fx:id="name" alignment="CENTER" editable="false" focusColor="WHITE" layoutX="372.0" layoutY="88.0" prefHeight="25.0" prefWidth="195.0" style="-fx-text-fill: white;" unFocusColor="WHITE">
+            <JFXTextField fx:id="name" alignment="CENTER" editable="false" focusColor="WHITE" layoutX="366.0" layoutY="114.0" prefHeight="25.0" prefWidth="195.0" style="-fx-text-fill: white;" unFocusColor="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
             </JFXTextField>
-            <JFXTextField fx:id="txtSearch" alignment="CENTER" focusColor="WHITE" layoutX="832.0" layoutY="88.0" prefHeight="25.0" prefWidth="195.0" style="-fx-text-fill: white;" unFocusColor="WHITE">
+            <JFXTextField fx:id="txtSearch" alignment="CENTER" focusColor="WHITE" layoutX="829.0" layoutY="112.0" prefHeight="25.0" prefWidth="195.0" style="-fx-text-fill: white;" unFocusColor="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
             </JFXTextField>
-            <JFXButton fx:id="btnSearch" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="781.0" layoutY="92.0" prefHeight="44.0" prefWidth="45.0" ripplerFill="WHITE" style="-fx-background-radius: 30 30 30 30;" stylesheets="@../css/customer.css">
+            <JFXButton fx:id="btnSearch" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="778.0" layoutY="116.0" prefHeight="44.0" prefWidth="45.0" ripplerFill="WHITE" style="-fx-background-radius: 30 30 30 30;" stylesheets="@../css/customer.css">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -45,54 +45,54 @@
                   <Tooltip text="Search with customers name" />
                </tooltip>
             </JFXButton>
+            <Circle fx:id="imgCustomerPhoto" fill="#ffffff00" layoutX="165.0" layoutY="167.0" radius="124.0" stroke="WHITE" strokeType="INSIDE">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Circle>
          </children></Pane>
-      <Circle fx:id="imgCustomerPhoto" fill="#ffffff00" layoutX="177.0" layoutY="123.0" radius="109.0" stroke="WHITE" strokeType="INSIDE">
-         <effect>
-            <DropShadow />
-         </effect>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </Circle>
-      <Label layoutX="279.0" layoutY="310.0" prefHeight="44.0" prefWidth="78.0" text="Address:">
+      <Label layoutX="261.0" layoutY="327.0" prefHeight="44.0" prefWidth="78.0" text="Address:">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <JFXTextField fx:id="address" alignment="CENTER" editable="false" focusColor="#263238" layoutX="364.0" layoutY="316.0" prefHeight="31.0" prefWidth="232.0">
+      <JFXTextField fx:id="address" alignment="CENTER" editable="false" focusColor="#263238" layoutX="346.0" layoutY="333.0" prefHeight="31.0" prefWidth="232.0">
          <font>
             <Font size="15.0" />
          </font></JFXTextField>
-      <Label layoutX="279.0" layoutY="445.0" prefHeight="44.0" prefWidth="78.0" text="Email:">
+      <Label layoutX="261.0" layoutY="462.0" prefHeight="44.0" prefWidth="78.0" text="Email:">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <JFXTextField fx:id="email" alignment="CENTER" editable="false" focusColor="#263238" layoutX="364.0" layoutY="454.0" prefHeight="31.0" prefWidth="232.0">
+      <JFXTextField fx:id="email" alignment="CENTER" editable="false" focusColor="#263238" layoutX="346.0" layoutY="471.0" prefHeight="31.0" prefWidth="232.0">
          <font>
             <Font size="15.0" />
          </font></JFXTextField>
-      <Separator layoutX="662.0" layoutY="226.0" orientation="VERTICAL" prefHeight="332.0" prefWidth="5.0" style="-fx-background-color: #263238;" />
-      <Label layoutX="279.0" layoutY="512.0" prefHeight="44.0" prefWidth="78.0" text="Gender:">
+      <Separator layoutX="644.0" layoutY="243.0" orientation="VERTICAL" prefHeight="332.0" prefWidth="5.0" style="-fx-background-color: #263238;" />
+      <Label layoutX="261.0" layoutY="529.0" prefHeight="44.0" prefWidth="78.0" text="Gender:">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <JFXTextField fx:id="gender" alignment="CENTER" editable="false" focusColor="#263238" layoutX="364.0" layoutY="521.0" prefHeight="31.0" prefWidth="232.0">
+      <JFXTextField fx:id="gender" alignment="CENTER" editable="false" focusColor="#263238" layoutX="346.0" layoutY="538.0" prefHeight="31.0" prefWidth="232.0">
          <font>
             <Font size="15.0" />
          </font></JFXTextField>
-      <Label layoutX="75.0" layoutY="422.0" prefHeight="58.0" prefWidth="106.0" text="Member Since:">
+      <Label layoutX="76.0" layoutY="439.0" prefHeight="58.0" prefWidth="106.0" text="Member Since:">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="38.0" layoutY="465.0" prefHeight="58.0" prefWidth="170.0" text="Date" textAlignment="CENTER">
+      <Label alignment="CENTER" layoutX="39.0" layoutY="482.0" prefHeight="58.0" prefWidth="170.0" text="Date" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <JFXToggleButton fx:id="btnEditMode" contentDisplay="RIGHT" layoutX="891.0" layoutY="146.0" onAction="#btnEditModeToggle" prefHeight="80.0" prefWidth="170.0" size="14.0" text="Edit Mode" toggleColor="#263238" toggleLineColor="#78909c">
+      <JFXToggleButton fx:id="btnEditMode" contentDisplay="RIGHT" layoutX="910.0" layoutY="192.0" onAction="#btnEditModeToggle" prefHeight="80.0" prefWidth="170.0" size="14.0" text="Edit Mode" toggleColor="#263238" toggleLineColor="#78909c">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
@@ -100,7 +100,7 @@
             <Tooltip text="Enable/Disable Edit Mode" />
          </tooltip>
       </JFXToggleButton>
-      <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="727.0" layoutY="500.0" prefHeight="53.0" prefWidth="59.0" ripplerFill="WHITE" style="-fx-background-radius: 30 0 0 30;" stylesheets="@../css/customer.css">
+      <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="709.0" layoutY="517.0" prefHeight="53.0" prefWidth="59.0" ripplerFill="WHITE" style="-fx-background-radius: 30 0 0 30;" stylesheets="@../css/customer.css">
          <graphic>
             <FontAwesomeIconView fill="WHITE" glyphName="ANGLE_LEFT" size="40" strokeLineCap="ROUND" wrappingWidth="13.071428298950195" />
          </graphic>
@@ -108,7 +108,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="799.0" layoutY="501.0" prefHeight="51.0" prefWidth="70.0" ripplerFill="WHITE" stylesheets="@../css/customer.css">
+      <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="781.0" layoutY="518.0" prefHeight="51.0" prefWidth="70.0" ripplerFill="WHITE" stylesheets="@../css/customer.css">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -116,7 +116,7 @@
             <FontAwesomeIconView fill="WHITE" glyphName="PLUS" size="30" />
          </graphic>
       </JFXButton>
-      <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="965.0" layoutY="500.0" prefHeight="53.0" prefWidth="59.0" ripplerFill="WHITE" style="-fx-background-radius: 0 30 30 0;" stylesheets="@../css/customer.css">
+      <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="947.0" layoutY="517.0" prefHeight="53.0" prefWidth="59.0" ripplerFill="WHITE" style="-fx-background-radius: 0 30 30 0;" stylesheets="@../css/customer.css">
          <graphic>
             <FontAwesomeIconView fill="WHITE" glyphName="ANGLE_RIGHT" size="40" strokeLineCap="ROUND" text="" wrappingWidth="13.071428298950195" />
          </graphic>
@@ -124,7 +124,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="883.0" layoutY="501.0" prefHeight="51.0" prefWidth="70.0" ripplerFill="WHITE" stylesheets="@../css/customer.css">
+      <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="865.0" layoutY="518.0" prefHeight="51.0" prefWidth="70.0" ripplerFill="WHITE" stylesheets="@../css/customer.css">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -132,7 +132,7 @@
             <MaterialDesignIconView fill="WHITE" glyphName="CONTENT_SAVE" size="30" />
          </graphic>
       </JFXButton>
-      <JFXButton alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="810.0" layoutY="267.0" prefHeight="50.0" prefWidth="147.0" ripplerFill="WHITE" stylesheets="@../css/customer.css" text="Accounts">
+      <JFXButton alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="792.0" layoutY="284.0" prefHeight="50.0" prefWidth="147.0" ripplerFill="WHITE" stylesheets="@../css/customer.css" text="Accounts">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -143,7 +143,7 @@
             <Font size="15.0" />
          </font>
       </JFXButton>
-      <JFXButton alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="810.0" layoutY="322.0" prefHeight="50.0" prefWidth="147.0" ripplerFill="WHITE" stylesheets="@../css/customer.css" text="Purchases">
+      <JFXButton alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="792.0" layoutY="339.0" prefHeight="50.0" prefWidth="147.0" ripplerFill="WHITE" stylesheets="@../css/customer.css" text="Purchases">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -154,7 +154,7 @@
             <Font size="15.0" />
          </font>
       </JFXButton>
-      <JFXButton alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="810.0" layoutY="377.0" prefHeight="50.0" prefWidth="147.0" ripplerFill="WHITE" stylesheets="@../css/customer.css" text="Rentals">
+      <JFXButton alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="792.0" layoutY="394.0" prefHeight="50.0" prefWidth="147.0" ripplerFill="WHITE" stylesheets="@../css/customer.css" text="Rentals">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -165,27 +165,27 @@
             <Font size="15.0" />
          </font>
       </JFXButton>
-      <Label layoutX="279.0" layoutY="248.0" prefHeight="44.0" prefWidth="78.0" text="ID:">
+      <Label layoutX="261.0" layoutY="265.0" prefHeight="44.0" prefWidth="78.0" text="ID:">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label fx:id="lblId" layoutX="364.0" layoutY="255.0" prefHeight="31.0" prefWidth="195.0" text="Label" textFill="#0c9e33">
+      <Label fx:id="lblId" layoutX="346.0" layoutY="272.0" prefHeight="31.0" prefWidth="195.0" text="Label" textFill="#0c9e33">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="279.0" layoutY="379.0" prefHeight="44.0" prefWidth="78.0" text="Phone:">
+      <Label layoutX="261.0" layoutY="396.0" prefHeight="44.0" prefWidth="78.0" text="Phone:">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <JFXTextField fx:id="phone" alignment="CENTER" editable="false" focusColor="#263238" layoutX="364.0" layoutY="385.0" prefHeight="31.0" prefWidth="232.0">
+      <JFXTextField fx:id="phone" alignment="CENTER" editable="false" focusColor="#263238" layoutX="346.0" layoutY="402.0" prefHeight="31.0" prefWidth="232.0">
          <font>
             <Font size="15.0" />
          </font>
       </JFXTextField>
-      <JFXButton alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="810.0" layoutY="432.0" prefHeight="50.0" prefWidth="147.0" ripplerFill="WHITE" style="-fx-background-color: green;" stylesheets="@../css/customer.css" text="View All">
+      <JFXButton alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="792.0" layoutY="449.0" prefHeight="50.0" prefWidth="147.0" ripplerFill="WHITE" style="-fx-background-color: green;" stylesheets="@../css/customer.css" text="View All">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -196,5 +196,6 @@
             <Font size="15.0" />
          </font>
       </JFXButton>
+      <Label alignment="CENTER" layoutX="470.0" layoutY="622.0" prefHeight="31.0" prefWidth="349.0" text="Showing m of n results." textAlignment="CENTER" />
    </children>
 </AnchorPane>
