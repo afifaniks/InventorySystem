@@ -17,6 +17,8 @@ import java.io.IOException;
  **/
 public class Dialog {
 
+    //Constructor will pop up a new stage which will contain
+    //type of error(header) and details(error).
     public Dialog(String header, String error) {
 
         Stage stg = new Stage();

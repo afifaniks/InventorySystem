@@ -14,6 +14,8 @@ import javafx.scene.control.Label;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
+import sample.Dialog;
+
 import java.io.IOException;
 import java.sql.*;
 import java.util.ResourceBundle;
@@ -145,6 +147,8 @@ public class LogIn implements Initializable{
                     base.setTitle("Tesla Rental Inventory");
                     base.setScene(scene);
                     base.show();
+                } else {
+                    new sample.Dialog("Authentication Error!", "Either username or password did not match!");
                 }
                 con.close();
             } catch (SQLException e) {
