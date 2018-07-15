@@ -27,7 +27,7 @@
       </AnchorPane>
       <Pane layoutX="151.0" layoutY="110.0" prefHeight="240.0" prefWidth="244.0">
          <children>
-            <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="35.0" layoutY="23.0" prefHeight="154.0" prefWidth="160.0" stylesheets="@../css/dashboard.css" text="Sells">
+            <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="35.0" layoutY="23.0" prefHeight="154.0" prefWidth="160.0" ripplerFill="GREEN" stylesheets="@../css/dashboard.css" text="Sells">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
@@ -57,7 +57,7 @@
       </Pane>
       <Pane layoutX="432.0" layoutY="110.0" prefHeight="240.0" prefWidth="244.0">
          <children>
-            <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="35.0" layoutY="23.0" prefHeight="154.0" prefWidth="160.0" stylesheets="@../css/dashboard.css" text="Rentals">
+            <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="35.0" layoutY="23.0" prefHeight="154.0" prefWidth="160.0" ripplerFill="GREEN" stylesheets="@../css/dashboard.css" text="Rentals">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
@@ -87,7 +87,7 @@
       </Pane>
       <Pane layoutX="713.0" layoutY="110.0" prefHeight="240.0" prefWidth="244.0">
          <children>
-            <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="35.0" layoutY="23.0" prefHeight="154.0" prefWidth="160.0" stylesheets="@../css/dashboard.css" text="Due">
+            <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="35.0" layoutY="23.0" prefHeight="154.0" prefWidth="160.0" ripplerFill="RED" stylesheets="@../css/dashboard.css" text="Due">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
@@ -117,7 +117,7 @@
       </Pane>
       <Pane layoutX="291.0" layoutY="391.0" prefHeight="240.0" prefWidth="244.0">
          <children>
-            <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="35.0" layoutY="23.0" prefHeight="154.0" prefWidth="160.0" stylesheets="@../css/dashboard.css" text="Due">
+            <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="35.0" layoutY="23.0" prefHeight="154.0" prefWidth="160.0" ripplerFill="RED" stylesheets="@../css/dashboard.css" text="Due">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
@@ -147,7 +147,7 @@
       </Pane>
       <Pane layoutX="572.0" layoutY="391.0" prefHeight="240.0" prefWidth="244.0">
          <children>
-            <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="35.0" layoutY="23.0" prefHeight="154.0" prefWidth="160.0" stylesheets="@../css/dashboard.css" text="Rentals">
+            <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="35.0" layoutY="23.0" prefHeight="154.0" prefWidth="160.0" ripplerFill="RED" stylesheets="@../css/dashboard.css" text="Rentals">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
