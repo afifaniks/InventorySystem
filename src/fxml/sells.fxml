@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="661.0" prefWidth="1125.0" stylesheets="/css/sells.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Sells">
+   <children>
+      <Label layoutX="58.0" layoutY="220.0" prefHeight="44.0" prefWidth="78.0" text="Customer:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtCustomerId" alignment="CENTER" focusColor="#263238" layoutX="162.0" layoutY="225.0" prefHeight="31.0" prefWidth="163.0">
+         <font>
+            <Font size="15.0" />
+         </font></JFXTextField>
+      <Label layoutX="58.0" layoutY="335.0" prefHeight="44.0" prefWidth="78.0" text="Date:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Separator layoutX="384.0" layoutY="151.0" orientation="VERTICAL" prefHeight="416.0" prefWidth="6.0" style="-fx-background-color: #263238;" />
+      <Label layoutX="58.0" layoutY="390.0" prefHeight="44.0" prefWidth="78.0" text="Qty:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <JFXTextField alignment="CENTER" focusColor="#263238" layoutX="162.0" layoutY="399.0" prefHeight="31.0" prefWidth="163.0">
+         <font>
+            <Font size="15.0" />
+         </font></JFXTextField>
+      <Label layoutX="58.0" layoutY="165.0" prefHeight="44.0" prefWidth="104.0" text="Purchase ID:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblId" layoutX="173.0" layoutY="174.0" prefHeight="31.0" prefWidth="183.0" text="Label" textFill="#0c9e33">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="58.0" layoutY="280.0" prefHeight="44.0" prefWidth="78.0" text="Item:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtItemId" alignment="CENTER" focusColor="#263238" layoutX="162.0" layoutY="284.0" prefHeight="31.0" prefWidth="163.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <AnchorPane layoutX="1.0" prefHeight="85.0" prefWidth="1169.0" style="-fx-background-color: #253238;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" layoutX="433.0" layoutY="6.0" prefHeight="72.0" prefWidth="338.0" text="Sells" textFill="WHITE" AnchorPane.leftAnchor="433.0" AnchorPane.rightAnchor="433.0">
+               <font>
+                  <Font name="System Bold" size="33.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="LINE_CHART" size="40" />
+               </graphic>
+            </Label>
+            <Line endX="143.0" layoutX="319.0" layoutY="81.0" startX="448.0" AnchorPane.leftAnchor="461.5" AnchorPane.rightAnchor="401.5" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="42.0" layoutY="103.0" prefHeight="51.0" prefWidth="134.0" text="New" textFill="GREEN">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <JFXDatePicker defaultColor="#263238" layoutX="162.0" layoutY="346.0" prefHeight="26.0" prefWidth="163.0" />
+      <Label layoutX="58.0" layoutY="511.0" prefHeight="44.0" prefWidth="104.0" text="Price:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblId1" layoutX="162.0" layoutY="511.0" prefHeight="45.0" prefWidth="214.0" text="Price" textFill="#0c9e33">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="58.0" layoutY="449.0" prefHeight="44.0" prefWidth="93.0" text="Pay Amount:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <JFXTextField alignment="CENTER" focusColor="#263238" layoutX="162.0" layoutY="458.0" prefHeight="31.0" prefWidth="163.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="421.0" layoutY="103.0" prefHeight="51.0" prefWidth="286.0" text="Your Recent Sells" textFill="GREEN">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <TableView layoutX="433.0" layoutY="170.0" prefHeight="382.0" prefWidth="626.0" AnchorPane.leftAnchor="433.0" AnchorPane.rightAnchor="109.0">
+        <columns>
+          <TableColumn text="Purchase ID" />
+          <TableColumn prefWidth="88.0" text="Customer ID" />
+            <TableColumn prefWidth="57.0" text="Item ID" />
+            <TableColumn prefWidth="98.0" text="Date" />
+            <TableColumn prefWidth="63.0" text="Qty" />
+            <TableColumn prefWidth="107.0" text="Price" />
+            <TableColumn prefWidth="54.0" text="Paid" />
+            <TableColumn prefWidth="69.0" text="Due" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+         <effect>
+            <DropShadow blurType="TWO_PASS_BOX" height="18.03" radius="7.775" spread="0.1" width="15.07" />
+         </effect>
+      </TableView>
+      <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="109.0" layoutY="594.0" prefHeight="59.0" prefWidth="61.0" ripplerFill="WHITE" style="-fx-background-color: #263238;" stylesheets="@../css/sells.css">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="REFRESH" size="30" />
+         </graphic>
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="199.0" layoutY="594.0" prefHeight="59.0" prefWidth="61.0" ripplerFill="WHITE" style="-fx-background-color: green;" stylesheets="@../css/sells.css">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="PLUS" size="30" />
+         </graphic>
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="txtSearch" alignment="CENTER" focusColor="#263238" layoutX="825.0" layoutY="102.0" prefHeight="25.0" prefWidth="195.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="btnSearch" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="1020.0" layoutY="98.0" prefHeight="44.0" prefWidth="45.0" ripplerFill="WHITE" style="-fx-background-radius: 30 30 30 30;" stylesheets="@../css/customer.css">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" size="25" />
+         </graphic>
+         <tooltip>
+            <Tooltip text="Search with customers name" />
+         </tooltip>
+      </JFXButton>
+   </children>
+</AnchorPane>
