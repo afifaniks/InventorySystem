@@ -5,7 +5,7 @@
  **/
 
 .split-pane > .split-pane-divider {
-    -fx-padding: 0 0;
+    -fx-padding: 0 0.004;
 }
 
 .root {

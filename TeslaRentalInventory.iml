@@ -10,5 +10,7 @@
     <orderEntry type="library" name="jfoenix-8.0.5" level="project" />
     <orderEntry type="library" name="fontawesomefx-8.9" level="project" />
     <orderEntry type="library" name="mysql-connector-java-8.0.11" level="project" />
+    <orderEntry type="library" name="controlsfx-8.0.1" level="project" />
+    <orderEntry type="library" name="controlsfx-8.40.12" level="project" />
   </component>
 </module>

@@ -1,12 +1,14 @@
 package controller;
 
 import com.jfoenix.controls.JFXButton;
+import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.Tooltip;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
 import javax.swing.*;
@@ -23,6 +25,9 @@ public class Base implements Initializable{
 
     @FXML
     private AnchorPane paneRight;
+
+    @FXML
+    private AnchorPane paneLeft;
 
     @FXML
     private JFXButton btnDashboard;
@@ -57,9 +62,12 @@ public class Base implements Initializable{
     private AnchorPane newRightPane = null;
     private JFXButton temp = null;
     private JFXButton recover = null;
+    private static boolean anchorFlag = false;
     private final static String INVENTORY_URL = "/fxml/inventory.fxml";
     private final static String CUSTOMER_URL = "/fxml/customer.fxml";
     private final static String DASHBOARD_URL = "/fxml/dashboard.fxml";
+    private final static String SELLS_URL = "/fxml/sells.fxml";
+    private final static String RENTALS_URL = "/fxml/rentals.fxml";
 
     //This method will help to set appropriate right pane
     //respective to the left pane selection and will make it responsive if
@@ -123,6 +131,18 @@ public class Base implements Initializable{
             } catch (IOException e) {
                 e.printStackTrace();
             }
+        } else if(btn.getText().equals(btnSells.getText())) {
+            try {
+                ctrlRightPane(SELLS_URL);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } else if(btn.getText().equals(btnRentals.getText())) {
+            try {
+                ctrlRightPane(RENTALS_URL);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -165,4 +185,5 @@ public class Base implements Initializable{
             e.printStackTrace();
         }
     }
+
 }

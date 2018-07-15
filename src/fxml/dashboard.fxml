@@ -14,7 +14,7 @@
    <children>
       <AnchorPane prefHeight="109.0" prefWidth="1169.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
-            <Label alignment="CENTER" layoutX="416.0" layoutY="25.0" prefHeight="72.0" prefWidth="338.0" text="Dashboard" textFill="#7550d3">
+            <Label alignment="CENTER" layoutX="446.0" layoutY="18.0" prefHeight="72.0" prefWidth="338.0" text="Dashboard" textFill="#7550d3">
                <font>
                   <Font name="System Bold" size="45.0" />
                </font>
@@ -22,10 +22,10 @@
                   <FontAwesomeIconView fill="#263238" glyphName="HOME" size="70" />
                </graphic>
             </Label>
-            <Line endX="143.0" layoutX="289.0" layoutY="97.0" startX="448.0" AnchorPane.leftAnchor="431.5" AnchorPane.rightAnchor="431.5" />
+            <Line endX="143.0" layoutX="319.0" layoutY="90.0" startX="448.0" AnchorPane.leftAnchor="461.5" AnchorPane.rightAnchor="401.5" />
          </children>
       </AnchorPane>
-      <Pane layoutX="151.0" layoutY="110.0" prefHeight="240.0" prefWidth="244.0">
+      <Pane layoutX="228.0" layoutY="109.0" prefHeight="240.0" prefWidth="244.0">
          <children>
             <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="35.0" layoutY="23.0" prefHeight="154.0" prefWidth="160.0" ripplerFill="GREEN" stylesheets="@../css/dashboard.css" text="Sells">
                <font>
@@ -55,7 +55,7 @@
             </Label>
          </children>
       </Pane>
-      <Pane layoutX="432.0" layoutY="110.0" prefHeight="240.0" prefWidth="244.0">
+      <Pane layoutX="509.0" layoutY="109.0" prefHeight="240.0" prefWidth="244.0">
          <children>
             <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="35.0" layoutY="23.0" prefHeight="154.0" prefWidth="160.0" ripplerFill="GREEN" stylesheets="@../css/dashboard.css" text="Rentals">
                <font>
@@ -85,20 +85,20 @@
             </Label>
          </children>
       </Pane>
-      <Pane layoutX="713.0" layoutY="110.0" prefHeight="240.0" prefWidth="244.0">
+      <Pane layoutX="790.0" layoutY="109.0" prefHeight="240.0" prefWidth="244.0">
          <children>
             <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="35.0" layoutY="23.0" prefHeight="154.0" prefWidth="160.0" ripplerFill="RED" stylesheets="@../css/dashboard.css" text="Due">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
                <graphic>
-                  <FontAwesomeIconView fill="#16861c" glyphName="RECYCLE" size="30" />
+                  <FontAwesomeIconView fill="RED" glyphName="RECYCLE" size="30" />
                </graphic>
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
-            <Label alignment="CENTER" layoutX="120.0" layoutY="14.0" prefHeight="50.0" prefWidth="47.0" style="-fx-background-color: #78909c; -fx-text-fill: white; -fx-background-radius: 30 30 30 30;" text="Label">
+            <Label alignment="CENTER" layoutX="120.0" layoutY="14.0" prefHeight="50.0" prefWidth="47.0" style="-fx-background-color: red; -fx-text-fill: white; -fx-background-radius: 30 30 30 30;" text="Label">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
@@ -115,7 +115,7 @@
             </Label>
          </children>
       </Pane>
-      <Pane layoutX="291.0" layoutY="391.0" prefHeight="240.0" prefWidth="244.0">
+      <Pane layoutX="368.0" layoutY="390.0" prefHeight="240.0" prefWidth="244.0">
          <children>
             <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="35.0" layoutY="23.0" prefHeight="154.0" prefWidth="160.0" ripplerFill="RED" stylesheets="@../css/dashboard.css" text="Due">
                <font>
@@ -145,7 +145,7 @@
             </Label>
          </children>
       </Pane>
-      <Pane layoutX="572.0" layoutY="391.0" prefHeight="240.0" prefWidth="244.0">
+      <Pane layoutX="649.0" layoutY="390.0" prefHeight="240.0" prefWidth="244.0">
          <children>
             <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="35.0" layoutY="23.0" prefHeight="154.0" prefWidth="160.0" ripplerFill="RED" stylesheets="@../css/dashboard.css" text="Rentals">
                <font>
@@ -170,6 +170,16 @@
             </Label>
          </children>
       </Pane>
-      <Separator layoutX="297.0" layoutY="365.0" prefHeight="1.0" prefWidth="513.0" style="-fx-background-color: #263238;" />
+      <Separator layoutX="356.0" layoutY="365.0" prefHeight="1.0" prefWidth="513.0" style="-fx-background-color: #263238;" />
+      <Label alignment="CENTER" layoutX="75.0" layoutY="204.0" prefHeight="29.0" prefWidth="121.0" text="Today's">
+         <font>
+            <Font size="34.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="168.0" layoutY="485.0" prefHeight="50.0" prefWidth="121.0" text="Total">
+         <font>
+            <Font size="34.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
