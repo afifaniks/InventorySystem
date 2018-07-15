@@ -40,7 +40,10 @@ public class Customer implements Initializable {
     private JFXTextField phone;
 
     @FXML
-    private JFXTextField name;
+    private JFXTextField txtFName;
+
+    @FXML
+    private JFXTextField txtLName;
 
     @FXML
     private JFXTextField address;
@@ -76,14 +79,16 @@ public class Customer implements Initializable {
     void btnEditModeToggle(ActionEvent event) {
         if(btnEditMode.isSelected()) {
             phone.setEditable(true);
-            name.setEditable(true);
+            txtFName.setEditable(true);
+            txtLName.setEditable(true);
             address.setEditable(true);
             email.setEditable(true);
             gender.setEditable(true);
         } else {
             btnEditMode.setStyle("");
             phone.setEditable(false);
-            name.setEditable(false);
+            txtFName.setEditable(false);
+            txtLName.setEditable(true);
             address.setEditable(false);
             email.setEditable(false);
             gender.setEditable(false);

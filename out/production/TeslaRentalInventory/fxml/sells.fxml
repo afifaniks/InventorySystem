@@ -9,6 +9,7 @@
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.Tooltip?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
@@ -143,6 +144,22 @@
          <font>
             <Font size="15.0" />
          </font>
+      </JFXButton>
+      <JFXTextField fx:id="txtSearch" alignment="CENTER" focusColor="#263238" layoutX="825.0" layoutY="102.0" prefHeight="25.0" prefWidth="195.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="btnSearch" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="1020.0" layoutY="98.0" prefHeight="44.0" prefWidth="45.0" ripplerFill="WHITE" style="-fx-background-radius: 30 30 30 30;" stylesheets="@../css/customer.css">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" size="25" />
+         </graphic>
+         <tooltip>
+            <Tooltip text="Search with customers name" />
+         </tooltip>
       </JFXButton>
    </children>
 </AnchorPane>
