@@ -22,7 +22,7 @@
             <Font size="15.0" />
          </font>
       </JFXTextField>
-      <JFXTextField fx:id="txtLname" alignment="CENTER" editable="false" focusColor="#263238" layoutX="378.0" layoutY="302.0" prefHeight="31.0" prefWidth="232.0">
+      <JFXTextField fx:id="txtLName" alignment="CENTER" editable="false" focusColor="#263238" layoutX="378.0" layoutY="302.0" prefHeight="31.0" prefWidth="232.0">
          <font>
             <Font size="15.0" />
          </font>
@@ -196,13 +196,13 @@
       </Circle>
       <AnchorPane layoutX="-3.0" prefHeight="85.0" prefWidth="1169.0" style="-fx-background-color: #253238;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
-            <Label alignment="CENTER" layoutX="433.0" layoutY="6.0" prefHeight="72.0" prefWidth="338.0" text="Customer" textFill="WHITE" AnchorPane.leftAnchor="433.0" AnchorPane.rightAnchor="433.0">
+            <Label alignment="CENTER" layoutX="446.0" layoutY="7.0" prefHeight="72.0" prefWidth="338.0" text="Customer" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="33.0" />
                </font>
             </Label>
             <Line endX="143.0" layoutX="319.0" layoutY="81.0" startX="448.0" AnchorPane.leftAnchor="461.5" AnchorPane.rightAnchor="401.5" />
-            <MaterialDesignIconView fill="WHITE" glyphName="ACCOUNT_CIRCLE" layoutX="462.0" layoutY="57.0" size="40" />
+            <MaterialDesignIconView fill="WHITE" glyphName="ACCOUNT_CIRCLE" layoutX="486.0" layoutY="58.0" size="40" />
          </children>
       </AnchorPane>
       <Label layoutX="293.0" layoutY="233.0" prefHeight="44.0" prefWidth="78.0" text="F. Name">

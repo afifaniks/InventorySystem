@@ -86,7 +86,7 @@
             <Line endX="143.0" layoutX="319.0" layoutY="81.0" startX="448.0" AnchorPane.leftAnchor="461.5" AnchorPane.rightAnchor="401.5" />
          </children>
       </AnchorPane>
-      <Label layoutX="42.0" layoutY="103.0" prefHeight="51.0" prefWidth="134.0" text="New" textFill="GREEN">
+      <Label fx:id="lblCategory" layoutX="42.0" layoutY="103.0" prefHeight="51.0" prefWidth="294.0" text="New" textFill="GREEN">
          <font>
             <Font size="27.0" />
          </font>
@@ -135,18 +135,21 @@
             <DropShadow blurType="TWO_PASS_BOX" height="18.03" radius="7.775" spread="0.1" width="15.07" />
          </effect>
       </TableView>
-      <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="109.0" layoutY="594.0" prefHeight="59.0" prefWidth="61.0" ripplerFill="WHITE" style="-fx-background-color: #263238;" stylesheets="@../css/sells.css">
+      <JFXButton fx:id="btnRefresh" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="110.0" layoutY="588.0" prefHeight="59.0" prefWidth="61.0" ripplerFill="WHITE" style="-fx-background-color: #263238;" stylesheets="@../css/sells.css">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
          <graphic>
-            <FontAwesomeIconView fill="WHITE" glyphName="REFRESH" size="30" />
+            <FontAwesomeIconView fill="WHITE" glyphName="UNDO" size="30" />
          </graphic>
          <font>
             <Font size="15.0" />
          </font>
+         <tooltip>
+            <Tooltip text="Empty Tooltip" />
+         </tooltip>
       </JFXButton>
-      <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="199.0" layoutY="594.0" prefHeight="59.0" prefWidth="61.0" ripplerFill="WHITE" style="-fx-background-color: green;" stylesheets="@../css/sells.css">
+      <JFXButton fx:id="btnAdd" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="181.0" layoutY="588.0" prefHeight="59.0" prefWidth="61.0" ripplerFill="WHITE" style="-fx-background-color: green;" stylesheets="@../css/sells.css">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -156,6 +159,9 @@
          <font>
             <Font size="15.0" />
          </font>
+         <tooltip>
+            <Tooltip text="Empty Tooltip" />
+         </tooltip>
       </JFXButton>
       <Label layoutX="58.0" layoutY="393.0" prefHeight="44.0" prefWidth="93.0" text="Return Date:">
          <font>
@@ -163,5 +169,19 @@
          </font>
       </Label>
       <JFXDatePicker fx:id="txtReturnDate" defaultColor="#263238" layoutX="162.0" layoutY="404.0" prefHeight="26.0" prefWidth="163.0" />
+      <JFXButton fx:id="btnRentalReturned" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="716.0" layoutY="588.0" onAction="#ctrlRentalReturnedAction" prefHeight="59.0" prefWidth="61.0" ripplerFill="WHITE" style="-fx-background-color: green;" stylesheets="@../css/sells.css">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="REFRESH" size="30" />
+         </graphic>
+         <font>
+            <Font size="15.0" />
+         </font>
+         <tooltip>
+            <Tooltip text="Update Returns" />
+         </tooltip>
+      </JFXButton>
    </children>
 </AnchorPane>

@@ -88,7 +88,7 @@ public class Customer implements Initializable {
             btnEditMode.setStyle("");
             phone.setEditable(false);
             txtFName.setEditable(false);
-            txtLName.setEditable(true);
+            txtLName.setEditable(false);
             address.setEditable(false);
             email.setEditable(false);
             gender.setEditable(false);

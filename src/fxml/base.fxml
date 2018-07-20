@@ -89,7 +89,7 @@
                         <Tooltip text="Rental list" />
                      </tooltip>
                   </JFXButton>
-                  <JFXButton fx:id="btnSells1" alignment="BASELINE_LEFT" graphicTextGap="40.0" layoutX="8.0" layoutY="299.0" onAction="#btnNavigators" prefHeight="60.0" prefWidth="238.0" ripplerFill="WHITE" text="Accounts" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0">
+                  <JFXButton fx:id="btnAccounts" alignment="BASELINE_LEFT" graphicTextGap="40.0" layoutX="8.0" layoutY="299.0" onAction="#btnNavigators" prefHeight="60.0" prefWidth="238.0" ripplerFill="WHITE" text="Accounts" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0">
                      <graphic>
                         <FontAwesomeIconView fill="WHITE" glyphName="MONEY" size="30" wrappingWidth="30.571430206298828" />
                      </graphic>
@@ -100,7 +100,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                      <tooltip>
-                        <Tooltip text="Go through sell history" />
+                        <Tooltip text="Create new account" />
                      </tooltip>
                   </JFXButton>
                   <JFXButton fx:id="btnAdmin" alignment="BASELINE_LEFT" graphicTextGap="40.0" layoutX="8.0" layoutY="359.0" onAction="#btnNavigators" prefHeight="60.0" prefWidth="238.0" ripplerFill="WHITE" text="Administrative" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0">

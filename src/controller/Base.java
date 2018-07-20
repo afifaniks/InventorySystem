@@ -68,6 +68,7 @@ public class Base implements Initializable{
     private final static String DASHBOARD_URL = "/fxml/dashboard.fxml";
     private final static String SELLS_URL = "/fxml/sells.fxml";
     private final static String RENTALS_URL = "/fxml/rentals.fxml";
+    private final static String ACCOUNTS_URL = "/fxml/accounts.fxml";
 
     //This method will help to set appropriate right pane
     //respective to the left pane selection and will make it responsive if
@@ -109,7 +110,7 @@ public class Base implements Initializable{
 
     @FXML
     void btnNavigators(ActionEvent event) {
-        borderSelector(event);
+        borderSelector(event); //Marking selected navigator button
 
         JFXButton btn = (JFXButton)event.getSource();
 
@@ -140,6 +141,12 @@ public class Base implements Initializable{
         } else if(btn.getText().equals(btnRentals.getText())) {
             try {
                 ctrlRightPane(RENTALS_URL);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } else if(btn.getText().equals(btnAccounts.getText())) {
+            try {
+                ctrlRightPane(ACCOUNTS_URL);
             } catch (IOException e) {
                 e.printStackTrace();
             }
