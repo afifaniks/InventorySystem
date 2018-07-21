@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import com.jfoenix.controls.JFXToggleButton?>
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
@@ -56,16 +57,12 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <JFXTextField fx:id="gender" alignment="CENTER" editable="false" focusColor="#263238" layoutX="378.0" layoutY="558.0" prefHeight="31.0" prefWidth="232.0">
-         <font>
-            <Font size="15.0" />
-         </font></JFXTextField>
       <Label layoutX="95.0" layoutY="426.0" prefHeight="58.0" prefWidth="106.0" text="Member Since:">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="58.0" layoutY="469.0" prefHeight="58.0" prefWidth="170.0" text="Date" textAlignment="CENTER">
+      <Label fx:id="memberSince" alignment="CENTER" layoutX="58.0" layoutY="469.0" prefHeight="58.0" prefWidth="170.0" text="Date" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
@@ -148,7 +145,7 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label fx:id="lblId" layoutX="378.0" layoutY="192.0" prefHeight="31.0" prefWidth="195.0" text="Label" textFill="#0c9e33">
+      <Label fx:id="customerID" layoutX="378.0" layoutY="192.0" prefHeight="31.0" prefWidth="195.0" text="Label" textFill="#0c9e33">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
@@ -215,5 +212,6 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
+      <JFXComboBox fx:id="gender" layoutX="441.0" layoutY="557.0" prefHeight="25.0" prefWidth="106.0" />
    </children>
 </AnchorPane>

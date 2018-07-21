@@ -1,8 +1,11 @@
 package controller;
 
 import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
 import com.jfoenix.controls.JFXToggleButton;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -10,14 +13,16 @@ import javafx.scene.control.Label;
 import javafx.scene.control.Tooltip;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.scene.layout.Pane;
-import javafx.scene.paint.Color;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
 import javafx.stage.FileChooser;
 
+import javax.swing.*;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 /**
@@ -34,7 +39,7 @@ public class Customer implements Initializable {
     private JFXToggleButton btnEditMode;
 
     @FXML
-    private Label customerID;
+    private Label customerID, memberSince;
 
     @FXML
     private JFXTextField phone;
@@ -52,7 +57,7 @@ public class Customer implements Initializable {
     private JFXTextField email;
 
     @FXML
-    private JFXTextField gender;
+    private JFXComboBox gender;
 
 
     @Override
@@ -71,6 +76,46 @@ public class Customer implements Initializable {
                 fc.showOpenDialog(btnEditMode.getScene().getWindow());
             }
         });
+
+        //Setting gender button
+        gender.setItems(FXCollections.observableArrayList("Male", "Female"));
+
+        //Fetching data from Database
+        Connection connection = DBConnection.getConnection();
+        try {
+            PreparedStatement ps = connection.prepareStatement("SELECT * FROM customers");
+            ResultSet rs = ps.executeQuery();
+
+            ObservableList<sample.Customer> customersList = FXCollections.observableArrayList();
+
+            while(rs.next()) {
+                customersList.add(new sample.Customer(
+                        rs.getInt(1),
+                        rs.getString(2),
+                        rs.getString(3),
+                        rs.getString(4),
+                        rs.getString(5),
+                        rs.getString(6),
+                        rs.getString(7),
+                        rs.getString(8),
+                        rs.getString(9),
+                        rs.getDate(10)));
+            }
+
+            sample.Customer onView = customersList.get(0);
+
+            //Setting customer default fields
+            customerID.setText(String.valueOf(onView.getId()));
+            txtFName.setText(onView.getFirstName());
+            txtLName.setText(onView.getLastName());
+            address.setText(onView.getAddress());
+            email.setText(onView.getEmail());
+            phone.setText(onView.getPhone());
+            memberSince.setText(onView.getDate().toString());
+            gender.setValue(onView.getGender());
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     //This method will toggle edit mode on/off in customer layout

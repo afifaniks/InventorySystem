@@ -34,7 +34,7 @@
 
 .button:hover {
     -fx-background-color: #37474F;
-    -fx-font-size: 21px;
+    -fx-font-size: 17px;
 }
 
 #paneRight {

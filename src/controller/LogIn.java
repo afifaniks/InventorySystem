@@ -26,7 +26,6 @@ import java.util.ResourceBundle;
  * Project: TeslaRentalInventory
  **/
 public class LogIn implements Initializable{
-    private static final String URL = "jdbc:mysql://localhost:3306/tri?autoReconnect=yes&useSSL=no";
     private static final String DIALOG_URL = "/fxml/dialog.fxml";
     private static final String RED = "-fx-text-fill: red";
     public static String loggerUsername = "";
@@ -120,9 +119,8 @@ public class LogIn implements Initializable{
             lblWarnPassword.setVisible(true);
         } else {
             try {
-                Connection con = DriverManager.getConnection(URL, "root", "3267");
-
-                String sql = "SELECT * FROM accessInfo WHERE username = '" + username + "' AND pass = '" + password + "'";
+                Connection con = DBConnection.getConnection();
+                String sql = "SELECT * FROM user WHERE username = '" + username + "' AND password = '" + password + "'";
                 PreparedStatement ps = con.prepareStatement(sql);
                 ResultSet rs = ps.executeQuery();
 
@@ -150,12 +148,11 @@ public class LogIn implements Initializable{
                 } else {
                     new sample.Dialog("Authentication Error!", "Either username or password did not match!");
                 }
+                System.out.println("Executed");
                 con.close();
             } catch (SQLException e) {
                 System.out.println(e.getErrorCode());
-                if (e.getErrorCode() == 0) { //Error Code 0: database server offline
-                    new sample.Dialog("Error!", "Database server is offline!");
-                }
+
             }
         }
     }
