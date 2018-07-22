@@ -16,8 +16,9 @@ import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 import sample.Dialog;
 
-import java.io.IOException;
+import java.io.*;
 import java.sql.*;
+import java.util.Properties;
 import java.util.ResourceBundle;
 
 /**
@@ -51,6 +52,11 @@ public class LogIn implements Initializable{
 
     @FXML
     private JFXCheckBox chkPasswordMask;
+
+    @FXML
+    private JFXCheckBox chkSaveCredentials;
+
+    private Properties credentials = new Properties();
 
     @FXML
     void ctrlLogInCheck(ActionEvent event)  {
@@ -95,8 +101,14 @@ public class LogIn implements Initializable{
             lblWarnPassword.setVisible(false);
         });
 
-        txtUsername.setText("kamla");
-        txtPassword.setText("0000");
+        //Setting fields from credential property file
+        try {
+            credentials.load(new FileInputStream("src/config.properties"));
+            txtUsername.setText(credentials.getProperty("username"));
+            txtPassword.setText(credentials.getProperty("password"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     private void userLogger() {
@@ -145,10 +157,25 @@ public class LogIn implements Initializable{
                     base.setTitle("Tesla Rental Inventory");
                     base.setScene(scene);
                     base.show();
+
+                    //Checking for Save Credential CheckBox
+                    //Upon true value saving new credents on property file
+                    if(chkSaveCredentials.isSelected()) {
+                        try {
+                            OutputStream newCredents = new FileOutputStream("src/config.properties");
+                            credentials.setProperty("username", username);
+                            credentials.setProperty("password", password);
+
+                            credentials.store(newCredents, null);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
+
                 } else {
                     new sample.Dialog("Authentication Error!", "Either username or password did not match!");
                 }
-                System.out.println("Executed");
+
                 con.close();
             } catch (SQLException e) {
                 System.out.println(e.getErrorCode());

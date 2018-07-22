@@ -4,6 +4,7 @@
 <?import com.jfoenix.controls.JFXCheckBox?>
 <?import com.jfoenix.controls.JFXPasswordField?>
 <?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Tooltip?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -26,7 +27,10 @@
             <Tooltip text="Show/Hide Password" />
          </tooltip>
       </JFXCheckBox>
-      <JFXButton fx:id="btnLogIn" layoutX="453.0" layoutY="328.0" onAction="#ctrlLogInCheck" onKeyPressed="#onEnterKey" prefHeight="51.0" prefWidth="112.0" text="Log In" />
+      <JFXButton fx:id="btnLogIn" layoutX="453.0" layoutY="310.0" onAction="#ctrlLogInCheck" onKeyPressed="#onEnterKey" prefHeight="51.0" prefWidth="112.0" text="Log In">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
       <JFXTextField fx:id="txtPasswordShown" focusColor="#243035" labelFloat="true" layoutX="158.0" layoutY="209.0" onKeyPressed="#onEnterKey" prefHeight="30.0" prefWidth="311.0" promptText="password">
          <font>
             <Font size="14.0" />
@@ -43,5 +47,10 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
+      <JFXCheckBox fx:id="chkSaveCredentials" checkedColor="#263238" layoutX="158.0" layoutY="327.0" prefHeight="18.0" prefWidth="128.0" text="Save Credentials">
+         <tooltip>
+            <Tooltip text="Save credentials for later use" />
+         </tooltip>
+      </JFXCheckBox>
    </children>
 </AnchorPane>
