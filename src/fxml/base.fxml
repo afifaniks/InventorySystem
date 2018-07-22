@@ -119,31 +119,47 @@
                   </JFXButton>
                   <AnchorPane fx:id="paneAccountSection" layoutX="20.0" layoutY="381.0" prefHeight="109.0" prefWidth="229.0" AnchorPane.bottomAnchor="21.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0">
                      <children>
-                        <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="14.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="29.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="171.0" AnchorPane.topAnchor="37.0">
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="92.0" layoutY="65.0" prefHeight="21.0" prefWidth="83.0" text="Access Level:" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="90.0">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblAccessLevel" alignment="CENTER" contentDisplay="CENTER" layoutX="92.0" layoutY="80.0" prefHeight="21.0" prefWidth="83.0" text="Level" textAlignment="CENTER" textFill="#00ff22" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="90.0">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="94.0" layoutY="29.0" prefHeight="21.0" prefWidth="83.0" text="Logged in as:" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="90.0">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblUsername" alignment="CENTER" contentDisplay="CENTER" layoutX="93.0" layoutY="46.0" prefHeight="21.0" prefWidth="83.0" text="username" textAlignment="CENTER" textFill="#00ff22" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="90.0">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblClock" alignment="CENTER" contentDisplay="CENTER" layoutX="53.0" layoutY="4.0" prefHeight="21.0" prefWidth="160.0" text="Clock" textAlignment="CENTER" textFill="#03d1ff" AnchorPane.leftAnchor="53.0" AnchorPane.rightAnchor="53.0">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <JFXButton alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="14.0" layoutY="30.0" onAction="#logOut" prefHeight="50.0" prefWidth="50.0" ripplerFill="WHITE" AnchorPane.leftAnchor="4.0">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="SIGN_OUT" size="30" wrappingWidth="24.28571319580078" />
+                           </graphic>
+                           <tooltip>
+                              <Tooltip text="Click to log out" />
+                           </tooltip>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="200.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../resource/icons/Accounts_main.png" />
                            </image>
                         </ImageView>
-                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="74.0" layoutY="62.0" prefHeight="21.0" prefWidth="83.0" text="Access Level:" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="74.0" AnchorPane.rightAnchor="78.0">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label fx:id="lblAccessLevel" alignment="CENTER" contentDisplay="CENTER" layoutX="74.0" layoutY="77.0" prefHeight="21.0" prefWidth="83.0" text="Level" textAlignment="CENTER" textFill="#00ff22" AnchorPane.leftAnchor="74.0" AnchorPane.rightAnchor="78.0">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="74.0" layoutY="19.0" prefHeight="21.0" prefWidth="83.0" text="Logged in as:" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="74.0" AnchorPane.rightAnchor="78.0">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label fx:id="lblUsername" alignment="CENTER" contentDisplay="CENTER" layoutX="74.0" layoutY="34.0" prefHeight="21.0" prefWidth="83.0" text="username" textAlignment="CENTER" textFill="#00ff22" AnchorPane.leftAnchor="74.0" AnchorPane.rightAnchor="78.0">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
                      </children>
                   </AnchorPane>
                </children>

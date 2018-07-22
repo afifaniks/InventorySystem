@@ -59,9 +59,23 @@ public class Customer implements Initializable {
     @FXML
     private JFXComboBox gender;
 
+    @FXML
+    private JFXButton btnPrevEntry;
+
+    @FXML
+    private JFXButton btnNextEntry;
+
+    @FXML
+    private Label lblPageIndex;
+
+    private static int recordIndex = 0;
+    private ObservableList<sample.Customer> customersList = FXCollections.observableArrayList();
+    private sample.Customer onView = null;
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+
         ImagePattern img = new ImagePattern(new Image("/resource/icons/10407479_1396350623998299_689954862227931112_n.jpg"));
         imgCustomerPhoto.setFill(img);
 
@@ -86,8 +100,6 @@ public class Customer implements Initializable {
             PreparedStatement ps = connection.prepareStatement("SELECT * FROM customers");
             ResultSet rs = ps.executeQuery();
 
-            ObservableList<sample.Customer> customersList = FXCollections.observableArrayList();
-
             while(rs.next()) {
                 customersList.add(new sample.Customer(
                         rs.getInt(1),
@@ -102,20 +114,40 @@ public class Customer implements Initializable {
                         rs.getDate(10)));
             }
 
-            sample.Customer onView = customersList.get(0);
+            onView = customersList.get(recordIndex); //Setting value for current record
 
             //Setting customer default fields
-            customerID.setText(String.valueOf(onView.getId()));
-            txtFName.setText(onView.getFirstName());
-            txtLName.setText(onView.getLastName());
-            address.setText(onView.getAddress());
-            email.setText(onView.getEmail());
-            phone.setText(onView.getPhone());
-            memberSince.setText(onView.getDate().toString());
-            gender.setValue(onView.getGender());
+            recordNavigator();
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
+        //Setting page indexer value
+        lblPageIndex.setText("Showing " + (recordIndex + 1) + " of " + customersList.size() +" results.");
+
+        //Setting next entry if any on next button action
+        btnNextEntry.setOnAction(event -> {
+            onView = customersList.get(++recordIndex);
+            recordNavigator();
+            lblPageIndex.setText("Showing " + (recordIndex + 1) + " of " + customersList.size() +" results.");
+            if(recordIndex == customersList.size() - 1)
+                btnNextEntry.setDisable(true);
+
+        });
+
+        //Setting previous entry if any on previous button action
+        btnPrevEntry.setOnAction(event -> {
+            onView = customersList.get(--recordIndex);
+            recordNavigator();
+            lblPageIndex.setText("Showing " + (recordIndex + 1) + " of " + customersList.size() +" results.");
+
+            if(recordIndex == 0)
+                btnPrevEntry.setDisable(true);
+
+        });
+
+        btnPrevEntry.setDisable(true);
     }
 
     //This method will toggle edit mode on/off in customer layout
@@ -139,4 +171,21 @@ public class Customer implements Initializable {
             gender.setEditable(false);
         }
     }
+
+    //This method will navigate between customer records
+
+    private void recordNavigator() {
+        customerID.setText(String.valueOf(onView.getId()));
+        txtFName.setText(onView.getFirstName());
+        txtLName.setText(onView.getLastName());
+        address.setText(onView.getAddress());
+        email.setText(onView.getEmail());
+        phone.setText(onView.getPhone());
+        memberSince.setText(onView.getDate().toString());
+        gender.setValue(onView.getGender());
+
+        //Re-initiating navigator button property
+        btnPrevEntry.setDisable(false);
+        btnNextEntry.setDisable(false);
+ }
 }

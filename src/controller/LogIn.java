@@ -141,6 +141,20 @@ public class LogIn implements Initializable{
                     loggerUsername = rs.getString("username");
                     loggerAccessLevel = rs.getString("accessLevel");
 
+                    //Checking for Save Credential CheckBox
+                    //Upon true value saving new credents on property file
+                    if(chkSaveCredentials.isSelected()) {
+                        try {
+                            OutputStream newCredents = new FileOutputStream("src/config.properties");
+                            credentials.setProperty("username", username);
+                            credentials.setProperty("password", password);
+
+                            credentials.store(newCredents, null);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
+
                     Stage logIn = (Stage) btnLogIn.getScene().getWindow();
                     logIn.close();
 
@@ -158,19 +172,7 @@ public class LogIn implements Initializable{
                     base.setScene(scene);
                     base.show();
 
-                    //Checking for Save Credential CheckBox
-                    //Upon true value saving new credents on property file
-                    if(chkSaveCredentials.isSelected()) {
-                        try {
-                            OutputStream newCredents = new FileOutputStream("src/config.properties");
-                            credentials.setProperty("username", username);
-                            credentials.setProperty("password", password);
 
-                            credentials.store(newCredents, null);
-                        } catch (Exception e) {
-                            e.printStackTrace();
-                        }
-                    }
 
                 } else {
                     new sample.Dialog("Authentication Error!", "Either username or password did not match!");

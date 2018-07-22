@@ -2,18 +2,24 @@ package controller;
 
 import com.jfoenix.controls.JFXButton;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.Tooltip;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 import javax.swing.*;
 import java.io.IOException;
 import java.net.URL;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ResourceBundle;
 
 /**
@@ -51,6 +57,9 @@ public class Base implements Initializable{
     private JFXButton btnAdmin;
 
     @FXML
+    private Label lblClock;
+
+    @FXML
     private JFXButton btnRentals;
 
     @FXML
@@ -63,6 +72,7 @@ public class Base implements Initializable{
     private JFXButton temp = null;
     private JFXButton recover = null;
     private static boolean anchorFlag = false;
+    private final static String LOGIN_URL = "/fxml/login.fxml";
     private final static String INVENTORY_URL = "/fxml/inventory.fxml";
     private final static String CUSTOMER_URL = "/fxml/customer.fxml";
     private final static String DASHBOARD_URL = "/fxml/dashboard.fxml";
@@ -185,9 +195,61 @@ public class Base implements Initializable{
 
         }
 
+        //Setting Clock within a new Thread
+        Runnable clock = new Runnable() {
+            @Override
+            public void run() {
+                runClock();
+            }
+        };
+
+        Thread newClock = new Thread(clock); //Creating new thread
+        newClock.setDaemon(true); //Thread will automatically close on applications closing
+        newClock.start(); //Starting Thread
+
         //Setting Dashboard on RightPane
         try {
             ctrlRightPane(DASHBOARD_URL);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    //This method will set the clock running
+    private void runClock() {
+        while (true) {
+            Platform.runLater(new Runnable() {
+                @Override
+                public void run() {
+                    lblClock.setText(LocalTime.now().format(
+                            DateTimeFormatter.ofPattern("hh:mm:ss a")));
+
+                }
+            });
+
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    //Upon logging out this method will set log in prompt on
+    //screen by closing main application
+    @FXML
+    private void logOut() {
+        Stage current = (Stage)lblUsername.getScene().getWindow();
+        current.close();
+
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource(LOGIN_URL));
+            root.getStylesheets().add("/css/login.css");
+            Scene scene = new Scene(root);
+            Stage logInPrompt = new Stage();
+            logInPrompt.setScene(scene);
+            logInPrompt.show();
+
         } catch (IOException e) {
             e.printStackTrace();
         }
