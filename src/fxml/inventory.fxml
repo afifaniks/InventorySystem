@@ -137,7 +137,7 @@
             <MaterialDesignIconView fill="#263238" glyphName="CONTENT_SAVE" size="30" />
          </graphic>
       </JFXButton>
-      <JFXButton alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="729.0" layoutY="208.0" prefHeight="50.0" prefWidth="147.0" ripplerFill="WHITE" stylesheets="@../css/customer.css" text="Update Stock">
+      <JFXButton alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="729.0" layoutY="208.0" prefHeight="50.0" prefWidth="147.0" ripplerFill="WHITE" text="Update Stock">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -148,7 +148,7 @@
             <Font size="15.0" />
          </font>
       </JFXButton>
-      <JFXButton alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="729.0" layoutY="278.0" prefHeight="50.0" prefWidth="147.0" ripplerFill="WHITE" stylesheets="@../css/customer.css" text="List All">
+      <JFXButton alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="729.0" layoutY="278.0" prefHeight="50.0" prefWidth="147.0" ripplerFill="WHITE" text="List All">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -159,7 +159,7 @@
             <Font size="15.0" />
          </font>
       </JFXButton>
-      <JFXButton alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="729.0" layoutY="350.0" prefHeight="50.0" prefWidth="147.0" ripplerFill="WHITE" stylesheets="@../css/customer.css" text="Most Sold">
+      <JFXButton alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="729.0" layoutY="350.0" prefHeight="50.0" prefWidth="147.0" ripplerFill="WHITE" text="Most Sold">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>

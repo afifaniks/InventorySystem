@@ -1,176 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXRadioButton?>
-<?import com.jfoenix.controls.JFXTextField?>
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Separator?>
-<?import javafx.scene.control.Tooltip?>
-<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="661.0" prefWidth="1107.0" stylesheets="/css/administrator.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Administrator">
    <children>
       <AnchorPane layoutX="4.0" prefHeight="85.0" prefWidth="1169.0" style="-fx-background-color: #253238;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
-            <Label alignment="CENTER" layoutX="420.0" layoutY="6.0" prefHeight="72.0" prefWidth="268.0" text="Items" textFill="WHITE" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="419.0">
+            <Label alignment="CENTER" layoutX="271.0" layoutY="6.0" prefHeight="72.0" prefWidth="566.0" text="Admin Panel" textFill="WHITE" AnchorPane.leftAnchor="271.0" AnchorPane.rightAnchor="270.0">
                <font>
                   <Font name="System Bold" size="33.0" />
                </font>
                <graphic>
-                  <MaterialDesignIconView fill="WHITE" glyphName="BASKET" size="40" text="" />
+                  <MaterialDesignIconView fill="RED" glyphName="ACCOUNT_KEY" size="40" textAlignment="JUSTIFY" />
                </graphic>
             </Label>
          </children>
       </AnchorPane>
-      <JFXTextField fx:id="txtFName" alignment="CENTER" editable="false" focusColor="#263238" layoutX="388.0" layoutY="249.0" prefHeight="31.0" prefWidth="232.0">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </JFXTextField>
-      <JFXTextField fx:id="txtLName" alignment="CENTER" editable="false" focusColor="#263238" layoutX="388.0" layoutY="312.0" prefHeight="31.0" prefWidth="232.0">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </JFXTextField>
-      <Label layoutX="303.0" layoutY="368.0" prefHeight="44.0" prefWidth="85.0" text="Rental/Sale:">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Label>
-      <JFXTextField fx:id="phone" alignment="CENTER" editable="false" focusColor="#263238" layoutX="388.0" layoutY="426.0" prefHeight="31.0" prefWidth="232.0">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </JFXTextField>
-      <Label layoutX="303.0" layoutY="196.0" prefHeight="44.0" prefWidth="78.0" text="Item ID:">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Label>
-      <Label fx:id="customerID" layoutX="388.0" layoutY="202.0" prefHeight="31.0" prefWidth="195.0" text="Label" textFill="#0c9e33">
-         <font>
-            <Font name="System Bold" size="20.0" />
-         </font>
-      </Label>
-      <Label layoutX="303.0" layoutY="420.0" prefHeight="44.0" prefWidth="78.0" text="Rent Rate:">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="303.0" layoutY="243.0" prefHeight="44.0" prefWidth="78.0" text="Name:">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="303.0" layoutY="306.0" prefHeight="44.0" prefWidth="78.0" text="Type:">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Label>
-      <Circle fx:id="imgCustomerPhoto" fill="#ffffff00" layoutX="148.0" layoutY="303.0" radius="124.0" stroke="WHITE" strokeType="INSIDE">
-         <effect>
-            <DropShadow />
-         </effect>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </Circle>
-      <Label alignment="CENTER" layoutX="105.0" layoutY="436.0" prefHeight="58.0" prefWidth="106.0" text="On Stock:">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Label>
-      <Label fx:id="memberSince" alignment="CENTER" layoutX="68.0" layoutY="479.0" prefHeight="58.0" prefWidth="170.0" text="Stock" textAlignment="CENTER">
-         <font>
-            <Font name="System Bold" size="40.0" />
-         </font>
-      </Label>
-      <JFXRadioButton layoutX="422.0" layoutY="382.0" text="Rent" />
-      <JFXRadioButton layoutX="504.0" layoutY="382.0" text="Sale" />
-      <JFXTextField fx:id="phone1" alignment="CENTER" editable="false" focusColor="#263238" layoutX="388.0" layoutY="478.0" prefHeight="31.0" prefWidth="232.0">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </JFXTextField>
-      <Label layoutX="303.0" layoutY="472.0" prefHeight="44.0" prefWidth="78.0" text="Price:">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Label>
-      <Separator layoutX="677.0" layoutY="196.0" orientation="VERTICAL" prefHeight="332.0" prefWidth="5.0" style="-fx-background-color: #263238;" />
-      <Label fx:id="lblPageIndex" alignment="CENTER" layoutX="503.0" layoutY="595.0" prefHeight="31.0" prefWidth="349.0" text="Showing m of n results." textAlignment="CENTER" />
-      <JFXButton fx:id="btnPrevEntry" alignment="CENTER" contentDisplay="CENTER" layoutX="233.0" layoutY="569.0" prefHeight="53.0" prefWidth="59.0" ripplerFill="WHITE" style="-fx-background-radius: 30 0 0 30;" stylesheets="@../css/customer.css">
-         <graphic>
-            <FontAwesomeIconView fill="#263238" glyphName="ANGLE_LEFT" size="40" strokeLineCap="ROUND" wrappingWidth="13.071428298950195" />
-         </graphic>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </JFXButton>
-      <JFXButton alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="305.0" layoutY="570.0" prefHeight="51.0" prefWidth="70.0" ripplerFill="WHITE" stylesheets="@../css/customer.css">
+      <JFXButton alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="141.0" layoutY="168.0" prefHeight="50.0" prefWidth="147.0" ripplerFill="WHITE" text="Last 30 Days">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
          <graphic>
-            <FontAwesomeIconView fill="#263238" glyphName="PLUS" size="30" />
-         </graphic>
-      </JFXButton>
-      <JFXButton fx:id="btnNextEntry" alignment="CENTER" contentDisplay="CENTER" layoutX="471.0" layoutY="569.0" prefHeight="53.0" prefWidth="59.0" ripplerFill="WHITE" style="-fx-background-radius: 0 30 30 0;" stylesheets="@../css/customer.css">
-         <graphic>
-            <FontAwesomeIconView fill="#263238" glyphName="ANGLE_RIGHT" size="40" strokeLineCap="ROUND" text="" wrappingWidth="13.071428298950195" />
-         </graphic>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </JFXButton>
-      <JFXButton alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="389.0" layoutY="570.0" prefHeight="51.0" prefWidth="70.0" ripplerFill="WHITE" stylesheets="@../css/customer.css">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-         <graphic>
-            <MaterialDesignIconView fill="#263238" glyphName="CONTENT_SAVE" size="30" />
-         </graphic>
-      </JFXButton>
-      <JFXButton alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="729.0" layoutY="208.0" prefHeight="50.0" prefWidth="147.0" ripplerFill="WHITE" stylesheets="@../css/customer.css" text="Update Stock">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-         <graphic>
-            <FontAwesomeIconView fill="WHITE" glyphName="USER" size="30" />
+            <FontAwesomeIconView fill="#263238" glyphName="RECYCLE" size="30" />
          </graphic>
          <font>
             <Font size="15.0" />
          </font>
       </JFXButton>
-      <JFXButton alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="729.0" layoutY="278.0" prefHeight="50.0" prefWidth="147.0" ripplerFill="WHITE" stylesheets="@../css/customer.css" text="List All">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-         <graphic>
-            <FontAwesomeIconView fill="WHITE" glyphName="USD" size="30" />
-         </graphic>
-         <font>
-            <Font size="15.0" />
-         </font>
-      </JFXButton>
-      <JFXButton alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="729.0" layoutY="350.0" prefHeight="50.0" prefWidth="147.0" ripplerFill="WHITE" stylesheets="@../css/customer.css" text="Most Sold">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-         <graphic>
-            <FontAwesomeIconView fill="WHITE" glyphName="RECYCLE" size="30" />
-         </graphic>
-         <font>
-            <Font size="15.0" />
-         </font>
-      </JFXButton>
-      <JFXButton alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="729.0" layoutY="426.0" prefHeight="50.0" prefWidth="147.0" ripplerFill="WHITE" style="-fx-background-color: green;" stylesheets="@../css/customer.css" text="View All">
+      <JFXButton alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="760.0" layoutY="292.0" prefHeight="50.0" prefWidth="147.0" ripplerFill="WHITE" style="-fx-background-color: green;" text="Update">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -181,21 +44,157 @@
             <Font size="15.0" />
          </font>
       </JFXButton>
-      <JFXTextField fx:id="txtSearch" alignment="CENTER" focusColor="#263238" layoutX="835.0" layoutY="123.0" prefHeight="25.0" prefWidth="195.0">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </JFXTextField>
-      <JFXButton fx:id="btnSearch" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="1038.0" layoutY="123.0" prefHeight="44.0" prefWidth="45.0" ripplerFill="WHITE" style="-fx-background-radius: 30 30 30 30;" stylesheets="@../css/customer.css">
+      <JFXButton alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="554.0" layoutY="168.0" prefHeight="50.0" prefWidth="147.0" ripplerFill="WHITE" text="Total Rents">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
          <graphic>
-            <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" size="25" />
+            <FontAwesomeIconView fill="#263238" glyphName="RECYCLE" size="30" />
          </graphic>
-         <tooltip>
-            <Tooltip text="Search with customers name" />
-         </tooltip>
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="52.0" layoutY="113.0" prefHeight="51.0" prefWidth="134.0" text="History" textFill="GREEN">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <JFXButton alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="358.0" layoutY="168.0" prefHeight="50.0" prefWidth="147.0" ripplerFill="WHITE" text="Total Sell">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIconView fill="#263238" glyphName="RECYCLE" size="30" />
+         </graphic>
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="52.0" layoutY="226.0" prefHeight="51.0" prefWidth="306.0" text="Employee Management" textFill="GREEN">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <JFXButton alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="141.0" layoutY="292.0" prefHeight="50.0" prefWidth="147.0" ripplerFill="WHITE" text="Add New">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIconView fill="#263238" glyphName="RECYCLE" size="30" />
+         </graphic>
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="358.0" layoutY="292.0" prefHeight="50.0" prefWidth="147.0" ripplerFill="WHITE" text="Remove">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIconView fill="#263238" glyphName="RECYCLE" size="30" />
+         </graphic>
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="561.0" layoutY="432.0" prefHeight="50.0" prefWidth="147.0" ripplerFill="WHITE" style="-fx-background-color: green;" text="Update">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="ASTERISK" size="30" />
+         </graphic>
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="59.0" layoutY="359.0" prefHeight="51.0" prefWidth="306.0" text="Account Management" textFill="GREEN">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <JFXButton alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="148.0" layoutY="432.0" prefHeight="50.0" prefWidth="147.0" ripplerFill="WHITE" text="Add New">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIconView fill="#263238" glyphName="RECYCLE" size="30" />
+         </graphic>
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="365.0" layoutY="432.0" prefHeight="50.0" prefWidth="147.0" ripplerFill="WHITE" text="Remove">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIconView fill="#263238" glyphName="RECYCLE" size="30" />
+         </graphic>
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="760.0" layoutY="180.0" prefHeight="50.0" prefWidth="147.0" ripplerFill="WHITE" text="Transactions">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIconView fill="#263238" glyphName="RECYCLE" size="30" />
+         </graphic>
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="554.0" layoutY="292.0" prefHeight="50.0" prefWidth="147.0" ripplerFill="WHITE" text="View All">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIconView fill="#263238" glyphName="RECYCLE" size="30" />
+         </graphic>
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="834.0" layoutY="503.0" prefHeight="118.0" prefWidth="198.0" ripplerFill="WHITE" style="-fx-background-color: red; -fx-background-radius: 100 100 100 100; -fx-text-fill: white;" text="Trancate Everything" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="TRASH" size="30" />
+         </graphic>
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="52.0" layoutY="495.0" prefHeight="51.0" prefWidth="306.0" text="Customers" textFill="GREEN">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <JFXButton alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="141.0" layoutY="568.0" prefHeight="50.0" prefWidth="147.0" ripplerFill="WHITE" text="Top 10">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIconView fill="#263238" glyphName="RECYCLE" size="30" />
+         </graphic>
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="358.0" layoutY="568.0" prefHeight="50.0" prefWidth="147.0" ripplerFill="WHITE" text="Most Due">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIconView fill="#263238" glyphName="RECYCLE" size="30" />
+         </graphic>
+         <font>
+            <Font size="15.0" />
+         </font>
       </JFXButton>
    </children>
 </AnchorPane>

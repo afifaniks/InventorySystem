@@ -14,7 +14,7 @@ import javafx.scene.control.Label;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
-import sample.Dialog;
+import sample.DBConnection;
 
 import java.io.*;
 import java.sql.*;
