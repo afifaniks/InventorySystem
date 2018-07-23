@@ -15,12 +15,8 @@ import javafx.scene.image.Image;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
 import javafx.stage.FileChooser;
-import sample.DBConnection;
+
 import java.net.URL;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 /**
@@ -32,6 +28,7 @@ public class Customer implements Initializable {
 
     @FXML
     private Circle imgCustomerPhoto;
+
 
     @FXML
     private JFXToggleButton btnEditMode;
@@ -67,7 +64,9 @@ public class Customer implements Initializable {
     private Label lblPageIndex;
 
     private static int recordIndex = 0;
-    private ObservableList<sample.Customer> customersList = FXCollections.observableArrayList();
+    private static int recordSize = 0;
+
+    public static ObservableList<sample.Customer> customersList = FXCollections.observableArrayList(); //This field will auto set from Initializer Class
     private sample.Customer onView = null;
 
 
@@ -75,7 +74,7 @@ public class Customer implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
 
         recordIndex = 0; //Resetting record index
-
+        recordSize = customersList.size();
         ImagePattern img = new ImagePattern(new Image("/resource/icons/10407479_1396350623998299_689954862227931112_n.jpg"));
         imgCustomerPhoto.setFill(img);
 
@@ -94,44 +93,20 @@ public class Customer implements Initializable {
         //Setting gender button
         gender.setItems(FXCollections.observableArrayList("Male", "Female"));
 
-        //Fetching data from Database
-        Connection connection = DBConnection.getConnection();
-        try {
-            PreparedStatement ps = connection.prepareStatement("SELECT * FROM customers");
-            ResultSet rs = ps.executeQuery();
+        onView = customersList.get(recordIndex); //Setting value for current record
 
-            while(rs.next()) {
-                customersList.add(new sample.Customer(
-                        rs.getInt(1),
-                        rs.getString(2),
-                        rs.getString(3),
-                        rs.getString(4),
-                        rs.getString(5),
-                        rs.getString(6),
-                        rs.getString(7),
-                        rs.getString(8),
-                        rs.getString(9),
-                        rs.getDate(10)));
-            }
-
-            onView = customersList.get(recordIndex); //Setting value for current record
-
-            //Setting customer default fields
-            recordNavigator();
-
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+        //Setting customer default fields
+        recordNavigator();
 
         //Setting page indexer value
-        lblPageIndex.setText("Showing " + (recordIndex + 1) + " of " + customersList.size() +" results.");
+        lblPageIndex.setText("Showing " + (recordIndex + 1) + " of " + recordSize +" results.");
 
         //Setting next entry if any on next button action
         btnNextEntry.setOnAction(event -> {
             onView = customersList.get(++recordIndex);
             recordNavigator();
-            lblPageIndex.setText("Showing " + (recordIndex + 1) + " of " + customersList.size() +" results.");
-            if(recordIndex == customersList.size() - 1)
+            lblPageIndex.setText("Showing " + (recordIndex + 1) + " of " + recordSize +" results.");
+            if(recordIndex == recordSize - 1)
                 btnNextEntry.setDisable(true);
 
         });
@@ -140,7 +115,7 @@ public class Customer implements Initializable {
         btnPrevEntry.setOnAction(event -> {
             onView = customersList.get(--recordIndex);
             recordNavigator();
-            lblPageIndex.setText("Showing " + (recordIndex + 1) + " of " + customersList.size() +" results.");
+            lblPageIndex.setText("Showing " + (recordIndex + 1) + " of " + recordSize +" results.");
 
             if(recordIndex == 0)
                 btnPrevEntry.setDisable(true);

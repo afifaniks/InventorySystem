@@ -14,7 +14,6 @@
 }
 
 .button {
-
     -fx-text-fill: #ffffff;
     -fx-text-alignment: center;
     -fx-font-size: 15px;
@@ -34,7 +33,8 @@
 
 .button:hover {
     -fx-background-color: #37474F;
-    -fx-font-size: 17px;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
 }
 
 #paneRight {

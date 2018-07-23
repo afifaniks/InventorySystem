@@ -1,27 +1,3 @@
 Manifest-Version: 1.0
-Class-Path: C:\Program Files\Java\jdk1.8.0_171\jre\lib\charsets.jar;C:
- \Program Files\Java\jdk1.8.0_171\jre\lib\deploy.jar;C:\Program Files\
- Java\jdk1.8.0_171\jre\lib\ext\access-bridge-64.jar;C:\Program Files\J
- ava\jdk1.8.0_171\jre\lib\ext\cldrdata.jar;C:\Program Files\Java\jdk1.
- 8.0_171\jre\lib\ext\dnsns.jar;C:\Program Files\Java\jdk1.8.0_171\jre\
- lib\ext\jaccess.jar;C:\Program Files\Java\jdk1.8.0_171\jre\lib\ext\jf
- xrt.jar;C:\Program Files\Java\jdk1.8.0_171\jre\lib\ext\localedata.jar
- ;C:\Program Files\Java\jdk1.8.0_171\jre\lib\ext\nashorn.jar;C:\Progra
- m Files\Java\jdk1.8.0_171\jre\lib\ext\sunec.jar;C:\Program Files\Java
- \jdk1.8.0_171\jre\lib\ext\sunjce_provider.jar;C:\Program Files\Java\j
- dk1.8.0_171\jre\lib\ext\sunmscapi.jar;C:\Program Files\Java\jdk1.8.0_
- 171\jre\lib\ext\sunpkcs11.jar;C:\Program Files\Java\jdk1.8.0_171\jre\
- lib\ext\zipfs.jar;C:\Program Files\Java\jdk1.8.0_171\jre\lib\javaws.j
- ar;C:\Program Files\Java\jdk1.8.0_171\jre\lib\jce.jar;C:\Program File
- s\Java\jdk1.8.0_171\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_17
- 1\jre\lib\jfxswt.jar;C:\Program Files\Java\jdk1.8.0_171\jre\lib\jsse.
- jar;C:\Program Files\Java\jdk1.8.0_171\jre\lib\management-agent.jar;C
- :\Program Files\Java\jdk1.8.0_171\jre\lib\plugin.jar;C:\Program Files
- \Java\jdk1.8.0_171\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8
- .0_171\jre\lib\rt.jar;D:\Progs\TeslaRentalInventory\out\production\Te
- slaRentalInventory;D:\Progs\TeslaRentalInventory\lib\jfoenix-8.0.5.ja
- r;D:\Progs\TeslaRentalInventory\lib\fontawesomefx-8.9.jar;D:\Progs\Te
- slaRentalInventory\lib\mysql-connector-java-8.0.11.jar;C:\Program Fil
- es\JetBrains\IntelliJ IDEA 2017.3.3\lib\idea_rt.jar
 Main-Class: sample.Main
 

@@ -103,7 +103,7 @@ public class LogIn implements Initializable{
 
         //Setting fields from credential property file
         try {
-            credentials.load(new FileInputStream("src/config.properties"));
+            credentials.load(new FileInputStream("src/resource/config.properties"));
             txtUsername.setText(credentials.getProperty("username"));
             txtPassword.setText(credentials.getProperty("password"));
         } catch (IOException e) {
@@ -145,7 +145,7 @@ public class LogIn implements Initializable{
                     //Upon true value saving new credents on property file
                     if(chkSaveCredentials.isSelected()) {
                         try {
-                            OutputStream newCredents = new FileOutputStream("src/config.properties");
+                            OutputStream newCredents = new FileOutputStream("src/resource/config.properties");
                             credentials.setProperty("username", username);
                             credentials.setProperty("password", password);
 
@@ -155,25 +155,20 @@ public class LogIn implements Initializable{
                         }
                     }
 
-                    Stage logIn = (Stage) btnLogIn.getScene().getWindow();
-                    logIn.close();
+                    Stage logIn = (Stage) btnLogIn.getScene().getWindow(); //Getting current window
 
                     Stage base = new Stage();
                     Parent root = null;
+
+                    //Moving to Initializer Class to load all required resources
                     try {
-                        root = FXMLLoader.load(getClass().getResource("/fxml/base.fxml"));
+                        root = FXMLLoader.load(getClass().getResource("/fxml/initializer.fxml"));
+                        Scene s = new Scene(root);
+                        logIn.setScene(s);
+
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
-                    Scene scene = new Scene(root);
-                    String css = this.getClass().getResource("/css/base.css").toExternalForm();
-                    scene.getStylesheets().add(css);
-                    base.setTitle("Tesla Rental Inventory");
-                    base.setScene(scene);
-                    base.show();
-
-
-
                 } else {
                     new sample.Dialog("Authentication Error!", "Either username or password did not match!");
                 }
