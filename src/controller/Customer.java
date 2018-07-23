@@ -76,6 +76,8 @@ public class Customer implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
+        recordIndex = 0; //Resetting record index
+        
         ImagePattern img = new ImagePattern(new Image("/resource/icons/10407479_1396350623998299_689954862227931112_n.jpg"));
         imgCustomerPhoto.setFill(img);
 
