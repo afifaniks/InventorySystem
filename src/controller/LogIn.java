@@ -87,6 +87,19 @@ public class LogIn implements Initializable{
 
     @Override
     public void initialize(java.net.URL location, ResourceBundle resources) {
+        Connection connection = DBConnection.getConnection();
+
+        try {
+            PreparedStatement getCredents = connection.prepareStatement("SELECT * FROM usercredents");
+            ResultSet resultSet = getCredents.executeQuery();
+
+            if(resultSet.next()) {
+                txtUsername.setText(resultSet.getString(1)); //Getting Saved Username
+                txtPassword.setText(resultSet.getString(2)); //Getting Saved Password
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         txtPasswordShown.setVisible(false);
 
         txtUsername.setOnMouseClicked(event -> {
@@ -101,12 +114,9 @@ public class LogIn implements Initializable{
             lblWarnPassword.setVisible(false);
         });
 
-        //Setting fields from credential property file
         try {
-            credentials.load(new FileInputStream("src/resource/config.properties"));
-            txtUsername.setText(credentials.getProperty("username"));
-            txtPassword.setText(credentials.getProperty("password"));
-        } catch (IOException e) {
+            connection.close();
+        } catch (SQLException e) {
             e.printStackTrace();
         }
     }
@@ -142,17 +152,13 @@ public class LogIn implements Initializable{
                     loggerAccessLevel = rs.getString("accessLevel");
 
                     //Checking for Save Credential CheckBox
-                    //Upon true value saving new credents on property file
+                    //Upon true value saving new credents in DataBase
                     if(chkSaveCredentials.isSelected()) {
-                        try {
-                            OutputStream newCredents = new FileOutputStream("src/resource/config.properties");
-                            credentials.setProperty("username", username);
-                            credentials.setProperty("password", password);
+                        PreparedStatement delPrevCredents = con.prepareStatement("DELETE FROM usercredents");
+                        delPrevCredents.executeUpdate();
 
-                            credentials.store(newCredents, null);
-                        } catch (Exception e) {
-                            e.printStackTrace();
-                        }
+                        PreparedStatement saveCredents = con.prepareStatement("INSERT INTO usercredents VALUES ('"+username+"',"+"'"+password+"')");
+                        saveCredents.executeUpdate();
                     }
 
                     Stage logIn = (Stage) btnLogIn.getScene().getWindow(); //Getting current window
