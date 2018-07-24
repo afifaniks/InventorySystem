@@ -6,6 +6,11 @@
     -fx-background-color:  #37474f;
 }
 
+.jfx-radio-button {
+    -fx-selected-color: #263238;
+    -fx-unselected-color: white;
+}
+
 .button {
     -fx-background-color: #ffffff;
     -fx-text-fill: white;

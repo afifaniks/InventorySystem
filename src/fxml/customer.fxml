@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXRadioButton?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import com.jfoenix.controls.JFXToggleButton?>
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
@@ -9,6 +9,7 @@
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.control.Tooltip?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -16,7 +17,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="661.0" prefWidth="1107.0" stylesheets="@../css/customer.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Customer">
+<AnchorPane fx:id="cusTomerPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="661.0" prefWidth="1107.0" stylesheets="@../css/customer.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Customer">
    <children>
       <JFXTextField fx:id="txtFName" alignment="CENTER" editable="false" focusColor="#263238" layoutX="378.0" layoutY="239.0" prefHeight="31.0" prefWidth="232.0">
          <font>
@@ -52,7 +53,7 @@
             <Font size="15.0" />
          </font></JFXTextField>
       <Separator layoutX="659.0" layoutY="247.0" orientation="VERTICAL" prefHeight="332.0" prefWidth="5.0" style="-fx-background-color: #263238;" />
-      <Label layoutX="56.0" layoutY="506.0" prefHeight="44.0" prefWidth="78.0" text="Gender:">
+      <Label layoutX="45.0" layoutY="507.0" prefHeight="44.0" prefWidth="78.0" text="Gender:">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
@@ -212,6 +213,11 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <JFXComboBox fx:id="gender" layoutX="135.0" layoutY="516.0" prefHeight="25.0" prefWidth="106.0" />
+      <JFXRadioButton fx:id="radioMale" layoutX="110.0" layoutY="521.0" text="Male">
+         <toggleGroup>
+            <ToggleGroup fx:id="gender" />
+         </toggleGroup>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="radioFemale" layoutX="176.0" layoutY="521.0" stylesheets="@../css/customer.css" text="Female" toggleGroup="$gender" />
    </children>
 </AnchorPane>

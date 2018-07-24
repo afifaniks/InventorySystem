@@ -13,6 +13,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 import sample.DBConnection;
+import sample.Dialog;
 import sample.Item;
 import sample.Customer;
 
@@ -21,6 +22,7 @@ import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 /**
@@ -44,6 +46,7 @@ public class Initializer implements Initializable {
        // progressIndicator.progressProperty().bind(t.progressProperty());
         taskName.textProperty().unbind();
         taskName.textProperty().bind(initializerTask.messageProperty());
+
         new Thread(initializerTask).start();
 
         //Loading Main Application upon initializer task's succession
@@ -140,6 +143,7 @@ public class Initializer implements Initializable {
 
             //Updating Status of the Task
             this.updateMessage("Loading Finished!");
+            Thread.sleep(400);
 
             return null;
         }

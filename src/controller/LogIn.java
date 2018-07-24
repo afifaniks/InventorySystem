@@ -182,6 +182,7 @@ public class LogIn implements Initializable{
                 con.close();
             } catch (SQLException e) {
                 System.out.println(e.getErrorCode());
+                e.printStackTrace();
 
             }
         }

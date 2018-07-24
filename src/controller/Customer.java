@@ -1,15 +1,13 @@
 package controller;
 
-import com.jfoenix.controls.JFXButton;
-import com.jfoenix.controls.JFXComboBox;
-import com.jfoenix.controls.JFXTextField;
-import com.jfoenix.controls.JFXToggleButton;
+import com.jfoenix.controls.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.control.ToggleGroup;
 import javafx.scene.control.Tooltip;
 import javafx.scene.image.Image;
 import javafx.scene.paint.ImagePattern;
@@ -52,7 +50,13 @@ public class Customer implements Initializable {
     private JFXTextField email;
 
     @FXML
-    private JFXComboBox gender;
+    private JFXRadioButton radioMale;
+
+    @FXML
+    private ToggleGroup gender;
+
+    @FXML
+    private JFXRadioButton radioFemale;
 
     @FXML
     private JFXButton btnPrevEntry;
@@ -75,6 +79,7 @@ public class Customer implements Initializable {
 
         recordIndex = 0; //Resetting record index
         recordSize = customersList.size();
+
         ImagePattern img = new ImagePattern(new Image("/resource/icons/10407479_1396350623998299_689954862227931112_n.jpg"));
         imgCustomerPhoto.setFill(img);
 
@@ -90,17 +95,6 @@ public class Customer implements Initializable {
             }
         });
 
-        //Setting gender button
-        gender.setItems(FXCollections.observableArrayList("Male", "Female"));
-
-        onView = customersList.get(recordIndex); //Setting value for current record
-
-        //Setting customer default fields
-        recordNavigator();
-
-        //Setting page indexer value
-        lblPageIndex.setText("Showing " + (recordIndex + 1) + " of " + recordSize +" results.");
-
         //Setting next entry if any on next button action
         btnNextEntry.setOnAction(event -> {
             onView = customersList.get(++recordIndex);
@@ -108,6 +102,7 @@ public class Customer implements Initializable {
             lblPageIndex.setText("Showing " + (recordIndex + 1) + " of " + recordSize +" results.");
             if(recordIndex == recordSize - 1)
                 btnNextEntry.setDisable(true);
+            btnPrevEntry.setDisable(false);
 
         });
 
@@ -116,13 +111,32 @@ public class Customer implements Initializable {
             onView = customersList.get(--recordIndex);
             recordNavigator();
             lblPageIndex.setText("Showing " + (recordIndex + 1) + " of " + recordSize +" results.");
-
+            btnNextEntry.setDisable(false);
             if(recordIndex == 0)
                 btnPrevEntry.setDisable(true);
 
         });
 
-        btnPrevEntry.setDisable(true);
+
+        //Checking if there is actually any record exists
+        btnNextEntry.setDisable(true);
+
+        if (recordSize > 0) {
+            onView = customersList.get(recordIndex); //Setting value for current record
+
+            //Setting customer default fields
+            recordNavigator();
+
+            //Setting page indexer value
+            lblPageIndex.setText("Showing " + (recordIndex + 1) + " of " + recordSize + " results.");
+
+            if(recordSize > 1) {
+                btnNextEntry.setDisable(false); //Next entry will be enabled if there is more than one entry
+            }
+        }
+
+        btnPrevEntry.setDisable(true); //Disabling prevButton Initially
+
     }
 
     //This method will toggle edit mode on/off in customer layout
@@ -135,7 +149,8 @@ public class Customer implements Initializable {
             txtLName.setEditable(true);
             address.setEditable(true);
             email.setEditable(true);
-            gender.setEditable(true);
+            radioFemale.setDisable(false);
+            radioMale.setDisable(false);
         } else {
             btnEditMode.setStyle("");
             phone.setEditable(false);
@@ -143,7 +158,8 @@ public class Customer implements Initializable {
             txtLName.setEditable(false);
             address.setEditable(false);
             email.setEditable(false);
-            gender.setEditable(false);
+            radioFemale.setDisable(true);
+            radioMale.setDisable(true);
         }
     }
 
@@ -157,10 +173,11 @@ public class Customer implements Initializable {
         email.setText(onView.getEmail());
         phone.setText(onView.getPhone());
         memberSince.setText(onView.getDate().toString());
-        gender.setValue(onView.getGender());
 
-        //Re-initiating navigator button property
-        btnPrevEntry.setDisable(false);
-        btnNextEntry.setDisable(false);
+        if(onView.getGender().equals("Male"))
+            radioMale.setSelected(true);
+        else
+            radioFemale.setSelected(true);
+
  }
 }

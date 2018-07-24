@@ -12,7 +12,7 @@
          <font>
             <Font size="14.0" />
          </font></Label>
-      <Label layoutX="88.0" layoutY="53.0" prefHeight="48.0" prefWidth="253.0" style="-fx-text-fill: green;" text="Waiting for resources to load...">
+      <Label layoutX="88.0" layoutY="53.0" prefHeight="48.0" prefWidth="253.0" style="-fx-text-fill: #263238;" text="Waiting for resources to load...">
          <font>
             <Font size="18.0" />
          </font>

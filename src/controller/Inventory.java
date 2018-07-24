@@ -81,28 +81,35 @@ public class Inventory implements Initializable{
     private JFXCheckBox chkRent, chkSale;
 
     private static int recordIndex = 0;
+    private static int itemSize = 0;
+
     public static ObservableList<Item> itemList = FXCollections.observableArrayList(); //This field will auto set from Initializer Class
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
         recordIndex = 0; //Resetting index value
-        Item itemRecord = itemList.get(recordIndex);
+        itemSize = itemList.size();
 
-        //Setting Fields
-        itemID.setText(Integer.toString(itemRecord.getId()));
-        txtItemName.setText(itemRecord.getName());
-        txtPrice.setText("Null");
-        txtRentRate.setText("Null");
-        txtType.setText(itemRecord.getItemType());
-        lblStock.setText(Integer.toString(itemRecord.getStock()));
-        if (itemRecord.isRent()) {
-            txtRentRate.setText(Double.toString(itemRecord.getRentRate()) + " $");
-            chkRent.setSelected(true);
-        }
-        if (itemRecord.isSale()) {
-            txtPrice.setText(Double.toString(itemRecord.getSalePrice()) + " $");
-            chkSale.setSelected(true);
+
+        if(itemSize > 0) {
+            Item itemRecord = itemList.get(recordIndex);
+
+            //Setting Fields
+            itemID.setText(Integer.toString(itemRecord.getId()));
+            txtItemName.setText(itemRecord.getName());
+            txtPrice.setText("Null");
+            txtRentRate.setText("Null");
+            txtType.setText(itemRecord.getItemType());
+            lblStock.setText(Integer.toString(itemRecord.getStock()));
+            if (itemRecord.isRent()) {
+                txtRentRate.setText(Double.toString(itemRecord.getRentRate()) + " $");
+                chkRent.setSelected(true);
+            }
+            if (itemRecord.isSale()) {
+                txtPrice.setText(Double.toString(itemRecord.getSalePrice()) + " $");
+                chkSale.setSelected(true);
+            }
         }
 
 
