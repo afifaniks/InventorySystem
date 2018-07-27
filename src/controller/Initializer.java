@@ -14,11 +14,14 @@ import javafx.stage.Stage;
 import sample.Customer;
 import sample.DBConnection;
 import sample.Item;
+import sample.Purchase;
+
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 /**
@@ -33,6 +36,9 @@ public class Initializer implements Initializable {
 
     @FXML
     private Label taskName;
+
+    public String sessionUser = LogIn.loggerUsername; //This firld will hold userName whos currently using the system
+                                                //The field is initiated from LogIn Class
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -83,6 +89,8 @@ public class Initializer implements Initializable {
             PreparedStatement getCustomerList = connection.prepareStatement("SELECT * FROM customers");
             PreparedStatement getItemList = connection.prepareStatement("SELECT *" +
                     "FROM item, itemtype WHERE item.ItemType_itemTypeId = itemtype.itemTypeId");
+            PreparedStatement getSellsList = connection.prepareStatement("SELECT * FROM purchases WHERE User_username ='"
+                    +sessionUser+"'");
 
             ResultSet itemResultSet = getItemList.executeQuery();
             ResultSet customerResultSet = getCustomerList.executeQuery();
@@ -91,8 +99,13 @@ public class Initializer implements Initializable {
             this.updateMessage("Loading Customers...");
             Thread.sleep(200);
 
+            ArrayList<String> customerIDNameHolder = new ArrayList<>(); //Will store ID and Name from ResultSet
             //Getting values from customers result set
             while(customerResultSet.next()) {
+                customerIDNameHolder.add(customerResultSet.getInt(1) + " | "
+                        + customerResultSet.getString(2) + "  "
+                        + customerResultSet.getString(3));
+
                 customersList.add(new sample.Customer(
                         customerResultSet.getInt(1),
                         customerResultSet.getString(2),
@@ -109,9 +122,14 @@ public class Initializer implements Initializable {
             //Setting value to Customers List
             controller.Customer.customersList = customersList;
 
+            //Setting Id and Name to Sells
+            Sells.customerIDName = customerIDNameHolder;
+
             Thread.sleep(500);
             //Updating Task status
             this.updateMessage("Loading Items...");
+
+            ArrayList<String> itemIDNameForSale = new ArrayList<>(); //Will hold item id name for sell
 
             while(itemResultSet.next()) {
                 Item item = new Item(itemResultSet.getInt("itemID"),
@@ -125,9 +143,13 @@ public class Initializer implements Initializable {
                         itemResultSet.getString("typeName"));
 
                 if(itemResultSet.getString("rentalOrSale").contains("Rental"))
+                {
                     item.setRent(true);
-                if(itemResultSet.getString("rentalOrSale").contains("Sale"))
+                }
+                if(itemResultSet.getString("rentalOrSale").contains("Sale")) {
+                    itemIDNameForSale.add(itemResultSet.getInt("itemID") + " | " + itemResultSet.getString("itemName"));
                     item.setSale(true);
+                }
 
                 itemList.add(item);
 
@@ -135,6 +157,30 @@ public class Initializer implements Initializable {
 
             //Setting OL to the static field of Inventory
             Inventory.itemList = itemList;
+
+            Sells.inventoryItem = itemIDNameForSale; //Setting item id and name for sale
+
+            Thread.sleep(500);
+
+            //Updating task status
+            this.updateMessage("Loading Sells...");
+            ObservableList<Purchase> sellsListByUser = FXCollections.observableArrayList();
+
+            ResultSet sellsList = getSellsList.executeQuery();
+
+            while(sellsList.next()) {
+                sellsListByUser.add(new Purchase(sellsList.getInt("purchaseID"),
+                        sellsList.getInt("Customers_customerID"),
+                        sellsList.getInt("Item_itemID"),
+                        sellsList.getString("purchaseDate"),
+                        sellsList.getInt("purchaseQuantity"),
+                        sellsList.getDouble("payAmount"),
+                        sellsList.getDouble("amountDue")));
+
+            }
+
+            //Setting Purchases on Sell Class
+            Sells.purchaseList = sellsListByUser;
 
             Thread.sleep(500);
 

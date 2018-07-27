@@ -46,3 +46,12 @@
     -fx-border-color: #ffffff;
     -fx-border-radius: 10 10 10 10;
 }
+
+.jfx-snackbar-content {
+    -fx-background-color: red;
+    -fx-text-fill: white;
+    -fx-background-radius: 10 10 10 10;
+}
+.jfx-snackbar-toast {
+    -fx-text-fill: white;
+}
