@@ -1,7 +1,6 @@
 package controller;
 
 import com.jfoenix.controls.JFXProgressBar;
-import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.concurrent.Task;
@@ -12,17 +11,14 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
-import sample.DBConnection;
-import sample.Dialog;
-import sample.Item;
 import sample.Customer;
-
+import sample.DBConnection;
+import sample.Item;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 /**
@@ -66,6 +62,7 @@ public class Initializer implements Initializable {
                 scene.getStylesheets().add(css);
                 base.setTitle("Tesla Rental Inventory");
                 base.setScene(scene);
+                base.setMaximized(true);
                 base.show();
             } catch (IOException ex) {
                 ex.printStackTrace();

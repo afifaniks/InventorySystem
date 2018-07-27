@@ -6,10 +6,10 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
-import javafx.scene.control.ToggleGroup;
-import javafx.scene.control.Tooltip;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
 import javafx.stage.FileChooser;
@@ -25,17 +25,10 @@ import java.util.ResourceBundle;
 public class Customer implements Initializable {
 
     @FXML
-    private Circle imgCustomerPhoto;
-
-
-    @FXML
-    private JFXToggleButton btnEditMode;
+    private AnchorPane cusTomerPane;
 
     @FXML
-    private Label customerID, memberSince;
-
-    @FXML
-    private JFXTextField phone;
+    private AnchorPane customerPane;
 
     @FXML
     private JFXTextField txtFName;
@@ -47,7 +40,37 @@ public class Customer implements Initializable {
     private JFXTextField address;
 
     @FXML
+    private JFXTextField phone;
+
+    @FXML
     private JFXTextField email;
+
+    @FXML
+    private Label memberSince;
+
+    @FXML
+    private JFXToggleButton btnEditMode;
+
+    @FXML
+    private JFXButton btnPrevEntry;
+
+    @FXML
+    private JFXButton btnNextEntry;
+
+    @FXML
+    private Label customerID;
+
+    @FXML
+    private Label lblPageIndex;
+
+    @FXML
+    private JFXTextField txtSearch;
+
+    @FXML
+    private JFXButton btnSearch;
+
+    @FXML
+    private Circle imgCustomerPhoto;
 
     @FXML
     private JFXRadioButton radioMale;
@@ -59,13 +82,36 @@ public class Customer implements Initializable {
     private JFXRadioButton radioFemale;
 
     @FXML
-    private JFXButton btnPrevEntry;
+    private AnchorPane customerListPane;
 
     @FXML
-    private JFXButton btnNextEntry;
+    private JFXButton btnLViewAllCustomers, btnGoBack;
 
     @FXML
-    private Label lblPageIndex;
+    private TableView<sample.Customer> tbl;
+
+    @FXML
+    private TableColumn<sample.Customer, Integer> columnID;
+
+    @FXML
+    private TableColumn<sample.Customer, String> columnFirstName;
+
+    @FXML
+    private TableColumn<sample.Customer, String> columnLastName;
+
+    @FXML
+    private TableColumn<sample.Customer, String> columnGender;
+
+    @FXML
+    private TableColumn<sample.Customer, String> columnAddress;
+
+    @FXML
+    private TableColumn<sample.Customer, String> columnPhone;
+
+    @FXML
+    private TableColumn<sample.Customer, String> columnEmail;
+
+
 
     private static int recordIndex = 0;
     private static int recordSize = 0;
@@ -76,6 +122,7 @@ public class Customer implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        customerListPane.setVisible(false); //Initially customer list view is set as not visible
 
         recordIndex = 0; //Resetting record index
         recordSize = customersList.size();
@@ -118,8 +165,7 @@ public class Customer implements Initializable {
         });
 
 
-        //Checking if there is actually any record exists
-        btnNextEntry.setDisable(true);
+        btnNextEntry.setDisable(true); //For purpose ;)
 
         if (recordSize > 0) {
             onView = customersList.get(recordIndex); //Setting value for current record
@@ -179,5 +225,28 @@ public class Customer implements Initializable {
         else
             radioFemale.setSelected(true);
 
- }
+    }
+
+    @FXML
+    private void listAllCustomers(ActionEvent event) {
+        //cusTomerPane.setVisible(false); //Hiding default customer view
+        customerListPane.setVisible(true); //Showing total list
+        customerPane.setVisible(false);
+
+        columnID.setCellValueFactory(new PropertyValueFactory<>("id"));
+        columnFirstName.setCellValueFactory(new PropertyValueFactory<>("firstName"));
+        columnLastName.setCellValueFactory(new PropertyValueFactory<>("lastName"));
+        columnAddress.setCellValueFactory(new PropertyValueFactory<>("address"));
+        columnEmail.setCellValueFactory(new PropertyValueFactory<>("email"));
+        columnPhone.setCellValueFactory(new PropertyValueFactory<>("phone"));
+        columnGender.setCellValueFactory(new PropertyValueFactory<>("gender"));
+
+        tbl.setItems(customersList);
+
+        btnGoBack.setOnAction(e -> {
+            customerListPane.setVisible(false);
+            customerPane.setVisible(true);
+        });
+
+    }
 }
