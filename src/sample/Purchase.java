@@ -13,7 +13,7 @@ public class Purchase {
     int itemID;
     String date;
     int qty;
-    double price, paid, due;
+    double paid, due;
 
     public Purchase(int purID, int cusID, int itemID, String date, int qty, double paid, double due) {
         this.purID = purID;
@@ -63,14 +63,6 @@ public class Purchase {
 
     public void setQty(int qty) {
         this.qty = qty;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
     }
 
     public double getPaid() {

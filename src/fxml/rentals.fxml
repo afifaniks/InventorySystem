@@ -16,7 +16,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="661.0" prefWidth="1125.0" stylesheets="/css/rentals.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Rentals">
+<AnchorPane fx:id="rightPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="661.0" prefWidth="1125.0" stylesheets="/css/rentals.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Rentals">
    <children>
       <Pane layoutX="784.0" layoutY="85.0" prefHeight="72.0" prefWidth="387.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
@@ -91,13 +91,13 @@
             <Font size="27.0" />
          </font>
       </Label>
-      <JFXDatePicker fx:id="txtRentalDate" defaultColor="#263238" layoutX="162.0" layoutY="346.0" prefHeight="26.0" prefWidth="163.0" />
+      <JFXDatePicker fx:id="txtRentalDate" defaultColor="#263238" disable="true" editable="false" layoutX="162.0" layoutY="346.0" prefHeight="26.0" prefWidth="163.0" />
       <Label layoutX="58.0" layoutY="511.0" prefHeight="44.0" prefWidth="104.0" text="Cost:">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label fx:id="lblCost" layoutX="162.0" layoutY="511.0" prefHeight="45.0" prefWidth="214.0" text="Cost" textFill="#0c9e33">
+      <Label fx:id="lblCost" layoutX="162.0" layoutY="511.0" prefHeight="45.0" prefWidth="214.0" text="??" textFill="#0c9e33">
          <font>
             <Font size="30.0" />
          </font>
@@ -119,14 +119,13 @@
       </Label>
       <TableView fx:id="tblRecent" layoutX="433.0" layoutY="170.0" prefHeight="382.0" prefWidth="627.0" AnchorPane.leftAnchor="433.0" AnchorPane.rightAnchor="109.0">
         <columns>
-          <TableColumn text="Rental ID" />
-          <TableColumn prefWidth="88.0" text="Customer ID" />
-            <TableColumn prefWidth="57.0" text="Item ID" />
-            <TableColumn prefWidth="98.0" text="Rntl Date" />
-            <TableColumn prefWidth="63.0" text="Rtrn Date" />
-            <TableColumn prefWidth="107.0" text="Cost" />
-            <TableColumn prefWidth="54.0" text="Paid" />
-            <TableColumn prefWidth="69.0" text="Due" />
+          <TableColumn fx:id="rentID" text="Rental ID" />
+          <TableColumn fx:id="cusID" prefWidth="88.0" text="Customer ID" />
+            <TableColumn fx:id="itemID" prefWidth="57.0" text="Item ID" />
+            <TableColumn fx:id="rentalDate" prefWidth="98.0" text="Rental Date" />
+            <TableColumn fx:id="returnDate" prefWidth="63.0" text="Return Date" />
+            <TableColumn fx:id="paid" prefWidth="54.0" text="Paid" />
+            <TableColumn fx:id="due" prefWidth="69.0" text="Due" />
         </columns>
          <columnResizePolicy>
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
@@ -141,20 +140,6 @@
          </cursor>
          <graphic>
             <FontAwesomeIconView fill="WHITE" glyphName="UNDO" size="30" />
-         </graphic>
-         <font>
-            <Font size="15.0" />
-         </font>
-         <tooltip>
-            <Tooltip text="Empty Tooltip" />
-         </tooltip>
-      </JFXButton>
-      <JFXButton fx:id="btnAdd" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="181.0" layoutY="588.0" prefHeight="59.0" prefWidth="61.0" ripplerFill="WHITE" style="-fx-background-color: green;" stylesheets="@../css/sells.css">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-         <graphic>
-            <FontAwesomeIconView fill="WHITE" glyphName="PLUS" size="30" />
          </graphic>
          <font>
             <Font size="15.0" />
@@ -182,6 +167,17 @@
          <tooltip>
             <Tooltip text="Update Returns" />
          </tooltip>
+      </JFXButton>
+      <JFXButton fx:id="btnProcced" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="192.0" layoutY="588.0" onAction="#btnProceedAction" prefHeight="59.0" prefWidth="61.0" ripplerFill="WHITE" style="-fx-background-color: green;" stylesheets="@../css/sells.css">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIconView fx:id="btnIcon" fill="WHITE" glyphName="QUESTION" size="30" />
+         </graphic>
+         <font>
+            <Font size="15.0" />
+         </font>
       </JFXButton>
    </children>
 </AnchorPane>

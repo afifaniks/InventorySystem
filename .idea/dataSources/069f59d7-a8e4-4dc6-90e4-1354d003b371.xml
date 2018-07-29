@@ -1184,477 +1184,478 @@
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="301" parent="286" name="fk_Accounts_Customers1_idx">
+    <column id="301" parent="286" name="User_username">
+      <Position>5</Position>
+      <DataType>varchar(45)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="302" parent="286" name="paymethod">
+      <Position>6</Position>
+      <DataType>enum(&apos;Cash&apos;, &apos;ATM&apos;, &apos;Cheque&apos;)|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="303" parent="286" name="fk_Accounts_Customers1_idx">
       <ColNames>Customers_customerID</ColNames>
     </index>
-    <key id="302" parent="286" name="PRIMARY">
+    <index id="304" parent="286" name="fk_Accounts_User2_idx">
+      <ColNames>User_username</ColNames>
+    </index>
+    <key id="305" parent="286" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>acccountID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="303" parent="286" name="fk_Accounts_Customers1">
+    <foreign-key id="306" parent="286" name="fk_Accounts_Customers1">
       <ColNames>Customers_customerID</ColNames>
       <RefSchemaName>teslarentalinventory</RefSchemaName>
       <RefTableName>customers</RefTableName>
       <RefColNames>customerid</RefColNames>
     </foreign-key>
-    <column id="304" parent="287" name="customerID">
+    <foreign-key id="307" parent="286" name="fk_Accounts_User2">
+      <ColNames>User_username</ColNames>
+      <RefSchemaName>teslarentalinventory</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>username</RefColNames>
+    </foreign-key>
+    <column id="308" parent="287" name="customerID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="305" parent="287" name="firstName">
+    <column id="309" parent="287" name="firstName">
       <Position>2</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="306" parent="287" name="lastName">
+    <column id="310" parent="287" name="lastName">
       <Position>3</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="307" parent="287" name="address">
+    <column id="311" parent="287" name="address">
       <Position>4</Position>
       <DataType>varchar(100)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="308" parent="287" name="phone">
+    <column id="312" parent="287" name="phone">
       <Position>5</Position>
       <DataType>varchar(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="309" parent="287" name="email">
+    <column id="313" parent="287" name="email">
       <Position>6</Position>
       <DataType>varchar(45)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="310" parent="287" name="details">
+    <column id="314" parent="287" name="details">
       <Position>7</Position>
       <DataType>varchar(100)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="311" parent="287" name="photo">
+    <column id="315" parent="287" name="photo">
       <Position>8</Position>
       <DataType>varchar(100)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="312" parent="287" name="gender">
+    <column id="316" parent="287" name="gender">
       <Position>9</Position>
       <DataType>enum(&apos;Male&apos;, &apos;Female&apos;)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="313" parent="287" name="memberSince">
+    <column id="317" parent="287" name="memberSince">
       <Position>10</Position>
       <DataType>date|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="314" parent="287" name="PRIMARY">
+    <key id="318" parent="287" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>customerID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="315" parent="288" name="trID">
+    <column id="319" parent="288" name="trID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="316" parent="288" name="trDate">
+    <column id="320" parent="288" name="trDate">
       <Position>2</Position>
       <DataType>date|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="317" parent="288" name="trComment">
+    <column id="321" parent="288" name="trComment">
       <Position>3</Position>
       <DataType>varchar(100)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="318" parent="288" name="Accounts_acccountID">
+    <column id="322" parent="288" name="Accounts_acccountID">
       <Position>4</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="319" parent="288" name="TrTypeCode_trTypeCode">
+    <column id="323" parent="288" name="TrTypeCode_trTypeCode">
       <Position>5</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="320" parent="288" name="Purchases_purchaseID">
+    <column id="324" parent="288" name="Purchases_purchaseID">
       <Position>6</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="321" parent="288" name="fk_financialTrOnPurchase_Accounts1_idx">
+    <index id="325" parent="288" name="fk_financialTrOnPurchase_Accounts1_idx">
       <ColNames>Accounts_acccountID</ColNames>
     </index>
-    <index id="322" parent="288" name="fk_financialTrOnPurchase_TrTypeCode1_idx">
+    <index id="326" parent="288" name="fk_financialTrOnPurchase_TrTypeCode1_idx">
       <ColNames>TrTypeCode_trTypeCode</ColNames>
     </index>
-    <index id="323" parent="288" name="fk_financialTrOnPurchase_Purchases1_idx">
+    <index id="327" parent="288" name="fk_financialTrOnPurchase_Purchases1_idx">
       <ColNames>Purchases_purchaseID</ColNames>
     </index>
-    <key id="324" parent="288" name="PRIMARY">
+    <key id="328" parent="288" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>trID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="325" parent="288" name="fk_financialTrOnPurchase_TrTypeCode1">
+    <foreign-key id="329" parent="288" name="fk_financialTrOnPurchase_TrTypeCode1">
       <ColNames>TrTypeCode_trTypeCode</ColNames>
       <RefSchemaName>teslarentalinventory</RefSchemaName>
       <RefTableName>trtypecode</RefTableName>
       <RefColNames>trtypecode</RefColNames>
     </foreign-key>
-    <foreign-key id="326" parent="288" name="fk_financialTrOnPurchase_Purchases1">
+    <foreign-key id="330" parent="288" name="fk_financialTrOnPurchase_Purchases1">
       <ColNames>Purchases_purchaseID</ColNames>
       <RefSchemaName>teslarentalinventory</RefSchemaName>
       <RefTableName>purchases</RefTableName>
       <RefColNames>purchaseid</RefColNames>
     </foreign-key>
-    <column id="327" parent="289" name="trID">
+    <column id="331" parent="289" name="trID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="328" parent="289" name="trDate">
+    <column id="332" parent="289" name="trDate">
       <Position>2</Position>
       <DataType>date|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="329" parent="289" name="trAmmount">
+    <column id="333" parent="289" name="trAmmount">
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="330" parent="289" name="Accounts_acccountID">
+    <column id="334" parent="289" name="Accounts_acccountID">
       <Position>4</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="331" parent="289" name="Rentals_rentalID">
+    <column id="335" parent="289" name="Rentals_rentalID">
       <Position>5</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="332" parent="289" name="TrTypeCode_trTypeCode">
+    <column id="336" parent="289" name="TrTypeCode_trTypeCode">
       <Position>6</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="333" parent="289" name="fk_FinancialTrOnRental_Accounts1_idx">
+    <index id="337" parent="289" name="fk_FinancialTrOnRental_Accounts1_idx">
       <ColNames>Accounts_acccountID</ColNames>
     </index>
-    <index id="334" parent="289" name="fk_FinancialTrOnRental_Rentals1_idx">
+    <index id="338" parent="289" name="fk_FinancialTrOnRental_Rentals1_idx">
       <ColNames>Rentals_rentalID</ColNames>
     </index>
-    <index id="335" parent="289" name="fk_FinancialTrOnRental_TrTypeCode1_idx">
+    <index id="339" parent="289" name="fk_FinancialTrOnRental_TrTypeCode1_idx">
       <ColNames>TrTypeCode_trTypeCode</ColNames>
     </index>
-    <key id="336" parent="289" name="PRIMARY">
+    <key id="340" parent="289" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>trID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="337" parent="289" name="fk_FinancialTrOnRental_Accounts1">
-      <ColNames>Accounts_acccountID</ColNames>
-      <RefSchemaName>teslarentalinventory</RefSchemaName>
-      <RefTableName>accounts</RefTableName>
-      <RefColNames>acccountid</RefColNames>
-    </foreign-key>
-    <foreign-key id="338" parent="289" name="fk_FinancialTrOnRental_Rentals1">
-      <ColNames>Rentals_rentalID</ColNames>
-      <RefSchemaName>teslarentalinventory</RefSchemaName>
-      <RefTableName>rentals</RefTableName>
-      <RefColNames>rentalid</RefColNames>
-    </foreign-key>
-    <foreign-key id="339" parent="289" name="fk_FinancialTrOnRental_TrTypeCode1">
+    <foreign-key id="341" parent="289" name="fk_FinancialTrOnRental_TrTypeCode1">
       <ColNames>TrTypeCode_trTypeCode</ColNames>
       <RefSchemaName>teslarentalinventory</RefSchemaName>
       <RefTableName>trtypecode</RefTableName>
       <RefColNames>trtypecode</RefColNames>
     </foreign-key>
-    <column id="340" parent="290" name="itemID">
+    <column id="342" parent="290" name="itemID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="341" parent="290" name="itemName">
+    <column id="343" parent="290" name="itemName">
       <Position>2</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="342" parent="290" name="description">
+    <column id="344" parent="290" name="description">
       <Position>3</Position>
       <DataType>varchar(160)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="343" parent="290" name="stock">
+    <column id="345" parent="290" name="stock">
       <Position>4</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="344" parent="290" name="rentalOrSale">
+    <column id="346" parent="290" name="rentalOrSale">
       <Position>5</Position>
       <DataType>set(&apos;Rental&apos;, &apos;Sale&apos;)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="345" parent="290" name="salePrice">
+    <column id="347" parent="290" name="salePrice">
       <Position>6</Position>
       <DataType>int(11)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="346" parent="290" name="rentRate">
+    <column id="348" parent="290" name="rentRate">
       <Position>7</Position>
       <DataType>int(11)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="347" parent="290" name="photo">
+    <column id="349" parent="290" name="photo">
       <Position>8</Position>
       <DataType>varchar(160)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="348" parent="290" name="ItemType_itemTypeId">
+    <column id="350" parent="290" name="ItemType_itemTypeId">
       <Position>9</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="349" parent="290" name="fk_Item_ItemType1_idx">
+    <index id="351" parent="290" name="fk_Item_ItemType1_idx">
       <ColNames>ItemType_itemTypeId</ColNames>
     </index>
-    <key id="350" parent="290" name="PRIMARY">
+    <key id="352" parent="290" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>itemID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="351" parent="290" name="fk_Item_ItemType1">
+    <foreign-key id="353" parent="290" name="fk_Item_ItemType1">
       <ColNames>ItemType_itemTypeId</ColNames>
       <RefSchemaName>teslarentalinventory</RefSchemaName>
       <RefTableName>itemtype</RefTableName>
       <RefColNames>itemtypeid</RefColNames>
     </foreign-key>
-    <column id="352" parent="291" name="itemTypeId">
+    <column id="354" parent="291" name="itemTypeId">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="353" parent="291" name="typeName">
+    <column id="355" parent="291" name="typeName">
       <Position>2</Position>
       <DataType>varchar(45)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="354" parent="291" name="PRIMARY">
+    <key id="356" parent="291" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>itemTypeId</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="355" parent="292" name="purchaseID">
+    <column id="357" parent="292" name="purchaseID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="356" parent="292" name="purchaseDate">
+    <column id="358" parent="292" name="purchaseDate">
       <Position>2</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="357" parent="292" name="purchaseQuantity">
+    <column id="359" parent="292" name="purchaseQuantity">
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="358" parent="292" name="amountDue">
+    <column id="360" parent="292" name="amountDue">
       <Position>4</Position>
       <DataType>double|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="359" parent="292" name="User_username">
+    <column id="361" parent="292" name="User_username">
       <Position>5</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="360" parent="292" name="Item_itemID">
+    <column id="362" parent="292" name="Item_itemID">
       <Position>6</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="361" parent="292" name="Customers_customerID">
+    <column id="363" parent="292" name="Customers_customerID">
       <Position>7</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="362" parent="292" name="payAmount">
+    <column id="364" parent="292" name="payAmount">
       <Position>8</Position>
       <DataType>double|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="363" parent="292" name="fk_Purchases_User1_idx">
+    <index id="365" parent="292" name="fk_Purchases_User1_idx">
       <ColNames>User_username</ColNames>
     </index>
-    <index id="364" parent="292" name="fk_Purchases_Item1_idx">
+    <index id="366" parent="292" name="fk_Purchases_Item1_idx">
       <ColNames>Item_itemID</ColNames>
     </index>
-    <index id="365" parent="292" name="fk_Purchases_Customers1_idx">
+    <index id="367" parent="292" name="fk_Purchases_Customers1_idx">
       <ColNames>Customers_customerID</ColNames>
     </index>
-    <key id="366" parent="292" name="PRIMARY">
+    <key id="368" parent="292" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>purchaseID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="367" parent="292" name="fk_Purchases_User1">
+    <foreign-key id="369" parent="292" name="fk_Purchases_User1">
       <ColNames>User_username</ColNames>
       <RefSchemaName>teslarentalinventory</RefSchemaName>
       <RefTableName>user</RefTableName>
       <RefColNames>username</RefColNames>
     </foreign-key>
-    <column id="368" parent="293" name="rentalID">
+    <column id="370" parent="293" name="rentalID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="369" parent="293" name="rentalDate">
+    <column id="371" parent="293" name="rentalDate">
       <Position>2</Position>
       <DataType>date|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="370" parent="293" name="returnDate">
+    <column id="372" parent="293" name="returnDate">
       <Position>3</Position>
       <DataType>date|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="371" parent="293" name="amountDue">
+    <column id="373" parent="293" name="paid">
       <Position>4</Position>
-      <DataType>int(11)|0</DataType>
+      <DataType>double|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="372" parent="293" name="User_username">
+    <column id="374" parent="293" name="amountDue">
       <Position>5</Position>
+      <DataType>double|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="375" parent="293" name="User_username">
+      <Position>6</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="373" parent="293" name="Item_itemID">
-      <Position>6</Position>
-      <DataType>int(11)|0</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="374" parent="293" name="Customers_customerID">
+    <column id="376" parent="293" name="Item_itemID">
       <Position>7</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="375" parent="293" name="fk_Rentals_User_idx">
+    <column id="377" parent="293" name="Customers_customerID">
+      <Position>8</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="378" parent="293" name="fk_Rentals_User_idx">
       <ColNames>User_username</ColNames>
     </index>
-    <index id="376" parent="293" name="fk_Rentals_Item1_idx">
+    <index id="379" parent="293" name="fk_Rentals_Item1_idx">
       <ColNames>Item_itemID</ColNames>
     </index>
-    <index id="377" parent="293" name="fk_Rentals_Customers1_idx">
+    <index id="380" parent="293" name="fk_Rentals_Customers1_idx">
       <ColNames>Customers_customerID</ColNames>
     </index>
-    <key id="378" parent="293" name="PRIMARY">
+    <key id="381" parent="293" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>rentalID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="379" parent="293" name="fk_Rentals_User">
+    <foreign-key id="382" parent="293" name="fk_Rentals_User">
       <ColNames>User_username</ColNames>
       <RefSchemaName>teslarentalinventory</RefSchemaName>
       <RefTableName>user</RefTableName>
       <RefColNames>username</RefColNames>
     </foreign-key>
-    <foreign-key id="380" parent="293" name="fk_Rentals_Item1">
-      <ColNames>Item_itemID</ColNames>
-      <RefSchemaName>teslarentalinventory</RefSchemaName>
-      <RefTableName>item</RefTableName>
-      <RefColNames>itemid</RefColNames>
-    </foreign-key>
-    <foreign-key id="381" parent="293" name="fk_Rentals_Customers1">
-      <ColNames>Customers_customerID</ColNames>
-      <RefSchemaName>teslarentalinventory</RefSchemaName>
-      <RefTableName>customers</RefTableName>
-      <RefColNames>customerid</RefColNames>
-    </foreign-key>
-    <column id="382" parent="294" name="trTypeCode">
+    <column id="383" parent="294" name="trTypeCode">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="383" parent="294" name="typeDescription">
+    <column id="384" parent="294" name="typeDescription">
       <Position>2</Position>
       <DataType>varchar(45)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="384" parent="294" name="PRIMARY">
+    <key id="385" parent="294" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>trTypeCode</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="385" parent="295" name="username">
+    <column id="386" parent="295" name="username">
       <Position>1</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="386" parent="295" name="password">
+    <column id="387" parent="295" name="password">
       <Position>2</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="387" parent="295" name="email">
+    <column id="388" parent="295" name="email">
       <Position>3</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="388" parent="295" name="accessLevel">
+    <column id="389" parent="295" name="accessLevel">
       <Position>4</Position>
       <DataType>enum(&apos;Admin&apos;, &apos;Employee&apos;)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="389" parent="295" name="PRIMARY">
+    <key id="390" parent="295" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>username</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="390" parent="296" name="username">
+    <column id="391" parent="296" name="username">
       <Position>1</Position>
       <DataType>varchar(40)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="391" parent="296" name="password">
+    <column id="392" parent="296" name="password">
       <Position>2</Position>
       <DataType>varchar(100)|0</DataType>
       <ColumnKind>normal</ColumnKind>

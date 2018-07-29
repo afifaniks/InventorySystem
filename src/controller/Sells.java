@@ -131,7 +131,7 @@ public class Sells implements Initializable{
     void btnProceedAction(ActionEvent event) {
         boolean flag = true;
 
-        if (!txtQty.getText().equals("") && Integer.parseInt(txtQty.getText()) != 0) {
+        if (!txtQty.getText().equals("") && Integer.parseInt(txtQty.getText()) > 0) {
 
             String customer = txtCustomerId.getText();
 

@@ -11,10 +11,9 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
+import sample.*;
+import sample.Account;
 import sample.Customer;
-import sample.DBConnection;
-import sample.Item;
-import sample.Purchase;
 
 import java.io.IOException;
 import java.net.URL;
@@ -91,9 +90,17 @@ public class Initializer implements Initializable {
                     "FROM item, itemtype WHERE item.ItemType_itemTypeId = itemtype.itemTypeId");
             PreparedStatement getSellsList = connection.prepareStatement("SELECT * FROM purchases WHERE User_username ='"
                     +sessionUser+"'");
+            PreparedStatement getRentalList = connection.prepareStatement("SELECT * FROM rentals WHERE User_username ='"
+                    +sessionUser+"'");
+            PreparedStatement getAccountList = connection.prepareStatement("SELECT  customers.firstName, customers.lastName, accounts.acccountID, accounts.accountName, accounts.paymethod " +
+                    "FROM accounts, customers WHERE User_username ='"
+                    +sessionUser+"' AND Customers_customerID = customerID");
 
             ResultSet itemResultSet = getItemList.executeQuery();
             ResultSet customerResultSet = getCustomerList.executeQuery();
+            ResultSet sellsList = getSellsList.executeQuery();
+            ResultSet rentList = getRentalList.executeQuery();
+            ResultSet accountResultSet = getAccountList.executeQuery();
 
             //Updating task message
             this.updateMessage("Loading Customers...");
@@ -122,14 +129,17 @@ public class Initializer implements Initializable {
             //Setting value to Customers List
             controller.Customer.customersList = customersList;
 
-            //Setting Id and Name to Sells
+            //Setting Id and Name to Sells, Rentals, Accounts
             Sells.customerIDName = customerIDNameHolder;
+            Rentals.customerIDName = customerIDNameHolder;
+            controller.Account.customerIDName = customerIDNameHolder;
 
             Thread.sleep(500);
             //Updating Task status
             this.updateMessage("Loading Items...");
 
             ArrayList<String> itemIDNameForSale = new ArrayList<>(); //Will hold item id name for sell
+            ArrayList<String> itemIDNameForRentals = new ArrayList<>(); //Will hold item id name for rent
 
             while(itemResultSet.next()) {
                 Item item = new Item(itemResultSet.getInt("itemID"),
@@ -145,6 +155,8 @@ public class Initializer implements Initializable {
                 if(itemResultSet.getString("rentalOrSale").contains("Rental"))
                 {
                     item.setRent(true);
+                    itemIDNameForRentals.add(itemResultSet.getInt("itemID") + " | " +
+                            itemResultSet.getString("itemName"));
                 }
                 if(itemResultSet.getString("rentalOrSale").contains("Sale")) {
                     itemIDNameForSale.add(itemResultSet.getInt("itemID") + " | " + itemResultSet.getString("itemName"));
@@ -158,15 +170,14 @@ public class Initializer implements Initializable {
             //Setting OL to the static field of Inventory
             Inventory.itemList = itemList;
 
-            Sells.inventoryItem = itemIDNameForSale; //Setting item id and name for sale
+            Sells.inventoryItem = itemIDNameForSale; //Setting item id and name for sale & Rentals
+            Rentals.inventoryItem = itemIDNameForRentals;
 
-            Thread.sleep(500);
+            Thread.sleep(200);
 
             //Updating task status
             this.updateMessage("Loading Sells...");
             ObservableList<Purchase> sellsListByUser = FXCollections.observableArrayList();
-
-            ResultSet sellsList = getSellsList.executeQuery();
 
             while(sellsList.next()) {
                 sellsListByUser.add(new Purchase(sellsList.getInt("purchaseID"),
@@ -182,11 +193,46 @@ public class Initializer implements Initializable {
             //Setting Purchases on Sell Class
             Sells.purchaseList = sellsListByUser;
 
-            Thread.sleep(500);
+            Thread.sleep(200);
+
+            //Updating Task Status
+            this.updateMessage("Loading Rentals...");
+            ObservableList<Rent> rentsListByUser = FXCollections.observableArrayList();
+
+            while (rentList.next()) {
+                rentsListByUser.add(new Rent(rentList.getInt("rentalID"),
+                        rentList.getInt("Item_itemID"),
+                        rentList.getInt("Customers_customerID"),
+                        rentList.getString("rentalDate"),
+                        rentList.getString("returnDate"),
+                        rentList.getDouble("paid"),
+                        rentList.getDouble("amountDue")));
+            }
+
+            //Setting Rents on Rental Class
+            Rentals.rentalList = rentsListByUser;
+
+            Thread.sleep(200);
+
+            //Updating task status
+            this.updateMessage("Loading Accounts...");
+
+            ObservableList<Account> accountListByUser = FXCollections.observableArrayList();
+
+            while(accountResultSet.next()) {
+                accountListByUser.add(new Account(accountResultSet.getInt(3),
+                        accountResultSet.getString(1) + " " + accountResultSet.getString(2),
+                        accountResultSet.getString(4),
+                        accountResultSet.getString(5)));
+            }
+
+            //Setting Accounts on Account Class
+            controller.Account.accountList = accountListByUser;
+
 
             //Updating Status of the Task
             this.updateMessage("Loading Finished!");
-            Thread.sleep(400);
+            Thread.sleep(200);
 
             return null;
         }
