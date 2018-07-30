@@ -14,23 +14,7 @@
     <bookmark url="file://$PROJECT_DIR$/src/controller/Dashboard.java" line="28" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/controller/Initializer$NewTask.class" afterPath="$PROJECT_DIR$/out/production/TeslaRentalInventory/controller/Initializer$NewTask.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/controller/Sells.class" afterPath="$PROJECT_DIR$/out/production/TeslaRentalInventory/controller/Sells.class" />
-      <change beforePath="$PROJECT_DIR$/src/controller/Dashboard.java" afterPath="$PROJECT_DIR$/src/controller/Dashboard.java" />
-      <change beforePath="$PROJECT_DIR$/src/controller/Initializer.java" afterPath="$PROJECT_DIR$/src/controller/Initializer.java" />
-      <change beforePath="$PROJECT_DIR$/src/controller/Rentals.java" afterPath="$PROJECT_DIR$/src/controller/Rentals.java" />
-      <change beforePath="$PROJECT_DIR$/src/controller/Sells.java" afterPath="$PROJECT_DIR$/src/controller/Sells.java" />
-      <change beforePath="$PROJECT_DIR$/src/controller/Transaction.java" afterPath="$PROJECT_DIR$/src/controller/Transaction.java" />
-      <change beforePath="$PROJECT_DIR$/src/fxml/dashboard.fxml" afterPath="$PROJECT_DIR$/src/fxml/dashboard.fxml" />
-      <change beforePath="$PROJECT_DIR$/src/fxml/rentals.fxml" afterPath="$PROJECT_DIR$/src/fxml/rentals.fxml" />
-      <change beforePath="$PROJECT_DIR$/src/fxml/sells.fxml" afterPath="$PROJECT_DIR$/src/fxml/sells.fxml" />
-      <change beforePath="$PROJECT_DIR$/src/fxml/transaction.fxml" afterPath="$PROJECT_DIR$/src/fxml/transaction.fxml" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Dialog.java" afterPath="$PROJECT_DIR$/src/sample/Dialog.java" />
-    </list>
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="" />
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -392,7 +376,7 @@
     </treeState>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="7" />
     <option name="y" value="231" />
     <option name="width" value="1382" />
@@ -717,7 +701,7 @@
       <workItem from="1532713914605" duration="15674000" />
       <workItem from="1532880290659" duration="19323000" />
       <workItem from="1532930780337" duration="2573000" />
-      <workItem from="1532963420569" duration="24051000" />
+      <workItem from="1532963420569" duration="24150000" />
     </task>
     <task id="LOCAL-00001" summary="Multiple view added.">
       <created>1531118175694</created>
@@ -737,10 +721,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="295443000" />
+    <option name="totallyTimeSpent" value="295542000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
