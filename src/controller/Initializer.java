@@ -95,18 +95,28 @@ public class Initializer implements Initializable {
             PreparedStatement getAccountList = connection.prepareStatement("SELECT  customers.firstName, customers.lastName, accounts.acccountID, accounts.accountName, accounts.paymethod " +
                     "FROM accounts, customers WHERE User_username ='"
                     +sessionUser+"' AND Customers_customerID = customerID");
+            PreparedStatement getRentalDue = connection.prepareStatement("SELECT COUNT(*), SUM(amountDue) FROM rentals WHERE amountDue <> 0");
+            PreparedStatement getPurchaseDue = connection.prepareStatement("SELECT COUNT(*), SUM(amountDue) FROM purchases WHERE amountDue <> 0");
 
             ResultSet itemResultSet = getItemList.executeQuery();
             ResultSet customerResultSet = getCustomerList.executeQuery();
             ResultSet sellsList = getSellsList.executeQuery();
             ResultSet rentList = getRentalList.executeQuery();
             ResultSet accountResultSet = getAccountList.executeQuery();
+            ResultSet rentalDue = getRentalDue.executeQuery();
+            ResultSet purchaseDue = getPurchaseDue.executeQuery();
 
             //Updating task message
             this.updateMessage("Loading Customers...");
             Thread.sleep(200);
 
             ArrayList<String> customerIDNameHolder = new ArrayList<>(); //Will store ID and Name from ResultSet
+            ArrayList<String> itemIDNameForSale = new ArrayList<>(); //Will hold item id name for sell
+            ArrayList<Integer> itemIDForSale = new ArrayList<>();
+            ArrayList<String> itemIDNameForRentals = new ArrayList<>(); //Will hold item id name for rent
+            ArrayList<Integer> itemIDForRent = new ArrayList<>();
+            ArrayList<Integer> customerID = new ArrayList<>();
+
             //Getting values from customers result set
             while(customerResultSet.next()) {
                 customerIDNameHolder.add(customerResultSet.getInt(1) + " | "
@@ -124,6 +134,8 @@ public class Initializer implements Initializable {
                         customerResultSet.getString(8),
                         customerResultSet.getString(9),
                         customerResultSet.getDate(10)));
+
+                customerID.add(customerResultSet.getInt(1));
             }
 
             //Setting value to Customers List
@@ -131,15 +143,14 @@ public class Initializer implements Initializable {
 
             //Setting Id and Name to Sells, Rentals, Accounts
             Sells.customerIDName = customerIDNameHolder;
+            Sells.customerID = customerID;
             Rentals.customerIDName = customerIDNameHolder;
+            Rentals.customerID = customerID;
             controller.Account.customerIDName = customerIDNameHolder;
 
             Thread.sleep(500);
             //Updating Task status
             this.updateMessage("Loading Items...");
-
-            ArrayList<String> itemIDNameForSale = new ArrayList<>(); //Will hold item id name for sell
-            ArrayList<String> itemIDNameForRentals = new ArrayList<>(); //Will hold item id name for rent
 
             while(itemResultSet.next()) {
                 Item item = new Item(itemResultSet.getInt("itemID"),
@@ -157,9 +168,11 @@ public class Initializer implements Initializable {
                     item.setRent(true);
                     itemIDNameForRentals.add(itemResultSet.getInt("itemID") + " | " +
                             itemResultSet.getString("itemName"));
+                    itemIDForRent.add(itemResultSet.getInt("itemID"));
                 }
                 if(itemResultSet.getString("rentalOrSale").contains("Sale")) {
                     itemIDNameForSale.add(itemResultSet.getInt("itemID") + " | " + itemResultSet.getString("itemName"));
+                    itemIDForSale.add(itemResultSet.getInt("itemID"));
                     item.setSale(true);
                 }
 
@@ -169,9 +182,10 @@ public class Initializer implements Initializable {
 
             //Setting OL to the static field of Inventory
             Inventory.itemList = itemList;
-
             Sells.inventoryItem = itemIDNameForSale; //Setting item id and name for sale & Rentals
+            Sells.itemIDForSale = itemIDForSale;
             Rentals.inventoryItem = itemIDNameForRentals;
+            Rentals.itemIDForRent = itemIDForRent;
 
             Thread.sleep(200);
 
@@ -228,6 +242,27 @@ public class Initializer implements Initializable {
 
             //Setting Accounts on Account Class
             controller.Account.accountList = accountListByUser;
+
+            Thread.sleep(200);
+            //Updating Task Message
+            this.updateMessage("Loading Dashboard Contents...");
+
+            Double totalDueAmount = 0.0;
+            Integer totalDueCtr = 0;
+
+            while (rentalDue.next()) {
+                totalDueCtr += rentalDue.getInt(1);
+                totalDueAmount += rentalDue.getDouble(2);
+            }
+
+            while (purchaseDue.next()) {
+                totalDueCtr += purchaseDue.getInt(1);
+                totalDueAmount += purchaseDue.getDouble(2);
+            }
+
+            //Setting on Dashboard
+            Dashboard.totalDueCtr = totalDueCtr;
+            Dashboard.totalDueAmount = totalDueAmount;
 
 
             //Updating Status of the Task

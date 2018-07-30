@@ -10,10 +10,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
@@ -70,7 +67,6 @@ public class Sells implements Initializable{
     @FXML
     private TableView<Purchase> tblRecent;
 
-
     @FXML
     private TableColumn<Purchase, Integer> purID;
 
@@ -95,14 +91,22 @@ public class Sells implements Initializable{
     @FXML
     private AnchorPane rightPane;
 
+    private static boolean startTransaction = false;
     public static ObservableList<Purchase> purchaseList;
     public static ArrayList<String> customerIDName = null; //Will hold auto completion data for customer ID text field
                                                     //The field will be initiated in Initializer class
     public static ArrayList<String> inventoryItem = null;
+    public static ArrayList<Integer> customerID = null;
+    public static ArrayList<Integer> itemIDForSale = null;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        startTransaction = false;
         txtQty.setText("1");
         txtDate.setValue(LocalDate.now());
+
+        Tooltip tooltip = new Tooltip("Verify Input");
+        btnProcced.setTooltip(tooltip);
 
         //Getting new connection to db to set new purchaseID
         Connection con = DBConnection.getConnection();
@@ -135,90 +139,150 @@ public class Sells implements Initializable{
 
     @FXML
     void btnProceedAction(ActionEvent event) {
-        boolean flag = true;
+        if (startTransaction) {
+            startTransaction = false; //Resetting Transaction Value
+            btnIcon.setGlyphName("QUESTION");
+            Tooltip tooltip = new Tooltip("Verify Input");
+            btnProcced.setTooltip(tooltip);
+            //Loading Transaction Window
+                //Setting Values in Transaction Window
+                Transaction.cusID = Integer.valueOf(txtCustomerId.getText());
+                Transaction.purchaseId = lblId.getText();
+                Transaction.purchaseQty = Integer.valueOf(txtQty.getText());
+                Transaction.itemID = Integer.valueOf(txtItemId.getText());
+                Transaction.rentOrSale = true;
 
-        if (!txtQty.getText().equals("") && Integer.parseInt(txtQty.getText()) > 0) {
+                Double paid = 0.0;
 
-            String customer = txtCustomerId.getText();
-
-            txtItemId.setUnFocusColor(Color.web("#263238"));
-            txtCustomerId.setUnFocusColor(Color.web("#263238"));
-            txtQty.setUnFocusColor(Color.web("#263238"));
-
-            try {
-                txtCustomerId.setText(Integer.valueOf(customer).toString());
-            } catch (Exception e) {
-                flag = false;
+                //Checking if input is valid
                 try {
-                    txtCustomerId.setText(customer.substring(0, customer.indexOf('|') - 1));
-                    flag = true;
-                } catch (Exception en) {
-                    flag = false;
-                    txtCustomerId.setUnFocusColor(Color.web("red"));
+                    if(txtPayAmount.getText().equals(""))
+                        paid = 0.0;
+                    else
+                        paid = Double.valueOf(txtPayAmount.getText());
+
+                    Transaction.payAmount = paid;
+                    Transaction.due = Double.valueOf(lblCost.getText()) - paid;
+
+                    Parent trPanel = FXMLLoader.load(getClass().getResource("/fxml/transaction.fxml"));
+                    Scene trScene = new Scene(trPanel);
+                    Stage trStage = new Stage();
+                    trStage.setScene(trScene);
+                    trStage.setResizable(false);
+                    trStage.show();
+
+                } catch (Exception e) {
+                    txtPayAmount.setUnFocusColor(Color.web("red"));
                     JFXSnackbar snackbar = new JFXSnackbar(rightPane);
-                    snackbar.show("Invalid Input", 3000);
+                    snackbar.show("Invalid Input Format", 3000);
                 }
 
-            }
+        } else {
+            boolean flag = true;
 
-            String item = txtItemId.getText();
+            if (!txtQty.getText().equals("") && Integer.parseInt(txtQty.getText()) > 0) {
 
-            try {
-                txtItemId.setText(Integer.valueOf(item).toString());
-            } catch (Exception e) {
-                flag = false;
+                String customer = txtCustomerId.getText();
+
+                txtItemId.setUnFocusColor(Color.web("#263238"));
+                txtCustomerId.setUnFocusColor(Color.web("#263238"));
+                txtQty.setUnFocusColor(Color.web("#263238"));
+                txtPayAmount.setUnFocusColor(Color.web("#263238"));
+
                 try {
-                    txtItemId.setText(item.substring(0, item.indexOf('|') - 1));
-                    flag = true;
-                } catch (Exception en) {
+                    txtCustomerId.setText(Integer.valueOf(customer).toString());
+                    //Searching if the ID is valid
+                    if (customerID.indexOf(Integer.valueOf(txtCustomerId.getText())) == -1) {
+                        flag = false;
+                        txtCustomerId.setUnFocusColor(Color.web("red"));
+                        JFXSnackbar snackbar = new JFXSnackbar(rightPane);
+                        snackbar.show("Invalid Customer ID", 3000);
+                    }
+                } catch (Exception e) {
                     flag = false;
-                    txtItemId.setUnFocusColor(Color.web("red"));
-                    JFXSnackbar snackbar = new JFXSnackbar(rightPane);
-                    snackbar.show("Invalid Input", 3000);
+                    try {
+                        txtCustomerId.setText(customer.substring(0, customer.indexOf('|') - 1));
+                        flag = true;
+                        //Searching if the ID is valid
+                        if (customerID.indexOf(Integer.valueOf(txtCustomerId.getText())) == -1) {
+                            flag = false;
+                            txtCustomerId.setUnFocusColor(Color.web("red"));
+                            JFXSnackbar snackbar = new JFXSnackbar(rightPane);
+                            snackbar.show("Invalid Customer ID", 3000);
+                        }
+                    } catch (Exception en) {
+                        flag = false;
+                        txtCustomerId.setUnFocusColor(Color.web("red"));
+                        JFXSnackbar snackbar = new JFXSnackbar(rightPane);
+                        snackbar.show("Invalid Input", 3000);
+                    }
+
                 }
+
+                String item = txtItemId.getText();
+
+                try {
+                    txtItemId.setText(Integer.valueOf(item).toString());
+                    if (itemIDForSale.indexOf(Integer.valueOf(txtItemId.getText())) == -1) {
+                        flag = false;
+                        txtItemId.setUnFocusColor(Color.web("red"));
+                        JFXSnackbar snackbar = new JFXSnackbar(rightPane);
+                        snackbar.show("Item ID is not listed", 3000);
+                    }
+                } catch (Exception e) {
+                    flag = false;
+                    try {
+                        txtItemId.setText(item.substring(0, item.indexOf('|') - 1));
+                        flag = true;
+                        if (itemIDForSale.indexOf(Integer.valueOf(txtItemId.getText())) == -1) {
+                            flag = false;
+                            txtItemId.setUnFocusColor(Color.web("red"));
+                            JFXSnackbar snackbar = new JFXSnackbar(rightPane);
+                            snackbar.show("Item ID is not listed", 3000);
+                        }
+                    } catch (Exception en) {
+                        flag = false;
+                        txtItemId.setUnFocusColor(Color.web("red"));
+                        JFXSnackbar snackbar = new JFXSnackbar(rightPane);
+                        snackbar.show("Invalid Input", 3000);
+                    }
+                }
+
+                if(flag) {
+                    Connection con = DBConnection.getConnection();
+                    try {
+                        PreparedStatement ps = con.prepareStatement("SELECT salePrice FROM item WHERE itemID = " + Integer.valueOf(txtItemId.getText()));
+                        ResultSet rs = ps.executeQuery();
+
+                        while (rs.next()) {
+                            lblCost.setText(String.valueOf(Integer.valueOf(txtQty.getText()) * rs.getDouble(1)));
+                        }
+                    } catch (SQLException e) {
+                        flag = false;
+                        e.printStackTrace();
+                    }
+                    try {
+                        con.close();
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
+                }
+
+            } else {
+                flag = false;
+                txtQty.setUnFocusColor(Color.web("red"));
+                JFXSnackbar snackbar = new JFXSnackbar(rightPane);
+                snackbar.show("Quantity field can not be null or 0", 3000);
             }
 
             if(flag) {
-                Connection con = DBConnection.getConnection();
-                try {
-                    PreparedStatement ps = con.prepareStatement("SELECT salePrice FROM item WHERE itemID = " + Integer.valueOf(txtItemId.getText()));
-                    ResultSet rs = ps.executeQuery();
-
-                    while (rs.next()) {
-                        lblCost.setText(String.valueOf(Integer.valueOf(txtQty.getText()) * rs.getDouble(1)));
-                    }
-                } catch (SQLException e) {
-                    flag = false;
-                    e.printStackTrace();
-                }
-                try {
-                    con.close();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-            }
-
-        } else {
-            flag = false;
-            txtQty.setUnFocusColor(Color.web("red"));
-            JFXSnackbar snackbar = new JFXSnackbar(rightPane);
-            snackbar.show("Quantity field can not be null or 0", 3000);
-        }
-
-        if(flag) {
-            btnIcon.setGlyphName("CHECK");
-            //Loading Transaction Window
-            try {
-                Parent trPanel = FXMLLoader.load(getClass().getResource("/fxml/transaction.fxml"));
-                Scene trScene = new Scene(trPanel);
-                Stage trStage = new Stage();
-                trStage.setScene(trScene);
-                trStage.initModality(Modality.APPLICATION_MODAL);
-                trStage.show();
-            } catch (IOException e) {
-                e.printStackTrace();
+                btnIcon.setGlyphName("CHECK");
+                startTransaction = true;
+                Tooltip tooltip = new Tooltip("Proceed to Transaction");
+                btnProcced.setTooltip(tooltip);
             }
         }
+
     }
 
 }

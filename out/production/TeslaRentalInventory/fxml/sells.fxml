@@ -95,7 +95,7 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <JFXTextField alignment="CENTER" focusColor="#263238" layoutX="162.0" layoutY="458.0" prefHeight="31.0" prefWidth="163.0">
+      <JFXTextField fx:id="txtPayAmount" alignment="CENTER" focusColor="#263238" layoutX="162.0" layoutY="458.0" prefHeight="31.0" prefWidth="163.0">
          <font>
             <Font size="15.0" />
          </font>

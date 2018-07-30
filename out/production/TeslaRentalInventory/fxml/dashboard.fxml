@@ -10,7 +10,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="661.0" prefWidth="1107.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="661.0" prefWidth="1107.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Dashboard">
    <children>
       <AnchorPane prefHeight="109.0" prefWidth="1169.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
@@ -68,7 +68,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
-            <Label alignment="CENTER" layoutX="120.0" layoutY="14.0" prefHeight="50.0" prefWidth="47.0" style="-fx-background-color: #78909c; -fx-text-fill: white; -fx-background-radius: 30 30 30 30;" text="Label">
+            <Label fx:id="lblTodaysRentalCtr" alignment="CENTER" layoutX="120.0" layoutY="14.0" prefHeight="50.0" prefWidth="47.0" style="-fx-background-color: #78909c; -fx-text-fill: white; -fx-background-radius: 30 30 30 30;" text="Label">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
@@ -78,7 +78,7 @@
                   <Font name="System Bold" size="15.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" layoutX="105.0" layoutY="197.0" prefHeight="29.0" prefWidth="137.0" text="Amount" textFill="#08b50e">
+            <Label fx:id="lblTodaysRentalAmount" alignment="CENTER" layoutX="105.0" layoutY="197.0" prefHeight="29.0" prefWidth="137.0" text="Amount" textFill="#08b50e">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
@@ -128,7 +128,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
-            <Label alignment="CENTER" layoutX="120.0" layoutY="14.0" prefHeight="50.0" prefWidth="47.0" style="-fx-background-color: red; -fx-text-fill: white; -fx-background-radius: 30 30 30 30;" text="Label">
+            <Label fx:id="lblTotalDueCtr" alignment="CENTER" layoutX="120.0" layoutY="14.0" prefHeight="50.0" prefWidth="47.0" style="-fx-background-color: red; -fx-text-fill: white; -fx-background-radius: 30 30 30 30;" text="Label">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
@@ -138,7 +138,7 @@
                   <Font name="System Bold" size="15.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" layoutX="97.0" layoutY="197.0" prefHeight="29.0" prefWidth="145.0" text="Amount" textFill="RED">
+            <Label fx:id="lblTotalDueAmount" alignment="CENTER" layoutX="97.0" layoutY="197.0" prefHeight="29.0" prefWidth="145.0" text="Amount" textFill="RED">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
