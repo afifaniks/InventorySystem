@@ -6,7 +6,10 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -14,10 +17,13 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 import org.controlsfx.control.textfield.TextFields;
 import sample.DBConnection;
 import sample.Purchase;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -201,6 +207,17 @@ public class Sells implements Initializable{
 
         if(flag) {
             btnIcon.setGlyphName("CHECK");
+            //Loading Transaction Window
+            try {
+                Parent trPanel = FXMLLoader.load(getClass().getResource("/fxml/transaction.fxml"));
+                Scene trScene = new Scene(trPanel);
+                Stage trStage = new Stage();
+                trStage.setScene(trScene);
+                trStage.initModality(Modality.APPLICATION_MODAL);
+                trStage.show();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 
