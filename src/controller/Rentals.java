@@ -12,6 +12,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.chart.CategoryAxis;
+import javafx.scene.chart.LineChart;
+import javafx.scene.chart.NumberAxis;
+import javafx.scene.chart.XYChart;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -112,6 +116,23 @@ public class Rentals implements Initializable {
     @FXML
     private FontAwesomeIconView btnIcon;
 
+    @FXML
+    private JFXButton btnBarchart;
+
+    @FXML
+    private FontAwesomeIconView btnChartIcon;
+
+    @FXML
+    private LineChart<String, Integer> lineChart;
+
+    @FXML
+    private CategoryAxis dateAxis;
+
+    @FXML
+    private NumberAxis amountAxis;
+
+
+    private static boolean toggle = true;
     private static boolean startTransaction = false;
     public static ObservableList<Rent> rentalList;
     public static ArrayList<String> customerIDName = null; //Will hold auto completion data for customer ID text field
@@ -311,10 +332,46 @@ public class Rentals implements Initializable {
         }
     }
 
+    @FXML
+    void btnBarchartAction(ActionEvent event) {
+        if(toggle) {
+            toggle = false;
+            btnChartIcon.setGlyphName("TABLE");
+            tblRecent.setVisible(false);
+            lineChart.setVisible(true);
+
+            Connection con = DBConnection.getConnection();
+            try {
+                PreparedStatement ps = con.prepareStatement("SELECT rentalDate, sum(paid) FROM rentals GROUP BY rentalDate");
+                ResultSet rs = ps.executeQuery();
+
+                XYChart.Series chartData = new XYChart.Series<>();
+
+                while(rs.next()) {
+                    chartData.getData().add(new XYChart.Data(rs.getString(1), rs.getInt(2)));
+
+                }
+                lineChart.getData().addAll(chartData);
+
+            } catch (SQLException e) {
+                e.printStackTrace();
+                new Dialog("SQL Error!", "Error occured while executing Query.\nSQL Error Code: " + e.getErrorCode());
+            }
+        } else {
+            toggle = true;
+            btnChartIcon.setGlyphName("LINE_CHART");
+            lineChart.setVisible(false);
+            lineChart.getData().clear();
+            tblRecent.setVisible(true);
+        }
+    }
+
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         TextFields.bindAutoCompletion(txtCustomerId, customerIDName);
         TextFields.bindAutoCompletion(txtItemId, inventoryItem);
+        toggle = true;
 
         Tooltip tooltip = new Tooltip("Verify Input");
         btnProcced.setTooltip(tooltip);

@@ -14,18 +14,18 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="661.0" prefWidth="1125.0" stylesheets="/css/accounts.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Account">
+<AnchorPane fx:id="accountPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="661.0" prefWidth="1125.0" stylesheets="/css/accounts.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Account">
    <children>
-      <Label layoutX="58.0" layoutY="224.0" prefHeight="44.0" prefWidth="104.0" text="Account Name:">
+      <Label layoutX="58.0" layoutY="246.0" prefHeight="44.0" prefWidth="104.0" text="Account Name:">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <JFXTextField fx:id="txtAccountID" alignment="CENTER" focusColor="#263238" layoutX="162.0" layoutY="229.0" prefHeight="31.0" prefWidth="163.0">
+      <JFXTextField fx:id="txtAccountID" alignment="CENTER" focusColor="#263238" layoutX="162.0" layoutY="251.0" prefHeight="31.0" prefWidth="163.0">
          <font>
             <Font size="15.0" />
          </font></JFXTextField>
-      <Label layoutX="58.0" layoutY="348.0" prefHeight="44.0" prefWidth="93.0" text="Pay Method:">
+      <Label layoutX="58.0" layoutY="406.0" prefHeight="44.0" prefWidth="93.0" text="Pay Method:">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
@@ -41,12 +41,12 @@
             <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="58.0" layoutY="285.0" prefHeight="44.0" prefWidth="78.0" text="Customer:">
+      <Label layoutX="58.0" layoutY="326.0" prefHeight="44.0" prefWidth="78.0" text="Customer:">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <JFXTextField fx:id="txtCustomerID" alignment="CENTER" focusColor="#263238" layoutX="162.0" layoutY="292.0" prefHeight="31.0" prefWidth="163.0">
+      <JFXTextField fx:id="txtCustomerID" alignment="CENTER" focusColor="#263238" layoutX="162.0" layoutY="333.0" prefHeight="31.0" prefWidth="163.0">
          <font>
             <Font size="15.0" />
          </font>
@@ -69,12 +69,12 @@
             <Font size="27.0" />
          </font>
       </Label>
-      <Label layoutX="58.0" layoutY="511.0" prefHeight="44.0" prefWidth="104.0" text="Processed by:">
+      <Label layoutX="58.0" layoutY="504.0" prefHeight="44.0" prefWidth="104.0" text="Processed by:">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label fx:id="lblProcessedBy" layoutX="162.0" layoutY="511.0" prefHeight="45.0" prefWidth="214.0" text="Emp. Name" textFill="#0c9e33">
+      <Label fx:id="lblProcessedBy" layoutX="162.0" layoutY="504.0" prefHeight="45.0" prefWidth="214.0" text="Emp. Name" textFill="#0c9e33">
          <font>
             <Font size="30.0" />
          </font>
@@ -109,7 +109,7 @@
             <Font size="15.0" />
          </font>
       </JFXButton>
-      <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="199.0" layoutY="594.0" prefHeight="59.0" prefWidth="61.0" ripplerFill="WHITE" style="-fx-background-color: green;" stylesheets="@../css/sells.css">
+      <JFXButton fx:id="btnAdd" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="199.0" layoutY="594.0" onAction="#btnAddAction" prefHeight="59.0" prefWidth="61.0" ripplerFill="WHITE" style="-fx-background-color: green;" stylesheets="@../css/sells.css">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -120,32 +120,27 @@
             <Font size="15.0" />
          </font>
       </JFXButton>
-      <Label layoutX="58.0" layoutY="417.0" prefHeight="44.0" prefWidth="93.0" text="Details:">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Label>
-      <JFXTextField fx:id="txtPayMethod" alignment="CENTER" focusColor="#263238" layoutX="162.0" layoutY="355.0" prefHeight="31.0" prefWidth="163.0">
+      <JFXTextField fx:id="txtPayMethod" alignment="CENTER" focusColor="#263238" layoutX="162.0" layoutY="413.0" prefHeight="31.0" prefWidth="163.0">
          <font>
             <Font size="15.0" />
          </font>
       </JFXTextField>
-      <JFXTextField fx:id="txtSearch" alignment="CENTER" focusColor="#263238" layoutX="828.0" layoutY="107.0" prefHeight="25.0" prefWidth="195.0">
+      <JFXTextField fx:id="txtSearch" alignment="CENTER" focusColor="#263238" layoutX="839.0" layoutY="107.0" prefHeight="25.0" prefWidth="195.0" promptText="search with account">
          <font>
-            <Font size="20.0" />
+            <Font size="15.0" />
          </font>
       </JFXTextField>
-      <JFXButton fx:id="btnSearch" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="1023.0" layoutY="107.0" prefHeight="44.0" prefWidth="45.0" ripplerFill="WHITE" style="-fx-background-radius: 30 30 30 30;" stylesheets="@../css/customer.css">
+      <JFXButton fx:id="btnSearch" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="1036.0" layoutY="98.0" onAction="#btnSearchAction" prefHeight="44.0" prefWidth="45.0" ripplerFill="WHITE" style="-fx-background-radius: 30 30 30 30; -fx-background-color: #263238;" stylesheets="@../css/customer.css">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
          <graphic>
-            <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" size="25" />
+            <FontAwesomeIconView fx:id="btnSearchIcon" fill="WHITE" glyphName="SEARCH" size="25" />
          </graphic>
          <tooltip>
             <Tooltip text="Search with customers name" />
          </tooltip>
       </JFXButton>
-      <JFXTextField layoutX="162.0" layoutY="427.0" prefHeight="25.0" prefWidth="163.0" />
+      <Label fx:id="lblSearchResults" alignment="CENTER_RIGHT" layoutX="705.0" layoutY="120.0" prefHeight="17.0" prefWidth="134.0" text="No Result Found!" visible="false" />
    </children>
 </AnchorPane>

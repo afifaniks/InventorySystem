@@ -5,6 +5,9 @@
 <?import com.jfoenix.controls.JFXTextField?>
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TableColumn?>
@@ -154,7 +157,7 @@
          </font>
       </Label>
       <JFXDatePicker fx:id="txtReturnDate" defaultColor="#263238" layoutX="162.0" layoutY="404.0" prefHeight="26.0" prefWidth="163.0" />
-      <JFXButton fx:id="btnRentalReturned" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="716.0" layoutY="588.0" onAction="#ctrlRentalReturnedAction" prefHeight="59.0" prefWidth="61.0" ripplerFill="WHITE" style="-fx-background-color: green;" stylesheets="@../css/sells.css">
+      <JFXButton fx:id="btnRentalReturned" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="689.0" layoutY="594.0" onAction="#ctrlRentalReturnedAction" prefHeight="59.0" prefWidth="61.0" ripplerFill="WHITE" style="-fx-background-color: green;" stylesheets="@../css/sells.css">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -179,5 +182,24 @@
             <Font size="15.0" />
          </font>
       </JFXButton>
+      <JFXButton fx:id="btnBarchart" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="767.0" layoutY="594.0" onAction="#btnBarchartAction" prefHeight="59.0" prefWidth="61.0" ripplerFill="WHITE" style="-fx-background-color: #263238;" stylesheets="@../css/sells.css">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIconView fx:id="btnChartIcon" fill="WHITE" glyphName="LINE_CHART" size="30" />
+         </graphic>
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <LineChart fx:id="lineChart" layoutX="433.0" layoutY="170.0" legendVisible="false" prefHeight="382.0" prefWidth="627.0" title="Your Recent Rentals/Day" visible="false">
+         <xAxis>
+            <CategoryAxis fx:id="dateAxis" animated="false" label="Date" prefHeight="11.0" prefWidth="569.0" side="BOTTOM" tickLabelGap="20.0" />
+         </xAxis>
+         <yAxis>
+            <NumberAxis fx:id="amountAxis" label="Amount" side="LEFT" />
+         </yAxis>
+      </LineChart>
    </children>
 </AnchorPane>

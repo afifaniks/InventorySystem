@@ -1,18 +1,32 @@
 package controller;
 
 import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXSnackbar;
 import com.jfoenix.controls.JFXTextArea;
 import com.jfoenix.controls.JFXTextField;
+import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.Tooltip;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.paint.Color;
+import org.controlsfx.control.textfield.TextFields;
+import sample.DBConnection;
+import sample.Dialog;
 import sample.Rent;
 
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
@@ -27,7 +41,7 @@ public class Account implements Initializable {
     private JFXTextField txtAccountID;
 
     @FXML
-    private Label lblId;
+    private Label lblId, lblS, lblSearchResults;
 
     @FXML
     private JFXTextField txtCustomerID;
@@ -59,19 +73,24 @@ public class Account implements Initializable {
     @FXML
     private JFXButton btnSearch;
 
-    public static ObservableList<sample.Account> accountList;
-    public static ArrayList<String> customerIDName = null; //Will hold auto completion data for customer ID text field
+    @FXML
+    private AnchorPane accountPane;
 
+    @FXML
+    private FontAwesomeIconView btnSearchIcon;
+
+    public static ObservableList<sample.Account> accountList;
+    public static ObservableList<sample.Account> tempList;
+    public static ArrayList<String> customerIDName = null; //Will hold auto completion data for customer ID text field
+    public static ArrayList<String> accountNames = null;
+    private static boolean searchDone = false;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         //Setting EmployeeName
         lblProcessedBy.setText(LogIn.loggerUsername);
-
-//        int accID;
-//        String cusName;
-//        String accName;
-//        String paymethod;
+        TextFields.bindAutoCompletion(txtCustomerID, customerIDName);
+        TextFields.bindAutoCompletion(txtSearch, accountNames);
 
         customer.setCellValueFactory(new PropertyValueFactory<>("cusName"));
         accID.setCellValueFactory(new PropertyValueFactory<>("accID"));
@@ -80,6 +99,129 @@ public class Account implements Initializable {
 
         tblRecent.setItems(accountList);
 
+        initiate();
+    }
+
+    private void initiate() {
+
+        //Getting highest account ID to set the next
+        Connection connection = DBConnection.getConnection();
+        try {
+            PreparedStatement ps = connection.prepareStatement("SELECT max(acccountID) FROM accounts");
+            ResultSet rs = ps.executeQuery();
+
+            while(rs.next()) {
+                lblId.setText(Integer.valueOf(rs.getInt(1) + 1).toString());
+            }
+        } catch (SQLException e) {
+            new Dialog("SQL Error!", "Error occured while executing Query.\nSQL Error Code: " + e.getErrorCode());
+        }
+
+        //Resetting fields
+        txtAccountID.setText("");
+        txtCustomerID.setText("");
+        txtPayMethod.setText("");
 
     }
+
+    @FXML
+    void btnSearchAction(ActionEvent event) {
+        if (searchDone) {
+            searchDone = false;
+            lblSearchResults.setVisible(false);
+            tblRecent.getItems().clear();
+            accountList = tempList; //Reassigning customers List
+            tblRecent.setItems(accountList);
+            btnSearch.setTooltip(new Tooltip("Search with customers name or id"));
+            btnSearchIcon.setGlyphName("SEARCH");
+        } else {
+            Connection con = DBConnection.getConnection();
+
+            String SQL = "SELECT  customers.firstName, customers.lastName, accounts.acccountID, accounts.accountName, accounts.paymethod " +
+                    "FROM accounts, customers WHERE accounts.Customers_customerID = customerID AND accountName COLLATE UTF8_GENERAL_CI like ?";
+
+            ObservableList<sample.Account> searchResult = FXCollections.observableArrayList(); //list to hold search result
+            try {
+                PreparedStatement ps = con.prepareStatement(SQL);
+                ps.setString(1, "%" + txtSearch.getText() +"%");
+                ResultSet accountResultSet = ps.executeQuery();
+                while (accountResultSet.next()) {
+                    searchResult.add(new sample.Account(accountResultSet.getInt(3),
+                            accountResultSet.getString(1) + " " + accountResultSet.getString(2),
+                            accountResultSet.getString(4),
+                            accountResultSet.getString(5)));
+                    accountNames.add(accountResultSet.getString(4));
+                }
+                con.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+
+
+            if (searchResult.size() <= 0) {
+                    lblSearchResults.setText("No Results Found!");
+                    lblSearchResults.setVisible(true);
+                } else {
+                tempList = FXCollections.observableArrayList(accountList);
+                searchDone = true;
+                btnSearchIcon.setGlyphName("CLOSE");
+                btnSearch.setTooltip(new Tooltip("Reset Full List"));
+                accountList = searchResult; //Assigning search result to customerList
+
+                lblSearchResults.setText(searchResult.size() + " results found!");
+                tblRecent.getItems().clear();
+                tblRecent.setItems(accountList);
+                lblSearchResults.setVisible(true);
+            }
+        }
+
+    }
+
+    @FXML
+    void btnAddAction(ActionEvent event) {
+        boolean flag = true;
+
+        if(txtAccountID.getText().equals("")) {
+            flag = false;
+            txtAccountID.setUnFocusColor(Color.web("red"));
+        }
+        if(txtCustomerID.getText().equals("")) {
+            flag = false;
+            txtCustomerID.setUnFocusColor(Color.web("red"));
+        }
+        if(txtPayMethod.getText().equals("")) {
+            flag = false;
+            txtPayMethod.setUnFocusColor(Color.web("red"));
+        }
+
+        if(!flag){
+            JFXSnackbar snackbar = new JFXSnackbar(accountPane);
+            snackbar.show("Fields required!", 3000);
+        } else {
+            Connection con = DBConnection.getConnection();
+            try {
+                PreparedStatement ps = con.prepareStatement("INSERT INTO accounts VALUES (?, ?, ?, ?, ?, ?)");
+                ps.setInt(1, Integer.valueOf(lblId.getText()));
+                ps.setString(2, txtAccountID.getText());
+                ps.setString(3, "NONE");
+                ps.setInt(4, Integer.valueOf(txtCustomerID.getText().substring(0, txtCustomerID.getText().indexOf('|') - 1)));
+                ps.setString(5, LogIn.loggerUsername);
+                ps.setString(6, txtPayMethod.getText());
+
+                ps.executeUpdate();
+
+                String defColor = "#263238";
+                txtPayMethod.setUnFocusColor(Color.web(defColor));
+                txtCustomerID.setUnFocusColor(Color.web(defColor));
+                txtAccountID.setUnFocusColor(Color.web(defColor));
+
+                new Dialog("Operation Successful!", "Account successfully created and stored into database.");
+
+                initiate();
+            } catch (SQLException e) {
+                new Dialog("Error!", "Invalid Argument.");
+            }
+        }
+    }
+
 }

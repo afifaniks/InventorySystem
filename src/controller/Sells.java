@@ -10,6 +10,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.chart.*;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
@@ -90,6 +91,57 @@ public class Sells implements Initializable{
     private TableColumn<Purchase, Double> dueAmount;
 
     @FXML
+    private LineChart<String, Integer> lineChart;
+
+    @FXML
+    private FontAwesomeIconView btnChartIcon;
+
+    @FXML
+    private CategoryAxis dateAxis;
+
+    @FXML
+    private NumberAxis amountAxis;
+
+    @FXML
+    private JFXButton btnBarchart;
+
+    private static boolean toggle = true;
+
+    @FXML
+    void btnBarchartAction(ActionEvent event) {
+       if(toggle) {
+           toggle = false;
+           btnChartIcon.setGlyphName("TABLE");
+           tblRecent.setVisible(false);
+           lineChart.setVisible(true);
+
+           Connection con = DBConnection.getConnection();
+           try {
+               PreparedStatement ps = con.prepareStatement("SELECT purchaseDate, sum(payAmount) FROM purchases GROUP BY purchaseDate");
+               ResultSet rs = ps.executeQuery();
+
+               XYChart.Series chartData = new XYChart.Series<>();
+
+               while(rs.next()) {
+                   chartData.getData().add(new XYChart.Data(rs.getString(1), rs.getInt(2)));
+
+               }
+               lineChart.getData().addAll(chartData);
+
+           } catch (SQLException e) {
+               e.printStackTrace();
+               new Dialog("SQL Error!", "Error occured while executing Query.\nSQL Error Code: " + e.getErrorCode());
+           }
+       } else {
+           toggle = true;
+           btnChartIcon.setGlyphName("LINE_CHART");
+           lineChart.setVisible(false);
+           lineChart.getData().clear();
+           tblRecent.setVisible(true);
+       }
+    }
+
+    @FXML
     private AnchorPane rightPane;
 
     private static boolean startTransaction = false;
@@ -102,6 +154,7 @@ public class Sells implements Initializable{
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        toggle = true;
         startTransaction = false;
         txtQty.setText("1");
         txtDate.setValue(LocalDate.now());

@@ -5,6 +5,9 @@
 <?import com.jfoenix.controls.JFXTextField?>
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TableColumn?>
@@ -90,6 +93,14 @@
             <Font size="30.0" />
          </font>
       </Label>
+      <LineChart fx:id="lineChart" layoutX="433.0" layoutY="170.0" legendVisible="false" prefHeight="382.0" prefWidth="627.0" title="Your Recent Sells/Day" AnchorPane.leftAnchor="433.0" AnchorPane.rightAnchor="109.0">
+        <xAxis>
+          <CategoryAxis fx:id="dateAxis" animated="false" label="Date" prefHeight="11.0" prefWidth="569.0" side="BOTTOM" tickLabelGap="20.0" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="amountAxis" label="Amount" side="LEFT" />
+        </yAxis>
+      </LineChart>
       <Label layoutX="58.0" layoutY="449.0" prefHeight="44.0" prefWidth="93.0" text="Pay Amount:">
          <font>
             <Font name="System Bold" size="14.0" />
@@ -159,6 +170,17 @@
          <tooltip>
             <Tooltip text="Search with customers name" />
          </tooltip>
+      </JFXButton>
+      <JFXButton fx:id="btnBarchart" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="767.0" layoutY="594.0" onAction="#btnBarchartAction" prefHeight="59.0" prefWidth="61.0" ripplerFill="WHITE" style="-fx-background-color: #263238;" stylesheets="@../css/sells.css">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIconView fx:id="btnChartIcon" fill="WHITE" glyphName="LINE_CHART" size="30" />
+         </graphic>
+         <font>
+            <Font size="15.0" />
+         </font>
       </JFXButton>
    </children>
 </AnchorPane>

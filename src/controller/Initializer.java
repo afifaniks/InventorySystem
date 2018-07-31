@@ -246,16 +246,19 @@ public class Initializer implements Initializable {
             this.updateMessage("Loading Accounts...");
 
             ObservableList<Account> accountListByUser = FXCollections.observableArrayList();
+            ArrayList<String> accountNames = new ArrayList<>();
 
             while(accountResultSet.next()) {
                 accountListByUser.add(new Account(accountResultSet.getInt(3),
                         accountResultSet.getString(1) + " " + accountResultSet.getString(2),
                         accountResultSet.getString(4),
                         accountResultSet.getString(5)));
+                accountNames.add(accountResultSet.getString(4));
             }
 
             //Setting Accounts on Account Class
             controller.Account.accountList = accountListByUser;
+            controller.Account.accountNames = accountNames;
 
             Thread.sleep(200);
             //Updating Task Message
