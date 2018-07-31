@@ -18,6 +18,7 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import org.controlsfx.control.textfield.TextFields;
 import sample.DBConnection;
+import sample.Dialog;
 import sample.Purchase;
 
 import java.io.IOException;
@@ -164,12 +165,28 @@ public class Sells implements Initializable{
                     Transaction.payAmount = paid;
                     Transaction.due = Double.valueOf(lblCost.getText()) - paid;
 
-                    Parent trPanel = FXMLLoader.load(getClass().getResource("/fxml/transaction.fxml"));
-                    Scene trScene = new Scene(trPanel);
-                    Stage trStage = new Stage();
-                    trStage.setScene(trScene);
-                    trStage.setResizable(false);
-                    trStage.show();
+                    //Checking for accounnts
+                    Connection connection = DBConnection.getConnection();
+                    PreparedStatement preparedStatement = connection.prepareStatement("SELECT count(*) from accounts, customers where customerID = Customers_customerID AND Customers_customerID = "+Integer.valueOf(txtCustomerId.getText()));
+                    ResultSet rs = preparedStatement.executeQuery();
+
+                    int chk = 0;
+
+                    while(rs.next()) {
+                        chk = rs.getInt(1);
+                    }
+                    if(chk <= 0) {
+                        new Dialog("No Account!", "Customer has no account. Please create an account first then try again.");
+                    } else {
+                        Parent trPanel = FXMLLoader.load(getClass().getResource("/fxml/transaction.fxml"));
+                        Scene trScene = new Scene(trPanel);
+                        Stage trStage = new Stage();
+                        trStage.setScene(trScene);
+                        trStage.setResizable(false);
+                        trStage.show();
+                    }
+
+                    connection.close();
 
                 } catch (Exception e) {
                     txtPayAmount.setUnFocusColor(Color.web("red"));

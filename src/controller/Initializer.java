@@ -22,6 +22,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
+import java.util.TreeMap;
 
 /**
  * Author: Afif Al Mamun
@@ -84,10 +85,11 @@ public class Initializer implements Initializable {
             //Creating OLs to save values from result set
             ObservableList<Customer> customersList = FXCollections.observableArrayList();
             ObservableList<Item> itemList = FXCollections.observableArrayList();
+            ObservableList<String> itemTypeName = FXCollections.observableArrayList();
 
             PreparedStatement getCustomerList = connection.prepareStatement("SELECT * FROM customers");
             PreparedStatement getItemList = connection.prepareStatement("SELECT *" +
-                    "FROM item, itemtype WHERE item.ItemType_itemTypeId = itemtype.itemTypeId");
+                    "FROM item, itemtype WHERE item.ItemType_itemTypeId = itemtype.itemTypeId ORDER BY itemID");
             PreparedStatement getSellsList = connection.prepareStatement("SELECT * FROM purchases WHERE User_username ='"
                     +sessionUser+"'");
             PreparedStatement getRentalList = connection.prepareStatement("SELECT * FROM rentals WHERE User_username ='"
@@ -97,6 +99,7 @@ public class Initializer implements Initializable {
                     +sessionUser+"' AND Customers_customerID = customerID");
             PreparedStatement getRentalDue = connection.prepareStatement("SELECT COUNT(*), SUM(amountDue) FROM rentals WHERE amountDue <> 0");
             PreparedStatement getPurchaseDue = connection.prepareStatement("SELECT COUNT(*), SUM(amountDue) FROM purchases WHERE amountDue <> 0");
+            PreparedStatement getItemType = connection.prepareStatement("SELECT * FROM itemtype");
 
             ResultSet itemResultSet = getItemList.executeQuery();
             ResultSet customerResultSet = getCustomerList.executeQuery();
@@ -105,6 +108,7 @@ public class Initializer implements Initializable {
             ResultSet accountResultSet = getAccountList.executeQuery();
             ResultSet rentalDue = getRentalDue.executeQuery();
             ResultSet purchaseDue = getPurchaseDue.executeQuery();
+            ResultSet itemType = getItemType.executeQuery();
 
             //Updating task message
             this.updateMessage("Loading Customers...");
@@ -116,7 +120,9 @@ public class Initializer implements Initializable {
             ArrayList<Integer> itemIDForSale = new ArrayList<>();
             ArrayList<String> itemIDNameForRentals = new ArrayList<>(); //Will hold item id name for rent
             ArrayList<Integer> itemIDForRent = new ArrayList<>();
+            ArrayList<String> itemNames = new ArrayList<>();
             ArrayList<Integer> customerID = new ArrayList<>();
+            TreeMap<String, Integer> itemTypeTree = new TreeMap<>();
 
             //Getting values from customers result set
             while(customerResultSet.next()) {
@@ -168,6 +174,8 @@ public class Initializer implements Initializable {
                         itemResultSet.getString("photo"),
                         itemResultSet.getString("typeName"));
 
+                itemNames.add(itemResultSet.getString("itemName"));
+
                 if(itemResultSet.getString("rentalOrSale").contains("Rental"))
                 {
                     item.setRent(true);
@@ -187,6 +195,7 @@ public class Initializer implements Initializable {
 
             //Setting OL to the static field of Inventory
             Inventory.itemList = itemList;
+            Inventory.itemNames = itemNames;
             Sells.inventoryItem = itemIDNameForSale; //Setting item id and name for sale & Rentals
             Sells.itemIDForSale = itemIDForSale;
             Rentals.inventoryItem = itemIDNameForRentals;
@@ -269,6 +278,16 @@ public class Initializer implements Initializable {
             Dashboard.totalDueCtr = totalDueCtr;
             Dashboard.totalDueAmount = totalDueAmount;
 
+            Thread.sleep(200);
+            this.updateMessage("Loading Item Types....");
+
+            while (itemType.next()) {
+                itemTypeTree.put(itemType.getString(2), itemType.getInt(1));
+                itemTypeName.add(itemType.getString(2));
+            }
+
+            Inventory.itemType = itemTypeTree;
+            Inventory.itemTypeNames = itemTypeName;
 
             //Updating Status of the Task
             this.updateMessage("Loading Finished!");

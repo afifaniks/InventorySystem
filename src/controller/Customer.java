@@ -10,7 +10,9 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.paint.Color;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
 import javafx.stage.FileChooser;
@@ -18,12 +20,12 @@ import org.controlsfx.control.textfield.TextFields;
 import sample.DBConnection;
 import sample.Dialog;
 
+import java.io.File;
 import java.net.URL;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
+import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 /**
@@ -67,7 +69,7 @@ public class Customer implements Initializable {
     private JFXButton btnNextEntry;
 
     @FXML
-    private Label customerID, lblSearchResults;
+    private Label customerID, lblSearchResults, lblMode;
 
     @FXML
     private Label lblPageIndex;
@@ -96,9 +98,23 @@ public class Customer implements Initializable {
     @FXML
     private JFXButton btnLViewAllCustomers, btnGoBack;
 
-
     @FXML
     private FontAwesomeIconView btnSeachIcon;
+
+    @FXML
+    private JFXButton btnAddNew, btnSave;
+
+    @FXML
+    private JFXButton btnAccounts;
+
+    @FXML
+    private JFXButton btnPurchases;
+
+    @FXML
+    private JFXButton btnRentals;
+
+    @FXML
+    private FontAwesomeIconView btnAddIcon;
 
     @FXML
     private TableView<sample.Customer> tbl;
@@ -125,7 +141,6 @@ public class Customer implements Initializable {
     private TableColumn<sample.Customer, String> columnEmail;
 
 
-
     private static int recordIndex = 0;
     private static int recordSize = 0;
 
@@ -134,6 +149,8 @@ public class Customer implements Initializable {
     public static ArrayList<String> customerNames = new ArrayList<>();
     private sample.Customer onView = null;
     private static boolean searchDone = false;
+    private static boolean addFlag = false;
+    private static String imgPath = null;
 
 
     @Override
@@ -143,13 +160,11 @@ public class Customer implements Initializable {
     }
 
     private void initialView() {
+        imgPath = null;
         customerListPane.setVisible(false); //Initially customer list view is set as not visible
 
         recordIndex = 0; //Resetting record index
         recordSize = customersList.size();
-
-        ImagePattern img = new ImagePattern(new Image("/resource/icons/10407479_1396350623998299_689954862227931112_n.jpg"));
-        imgCustomerPhoto.setFill(img);
 
         //Tooltip will be activated on Customer's photo if hovered
         Tooltip tooltip = new Tooltip("Double Click to Change Avatar in 'Edit Mode'");
@@ -159,7 +174,17 @@ public class Customer implements Initializable {
             if (btnEditMode.isSelected() && event.getClickCount() == 2) {
                 FileChooser fc = new FileChooser();
                 fc.setTitle("Choose Photo");
-                fc.showOpenDialog(btnEditMode.getScene().getWindow());
+
+                File imgFile = fc.showOpenDialog(btnEditMode.getScene().getWindow());
+
+                imgPath = imgFile.toURI().toString();
+
+                if(imgPath.contains(".jpg") || imgPath.contains(".png") || imgPath.contains(".gif") ||imgPath.contains(".jpeg")) {
+                    ImagePattern gg = new ImagePattern(new Image(imgPath));
+                    imgCustomerPhoto.setFill(gg);
+                } else {
+                    new Dialog("File Format Error!", "Please select a valid image file. You can select JPG, JPEG, PNG, GIF");
+                }
             }
         });
 
@@ -167,8 +192,8 @@ public class Customer implements Initializable {
         btnNextEntry.setOnAction(event -> {
             onView = customersList.get(++recordIndex);
             recordNavigator();
-            lblPageIndex.setText("Showing " + (recordIndex + 1) + " of " + recordSize +" results.");
-            if(recordIndex == recordSize - 1)
+            lblPageIndex.setText("Showing " + (recordIndex + 1) + " of " + recordSize + " results.");
+            if (recordIndex == recordSize - 1)
                 btnNextEntry.setDisable(true);
             btnPrevEntry.setDisable(false);
 
@@ -178,9 +203,9 @@ public class Customer implements Initializable {
         btnPrevEntry.setOnAction(event -> {
             onView = customersList.get(--recordIndex);
             recordNavigator();
-            lblPageIndex.setText("Showing " + (recordIndex + 1) + " of " + recordSize +" results.");
+            lblPageIndex.setText("Showing " + (recordIndex + 1) + " of " + recordSize + " results.");
             btnNextEntry.setDisable(false);
-            if(recordIndex == 0)
+            if (recordIndex == 0)
                 btnPrevEntry.setDisable(true);
 
         });
@@ -197,7 +222,7 @@ public class Customer implements Initializable {
             //Setting page indexer value
             lblPageIndex.setText("Showing " + (recordIndex + 1) + " of " + recordSize + " results.");
 
-            if(recordSize > 1) {
+            if (recordSize > 1) {
                 btnNextEntry.setDisable(false); //Next entry will be enabled if there is more than one entry
             }
         }
@@ -209,7 +234,7 @@ public class Customer implements Initializable {
 
     @FXML
     void btnEditModeToggle(ActionEvent event) {
-        if(btnEditMode.isSelected()) {
+        if (btnEditMode.isSelected()) {
             phone.setEditable(true);
             txtFName.setEditable(true);
             txtLName.setEditable(true);
@@ -236,7 +261,23 @@ public class Customer implements Initializable {
         phone.setText(onView.getPhone());
         memberSince.setText(onView.getDate().toString());
 
-        if(onView.getGender().equals("Male"))
+        //Setting Image
+        if (onView.getPhoto() == null) {
+            ImagePattern img = new ImagePattern(new Image("/resource/icons/user.png"));
+            imgCustomerPhoto.setFill(img);
+        } else {
+            try {
+                ImagePattern img = new ImagePattern(new Image(onView.getPhoto()));
+                imgCustomerPhoto.setFill(img);
+            } catch (Exception e) {
+                //Fallback photo
+                System.out.println(111);
+                ImagePattern img = new ImagePattern(new Image("/resource/icons/user.png"));
+                imgCustomerPhoto.setFill(img);
+            }
+        }
+
+        if (onView.getGender().equals("Male"))
             radioMale.setSelected(true);
         else
             radioFemale.setSelected(true);
@@ -293,7 +334,7 @@ public class Customer implements Initializable {
                 ResultSet customerResultSet = preparedStatement.executeQuery();
 
                 //Getting values from customers result set
-                while(customerResultSet.next()) {
+                while (customerResultSet.next()) {
                     searchResult.add(new sample.Customer(
                             customerResultSet.getInt(1),
                             customerResultSet.getString(2),
@@ -318,13 +359,14 @@ public class Customer implements Initializable {
                     btnSearch.setTooltip(new Tooltip("Reset Full List"));
                     customersList = searchResult; //Assigning search result to customerList
                     recordSize = searchResult.size();
-                    lblSearchResults.setText(Integer.valueOf(recordSize) + " results found!");
+                    lblSearchResults.setText(recordSize + " results found!");
+                    lblSearchResults.setVisible(true);
                     initialView();
 
                     con.close();
                 }
 
-            } catch(NumberFormatException eN) {
+            } catch (NumberFormatException eN) {
 
                 try {
                     PreparedStatement preparedStatement2 = con.prepareStatement(nameSQL);
@@ -334,7 +376,7 @@ public class Customer implements Initializable {
                     ResultSet customerResultSet2 = preparedStatement2.executeQuery();
 
                     //Getting values from customers result set
-                    while(customerResultSet2.next()) {
+                    while (customerResultSet2.next()) {
                         searchResult.add(new sample.Customer(
                                 customerResultSet2.getInt(1),
                                 customerResultSet2.getString(2),
@@ -359,7 +401,8 @@ public class Customer implements Initializable {
                         btnSearch.setTooltip(new Tooltip("Reset Full List"));
                         customersList = searchResult; //Assigning search result to customerList
                         recordSize = searchResult.size();
-                        lblSearchResults.setText(Integer.valueOf(recordSize) + " results found!");
+                        lblSearchResults.setText(recordSize + " results found!");
+                        lblSearchResults.setVisible(true);
                         initialView();
 
                         con.close();
@@ -367,7 +410,7 @@ public class Customer implements Initializable {
 
                 } catch (SQLException eS2) {
 
-                    eS2.printStackTrace();
+                    new Dialog("SQL Error!", "Error occured while executing Query.\nSQL Error Code: " + eS2.getErrorCode());
                 }
 
             } catch (SQLException eS) {
@@ -375,5 +418,222 @@ public class Customer implements Initializable {
             }
         }
 
+    }
+
+    @FXML
+    void btnAddMode(ActionEvent event) {
+        if(addFlag) {
+            addFlag = false; //Resetting addFlag value.
+            btnAddIcon.setGlyphName("PLUS");
+
+            //Enabling other buttons
+            btnPrevEntry.setDisable(false);
+            btnNextEntry.setDisable(false);
+            btnAccounts.setDisable(false);
+            btnSearch.setDisable(false);
+            btnRentals.setDisable(false);
+            btnPurchases.setDisable(false);
+            btnLViewAllCustomers.setDisable(false);
+            btnEditMode.setSelected(false);
+
+            String defColor = "#263238";
+
+            //Changing Focus Color
+            txtFName.setUnFocusColor(Color.web(defColor));
+            txtLName.setUnFocusColor(Color.web(defColor));
+            address.setUnFocusColor(Color.web(defColor));
+            phone.setUnFocusColor(Color.web(defColor));
+            email.setUnFocusColor(Color.web(defColor));
+
+            //Setting Label
+            lblMode.setText("Navigation Mode");
+
+            initialView();
+
+            btnEditModeToggle(new ActionEvent());
+
+        } else {
+            Connection con = DBConnection.getConnection();
+            try {
+                PreparedStatement ps = con.prepareStatement("SELECT max(customerID) FROM customers");
+                ResultSet rs = ps.executeQuery();
+
+                while(rs.next()) {
+                    customerID.setText(Integer.valueOf(rs.getInt(1) + 1).toString());
+                }
+
+                addFlag = true; //Setting flag true to enable exit mode
+                btnAddIcon.setGlyphName("UNDO"); //Changing glyph
+
+                //Setting Label
+                lblMode.setText("Entry Mode");
+
+                //Disabling other buttons
+                btnPrevEntry.setDisable(true);
+                btnNextEntry.setDisable(true);
+                btnAccounts.setDisable(true);
+                btnRentals.setDisable(true);
+                btnPurchases.setDisable(true);
+                btnLViewAllCustomers.setDisable(true);
+                btnSearch.setDisable(true);
+                btnEditMode.setSelected(true);
+
+                //Cleaning fields
+                txtFName.setText("");
+                txtLName.setText("");
+                address.setText("");
+                phone.setText("");
+                email.setText("");
+                memberSince.setText(LocalDate.now().toString());
+
+                btnEditModeToggle(new ActionEvent()); //Changing mode into entry mode.. all fields will be available to edit
+
+            } catch (SQLException e) {
+                new Dialog("SQL Error!", "Error occured while executing Query.\nSQL Error Code: " + e.getErrorCode());
+            }
+        }
+    }
+
+    @FXML
+    void saveEntry(ActionEvent event) {
+        if (addFlag) {
+            //addFlag = false;
+            boolean entryFlag = true;
+            if (txtFName.getText().equals("")) {
+                txtFName.setUnFocusColor(Color.web("red"));
+                entryFlag = false;
+            }
+
+            if(txtLName.getText().equals("")) {
+                txtLName.setUnFocusColor(Color.web("red"));
+                entryFlag = false;
+            }
+
+            if(address.getText().equals("")) {
+                address.setUnFocusColor(Color.web("red"));
+                entryFlag = false;
+            }
+
+            if(phone.getText().equals("")) {
+                phone.setUnFocusColor(Color.web("red"));
+                entryFlag = false;
+            }
+
+            if(email.getText().equals("")) {
+                email.setUnFocusColor(Color.web("red"));
+                entryFlag = false;;
+            }
+
+            if(entryFlag) {
+                Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                alert.setTitle("Confirm Entry");
+                alert.setGraphic(new ImageView(this.getClass().getResource("/resource/icons/question (2).png").toString()));
+
+                alert.setHeaderText("Do you want to add this entry?");
+                alert.setContentText("Press OK to confirm, Cancel to go back");
+
+                Optional<ButtonType> result = alert.showAndWait();
+
+                if (result.get() == ButtonType.OK) {
+                    Connection con = DBConnection.getConnection();
+                    try {
+                        PreparedStatement ps = con.prepareStatement("INSERT INTO customers VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+                        ps.setInt(1, Integer.valueOf(customerID.getText()));
+                        ps.setString(2, txtFName.getText());
+                        ps.setString(3, txtLName.getText());
+                        ps.setString(4, address.getText());
+                        ps.setString(5, phone.getText());
+                        ps.setString(6, email.getText());
+                        ps.setString(7, "null");
+                        ps.setString(8, imgPath);
+                        if(radioMale.isSelected()) {
+                            ps.setString(9, "Male");
+                        } else if(radioFemale.isSelected()) {
+                            ps.setString(9, "Female");
+                        }
+
+                        ps.setDate(10, Date.valueOf(LocalDate.now()));
+
+                        ps.executeUpdate();
+
+                        new Dialog("Operation Successful!", "New Customer Added!");
+
+                    } catch (SQLException e) {
+                        new Dialog("SQL Error!", "Error occured while executing Query.\nSQL Error Code: " + e.getErrorCode());
+                    }
+                }
+            } else {
+                JFXSnackbar snackbar = new JFXSnackbar(customerPane);
+                snackbar.show("One or more fields are empty!", 3000);
+            }
+        } else {
+            boolean entryFlag = true;
+            if (txtFName.getText().equals("")) {
+                txtFName.setUnFocusColor(Color.web("red"));
+                entryFlag = false;
+            }
+
+            if(txtLName.getText().equals("")) {
+                txtLName.setUnFocusColor(Color.web("red"));
+                entryFlag = false;
+            }
+
+            if(address.getText().equals("")) {
+                address.setUnFocusColor(Color.web("red"));
+                entryFlag = false;
+            }
+
+            if(phone.getText().equals("")) {
+                phone.setUnFocusColor(Color.web("red"));
+                entryFlag = false;
+            }
+
+            if(email.getText().equals("")) {
+                email.setUnFocusColor(Color.web("red"));
+                entryFlag = false;;
+            }
+
+            if(entryFlag) {
+                Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                alert.setTitle("Confirm Edit");
+                alert.setGraphic(new ImageView(this.getClass().getResource("/resource/icons/question (2).png").toString()));
+
+                alert.setHeaderText("Do you really want to update this entry?");
+                alert.setContentText("Press OK to confirm, Cancel to go back");
+
+                Optional<ButtonType> result = alert.showAndWait();
+
+                if (result.get() == ButtonType.OK) {
+                    Connection con = DBConnection.getConnection();
+                    try {
+                        PreparedStatement ps = con.prepareStatement("UPDATE customers SET customerID = ?, firstName = ?, lastName = ?, address = ?," +
+                                "phone = ?, email = ?, details = ?, photo = ?, gender = ?, memberSince = ? WHERE customerID =" + Integer.valueOf(customerID.getText()));
+                        ps.setInt(1, Integer.valueOf(customerID.getText()));
+                        ps.setString(2, txtFName.getText());
+                        ps.setString(3, txtLName.getText());
+                        ps.setString(4, address.getText());
+                        ps.setString(5, phone.getText());
+                        ps.setString(6, email.getText());
+                        ps.setString(7, "null");
+                        ps.setString(8, imgPath);
+                        if (radioMale.isSelected()) {
+                            ps.setString(9, "Male");
+                        } else if (radioFemale.isSelected()) {
+                            ps.setString(9, "Female");
+                        }
+                        ps.setDate(10, Date.valueOf(LocalDate.now()));
+
+                        ps.executeUpdate();
+
+                        new Dialog("Operation Successful!", "The record is updated!");
+
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                        new Dialog("SQL Error!", "Error occured while executing Query.\nSQL Error Code: " + e.getErrorCode());
+                    }
+                }
+            }
+
+        }
     }
 }
