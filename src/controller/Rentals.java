@@ -160,8 +160,24 @@ public class Rentals implements Initializable {
                 Transaction.payAmount = paid;
                 Transaction.due = Double.valueOf(lblCost.getText()) - paid;
 
-                //Checking for accounnts
                 Connection connection = DBConnection.getConnection();
+
+                //Checking for stock availability
+                PreparedStatement checkItemStock = connection.prepareStatement("SELECT stock FROM item WHERE itemID = "+Integer.valueOf(txtItemId.getText()));
+                ResultSet itemStock = checkItemStock.executeQuery();
+
+                Integer stock = 0;
+
+                while(itemStock.next()) {
+                    stock = itemStock.getInt(1);
+                }
+
+                if(stock == 0) {
+                    new Dialog("Insuffecient Stock!", "This item is not currently available for renting.");
+                    return;
+                }
+
+                //Checking for accounnts
                 PreparedStatement preparedStatement = connection.prepareStatement("SELECT count(*) from accounts, customers where customerID = Customers_customerID AND Customers_customerID = "+Integer.valueOf(txtCustomerId.getText()));
                 ResultSet rs = preparedStatement.executeQuery();
 
