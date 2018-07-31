@@ -112,6 +112,7 @@ public class Initializer implements Initializable {
 
             ArrayList<String> customerIDNameHolder = new ArrayList<>(); //Will store ID and Name from ResultSet
             ArrayList<String> itemIDNameForSale = new ArrayList<>(); //Will hold item id name for sell
+            ArrayList<String> customerName = new ArrayList<>();
             ArrayList<Integer> itemIDForSale = new ArrayList<>();
             ArrayList<String> itemIDNameForRentals = new ArrayList<>(); //Will hold item id name for rent
             ArrayList<Integer> itemIDForRent = new ArrayList<>();
@@ -122,6 +123,9 @@ public class Initializer implements Initializable {
                 customerIDNameHolder.add(customerResultSet.getInt(1) + " | "
                         + customerResultSet.getString(2) + "  "
                         + customerResultSet.getString(3));
+
+                customerName.add(customerResultSet.getString(2)); //Adding first Name
+                customerName.add(customerResultSet.getString(3)); //Adding last name
 
                 customersList.add(new sample.Customer(
                         customerResultSet.getInt(1),
@@ -138,8 +142,9 @@ public class Initializer implements Initializable {
                 customerID.add(customerResultSet.getInt(1));
             }
 
-            //Setting value to Customers List
+            //Setting fields in Customers List
             controller.Customer.customersList = customersList;
+            controller.Customer.customerNames = customerName;
 
             //Setting Id and Name to Sells, Rentals, Accounts
             Sells.customerIDName = customerIDNameHolder;

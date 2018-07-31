@@ -142,8 +142,12 @@ public class LogIn implements Initializable{
         } else {
             try {
                 Connection con = DBConnection.getConnection();
-                String sql = "SELECT * FROM user WHERE username = '" + username + "' AND password = '" + password + "'";
+                String sql = "SELECT * FROM user WHERE username = ? AND password = ?";
                 PreparedStatement ps = con.prepareStatement(sql);
+
+                ps.setString(1, username);
+                ps.setString(2, password);
+
                 ResultSet rs = ps.executeQuery();
 
                 if (rs.next()) {

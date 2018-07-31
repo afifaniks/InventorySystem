@@ -1,6 +1,7 @@
 package controller;
 
 import com.jfoenix.controls.*;
+import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -13,8 +14,16 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
 import javafx.stage.FileChooser;
+import org.controlsfx.control.textfield.TextFields;
+import sample.DBConnection;
+import sample.Dialog;
 
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 /**
@@ -58,7 +67,7 @@ public class Customer implements Initializable {
     private JFXButton btnNextEntry;
 
     @FXML
-    private Label customerID;
+    private Label customerID, lblSearchResults;
 
     @FXML
     private Label lblPageIndex;
@@ -86,6 +95,10 @@ public class Customer implements Initializable {
 
     @FXML
     private JFXButton btnLViewAllCustomers, btnGoBack;
+
+
+    @FXML
+    private FontAwesomeIconView btnSeachIcon;
 
     @FXML
     private TableView<sample.Customer> tbl;
@@ -117,11 +130,19 @@ public class Customer implements Initializable {
     private static int recordSize = 0;
 
     public static ObservableList<sample.Customer> customersList = FXCollections.observableArrayList(); //This field will auto set from Initializer Class
+    public static ObservableList<sample.Customer> tempList = FXCollections.observableArrayList(); //Will hold the main list while searching
+    public static ArrayList<String> customerNames = new ArrayList<>();
     private sample.Customer onView = null;
+    private static boolean searchDone = false;
 
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        TextFields.bindAutoCompletion(txtSearch, customerNames); //Auto complete field is set now
+        initialView();
+    }
+
+    private void initialView() {
         customerListPane.setVisible(false); //Initially customer list view is set as not visible
 
         recordIndex = 0; //Resetting record index
@@ -182,7 +203,6 @@ public class Customer implements Initializable {
         }
 
         btnPrevEntry.setDisable(true); //Disabling prevButton Initially
-
     }
 
     //This method will toggle edit mode on/off in customer layout
@@ -195,8 +215,6 @@ public class Customer implements Initializable {
             txtLName.setEditable(true);
             address.setEditable(true);
             email.setEditable(true);
-            radioFemale.setDisable(false);
-            radioMale.setDisable(false);
         } else {
             btnEditMode.setStyle("");
             phone.setEditable(false);
@@ -204,8 +222,6 @@ public class Customer implements Initializable {
             txtLName.setEditable(false);
             address.setEditable(false);
             email.setEditable(false);
-            radioFemale.setDisable(true);
-            radioMale.setDisable(true);
         }
     }
 
@@ -247,6 +263,117 @@ public class Customer implements Initializable {
             customerListPane.setVisible(false);
             customerPane.setVisible(true);
         });
+
+    }
+
+
+    @FXML
+    void btnSearchAction(ActionEvent event) {
+        if (searchDone) {
+            searchDone = false;
+            lblSearchResults.setVisible(false);
+            customersList = tempList; //Reassigning customers List
+            recordSize = customersList.size();
+            btnSearch.setTooltip(new Tooltip("Search with customers name or id"));
+            btnSeachIcon.setGlyphName("SEARCH");
+            initialView();
+        } else {
+            Connection con = DBConnection.getConnection();
+
+            String idSQL = "SELECT * FROM customers WHERE customerID = ?";
+            String nameSQL = "SELECT * FROM customers WHERE firstName COLLATE UTF8_GENERAL_CI like ? OR lastName COLLATE UTF8_GENERAL_CI like ?";
+            ObservableList<sample.Customer> searchResult = FXCollections.observableArrayList(); //list to hold search result
+
+            try {
+                //Checking if input field is a number then searching with ID
+                Integer id = Integer.valueOf(txtSearch.getText());
+                PreparedStatement preparedStatement = con.prepareStatement(idSQL);
+                preparedStatement.setInt(1, id);
+
+                ResultSet customerResultSet = preparedStatement.executeQuery();
+
+                //Getting values from customers result set
+                while(customerResultSet.next()) {
+                    searchResult.add(new sample.Customer(
+                            customerResultSet.getInt(1),
+                            customerResultSet.getString(2),
+                            customerResultSet.getString(3),
+                            customerResultSet.getString(4),
+                            customerResultSet.getString(5),
+                            customerResultSet.getString(6),
+                            customerResultSet.getString(7),
+                            customerResultSet.getString(8),
+                            customerResultSet.getString(9),
+                            customerResultSet.getDate(10)));
+
+                }
+
+                if (searchResult.size() <= 0) {
+                    lblSearchResults.setText("No Results Found!");
+                    lblSearchResults.setVisible(true);
+                } else {
+                    tempList = FXCollections.observableArrayList(customersList);
+                    searchDone = true;
+                    btnSeachIcon.setGlyphName("CLOSE");
+                    btnSearch.setTooltip(new Tooltip("Reset Full List"));
+                    customersList = searchResult; //Assigning search result to customerList
+                    recordSize = searchResult.size();
+                    lblSearchResults.setText(Integer.valueOf(recordSize) + " results found!");
+                    initialView();
+
+                    con.close();
+                }
+
+            } catch(NumberFormatException eN) {
+
+                try {
+                    PreparedStatement preparedStatement2 = con.prepareStatement(nameSQL);
+                    preparedStatement2.setString(1, "%" + txtSearch.getText() + "%");
+                    preparedStatement2.setString(2, "%" + txtSearch.getText() + "%");
+
+                    ResultSet customerResultSet2 = preparedStatement2.executeQuery();
+
+                    //Getting values from customers result set
+                    while(customerResultSet2.next()) {
+                        searchResult.add(new sample.Customer(
+                                customerResultSet2.getInt(1),
+                                customerResultSet2.getString(2),
+                                customerResultSet2.getString(3),
+                                customerResultSet2.getString(4),
+                                customerResultSet2.getString(5),
+                                customerResultSet2.getString(6),
+                                customerResultSet2.getString(7),
+                                customerResultSet2.getString(8),
+                                customerResultSet2.getString(9),
+                                customerResultSet2.getDate(10)));
+
+                    }
+
+                    if (searchResult.size() <= 0) {
+                        lblSearchResults.setText("No Results Found!");
+                        lblSearchResults.setVisible(true);
+                    } else {
+                        tempList = FXCollections.observableArrayList(customersList);
+                        searchDone = true;
+                        btnSeachIcon.setGlyphName("CLOSE");
+                        btnSearch.setTooltip(new Tooltip("Reset Full List"));
+                        customersList = searchResult; //Assigning search result to customerList
+                        recordSize = searchResult.size();
+                        lblSearchResults.setText(Integer.valueOf(recordSize) + " results found!");
+                        initialView();
+
+                        con.close();
+                    }
+
+                } catch (SQLException eS2) {
+
+                    eS2.printStackTrace();
+                }
+
+            } catch (SQLException eS) {
+                new Dialog("SQL Error!", "Error occured while executing Query.\nSQL Error Code: " + eS.getErrorCode());
+            }
+        }
 
     }
 }

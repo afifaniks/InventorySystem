@@ -6,6 +6,7 @@
 <?import com.jfoenix.controls.JFXToggleButton?>
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
@@ -21,6 +22,41 @@
 
 <AnchorPane fx:id="cusTomerPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="661.0" prefWidth="1169.0" stylesheets="@../css/customer.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Customer">
    <children>
+      <AnchorPane fx:id="customerListPane" layoutY="85.0" prefHeight="581.0" prefWidth="1169.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="85.0">
+         <children>
+            <TableView fx:id="tbl" prefHeight="354.0" prefWidth="1045.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+               <columns>
+                  <TableColumn fx:id="columnID" prefWidth="50.0" text="Customer ID" />
+                  <TableColumn fx:id="columnFirstName" prefWidth="75.0" text="First Name" />
+                  <TableColumn fx:id="columnLastName" prefWidth="75.0" text="Last Name" />
+                  <TableColumn fx:id="columnGender" prefWidth="75.0" text="Gender" />
+                  <TableColumn fx:id="columnAddress" prefWidth="75.0" text="Address" />
+                  <TableColumn fx:id="columnPhone" prefWidth="75.0" text="Phone" />
+                  <TableColumn fx:id="columnEmail" prefWidth="75.0" text="Email" />
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </TableView>
+            <JFXButton fx:id="btnGoBack" alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="500.0" layoutY="460.0" prefHeight="50.0" prefWidth="170.0" ripplerFill="WHITE" text="Go Back" AnchorPane.leftAnchor="500.0" AnchorPane.rightAnchor="500.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <FontAwesomeIconView fill="#263238" glyphName="LIST_ALT" size="30" />
+               </graphic>
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </JFXButton>
+         </children>
+      </AnchorPane>
       <AnchorPane layoutX="-3.0" prefHeight="85.0" prefWidth="1169.0" style="-fx-background-color: #253238;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
             <Label alignment="CENTER" layoutX="446.0" layoutY="7.0" prefHeight="72.0" prefWidth="338.0" text="Customer" textFill="WHITE">
@@ -83,7 +119,7 @@
                        <Font name="System Bold" size="14.0" />
                     </font>
                  </Label>
-                 <JFXToggleButton fx:id="btnEditMode" contentDisplay="RIGHT" layoutX="912.0" layoutY="105.0" onAction="#btnEditModeToggle" prefHeight="80.0" prefWidth="170.0" size="14.0" text="Edit Mode" toggleColor="#263238" toggleLineColor="#78909c">
+                 <JFXToggleButton fx:id="btnEditMode" contentDisplay="RIGHT" layoutX="873.0" layoutY="114.0" onAction="#btnEditModeToggle" prefHeight="80.0" prefWidth="170.0" size="14.0" text="Edit Mode" toggleColor="#263238" toggleLineColor="#78909c">
                     <font>
                        <Font name="System Bold" size="15.0" />
                     </font>
@@ -123,34 +159,34 @@
                        <MaterialDesignIconView fill="#263238" glyphName="CONTENT_SAVE" size="30" />
                     </graphic>
                  </JFXButton>
-                 <JFXButton alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="851.0" layoutY="232.0" prefHeight="50.0" prefWidth="147.0" ripplerFill="WHITE" stylesheets="@../css/customer.css" text="Accounts">
+                 <JFXButton alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="812.0" layoutY="241.0" prefHeight="50.0" prefWidth="147.0" ripplerFill="WHITE" stylesheets="@../css/customer.css" text="Accounts">
                     <cursor>
                        <Cursor fx:constant="HAND" />
                     </cursor>
                     <graphic>
-                       <FontAwesomeIconView fill="WHITE" glyphName="USER" size="30" />
+                       <FontAwesomeIconView fill="#263238" glyphName="USER" size="30" />
                     </graphic>
                     <font>
                        <Font size="15.0" />
                     </font>
                  </JFXButton>
-                 <JFXButton alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="851.0" layoutY="287.0" prefHeight="50.0" prefWidth="147.0" ripplerFill="WHITE" stylesheets="@../css/customer.css" text="Purchases">
+                 <JFXButton alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="812.0" layoutY="296.0" prefHeight="50.0" prefWidth="147.0" ripplerFill="WHITE" stylesheets="@../css/customer.css" text="Purchases">
                     <cursor>
                        <Cursor fx:constant="HAND" />
                     </cursor>
                     <graphic>
-                       <FontAwesomeIconView fill="WHITE" glyphName="USD" size="30" />
+                       <FontAwesomeIconView fill="#263238" glyphName="USD" size="30" />
                     </graphic>
                     <font>
                        <Font size="15.0" />
                     </font>
                  </JFXButton>
-                 <JFXButton alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="851.0" layoutY="342.0" prefHeight="50.0" prefWidth="147.0" ripplerFill="WHITE" stylesheets="@../css/customer.css" text="Rentals">
+                 <JFXButton alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="812.0" layoutY="351.0" prefHeight="50.0" prefWidth="147.0" ripplerFill="WHITE" stylesheets="@../css/customer.css" text="Rentals">
                     <cursor>
                        <Cursor fx:constant="HAND" />
                     </cursor>
                     <graphic>
-                       <FontAwesomeIconView fill="WHITE" glyphName="RECYCLE" size="30" />
+                       <FontAwesomeIconView fill="#263238" glyphName="RECYCLE" size="30" />
                     </graphic>
                     <font>
                        <Font size="15.0" />
@@ -171,32 +207,32 @@
                        <Font name="System Bold" size="14.0" />
                     </font>
                  </Label>
-                 <JFXButton fx:id="btnLViewAllCustomers" alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="851.0" layoutY="397.0" onAction="#listAllCustomers" prefHeight="50.0" prefWidth="147.0" ripplerFill="WHITE" style="-fx-background-color: green;" stylesheets="@../css/customer.css" text="View All">
+                 <JFXButton fx:id="btnLViewAllCustomers" alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="812.0" layoutY="406.0" onAction="#listAllCustomers" prefHeight="50.0" prefWidth="147.0" ripplerFill="WHITE" style="-fx-background-color: green; -fx-text-fill: white;" stylesheets="@../css/customer.css" text="Table View">
                     <cursor>
                        <Cursor fx:constant="HAND" />
                     </cursor>
                     <graphic>
-                       <FontAwesomeIconView fill="WHITE" glyphName="ASTERISK" size="30" />
+                       <FontAwesomeIconView fill="WHITE" glyphName="TABLE" size="30" />
                     </graphic>
                     <font>
                        <Font size="15.0" />
                     </font>
                  </JFXButton>
                  <Label fx:id="lblPageIndex" alignment="CENTER" layoutX="470.0" layoutY="543.0" prefHeight="31.0" prefWidth="349.0" text="Showing m of n results." textAlignment="CENTER" />
-                 <JFXTextField fx:id="txtSearch" alignment="CENTER" focusColor="#263238" layoutX="827.0" layoutY="26.0" prefHeight="25.0" prefWidth="195.0">
+                 <JFXTextField fx:id="txtSearch" alignment="CENTER" focusColor="#263238" layoutX="788.0" layoutY="35.0" prefHeight="25.0" prefWidth="195.0" promptText="search with id/name">
                     <font>
-                       <Font size="20.0" />
+                       <Font size="15.0" />
                     </font>
                  </JFXTextField>
-                 <JFXButton fx:id="btnSearch" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="1030.0" layoutY="26.0" prefHeight="44.0" prefWidth="45.0" ripplerFill="WHITE" style="-fx-background-radius: 30 30 30 30;" stylesheets="@../css/customer.css">
+                 <JFXButton fx:id="btnSearch" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="990.0" layoutY="26.0" onAction="#btnSearchAction" prefHeight="44.0" prefWidth="45.0" ripplerFill="WHITE" style="-fx-background-radius: 30 30 30 30; -fx-background-color: #263238;" stylesheets="@../css/customer.css">
                     <cursor>
                        <Cursor fx:constant="HAND" />
                     </cursor>
                     <graphic>
-                       <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" size="25" />
+                       <FontAwesomeIconView fx:id="btnSeachIcon" fill="WHITE" glyphName="SEARCH" size="25" />
                     </graphic>
                     <tooltip>
-                       <Tooltip text="Search with customers name" />
+                       <Tooltip text="Search with customers name or id" />
                     </tooltip>
                  </JFXButton>
                  <Circle fx:id="imgCustomerPhoto" fill="#ffffff00" layoutX="145.0" layoutY="206.0" radius="124.0" stroke="WHITE" strokeType="INSIDE">
@@ -223,36 +259,8 @@
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
+            <Label fx:id="lblSearchResults" alignment="CENTER_RIGHT" layoutX="631.0" layoutY="48.0" prefHeight="17.0" prefWidth="154.0" text="Results found!" visible="false" />
               </children>
-      </AnchorPane>
-      <AnchorPane fx:id="customerListPane" layoutY="85.0" prefHeight="581.0" prefWidth="1169.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="85.0">
-         <children>
-            <JFXButton fx:id="btnGoBack" alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="500.0" layoutY="460.0" prefHeight="50.0" prefWidth="170.0" ripplerFill="WHITE" text="Go Back" AnchorPane.leftAnchor="500.0" AnchorPane.rightAnchor="500.0">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-               <graphic>
-                  <FontAwesomeIconView fill="#263238" glyphName="LIST_ALT" size="30" />
-               </graphic>
-               <font>
-                  <Font size="15.0" />
-               </font>
-            </JFXButton>
-            <TableView fx:id="tbl" prefHeight="354.0" prefWidth="1045.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="104.0" AnchorPane.topAnchor="20.0">
-               <columns>
-                  <TableColumn fx:id="columnID" prefWidth="50.0" text="Customer ID" />
-                  <TableColumn fx:id="columnFirstName" prefWidth="75.0" text="First Name" />
-                  <TableColumn fx:id="columnLastName" prefWidth="75.0" text="Last Name" />
-                  <TableColumn fx:id="columnGender" prefWidth="75.0" text="Gender" />
-                  <TableColumn fx:id="columnAddress" prefWidth="75.0" text="Address" />
-                  <TableColumn fx:id="columnPhone" prefWidth="75.0" text="Phone" />
-                  <TableColumn fx:id="columnEmail" prefWidth="75.0" text="Email" />
-               </columns>
-               <columnResizePolicy>
-                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
-               </columnResizePolicy>
-            </TableView>
-         </children>
       </AnchorPane>
    </children>
 </AnchorPane>

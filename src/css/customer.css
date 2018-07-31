@@ -13,10 +13,15 @@
 
 .button {
     -fx-background-color: #ffffff;
-    -fx-text-fill: white;
+    -fx-text-fill: #263238;
     -fx-text-alignment: center;
 }
 
 .button:hover {
-    -fx-background-color: #ffffcc;
+    -fx-background-color: white;
+    -fx-font-weight: bold;
+}
+
+.button:pressed:hover {
+    -fx-background-color: #b0bec5;
 }
