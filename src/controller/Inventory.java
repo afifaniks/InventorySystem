@@ -454,6 +454,9 @@ public class Inventory implements Initializable{
                 //Setting Label
                 lblMode.setText("Entry Mode");
 
+                ImagePattern img = new ImagePattern(new Image("/resource/icons/trolley.png"));
+                imgCustomerPhoto.setFill(img);
+
                 //Disabling other buttons
                 btnPrevEntry.setDisable(true);
                 btnNextEntry.setDisable(true);
@@ -462,11 +465,14 @@ public class Inventory implements Initializable{
                 btnListAll.setDisable(true);
                 btnSearch.setDisable(true);
 
+
+
                 //Cleaning fields
                 txtItemName.setText("");
                 txtType.setValue("");
                 txtRentRate.setText("");
                 txtPrice.setText("");
+                imgPath = null;
                 lblStock.setText("");
             } catch (SQLException e) {
                 new Dialog("SQL Error!", "Error occured while executing Query.\nSQL Error Code: " + e.getErrorCode());
@@ -676,7 +682,6 @@ public class Inventory implements Initializable{
 
                         new Dialog("Operation Successful!", "New Item Added!");
 
-                        reloadRecords();
 
                     } catch (SQLException e) {
                         new Dialog("SQL Error!", "Error occured while executing Query.\nSQL Error Code: " + e.getErrorCode());
