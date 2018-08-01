@@ -237,6 +237,8 @@ public class Sells implements Initializable{
                         return;
                     }
 
+                    Transaction.stock = stock;
+
                     //Checking for accounnts
                     PreparedStatement preparedStatement = connection.prepareStatement("SELECT count(*) from accounts, customers where customerID = Customers_customerID AND Customers_customerID = "+Integer.valueOf(txtCustomerId.getText()));
                     ResultSet rs = preparedStatement.executeQuery();

@@ -77,6 +77,8 @@ public class Transaction implements Initializable {
     @FXML
     private Label lblDue;
 
+    public static Integer stock = 0;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
@@ -199,8 +201,16 @@ public class Transaction implements Initializable {
             new Dialog("Transaction Complete!", "Purchase & Transaction are successful! " +
                     "You can close this dialog and start over.");
 
+            PreparedStatement updateStock = con.prepareStatement("UPDATE item SET stock = ? WHERE itemID = ?");
+
+            updateStock.setInt(1, stock - purchaseQty);
+            updateStock.setInt(2, itemID);
+
+            updateStock.executeUpdate();
+
             con.close();
         } catch (SQLException e) {
+            e.printStackTrace();
             new Dialog("SQL Error!", "Error occured while executing Query.\nSQL Error Code: " + e.getErrorCode());
         }
     }
@@ -245,6 +255,13 @@ public class Transaction implements Initializable {
 
             new Dialog("Transaction Complete!", "Rent & Transaction are successful! " +
                     "You can close this dialog and start over.");
+
+            PreparedStatement updateStock = con.prepareStatement("UPDATE item SET stock = ? WHERE itemID = ?");
+
+            updateStock.setInt(1, stock - 1);
+            updateStock.setInt(2, itemID);
+
+            updateStock.executeUpdate();
 
             con.close();
         } catch (SQLException e) {
