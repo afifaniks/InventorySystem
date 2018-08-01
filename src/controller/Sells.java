@@ -117,7 +117,7 @@ public class Sells implements Initializable{
 
            Connection con = DBConnection.getConnection();
            try {
-               PreparedStatement ps = con.prepareStatement("SELECT purchaseDate, sum(payAmount) FROM purchases GROUP BY purchaseDate");
+               PreparedStatement ps = con.prepareStatement("SELECT purchaseDate, sum(payAmount) FROM purchases WHERE User_username='"+LogIn.loggerUsername+"' GROUP BY purchaseDate");
                ResultSet rs = ps.executeQuery();
 
                XYChart.Series chartData = new XYChart.Series<>();
@@ -151,6 +151,54 @@ public class Sells implements Initializable{
     public static ArrayList<String> inventoryItem = null;
     public static ArrayList<Integer> customerID = null;
     public static ArrayList<Integer> itemIDForSale = null;
+
+    @FXML
+    void loadAgain(ActionEvent event) {
+
+        Connection con = DBConnection.getConnection();
+
+        PreparedStatement getSellsList = null;
+        try {
+            getSellsList = con.prepareStatement("SELECT * FROM purchases WHERE User_username ='"
+                    + LogIn.loggerUsername+"'");
+
+            PreparedStatement ps = con.prepareStatement("SELECT MAX(purchaseID) FROM purchases");
+            ResultSet rs = ps.executeQuery();
+
+            while(rs.next()) {
+                lblId.setText(Integer.valueOf(rs.getInt(1) + 1).toString());
+            }
+
+            ObservableList<Purchase> sellsListByUser = FXCollections.observableArrayList();
+
+            ResultSet sellsList = getSellsList.executeQuery();
+
+            while(sellsList.next()) {
+                sellsListByUser.add(new Purchase(sellsList.getInt("purchaseID"),
+                        sellsList.getInt("Customers_customerID"),
+                        sellsList.getInt("Item_itemID"),
+                        sellsList.getString("purchaseDate"),
+                        sellsList.getInt("purchaseQuantity"),
+                        sellsList.getDouble("payAmount"),
+                        sellsList.getDouble("amountDue")));
+
+            }
+            purchaseList = sellsListByUser;
+            tblRecent.getItems().clear();
+            tblRecent.setItems(purchaseList);
+
+            txtPayAmount.setText("");
+            txtQty.setText("1");
+            txtCustomerId.setText("");
+            txtItemId.setText("");
+            txtDate.setValue(LocalDate.now());
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+
+    }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {

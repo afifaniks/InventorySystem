@@ -11,6 +11,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
 <SplitPane dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1197.0" stylesheets="@../css/base.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Base">
@@ -164,6 +165,27 @@
                   </AnchorPane>
                </children>
             </AnchorPane>
+            <ImageView fitHeight="67.0" fitWidth="69.0" layoutX="5.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="5.0">
+               <image>
+                  <Image url="@../resource/icons/Logo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="84.0" layoutY="25.0" prefHeight="21.0" prefWidth="100.0" text="Tesla" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="104.0" layoutY="53.0" prefHeight="21.0" prefWidth="100.0" text="Rental" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="127.0" layoutY="81.0" prefHeight="21.0" prefWidth="100.0" text="Inventory" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Line endX="298.0" layoutX="-19.0" layoutY="114.0" startX="14.5" stroke="WHITE" AnchorPane.leftAnchor="-5.0" AnchorPane.rightAnchor="0.5" />
          </children></AnchorPane>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
          <children>

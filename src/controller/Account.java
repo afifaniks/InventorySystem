@@ -178,6 +178,44 @@ public class Account implements Initializable {
     }
 
     @FXML
+    void reloadAll(ActionEvent event) {
+        ObservableList<sample.Account> accountListByUser = FXCollections.observableArrayList();
+
+        Connection connection = DBConnection.getConnection();
+
+        try {
+            PreparedStatement ps = connection.prepareStatement("SELECT max(acccountID) FROM accounts");
+            ResultSet rs = ps.executeQuery();
+
+            while(rs.next()) {
+                lblId.setText(Integer.valueOf(rs.getInt(1) + 1).toString());
+            }
+
+            PreparedStatement getAccountList = connection.prepareStatement("SELECT  customers.firstName, customers.lastName, accounts.acccountID, accounts.accountName, accounts.paymethod " +
+                    "FROM accounts, customers WHERE User_username ='"
+                    +LogIn.loggerUsername+"' AND Customers_customerID = customerID");
+
+            ResultSet accountResultSet = getAccountList.executeQuery();
+
+            while(accountResultSet.next()) {
+                accountListByUser.add(new sample.Account(accountResultSet.getInt(3),
+                        accountResultSet.getString(1) + " " + accountResultSet.getString(2),
+                        accountResultSet.getString(4),
+                        accountResultSet.getString(5)));
+            }
+
+            accountList.clear();
+            tblRecent.getItems().clear();
+            accountList = accountListByUser;
+            tblRecent.setItems(accountList);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    @FXML
     void btnAddAction(ActionEvent event) {
         boolean flag = true;
 

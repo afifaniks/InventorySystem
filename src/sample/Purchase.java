@@ -14,6 +14,7 @@ public class Purchase {
     String date;
     int qty;
     double paid, due;
+    String user;
 
     public Purchase(int purID, int cusID, int itemID, String date, int qty, double paid, double due) {
         this.purID = purID;
@@ -23,6 +24,17 @@ public class Purchase {
         this.qty = qty;
         this.paid = paid;
         this.due = due;
+    }
+
+    public Purchase(int purID, int cusID, int itemID, String date, int qty, double paid, double due, String user) {
+        this.purID = purID;
+        this.cusID = cusID;
+        this.itemID = itemID;
+        this.date = date;
+        this.qty = qty;
+        this.paid = paid;
+        this.due = due;
+        this.user = user;
     }
 
     public int getPurID() {
@@ -79,5 +91,13 @@ public class Purchase {
 
     public void setDue(double due) {
         this.due = due;
+    }
+
+    public String getUser() {
+        return user;
+    }
+
+    public void setUser(String user) {
+        this.user = user;
     }
 }

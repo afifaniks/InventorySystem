@@ -10,6 +10,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import sample.*;
 import sample.Account;
@@ -18,8 +19,10 @@ import sample.Customer;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 import java.util.TreeMap;
@@ -67,6 +70,7 @@ public class Initializer implements Initializable {
                 String css = this.getClass().getResource("/css/base.css").toExternalForm();
                 scene.getStylesheets().add(css);
                 base.setTitle("Tesla Rental Inventory");
+                base.getIcons().add(new Image("/resource/icons/Logo.png"));
                 base.setScene(scene);
                 base.setMaximized(true);
                 base.show();
@@ -97,18 +101,32 @@ public class Initializer implements Initializable {
             PreparedStatement getAccountList = connection.prepareStatement("SELECT  customers.firstName, customers.lastName, accounts.acccountID, accounts.accountName, accounts.paymethod " +
                     "FROM accounts, customers WHERE User_username ='"
                     +sessionUser+"' AND Customers_customerID = customerID");
+            PreparedStatement getItemType = connection.prepareStatement("SELECT * FROM itemtype");
+            PreparedStatement getOutOfStock = connection.prepareStatement("SELECT * FROM item, itemtype WHERE itemTypeId = ItemType_itemTypeId AND stock ="+0);
+
+            //Dashboard stmts
             PreparedStatement getRentalDue = connection.prepareStatement("SELECT COUNT(*), SUM(amountDue) FROM rentals WHERE amountDue <> 0");
             PreparedStatement getPurchaseDue = connection.prepareStatement("SELECT COUNT(*), SUM(amountDue) FROM purchases WHERE amountDue <> 0");
-            PreparedStatement getItemType = connection.prepareStatement("SELECT * FROM itemtype");
+            PreparedStatement getTodaysSell = connection.prepareStatement("SELECT COUNT(*), SUM(payAmount) FROM purchases WHERE purchaseDate = '"+ Date.valueOf(LocalDate.now()) + "'");
+            PreparedStatement getTodaysRent = connection.prepareStatement("SELECT COUNT(*), SUM(paid) FROM rentals WHERE rentalDate = '"+ Date.valueOf(LocalDate.now()) + "'");
+            PreparedStatement getTodaysRentalDue = connection.prepareStatement("SELECT COUNT(*), SUM(amountDue) FROM rentals WHERE amountDue <> 0 AND rentalDate = '"+ Date.valueOf(LocalDate.now()) + "'");
+            PreparedStatement getTodaysPurchaseDue = connection.prepareStatement("SELECT COUNT(*), SUM(amountDue) FROM purchases WHERE amountDue <> 0 AND purchaseDate = '"+ Date.valueOf(LocalDate.now()) + "'");
 
             ResultSet itemResultSet = getItemList.executeQuery();
             ResultSet customerResultSet = getCustomerList.executeQuery();
             ResultSet sellsList = getSellsList.executeQuery();
             ResultSet rentList = getRentalList.executeQuery();
             ResultSet accountResultSet = getAccountList.executeQuery();
+            ResultSet itemType = getItemType.executeQuery();
+            ResultSet stockOut = getOutOfStock.executeQuery();
+
+            //Dashboard rs
             ResultSet rentalDue = getRentalDue.executeQuery();
             ResultSet purchaseDue = getPurchaseDue.executeQuery();
-            ResultSet itemType = getItemType.executeQuery();
+            ResultSet todaysSell = getTodaysSell.executeQuery();
+            ResultSet todaysRent = getTodaysRent.executeQuery();
+            ResultSet todaysRentDue = getTodaysRentalDue.executeQuery();
+            ResultSet todysPurchaseDue = getTodaysPurchaseDue.executeQuery();
 
             //Updating task message
             this.updateMessage("Loading Customers...");
@@ -261,7 +279,9 @@ public class Initializer implements Initializable {
             controller.Account.accountNames = accountNames;
 
             Thread.sleep(200);
+
             //Updating Task Message
+            //Dashboard contents
             this.updateMessage("Loading Dashboard Contents...");
 
             Double totalDueAmount = 0.0;
@@ -277,9 +297,50 @@ public class Initializer implements Initializable {
                 totalDueAmount += purchaseDue.getDouble(2);
             }
 
+            Double todaySell = 0.0;
+            Double todayRent = 0.0;
+            Integer rentCount = 0;
+            Integer sellCount = 0;
+
+            while (todaysSell.next()) {
+                sellCount += todaysSell.getInt(1);
+                todaySell += todaysSell.getDouble(2);
+            }
+
+            while (todaysRent.next()) {
+                rentCount += todaysRent.getInt(1);
+                todayRent += todaysRent.getDouble(2);
+            }
+
+            Double todaysDueAmount = 0.0;
+            Integer dueCtr = 0;
+
+            while (todaysRentDue.next()) {
+                dueCtr += todaysRentDue.getInt(1);
+                todaysDueAmount += todaysRentDue.getDouble(2);
+            }
+
+            while (todysPurchaseDue.next()) {
+                dueCtr += todysPurchaseDue.getInt(1);
+                todaysDueAmount += todysPurchaseDue.getDouble(2);
+            }
+
+            Integer stockOutCtr = 0;
+
+            while (stockOut.next()) {
+                stockOutCtr += 1;
+            }
+
             //Setting on Dashboard
             Dashboard.totalDueCtr = totalDueCtr;
             Dashboard.totalDueAmount = totalDueAmount;
+            Dashboard.todaySellCtr = sellCount;
+            Dashboard.todaysTotalSell = todaySell;
+            Dashboard.todaysRentalCtr = rentCount;
+            Dashboard.todayTotalRental = todayRent;
+            Dashboard.todaysTotalDue = todaysDueAmount;
+            Dashboard.todaysDueCtr = dueCtr;
+            Dashboard.stockOut = stockOutCtr;
 
             Thread.sleep(200);
             this.updateMessage("Loading Item Types....");

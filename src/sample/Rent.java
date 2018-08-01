@@ -12,6 +12,7 @@ public class Rent {
     String rentDate;
     String returnDate;
     double payAmount, amountDue;
+    String user;
 
     public Rent(int rentID, int itemID, int cusID, String rentDate, String returnDate, double payAmount, double amountDue) {
         this.rentID = rentID;
@@ -21,6 +22,26 @@ public class Rent {
         this.returnDate = returnDate;
         this.payAmount = payAmount;
         this.amountDue = amountDue;
+    }
+
+    public Rent(int rentID, int itemID, int cusID, String rentDate, String returnDate, double payAmount, double amountDue, String user) {
+        this.rentID = rentID;
+        this.itemID = itemID;
+        this.cusID = cusID;
+        this.rentDate = rentDate;
+        this.returnDate = returnDate;
+        this.payAmount = payAmount;
+        this.amountDue = amountDue;
+        this.user = user;
+    }
+
+
+    public String getUser() {
+        return user;
+    }
+
+    public void setUser(String user) {
+        this.user = user;
     }
 
     public int getRentID() {

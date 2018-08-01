@@ -133,18 +133,7 @@
             <Label fx:id="lblPageIndex" alignment="CENTER" layoutX="503.0" layoutY="496.0" prefHeight="31.0" prefWidth="349.0" text="Showing m of n results." textAlignment="CENTER" />
             <JFXCheckBox fx:id="chkRent" layoutX="478.0" layoutY="283.0" text="Rent" />
             <JFXCheckBox fx:id="chkSale" layoutX="392.0" layoutY="283.0" text="Sale" />
-            <JFXButton fx:id="btnUpdateStock" alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="767.0" layoutY="174.0" prefHeight="50.0" prefWidth="170.0" ripplerFill="WHITE" text="Update Stock">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-               <graphic>
-                  <FontAwesomeIconView fill="#263238" glyphName="UPLOAD" size="30" />
-               </graphic>
-               <font>
-                  <Font size="15.0" />
-               </font>
-            </JFXButton>
-            <JFXButton fx:id="btnListAll" alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="767.0" layoutY="233.0" onAction="#listAllItems" prefHeight="50.0" prefWidth="170.0" ripplerFill="WHITE" text="List All">
+            <JFXButton fx:id="btnListAll" alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="767.0" layoutY="177.0" onAction="#listAllItems" prefHeight="50.0" prefWidth="147.0" ripplerFill="#37474f" text="List All">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -155,7 +144,7 @@
                   <Font size="15.0" />
                </font>
             </JFXButton>
-            <JFXButton fx:id="btnMostSold" alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="767.0" layoutY="292.0" prefHeight="50.0" prefWidth="170.0" ripplerFill="WHITE" text="Most Sold">
+            <JFXButton fx:id="btnMostSold" alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="767.0" layoutY="236.0" prefHeight="50.0" prefWidth="147.0" ripplerFill="#37474f" text="Most Sold">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -166,18 +155,18 @@
                   <Font size="15.0" />
                </font>
             </JFXButton>
-            <JFXButton fx:id="btnOutOfStock" alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="767.0" layoutY="352.0" prefHeight="50.0" prefWidth="170.0" ripplerFill="WHITE" style="-fx-background-color: red; -fx-text-fill: white;" text="Out of Stock" textFill="WHITE">
+            <JFXButton fx:id="btnOutOfStock" alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="767.0" layoutY="298.0" onAction="#outOfStockList" prefHeight="50.0" prefWidth="147.0" ripplerFill="#37474f" style="-fx-background-color: white;" text="Out of Stock" textFill="WHITE">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
                <graphic>
-                  <FontAwesomeIconView fill="WHITE" glyphName="EXCLAMATION_TRIANGLE" size="30" />
+                  <FontAwesomeIconView fill="#263238" glyphName="EXCLAMATION_TRIANGLE" size="30" />
                </graphic>
                <font>
                   <Font size="15.0" />
                </font>
             </JFXButton>
-            <Label layoutX="690.0" layoutY="95.0" prefHeight="51.0" prefWidth="134.0" text="Operations" textFill="GREEN">
+            <Label layoutX="700.0" layoutY="97.0" prefHeight="51.0" prefWidth="134.0" text="Operations" textFill="GREEN">
                <font>
                   <Font size="24.0" />
                </font>
@@ -242,6 +231,17 @@
             </JFXTextField>
             <Label fx:id="lblSearchResults" alignment="CENTER_RIGHT" layoutX="631.0" layoutY="48.0" prefHeight="17.0" prefWidth="154.0" text="Results found!" visible="false" />
             <JFXComboBox fx:id="txtType" layoutX="392.0" layoutY="224.0" prefHeight="25.0" prefWidth="232.0" style="-fx-text-size: 15px;" />
+            <JFXButton fx:id="btnDelete" alignment="CENTER" buttonType="RAISED" disable="true" graphicTextGap="10.0" layoutX="767.0" layoutY="359.0" onAction="#btnDelAction" prefHeight="50.0" prefWidth="147.0" ripplerFill="WHITE" style="-fx-background-color: red; -fx-text-fill: white;" text="Delete Entry" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="TRASH" size="30" />
+               </graphic>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXButton>
          </children>
       </AnchorPane>
    </children>

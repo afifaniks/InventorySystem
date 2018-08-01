@@ -12,7 +12,6 @@
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.Tooltip?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
@@ -133,18 +132,7 @@
             <DropShadow blurType="TWO_PASS_BOX" height="18.03" radius="7.775" spread="0.1" width="15.07" />
          </effect>
       </TableView>
-      <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="109.0" layoutY="594.0" prefHeight="59.0" prefWidth="61.0" ripplerFill="WHITE" style="-fx-background-color: #263238;" stylesheets="@../css/sells.css">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-         <graphic>
-            <FontAwesomeIconView fill="WHITE" glyphName="REFRESH" size="30" />
-         </graphic>
-         <font>
-            <Font size="15.0" />
-         </font>
-      </JFXButton>
-      <JFXButton fx:id="btnProcced" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="199.0" layoutY="594.0" onAction="#btnProceedAction" prefHeight="59.0" prefWidth="61.0" ripplerFill="WHITE" style="-fx-background-color: green;" stylesheets="@../css/sells.css">
+      <JFXButton fx:id="btnProcced" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="195.0" layoutY="594.0" onAction="#btnProceedAction" prefHeight="59.0" prefWidth="61.0" ripplerFill="WHITE" style="-fx-background-color: green;" stylesheets="@../css/sells.css">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -155,28 +143,23 @@
             <Font size="15.0" />
          </font>
       </JFXButton>
-      <JFXTextField fx:id="txtSearch" alignment="CENTER" focusColor="#263238" layoutX="825.0" layoutY="102.0" prefHeight="25.0" prefWidth="195.0">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </JFXTextField>
-      <JFXButton fx:id="btnSearch" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="1020.0" layoutY="98.0" prefHeight="44.0" prefWidth="45.0" ripplerFill="WHITE" style="-fx-background-radius: 30 30 30 30; -fx-background-color: #263238;" stylesheets="@../css/customer.css">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-         <graphic>
-            <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" size="25" />
-         </graphic>
-         <tooltip>
-            <Tooltip text="Search with customers name" />
-         </tooltip>
-      </JFXButton>
       <JFXButton fx:id="btnBarchart" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="767.0" layoutY="594.0" onAction="#btnBarchartAction" prefHeight="59.0" prefWidth="61.0" ripplerFill="WHITE" style="-fx-background-color: #263238;" stylesheets="@../css/sells.css">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
          <graphic>
             <FontAwesomeIconView fx:id="btnChartIcon" fill="WHITE" glyphName="LINE_CHART" size="30" />
+         </graphic>
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="loadAgain" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="691.0" layoutY="594.0" onAction="#loadAgain" prefHeight="59.0" prefWidth="61.0" ripplerFill="WHITE" style="-fx-background-color: #263238;" stylesheets="@../css/sells.css">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="REFRESH" size="30" />
          </graphic>
          <font>
             <Font size="15.0" />

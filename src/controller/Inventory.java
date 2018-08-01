@@ -74,16 +74,13 @@ public class Inventory implements Initializable{
     private JFXButton btnNextEntry;
 
     @FXML
-    private JFXButton btnUpdateStock;
-
-    @FXML
     private JFXButton btnListAll;
 
     @FXML
     private JFXButton btnMostSold;
 
     @FXML
-    private JFXButton btnOutOfStock, btnGoBack;
+    private JFXButton btnOutOfStock, btnGoBack, btnDelete;
 
     @FXML
     private JFXTextField txtSearch;
@@ -149,9 +146,51 @@ public class Inventory implements Initializable{
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        if(LogIn.loggerAccessLevel.equals("Admin")) {
+            btnDelete.setDisable(false);
+        }
         txtType.setItems(itemTypeNames);
         TextFields.bindAutoCompletion(txtSearch, itemNames);
         initialView();
+    }
+    private void reloadRecords(){
+        itemList.clear();
+        Connection connection = DBConnection.getConnection();
+        try {
+            PreparedStatement getItemList = connection.prepareStatement("SELECT *" +
+                    "FROM item, itemtype WHERE item.ItemType_itemTypeId = itemtype.itemTypeId ORDER BY itemID");
+            ResultSet itemResultSet = getItemList.executeQuery();
+
+            while(itemResultSet.next()) {
+                Item item = new Item(itemResultSet.getInt("itemID"),
+                        itemResultSet.getString("itemName"),
+                        itemResultSet.getInt("stock"),
+                        false,
+                        false,
+                        itemResultSet.getDouble("salePrice"),
+                        itemResultSet.getDouble("rentRate"),
+                        itemResultSet.getString("photo"),
+                        itemResultSet.getString("typeName"));
+
+                itemNames.add(itemResultSet.getString("itemName"));
+
+                if(itemResultSet.getString("rentalOrSale").contains("Rental"))
+                {
+                    item.setRent(true);
+                }
+                if(itemResultSet.getString("rentalOrSale").contains("Sale")) {
+                    item.setSale(true);
+                }
+
+                itemList.add(item);
+
+            }
+
+            initialView();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     private void initialView() {
@@ -269,6 +308,93 @@ public class Inventory implements Initializable{
 
     @FXML
     void listAllItems(ActionEvent event) {
+        btnGoBack.setOnAction(e -> {
+            itemListPane.setVisible(false);  //Setting item list pane visible
+            itemPane.setVisible(true); //Setting item pane visible
+        });
+        tbl.setItems(itemList);
+        listView();
+    }
+
+    @FXML
+    void btnDelAction(ActionEvent event) {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Confirm Delete");
+        alert.setGraphic(new ImageView(this.getClass().getResource("/resource/icons/x-button.png").toString()));
+
+        alert.setHeaderText("Do you really want to delete this entry?");
+        alert.setContentText("Press OK to confirm, Cancel to go back");
+
+        Optional<ButtonType> result = alert.showAndWait();
+
+        if(result.get() == ButtonType.OK) {
+            Connection connection = DBConnection.getConnection();
+            try {
+                PreparedStatement ps = connection.prepareStatement("DELETE FROM  item WHERE itemID = "+Integer.valueOf(itemID.getText()));
+                ps.executeUpdate();
+
+                new Dialog("Operation Successful.", "Item is deleted from the database. Restart or refresh to see effective result.");
+                reloadRecords();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    @FXML
+    void outOfStockList(ActionEvent event) {
+
+        btnGoBack.setOnAction(e -> {
+            itemListPane.setVisible(false);  //Setting item list pane visible
+            itemPane.setVisible(true); //Setting item pane visible
+        });
+
+        Connection con = DBConnection.getConnection();
+        try {
+            PreparedStatement ps = con.prepareStatement("SELECT * FROM item, itemtype WHERE itemTypeId = ItemType_itemTypeId AND stock ="+0);
+            ResultSet itemResultSet = ps.executeQuery();
+
+            ObservableList<Item> outOfStk = FXCollections.observableArrayList();
+
+            while(itemResultSet.next()) {
+                Item item = new Item(itemResultSet.getInt("itemID"),
+                        itemResultSet.getString("itemName"),
+                        itemResultSet.getInt("stock"),
+                        false,
+                        false,
+                        itemResultSet.getDouble("salePrice"),
+                        itemResultSet.getDouble("rentRate"),
+                        itemResultSet.getString("photo"),
+                        itemResultSet.getString("typeName"));
+
+                itemNames.add(itemResultSet.getString("itemName"));
+
+                if(itemResultSet.getString("rentalOrSale").contains("Rental"))
+                {
+                    item.setRent(true);
+                }
+                if(itemResultSet.getString("rentalOrSale").contains("Sale")) {
+                }
+
+                btnGoBack.setOnAction(e -> {
+                    itemListPane.setVisible(false);  //Setting item list pane visible
+                    itemPane.setVisible(true); //Setting item pane visible
+                });
+
+                outOfStk.add(item);
+
+            }
+
+            tbl.setItems(outOfStk);
+
+            listView();
+            con.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void listView() {
         itemPane.setVisible(false); //Setting default item pane not visible
         itemListPane.setVisible(true); //Setting item list visible
 
@@ -281,12 +407,6 @@ public class Inventory implements Initializable{
         columnRentalRate.setCellValueFactory(new PropertyValueFactory<>("rentRate"));
         columnPrice.setCellValueFactory(new PropertyValueFactory<>("salePrice"));
 
-        tbl.setItems(itemList);
-
-        btnGoBack.setOnAction(e -> {
-            itemListPane.setVisible(false);  //Setting item list pane visible
-            itemPane.setVisible(true); //Setting item pane visible
-        });
     }
 
     @FXML
@@ -301,7 +421,6 @@ public class Inventory implements Initializable{
             btnListAll.setDisable(false);
             btnSearch.setDisable(false);
             btnMostSold.setDisable(false);
-            btnUpdateStock.setDisable(false);
             btnOutOfStock.setDisable(false);
 
             String defColor = "#263238";
@@ -316,7 +435,7 @@ public class Inventory implements Initializable{
             //Setting Label
             lblMode.setText("Navigation Mode");
 
-            initialView();
+            reloadRecords();
 
 
         } else {
@@ -341,7 +460,6 @@ public class Inventory implements Initializable{
                 btnOutOfStock.setDisable(true);
                 btnMostSold.setDisable(true);
                 btnListAll.setDisable(true);
-                btnUpdateStock.setDisable(true);
                 btnSearch.setDisable(true);
 
                 //Cleaning fields
@@ -558,6 +676,8 @@ public class Inventory implements Initializable{
 
                         new Dialog("Operation Successful!", "New Item Added!");
 
+                        reloadRecords();
+
                     } catch (SQLException e) {
                         new Dialog("SQL Error!", "Error occured while executing Query.\nSQL Error Code: " + e.getErrorCode());
                     }
@@ -640,6 +760,8 @@ public class Inventory implements Initializable{
                         ps.executeUpdate();
 
                         new Dialog("Operation Successful!", "Entry updated!");
+
+                        reloadRecords();
 
                     } catch (SQLException e) {
                         e.printStackTrace();

@@ -5,6 +5,7 @@ import com.jfoenix.controls.JFXDatePicker;
 import com.jfoenix.controls.JFXSnackbar;
 import com.jfoenix.controls.JFXTextField;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -31,10 +32,7 @@ import sample.Purchase;
 import sample.Rent;
 
 import java.net.URL;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
@@ -140,11 +138,6 @@ public class Rentals implements Initializable {
     public static ArrayList<String> inventoryItem = null;
     public static ArrayList<Integer> customerID = null;
     public static ArrayList<Integer> itemIDForRent = null;
-
-    @FXML
-    void ctrlRentalReturnedAction(ActionEvent event) {
-        lblCategory.setText("Rental Return");
-    }
 
 
     @FXML
@@ -335,6 +328,53 @@ public class Rentals implements Initializable {
     }
 
     @FXML
+    void loadAgain(ActionEvent event) {
+
+        Connection con = DBConnection.getConnection();
+
+        PreparedStatement getSellsList = null;
+        try {
+            PreparedStatement ps = con.prepareStatement("SELECT MAX(rentalID) FROM rentals");
+            ResultSet rs = ps.executeQuery();
+
+            while(rs.next()) {
+                lblId.setText(Integer.valueOf(rs.getInt(1) + 1).toString());
+            }
+
+            PreparedStatement getRentalList = con.prepareStatement("SELECT * FROM rentals WHERE User_username ='"
+                    +LogIn.loggerUsername+"'");
+            PreparedStatement getTodaysRent = con.prepareStatement("SELECT COUNT(*), SUM(paid) FROM rentals WHERE rentalDate = '"+ Date.valueOf(LocalDate.now()) + "'");
+            ResultSet rentList = getRentalList.executeQuery();
+            ObservableList<Rent> rentsListByUser = FXCollections.observableArrayList();
+
+            while (rentList.next()) {
+                rentsListByUser.add(new Rent(rentList.getInt("rentalID"),
+                        rentList.getInt("Item_itemID"),
+                        rentList.getInt("Customers_customerID"),
+                        rentList.getString("rentalDate"),
+                        rentList.getString("returnDate"),
+                        rentList.getDouble("paid"),
+                        rentList.getDouble("amountDue")));
+            }
+
+            tblRecent.getItems().clear();
+            rentalList = rentsListByUser;
+            tblRecent.setItems(rentalList);
+
+            txtPayAmount.setText("");
+            txtReturnDate.setValue(null);
+            txtCustomerId.setText("");
+            txtItemId.setText("");
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+
+    }
+
+
+    @FXML
     void btnBarchartAction(ActionEvent event) {
         if(toggle) {
             toggle = false;
@@ -344,7 +384,7 @@ public class Rentals implements Initializable {
 
             Connection con = DBConnection.getConnection();
             try {
-                PreparedStatement ps = con.prepareStatement("SELECT rentalDate, sum(paid) FROM rentals GROUP BY rentalDate");
+                PreparedStatement ps = con.prepareStatement("SELECT rentalDate, sum(paid) FROM rentals WHERE User_username ='"+LogIn.loggerUsername+"' GROUP BY rentalDate");
                 ResultSet rs = ps.executeQuery();
 
                 XYChart.Series chartData = new XYChart.Series<>();
@@ -400,7 +440,7 @@ public class Rentals implements Initializable {
         cusID.setCellValueFactory(new PropertyValueFactory<>("cusID"));
         rentalDate.setCellValueFactory(new PropertyValueFactory<>("rentDate"));
         returnDate.setCellValueFactory(new PropertyValueFactory<>("returnDate"));
-        paid.setCellValueFactory(new PropertyValueFactory<>("payAmoun"));
+        paid.setCellValueFactory(new PropertyValueFactory<>("payAmount"));
         due.setCellValueFactory(new PropertyValueFactory<>("amountDue"));
 
         tblRecent.setItems(rentalList);

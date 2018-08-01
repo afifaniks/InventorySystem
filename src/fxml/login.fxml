@@ -37,7 +37,14 @@
             <Font size="14.0" />
          </font>
       </JFXTextField>
-      <AnchorPane fx:id="topPane" prefHeight="81.0" prefWidth="663.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <AnchorPane fx:id="topPane" prefHeight="81.0" prefWidth="663.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" layoutX="189.0" layoutY="15.0" prefHeight="51.0" prefWidth="285.0" text="Log In" textFill="WHITE">
+               <font>
+                  <Font size="35.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
       <Label fx:id="lblWarnUsername" layoutX="473.0" layoutY="134.0" prefHeight="30.0" prefWidth="137.0" text="field requird!" textFill="RED" visible="false">
          <font>
             <Font name="System Bold" size="14.0" />

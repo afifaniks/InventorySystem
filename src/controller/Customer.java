@@ -6,7 +6,10 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
@@ -16,11 +19,13 @@ import javafx.scene.paint.Color;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
 import javafx.stage.FileChooser;
+import javafx.stage.Stage;
 import org.controlsfx.control.textfield.TextFields;
 import sample.DBConnection;
 import sample.Dialog;
 
 import java.io.File;
+import java.io.IOException;
 import java.net.URL;
 import java.sql.*;
 import java.time.LocalDate;
@@ -105,13 +110,10 @@ public class Customer implements Initializable {
     private JFXButton btnAddNew, btnSave;
 
     @FXML
-    private JFXButton btnAccounts;
-
-    @FXML
     private JFXButton btnPurchases;
 
     @FXML
-    private JFXButton btnRentals;
+    private JFXButton btnRentals, btnDelete;
 
     @FXML
     private FontAwesomeIconView btnAddIcon;
@@ -155,6 +157,9 @@ public class Customer implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        if(LogIn.loggerAccessLevel.equals("Admin"))
+            btnDelete.setDisable(false);
+
         TextFields.bindAutoCompletion(txtSearch, customerNames); //Auto complete field is set now
         initialView();
     }
@@ -285,6 +290,37 @@ public class Customer implements Initializable {
     }
 
     @FXML
+    void showPurchases(ActionEvent event) {
+        try {
+            CustomerPurchase.customerID = Integer.valueOf(customerID.getText());
+            Parent pur = FXMLLoader.load(getClass().getResource("/fxml/customerpurchase.fxml"));
+            Scene s = new Scene(pur);
+            Stage stg = new Stage();
+            stg.setResizable(false);
+            stg.setScene(s);
+            stg.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    void showrentals(ActionEvent event) {
+        try {
+            CustomersRental.customerID = Integer.valueOf(customerID.getText());
+            Parent rent = FXMLLoader.load(getClass().getResource("/fxml/customerrentals.fxml"));
+            Scene s = new Scene(rent);
+            Stage stg = new Stage();
+            stg.setResizable(false);
+            stg.setScene(s);
+            stg.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    @FXML
     private void listAllCustomers(ActionEvent event) {
         //cusTomerPane.setVisible(false); //Hiding default customer view
         customerListPane.setVisible(true); //Showing total list
@@ -305,6 +341,63 @@ public class Customer implements Initializable {
             customerPane.setVisible(true);
         });
 
+    }
+
+    @FXML
+    void btnDelAction(ActionEvent event) {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Confirm Delete");
+        alert.setGraphic(new ImageView(this.getClass().getResource("/resource/icons/x-button.png").toString()));
+
+        alert.setHeaderText("Do you really want to delete this entry?");
+        alert.setContentText("Press OK to confirm, Cancel to go back");
+
+        Optional<ButtonType> result = alert.showAndWait();
+
+        if(result.get() == ButtonType.OK) {
+            Connection connection = DBConnection.getConnection();
+            try {
+                PreparedStatement ps = connection.prepareStatement("DELETE FROM  customers WHERE customerID = "+Integer.valueOf(customerID.getText()));
+                ps.executeUpdate();
+                reloadRecords();
+
+                new Dialog("Operation Successful.", "Item is deleted from the database. Restart or refresh to see effective result.");
+            } catch (SQLException e) {
+                if(e.getErrorCode() == 1451) {
+                    new Dialog("Constraint Error", "Customer has accounts & may be transactions. You need to delete them first in Admin Panel if you want to delete this entry");
+                }
+
+            }
+        }
+    }
+
+    private void reloadRecords() {
+        Connection connection = DBConnection.getConnection();
+        try {
+            PreparedStatement getCustomerList = connection.prepareStatement("SELECT * FROM customers");
+            ResultSet customerResultSet = getCustomerList.executeQuery();
+
+            customersList.clear();
+
+            while(customerResultSet.next()) {
+                customersList.add(new sample.Customer(
+                        customerResultSet.getInt(1),
+                        customerResultSet.getString(2),
+                        customerResultSet.getString(3),
+                        customerResultSet.getString(4),
+                        customerResultSet.getString(5),
+                        customerResultSet.getString(6),
+                        customerResultSet.getString(7),
+                        customerResultSet.getString(8),
+                        customerResultSet.getString(9),
+                        customerResultSet.getDate(10)));;
+            }
+
+            initialView();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
 
@@ -429,7 +522,6 @@ public class Customer implements Initializable {
             //Enabling other buttons
             btnPrevEntry.setDisable(false);
             btnNextEntry.setDisable(false);
-            btnAccounts.setDisable(false);
             btnSearch.setDisable(false);
             btnRentals.setDisable(false);
             btnPurchases.setDisable(false);
@@ -448,7 +540,7 @@ public class Customer implements Initializable {
             //Setting Label
             lblMode.setText("Navigation Mode");
 
-            initialView();
+            reloadRecords();
 
             btnEditModeToggle(new ActionEvent());
 
@@ -471,7 +563,6 @@ public class Customer implements Initializable {
                 //Disabling other buttons
                 btnPrevEntry.setDisable(true);
                 btnNextEntry.setDisable(true);
-                btnAccounts.setDisable(true);
                 btnRentals.setDisable(true);
                 btnPurchases.setDisable(true);
                 btnLViewAllCustomers.setDisable(true);
@@ -485,6 +576,9 @@ public class Customer implements Initializable {
                 phone.setText("");
                 email.setText("");
                 memberSince.setText(LocalDate.now().toString());
+                ImagePattern img = new ImagePattern(new Image("/resource/icons/user.png"));
+                imgCustomerPhoto.setFill(img);
+                imgPath = null;
 
                 btnEditModeToggle(new ActionEvent()); //Changing mode into entry mode.. all fields will be available to edit
 
@@ -626,6 +720,7 @@ public class Customer implements Initializable {
                         ps.executeUpdate();
 
                         new Dialog("Operation Successful!", "The record is updated!");
+                        reloadRecords();
 
                     } catch (SQLException e) {
                         e.printStackTrace();

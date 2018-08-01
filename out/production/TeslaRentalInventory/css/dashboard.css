@@ -5,8 +5,13 @@
     -fx-border-radius: 100 100 100 100;
     -fx-border-width: 2;
     -fx-background-radius: 100 100 100 100;
+    -fx-ripper-fill: white;
 }
 
 .button:hover {
     -fx-background-color: #eceff1;
+}
+
+.button:pressed:hover {
+    -fx-background-color: white;
 }
