@@ -102,9 +102,11 @@ public class Administrator implements Initializable {
             PreparedStatement ps = con.prepareStatement("DELETE from accounts");
             PreparedStatement ps2 = con.prepareStatement("DELETE from financialtronrental");
             PreparedStatement ps3 = con.prepareStatement("DELETE from financialtronpurchase");
+            PreparedStatement px = con.prepareStatement("DELETE FROM trtypecode");
             PreparedStatement ps6 = con.prepareStatement("DELETE from purchases");
             PreparedStatement ps7 = con.prepareStatement("DELETE from rentals");
             PreparedStatement ps4 = con.prepareStatement("DELETE from item");
+            PreparedStatement py = con.prepareStatement("DELETE from itemtypes");
             PreparedStatement ps5 = con.prepareStatement("DELETE from customers");
 
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
@@ -120,9 +122,11 @@ public class Administrator implements Initializable {
                 ps.executeUpdate();
                 ps2.executeUpdate();
                 ps3.executeUpdate();
+                //px.executeUpdate();
                 ps6.executeUpdate();
                 ps7.executeUpdate();
                 ps4.executeUpdate();
+                //py.executeUpdate();
                 ps5.executeUpdate();
             }
 

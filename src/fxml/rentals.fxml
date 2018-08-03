@@ -12,6 +12,7 @@
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.Tooltip?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
@@ -123,27 +124,30 @@
          </font>
       </Label>
       <JFXDatePicker fx:id="txtReturnDate" defaultColor="#263238" layoutX="162.0" layoutY="404.0" prefHeight="26.0" prefWidth="163.0" />
-      <JFXButton fx:id="btnProcced" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="195.0" layoutY="594.0" onAction="#btnProceedAction" prefHeight="59.0" prefWidth="61.0" ripplerFill="WHITE" style="-fx-background-color: green;" stylesheets="@../css/sells.css">
+      <JFXButton fx:id="btnProcced" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="195.0" layoutY="594.0" onAction="#btnProceedAction" prefHeight="59.0" prefWidth="61.0" ripplerFill="WHITE" style="-fx-background-color: white;" stylesheets="@../css/sells.css">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
          <graphic>
-            <FontAwesomeIconView fx:id="btnIcon" fill="WHITE" glyphName="QUESTION" size="30" />
+            <FontAwesomeIconView fx:id="btnIcon" fill="GREEN" glyphName="QUESTION" size="30" />
          </graphic>
          <font>
             <Font size="15.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="btnBarchart" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="767.0" layoutY="594.0" onAction="#btnBarchartAction" prefHeight="59.0" prefWidth="61.0" ripplerFill="WHITE" style="-fx-background-color: #263238;" stylesheets="@../css/sells.css">
+      <JFXButton fx:id="btnBarchart" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="767.0" layoutY="594.0" onAction="#btnBarchartAction" prefHeight="59.0" prefWidth="61.0" ripplerFill="WHITE" style="-fx-background-color: white;" stylesheets="@../css/sells.css">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
          <graphic>
-            <FontAwesomeIconView fx:id="btnChartIcon" fill="WHITE" glyphName="LINE_CHART" size="30" />
+            <FontAwesomeIconView fx:id="btnChartIcon" fill="#263238" glyphName="LINE_CHART" size="30" />
          </graphic>
          <font>
             <Font size="15.0" />
          </font>
+         <tooltip>
+            <Tooltip text="Show Table/Stat" />
+         </tooltip>
       </JFXButton>
       <LineChart fx:id="lineChart" layoutX="433.0" layoutY="170.0" legendVisible="false" prefHeight="382.0" prefWidth="627.0" title="Your Recent Rentals/Day" visible="false">
          <xAxis>
@@ -153,16 +157,20 @@
             <NumberAxis fx:id="amountAxis" label="Amount" side="LEFT" />
          </yAxis>
       </LineChart>
-      <JFXButton fx:id="loadAgain" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="691.0" layoutY="594.0" onAction="#loadAgain" prefHeight="59.0" prefWidth="61.0" ripplerFill="WHITE" style="-fx-background-color: #263238;" stylesheets="@../css/sells.css">
+      <JFXButton fx:id="loadAgain" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="691.0" layoutY="594.0" onAction="#loadAgain" prefHeight="59.0" prefWidth="61.0" ripplerFill="WHITE" style="-fx-background-color: white;" stylesheets="@../css/sells.css">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
          <graphic>
-            <FontAwesomeIconView fill="WHITE" glyphName="REFRESH" size="30" />
+            <FontAwesomeIconView fill="#263238" glyphName="REFRESH" size="30" />
          </graphic>
          <font>
             <Font size="15.0" />
          </font>
+         <tooltip>
+            <Tooltip text="Refresh" />
+         </tooltip>
       </JFXButton>
+      <Label fx:id="lblVerify" alignment="CENTER_RIGHT" layoutX="109.0" layoutY="615.0" prefHeight="18.0" prefWidth="78.0" text="Verify Input" />
    </children>
 </AnchorPane>

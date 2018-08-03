@@ -98,23 +98,23 @@
             <DropShadow blurType="TWO_PASS_BOX" height="18.03" radius="7.775" spread="0.1" width="15.07" />
          </effect>
       </TableView>
-      <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="116.0" layoutY="594.0" onAction="#reloadAll" prefHeight="59.0" prefWidth="61.0" ripplerFill="WHITE" style="-fx-background-color: #263238;" stylesheets="@../css/sells.css">
+      <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="116.0" layoutY="594.0" onAction="#reloadAll" prefHeight="59.0" prefWidth="61.0" ripplerFill="WHITE" style="-fx-background-color: white;" stylesheets="@../css/sells.css">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
          <graphic>
-            <FontAwesomeIconView fill="WHITE" glyphName="REFRESH" size="30" />
+            <FontAwesomeIconView fill="#263238" glyphName="REFRESH" size="30" />
          </graphic>
          <font>
             <Font size="15.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="btnAdd" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="189.0" layoutY="594.0" onAction="#btnAddAction" prefHeight="59.0" prefWidth="61.0" ripplerFill="WHITE" style="-fx-background-color: green;" stylesheets="@../css/sells.css">
+      <JFXButton fx:id="btnAdd" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="189.0" layoutY="594.0" onAction="#btnAddAction" prefHeight="59.0" prefWidth="61.0" ripplerFill="WHITE" style="-fx-background-color: white;" stylesheets="@../css/sells.css">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
          <graphic>
-            <FontAwesomeIconView fill="WHITE" glyphName="PLUS" size="30" />
+            <FontAwesomeIconView fill="GREEN" glyphName="PLUS" size="30" />
          </graphic>
          <font>
             <Font size="15.0" />
@@ -130,12 +130,12 @@
             <Font size="15.0" />
          </font>
       </JFXTextField>
-      <JFXButton fx:id="btnSearch" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="1036.0" layoutY="98.0" onAction="#btnSearchAction" prefHeight="44.0" prefWidth="45.0" ripplerFill="WHITE" style="-fx-background-radius: 30 30 30 30; -fx-background-color: #263238;" stylesheets="@../css/customer.css">
+      <JFXButton fx:id="btnSearch" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="1036.0" layoutY="98.0" onAction="#btnSearchAction" prefHeight="44.0" prefWidth="45.0" ripplerFill="WHITE" style="-fx-background-radius: 30 30 30 30; -fx-background-color: white;" stylesheets="@../css/customer.css">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
          <graphic>
-            <FontAwesomeIconView fx:id="btnSearchIcon" fill="WHITE" glyphName="SEARCH" size="25" />
+            <FontAwesomeIconView fx:id="btnSearchIcon" fill="#263238" glyphName="SEARCH" size="25" />
          </graphic>
          <tooltip>
             <Tooltip text="Search with customers name" />

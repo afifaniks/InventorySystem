@@ -10,9 +10,12 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
+import sample.DBConnection;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.*;
+import java.time.LocalDate;
 import java.util.ResourceBundle;
 
 /**
@@ -41,7 +44,7 @@ public class Dashboard implements Initializable{
     private Label lblTodaysRentalAmount;
 
     @FXML
-    private JFXButton btnTodaysDue;
+    private JFXButton btnTodaysDue, loadAgain;
 
     @FXML
     private Label lblTodaysDueCtr;
@@ -76,6 +79,10 @@ public class Dashboard implements Initializable{
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        setFields();
+    }
+
+    private void setFields() {
         //Setting total due amount
         lblTotalDueAmount.setText(totalDueAmount.toString() + " $");
         lblTotalDueCtr.setText(totalDueCtr.toString());
@@ -94,8 +101,92 @@ public class Dashboard implements Initializable{
 
         //Setting out of stock
         lblOutOfStock.setText(stockOut.toString());
+    }
+
+    @FXML
+    void loadAgain(ActionEvent event) {
+        Connection connection = DBConnection.getConnection();
+        try {
+            PreparedStatement getRentalDue = connection.prepareStatement("SELECT COUNT(*), SUM(amountDue) FROM rentals WHERE amountDue <> 0");
+            PreparedStatement getPurchaseDue = connection.prepareStatement("SELECT COUNT(*), SUM(amountDue) FROM purchases WHERE amountDue <> 0");
+            PreparedStatement getTodaysSell = connection.prepareStatement("SELECT COUNT(*), SUM(payAmount) FROM purchases WHERE purchaseDate = '"+ Date.valueOf(LocalDate.now()) + "'");
+            PreparedStatement getTodaysRent = connection.prepareStatement("SELECT COUNT(*), SUM(paid) FROM rentals WHERE rentalDate = '"+ Date.valueOf(LocalDate.now()) + "'");
+            PreparedStatement getTodaysRentalDue = connection.prepareStatement("SELECT COUNT(*), SUM(amountDue) FROM rentals WHERE amountDue <> 0 AND rentalDate = '"+ Date.valueOf(LocalDate.now()) + "'");
+            PreparedStatement getTodaysPurchaseDue = connection.prepareStatement("SELECT COUNT(*), SUM(amountDue) FROM purchases WHERE amountDue <> 0 AND purchaseDate = '"+ Date.valueOf(LocalDate.now()) + "'");
+            PreparedStatement getOutOfStock = connection.prepareStatement("SELECT * FROM item, itemtype WHERE itemTypeId = ItemType_itemTypeId AND stock ="+0);
+
+            ResultSet rentalDue = getRentalDue.executeQuery();
+            ResultSet purchaseDue = getPurchaseDue.executeQuery();
+            ResultSet todaysSell = getTodaysSell.executeQuery();
+            ResultSet todaysRent = getTodaysRent.executeQuery();
+            ResultSet todaysRentDue = getTodaysRentalDue.executeQuery();
+            ResultSet todysPurchaseDue = getTodaysPurchaseDue.executeQuery();
+            ResultSet stockOutRs = getOutOfStock.executeQuery();
+
+            Double tDAmount = 0.0;
+            Integer tDCtr = 0;
+
+            while (rentalDue.next()) {
+                tDCtr += rentalDue.getInt(1);
+                tDAmount += rentalDue.getDouble(2);
+            }
+
+            while (purchaseDue.next()) {
+                tDCtr += purchaseDue.getInt(1);
+                tDAmount += purchaseDue.getDouble(2);
+            }
+
+            Double tSell = 0.0;
+            Double tRent = 0.0;
+            Integer rCount = 0;
+            Integer sCount = 0;
+
+            while (todaysSell.next()) {
+                sCount += todaysSell.getInt(1);
+                tSell += todaysSell.getDouble(2);
+            }
+
+            while (todaysRent.next()) {
+                rCount += todaysRent.getInt(1);
+                tRent += todaysRent.getDouble(2);
+            }
+
+            Double todayDAmount = 0.0;
+            Integer dCtr = 0;
+
+            while (todaysRentDue.next()) {
+                dCtr += todaysRentDue.getInt(1);
+                todayDAmount += todaysRentDue.getDouble(2);
+            }
+
+            while (todysPurchaseDue.next()) {
+                dCtr += todysPurchaseDue.getInt(1);
+                todayDAmount += todysPurchaseDue.getDouble(2);
+            }
+
+            Integer sOCtr = 0;
+
+            while (stockOutRs.next()) {
+                sOCtr += 1;
+            }
 
 
+            totalDueCtr = tDCtr;
+            totalDueAmount = tDAmount;
+            todaySellCtr = sCount;
+            todaysTotalSell = tSell;
+            todaysRentalCtr = rCount;
+            todayTotalRental = tRent;
+            todaysTotalDue = todayDAmount;
+            todaysDueCtr = dCtr;
+            stockOut = sOCtr;
+
+            //Setting values
+            setFields();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
 
     }
 

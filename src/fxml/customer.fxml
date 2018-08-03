@@ -24,7 +24,7 @@
    <children>
       <AnchorPane fx:id="customerListPane" layoutY="85.0" prefHeight="581.0" prefWidth="1169.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="85.0">
          <children>
-            <TableView fx:id="tbl" prefHeight="354.0" prefWidth="1045.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+            <TableView fx:id="tbl" prefHeight="354.0" prefWidth="1045.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="104.0" AnchorPane.topAnchor="20.0">
                <columns>
                   <TableColumn fx:id="columnID" prefWidth="50.0" text="Customer ID" />
                   <TableColumn fx:id="columnFirstName" prefWidth="75.0" text="First Name" />
@@ -213,12 +213,12 @@
                        <Font size="15.0" />
                     </font>
                  </JFXTextField>
-                 <JFXButton fx:id="btnSearch" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="990.0" layoutY="26.0" onAction="#btnSearchAction" prefHeight="44.0" prefWidth="45.0" ripplerFill="WHITE" style="-fx-background-radius: 30 30 30 30; -fx-background-color: #263238;" stylesheets="@../css/customer.css">
+                 <JFXButton fx:id="btnSearch" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="990.0" layoutY="26.0" onAction="#btnSearchAction" prefHeight="44.0" prefWidth="45.0" ripplerFill="WHITE" style="-fx-background-radius: 30 30 30 30; -fx-background-color: white;" stylesheets="@../css/customer.css">
                     <cursor>
                        <Cursor fx:constant="HAND" />
                     </cursor>
                     <graphic>
-                       <FontAwesomeIconView fx:id="btnSeachIcon" fill="WHITE" glyphName="SEARCH" size="25" />
+                       <FontAwesomeIconView fx:id="btnSeachIcon" fill="#263238" glyphName="SEARCH" size="25" />
                     </graphic>
                     <tooltip>
                        <Tooltip text="Search with customers name or id" />

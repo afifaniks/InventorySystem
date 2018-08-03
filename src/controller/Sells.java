@@ -55,7 +55,7 @@ public class Sells implements Initializable{
     private JFXDatePicker txtDate;
 
     @FXML
-    private Label lblCost;
+    private Label lblCost, lblVerify;
 
     @FXML
     private JFXTextField txtPayAmount, txtQty;
@@ -192,6 +192,7 @@ public class Sells implements Initializable{
             txtCustomerId.setText("");
             txtItemId.setText("");
             txtDate.setValue(LocalDate.now());
+            lblVerify.setText("Verify Input");
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -244,6 +245,7 @@ public class Sells implements Initializable{
         if (startTransaction) {
             startTransaction = false; //Resetting Transaction Value
             btnIcon.setGlyphName("QUESTION");
+            lblVerify.setText("Verify Input");
             Tooltip tooltip = new Tooltip("Verify Input");
             btnProcced.setTooltip(tooltip);
             //Loading Transaction Window
@@ -415,6 +417,7 @@ public class Sells implements Initializable{
 
             if(flag) {
                 btnIcon.setGlyphName("CHECK");
+                lblVerify.setText("Finalize");
                 startTransaction = true;
                 Tooltip tooltip = new Tooltip("Proceed to Transaction");
                 btnProcced.setTooltip(tooltip);

@@ -58,7 +58,7 @@ public class Rentals implements Initializable {
     private JFXTextField txtCustomerId;
 
     @FXML
-    private Label lblId;
+    private Label lblId, lblVerify;
 
     @FXML
     private JFXTextField txtItemId;
@@ -152,6 +152,7 @@ public class Rentals implements Initializable {
             startTransaction = false; //Resetting Transaction Value
             btnIcon.setGlyphName("QUESTION");
             Tooltip tooltip = new Tooltip("Verify Input");
+            lblVerify.setText("Verify Input");
             btnProcced.setTooltip(tooltip);
 
             //Loading Transaction Window
@@ -317,6 +318,7 @@ public class Rentals implements Initializable {
                     btnIcon.setGlyphName("CHECK");
                     startTransaction = true;
                     Tooltip tooltip = new Tooltip("Proceed to Transaction");
+                    lblVerify.setText("Finalize");
                     btnProcced.setTooltip(tooltip);
 
                 } catch (SQLException e) {
@@ -365,6 +367,7 @@ public class Rentals implements Initializable {
             txtReturnDate.setValue(null);
             txtCustomerId.setText("");
             txtItemId.setText("");
+            lblVerify.setText("Verify Input");
 
         } catch (SQLException e) {
             e.printStackTrace();
