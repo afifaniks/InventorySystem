@@ -54,7 +54,13 @@ public class Base implements Initializable{
     private JFXButton btnAccounts;
 
     @FXML
+    private JFXButton btnDueUpdate;
+
+    @FXML
     private JFXButton btnAdmin;
+
+    @FXML
+    private JFXButton btn;
 
     @FXML
     private Label lblClock;
@@ -80,6 +86,7 @@ public class Base implements Initializable{
     private final static String RENTALS_URL = "/fxml/rentals.fxml";
     private final static String ACCOUNTS_URL = "/fxml/accounts.fxml";
     private final static String ADMIN_URL = "/fxml/administrator.fxml";
+    private final static String DUE_UPDATE = "/fxml/dueupdate.fxml";
 
     //This method will help to set appropriate right pane
     //respective to the left pane selection and will make it responsive if
@@ -164,6 +171,12 @@ public class Base implements Initializable{
         } else if(btn.getText().equals(btnAdmin.getText())) {
             try {
                 ctrlRightPane(ADMIN_URL);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } else if(btn.getText().equals(btnDueUpdate.getText())) {
+            try {
+                ctrlRightPane(DUE_UPDATE);
             } catch (IOException e) {
                 e.printStackTrace();
             }
