@@ -117,7 +117,7 @@ public class Sells implements Initializable{
 
            Connection con = DBConnection.getConnection();
            try {
-               PreparedStatement ps = con.prepareStatement("SELECT purchaseDate, sum(payAmount) FROM purchases WHERE User_username='"+LogIn.loggerUsername+"' GROUP BY purchaseDate");
+               PreparedStatement ps = con.prepareStatement("SELECT purchaseDate, sum(payAmount) FROM purchases WHERE User_username='"+LogIn.loggerUsername+"' GROUP BY purchaseDate LIMIT 14");
                ResultSet rs = ps.executeQuery();
 
                XYChart.Series chartData = new XYChart.Series<>();

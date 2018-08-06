@@ -20,46 +20,46 @@
 
 <AnchorPane fx:id="rightPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="661.0" prefWidth="1125.0" stylesheets="/css/sells.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Sells">
    <children>
-      <Label layoutX="58.0" layoutY="220.0" prefHeight="44.0" prefWidth="78.0" text="Customer:">
+      <Label layoutX="58.0" layoutY="233.0" prefHeight="44.0" prefWidth="78.0" text="Customer:">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <JFXTextField fx:id="txtCustomerId" alignment="CENTER" focusColor="#263238" layoutX="162.0" layoutY="225.0" prefHeight="31.0" prefWidth="163.0">
+      <JFXTextField fx:id="txtCustomerId" alignment="CENTER" focusColor="#263238" layoutX="162.0" layoutY="238.0" prefHeight="31.0" prefWidth="163.0">
          <font>
             <Font size="15.0" />
          </font></JFXTextField>
-      <Label layoutX="58.0" layoutY="335.0" prefHeight="44.0" prefWidth="78.0" text="Date:">
+      <Label layoutX="58.0" layoutY="348.0" prefHeight="44.0" prefWidth="78.0" text="Date:">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Separator layoutX="384.0" layoutY="151.0" orientation="VERTICAL" prefHeight="416.0" prefWidth="6.0" style="-fx-background-color: #263238;" />
-      <Label layoutX="58.0" layoutY="390.0" prefHeight="44.0" prefWidth="78.0" text="Qty:">
+      <Separator layoutX="382.0" layoutY="167.0" orientation="VERTICAL" prefHeight="416.0" prefWidth="6.0" style="-fx-background-color: #263238;" />
+      <Label layoutX="58.0" layoutY="403.0" prefHeight="44.0" prefWidth="78.0" text="Qty:">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <JFXTextField fx:id="txtQty" alignment="CENTER" focusColor="#263238" layoutX="162.0" layoutY="399.0" prefHeight="31.0" prefWidth="163.0">
+      <JFXTextField fx:id="txtQty" alignment="CENTER" focusColor="#263238" layoutX="162.0" layoutY="412.0" prefHeight="31.0" prefWidth="163.0">
          <font>
             <Font size="15.0" />
          </font></JFXTextField>
-      <Label layoutX="58.0" layoutY="165.0" prefHeight="44.0" prefWidth="104.0" text="Purchase ID:">
+      <Label layoutX="58.0" layoutY="178.0" prefHeight="44.0" prefWidth="104.0" text="Purchase ID:">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label fx:id="lblId" layoutX="173.0" layoutY="174.0" prefHeight="31.0" prefWidth="183.0" text="Label" textFill="#0c9e33">
+      <Label fx:id="lblId" layoutX="173.0" layoutY="187.0" prefHeight="31.0" prefWidth="183.0" text="Label" textFill="#0c9e33">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="58.0" layoutY="280.0" prefHeight="44.0" prefWidth="78.0" text="Item:">
+      <Label layoutX="58.0" layoutY="293.0" prefHeight="44.0" prefWidth="78.0" text="Item:">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <JFXTextField fx:id="txtItemId" alignment="CENTER" focusColor="#263238" layoutX="162.0" layoutY="284.0" prefHeight="31.0" prefWidth="163.0">
+      <JFXTextField fx:id="txtItemId" alignment="CENTER" focusColor="#263238" layoutX="162.0" layoutY="297.0" prefHeight="31.0" prefWidth="163.0">
          <font>
             <Font size="15.0" />
          </font>
@@ -82,18 +82,18 @@
             <Font size="27.0" />
          </font>
       </Label>
-      <JFXDatePicker fx:id="txtDate" defaultColor="#263238" layoutX="162.0" layoutY="346.0" prefHeight="26.0" prefWidth="163.0" />
-      <Label layoutX="58.0" layoutY="511.0" prefHeight="44.0" prefWidth="104.0" text="Price:">
+      <JFXDatePicker fx:id="txtDate" defaultColor="#263238" layoutX="162.0" layoutY="359.0" prefHeight="26.0" prefWidth="163.0" />
+      <Label layoutX="58.0" layoutY="524.0" prefHeight="44.0" prefWidth="104.0" text="Price:">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label fx:id="lblCost" layoutX="162.0" layoutY="511.0" prefHeight="45.0" prefWidth="214.0" text="??" textFill="#0c9e33">
+      <Label fx:id="lblCost" layoutX="162.0" layoutY="524.0" prefHeight="45.0" prefWidth="214.0" text="??" textFill="#0c9e33">
          <font>
             <Font size="30.0" />
          </font>
       </Label>
-      <LineChart fx:id="lineChart" layoutX="433.0" layoutY="170.0" legendVisible="false" prefHeight="382.0" prefWidth="627.0" title="Your Recent Sells/Day" AnchorPane.leftAnchor="433.0" AnchorPane.rightAnchor="109.0">
+      <LineChart fx:id="lineChart" layoutX="433.0" layoutY="183.0" legendVisible="false" prefHeight="382.0" prefWidth="627.0" title="Your Recent Sells/Day" AnchorPane.leftAnchor="433.0" AnchorPane.rightAnchor="109.0">
         <xAxis>
           <CategoryAxis fx:id="dateAxis" animated="false" label="Date" prefHeight="11.0" prefWidth="569.0" side="BOTTOM" tickLabelGap="20.0" />
         </xAxis>
@@ -101,12 +101,12 @@
           <NumberAxis fx:id="amountAxis" label="Amount" side="LEFT" />
         </yAxis>
       </LineChart>
-      <Label layoutX="58.0" layoutY="449.0" prefHeight="44.0" prefWidth="93.0" text="Pay Amount:">
+      <Label layoutX="58.0" layoutY="462.0" prefHeight="44.0" prefWidth="93.0" text="Pay Amount:">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <JFXTextField fx:id="txtPayAmount" alignment="CENTER" focusColor="#263238" layoutX="162.0" layoutY="458.0" prefHeight="31.0" prefWidth="163.0">
+      <JFXTextField fx:id="txtPayAmount" alignment="CENTER" focusColor="#263238" layoutX="162.0" layoutY="471.0" prefHeight="31.0" prefWidth="163.0">
          <font>
             <Font size="15.0" />
          </font>
@@ -116,7 +116,7 @@
             <Font size="27.0" />
          </font>
       </Label>
-      <TableView fx:id="tblRecent" layoutX="433.0" layoutY="170.0" prefHeight="382.0" prefWidth="626.0" AnchorPane.leftAnchor="433.0" AnchorPane.rightAnchor="109.0">
+      <TableView fx:id="tblRecent" layoutX="433.0" layoutY="183.0" prefHeight="382.0" prefWidth="626.0" AnchorPane.leftAnchor="433.0" AnchorPane.rightAnchor="109.0">
         <columns>
           <TableColumn fx:id="purID" text="Purchase ID" />
           <TableColumn fx:id="cusID" prefWidth="88.0" text="Customer ID" />
@@ -133,7 +133,7 @@
             <DropShadow blurType="TWO_PASS_BOX" height="18.03" radius="7.775" spread="0.1" width="15.07" />
          </effect>
       </TableView>
-      <JFXButton fx:id="btnProcced" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="195.0" layoutY="594.0" onAction="#btnProceedAction" prefHeight="59.0" prefWidth="61.0" ripplerFill="WHITE" style="-fx-background-color: white;" stylesheets="@../css/sells.css">
+      <JFXButton fx:id="btnProcced" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="195.0" layoutY="625.0" onAction="#btnProceedAction" prefHeight="59.0" prefWidth="61.0" ripplerFill="WHITE" style="-fx-background-color: white;" stylesheets="@../css/sells.css">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -144,7 +144,7 @@
             <Font size="15.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="btnBarchart" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="767.0" layoutY="594.0" onAction="#btnBarchartAction" prefHeight="59.0" prefWidth="61.0" ripplerFill="WHITE" style="-fx-background-color: white;" stylesheets="@../css/sells.css">
+      <JFXButton fx:id="btnBarchart" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="767.0" layoutY="625.0" onAction="#btnBarchartAction" prefHeight="59.0" prefWidth="61.0" ripplerFill="WHITE" style="-fx-background-color: white;" stylesheets="@../css/sells.css">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -158,7 +158,7 @@
             <Tooltip text="Show Table/Stat" />
          </tooltip>
       </JFXButton>
-      <JFXButton fx:id="loadAgain" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="691.0" layoutY="594.0" onAction="#loadAgain" prefHeight="59.0" prefWidth="61.0" ripplerFill="WHITE" style="-fx-background-color: white;" stylesheets="@../css/sells.css">
+      <JFXButton fx:id="loadAgain" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="691.0" layoutY="625.0" onAction="#loadAgain" prefHeight="59.0" prefWidth="61.0" ripplerFill="WHITE" style="-fx-background-color: white;" stylesheets="@../css/sells.css">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -172,6 +172,6 @@
             <Tooltip text="Refresh" />
          </tooltip>
       </JFXButton>
-      <Label fx:id="lblVerify" alignment="CENTER_RIGHT" layoutX="109.0" layoutY="615.0" prefHeight="18.0" prefWidth="78.0" text="Verify Input" />
+      <Label fx:id="lblVerify" alignment="CENTER_RIGHT" layoutX="109.0" layoutY="646.0" prefHeight="18.0" prefWidth="78.0" text="Verify Input" />
    </children>
 </AnchorPane>

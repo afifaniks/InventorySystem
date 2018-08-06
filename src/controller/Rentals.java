@@ -387,7 +387,7 @@ public class Rentals implements Initializable {
 
             Connection con = DBConnection.getConnection();
             try {
-                PreparedStatement ps = con.prepareStatement("SELECT rentalDate, sum(paid) FROM rentals WHERE User_username ='"+LogIn.loggerUsername+"' GROUP BY rentalDate");
+                PreparedStatement ps = con.prepareStatement("SELECT rentalDate, sum(paid) FROM rentals WHERE User_username ='"+LogIn.loggerUsername+"' GROUP BY rentalDate LIMIT 14");
                 ResultSet rs = ps.executeQuery();
 
                 XYChart.Series chartData = new XYChart.Series<>();

@@ -30,7 +30,7 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Separator layoutX="382.0" layoutY="154.0" orientation="VERTICAL" prefHeight="416.0" prefWidth="6.0" style="-fx-background-color: #263238;" />
+      <Separator layoutX="382.0" layoutY="167.0" orientation="VERTICAL" prefHeight="416.0" prefWidth="6.0" style="-fx-background-color: #263238;" />
       <Label layoutX="58.0" layoutY="165.0" prefHeight="44.0" prefWidth="104.0" text="Account ID:">
          <font>
             <Font name="System Bold" size="14.0" />
@@ -84,7 +84,7 @@
             <Font size="27.0" />
          </font>
       </Label>
-      <TableView fx:id="tblRecent" layoutX="438.0" layoutY="170.0" prefHeight="382.0" prefWidth="615.0" AnchorPane.leftAnchor="438.0" AnchorPane.rightAnchor="116.0">
+      <TableView fx:id="tblRecent" layoutX="433.0" layoutY="183.0" prefHeight="382.0" prefWidth="615.0" AnchorPane.leftAnchor="438.0" AnchorPane.rightAnchor="116.0">
         <columns>
             <TableColumn fx:id="customer" prefWidth="57.0" text="Customer" />
           <TableColumn fx:id="accID" text="Account ID" />
