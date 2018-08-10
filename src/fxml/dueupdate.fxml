@@ -53,7 +53,7 @@
                   <Font name="System Bold" size="33.0" />
                </font>
                <graphic>
-                  <FontAwesomeIconView fill="WHITE" glyphName="RECYCLE" size="40" />
+                  <FontAwesomeIconView fill="WHITE" glyphName="CHEVRON_CIRCLE_UP" size="40" />
                </graphic>
             </Label>
             <Line endX="143.0" layoutX="319.0" layoutY="81.0" startX="448.0" AnchorPane.leftAnchor="461.5" AnchorPane.rightAnchor="401.5" />
@@ -124,7 +124,96 @@
             <FontAwesomeIconView fx:id="btnSearchIcon" fill="#263238" glyphName="SEARCH" size="20" />
          </graphic>
          <tooltip>
-            <Tooltip text="Search with customers name" />
+            <Tooltip text="Search with sell id" />
+         </tooltip>
+      </JFXButton>
+      <Label layoutX="652.0" layoutY="232.0" prefHeight="44.0" prefWidth="78.0" text="Customer:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtCustomerId1" alignment="CENTER" editable="false" focusColor="#263238" layoutX="756.0" layoutY="237.0" prefHeight="31.0" prefWidth="163.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="652.0" layoutY="347.0" prefHeight="44.0" prefWidth="93.0" text="Date:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="652.0" layoutY="177.0" prefHeight="44.0" prefWidth="104.0" text="Rental ID:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="652.0" layoutY="292.0" prefHeight="44.0" prefWidth="78.0" text="Item:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtItemRental" alignment="CENTER" editable="false" focusColor="#263238" layoutX="756.0" layoutY="296.0" prefHeight="31.0" prefWidth="163.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXDatePicker fx:id="txtRentalDate" defaultColor="#263238" editable="false" layoutX="756.0" layoutY="358.0" prefHeight="26.0" prefWidth="163.0" />
+      <Label layoutX="650.0" layoutY="401.0" prefHeight="44.0" prefWidth="93.0" text="Paid:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtPaidRental" alignment="CENTER" editable="false" focusColor="#263238" layoutX="754.0" layoutY="410.0" prefHeight="31.0" prefWidth="163.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="btnProceedRental" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="789.0" layoutY="624.0" onAction="#updateRentalDue" prefHeight="59.0" prefWidth="61.0" ripplerFill="WHITE" style="-fx-background-color: white;" stylesheets="@../css/sells.css">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIconView fx:id="btnIcon1" fill="GREEN" glyphName="CHECK" size="30" />
+         </graphic>
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <FontAwesomeIconView fx:id="btnIcon1" fill="GREEN" glyphName="CHECK" layoutX="509.0" layoutY="-1.0" size="30" />
+      <Label layoutX="652.0" layoutY="458.0" prefHeight="44.0" prefWidth="93.0" text="Due:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtRentalDue" alignment="CENTER" editable="false" focusColor="#263238" layoutX="756.0" layoutY="467.0" prefHeight="31.0" prefWidth="163.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="650.0" layoutY="520.0" prefHeight="44.0" prefWidth="93.0" text="New Pay:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtNewPayRental" alignment="CENTER" focusColor="#263238" layoutX="754.0" layoutY="529.0" prefHeight="31.0" prefWidth="163.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtRentalID" alignment="CENTER" focusColor="#263238" layoutX="754.0" layoutY="184.0" prefHeight="31.0" prefWidth="163.0" promptText="input rental id here">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="btnSearchRental" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="5.0" layoutX="920.0" layoutY="184.0" onAction="#btnSearchActionRental" prefHeight="31.0" prefWidth="31.0" ripplerFill="WHITE" style="-fx-background-radius: 30 30 30 30; -fx-background-color: white;" stylesheets="@../css/customer.css">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIconView fx:id="btnSearchIcon1" fill="#263238" glyphName="SEARCH" size="20" />
+         </graphic>
+         <tooltip>
+            <Tooltip text="Search with rental id" />
          </tooltip>
       </JFXButton>
    </children>

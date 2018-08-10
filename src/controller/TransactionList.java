@@ -16,6 +16,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.LocalDate;
+import java.util.Locale;
 import java.util.ResourceBundle;
 
 /**
@@ -66,6 +68,8 @@ public class TransactionList implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        today.setText(LocalDate.now().toString());
+
         ObservableList<Transact> purchase = FXCollections.observableArrayList();
         ObservableList<Transact> rent = FXCollections.observableArrayList();
 

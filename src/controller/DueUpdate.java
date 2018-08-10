@@ -50,9 +50,6 @@ public class DueUpdate implements Initializable {
     private FontAwesomeIconView btnIcon;
 
     @FXML
-    private Label lblVerify;
-
-    @FXML
     private JFXTextField txtDue;
 
     @FXML
@@ -66,6 +63,91 @@ public class DueUpdate implements Initializable {
 
     @FXML
     private FontAwesomeIconView btnSearchIcon;
+
+    @FXML
+    private JFXTextField txtCustomerId1;
+
+    @FXML
+    private JFXTextField txtItemRental;
+
+    @FXML
+    private JFXDatePicker txtRentalDate;
+
+    @FXML
+    private JFXTextField txtPaidRental;
+
+    @FXML
+    private JFXButton btnProceedRental;
+
+    @FXML
+    private FontAwesomeIconView btnIcon1;
+
+    @FXML
+    private JFXTextField txtRentalDue;
+
+    @FXML
+    private JFXTextField txtNewPayRental;
+
+    @FXML
+    private JFXTextField txtRentalID;
+
+    @FXML
+    private JFXButton btnSearchRental;
+
+    @FXML
+    private FontAwesomeIconView btnSearchIcon1;
+
+    @FXML
+    void updateRentalDue(ActionEvent event) {
+        Double newAmount = Double.valueOf(txtNewPayRental.getText());
+        Double newDue = Double.valueOf(txtRentalDue.getText()) - newAmount;
+        Double totalPaid = Double.valueOf(txtPaidRental.getText()) + newAmount;
+        Connection connection = DBConnection.getConnection();
+        try {
+            PreparedStatement ps = connection.prepareStatement("UPDATE rentals SET paid = "+totalPaid+", amountDue = "+newDue+"WHERE rentalID = "+Integer.valueOf(txtRentalID.getText()));
+            ps.executeUpdate();
+
+            new Dialog("Operation Successful!", "The due is updated successfully and recorded into database!");
+
+            //Clearing fields
+            txtRentalID.setText("");
+            txtCustomerId1.setText("");
+            txtRentalDue.setText("");
+            txtRentalDate.setValue(null);
+            txtPaidRental.setText("");
+            txtItemRental.setText("");
+            txtNewPayRental.setText("");
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    @FXML
+    void btnSearchActionRental(ActionEvent event) {
+        Integer sId = Integer.valueOf(txtRentalID.getText());
+
+        Connection connection = DBConnection.getConnection();
+        try {
+            PreparedStatement ps = connection.prepareStatement("SELECT * FROM rentals WHERE rentalID ="+sId);
+            ResultSet rs = ps.executeQuery();
+
+            while (rs.next()) {
+                txtRentalID.setText(Integer.valueOf(rs.getInt("rentalID")).toString());
+                txtCustomerId1.setText(rs.getString("Customers_customerID"));
+                txtItemRental.setText(Integer.valueOf(rs.getInt("Item_itemID")).toString());
+                txtRentalDate.setValue(Date.valueOf(rs.getString("rentalDate")).toLocalDate());
+                txtPaidRental.setText(Double.valueOf(rs.getDouble("paid")).toString());
+                txtRentalDue.setText(Double.valueOf(rs.getDouble("amountDue")).toString());
+            }
+
+            connection.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -109,6 +191,16 @@ public class DueUpdate implements Initializable {
             ps.executeUpdate();
 
             new Dialog("Operation Successful!", "The due is updated successfully and recorded into database!");
+
+            //Clearing fields
+            txtSellId.setText("");
+            txtCustomerId.setText("");
+            txtDue.setText("");
+            txtSellDate.setValue(null);
+            txtPaid.setText("");
+            txtItemId.setText("");
+            txtNewPay.setText("");
+
         } catch (SQLException e) {
             e.printStackTrace();
         }

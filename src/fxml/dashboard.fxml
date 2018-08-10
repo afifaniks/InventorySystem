@@ -114,6 +114,7 @@
                   <Font name="System Bold" size="20.0" />
                </font>
             </Label>
+            <Pane layoutX="15.0" prefHeight="200.0" prefWidth="200.0" />
          </children>
       </Pane>
       <Pane layoutX="368.0" layoutY="390.0" prefHeight="240.0" prefWidth="244.0">
@@ -144,6 +145,7 @@
                   <Font name="System Bold" size="20.0" />
                </font>
             </Label>
+            <Pane layoutX="15.0" prefHeight="200.0" prefWidth="200.0" />
          </children>
       </Pane>
       <Pane layoutX="649.0" layoutY="390.0" prefHeight="240.0" prefWidth="244.0">
@@ -169,6 +171,7 @@
                   <Font name="System Bold" size="15.0" />
                </font>
             </Label>
+            <Pane layoutX="15.0" prefHeight="200.0" prefWidth="200.0" />
          </children>
       </Pane>
       <Separator layoutX="356.0" layoutY="365.0" prefHeight="1.0" prefWidth="513.0" style="-fx-background-color: #263238;" />

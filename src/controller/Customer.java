@@ -273,10 +273,19 @@ public class Customer implements Initializable {
         } else {
             try {
                 imgPath = onView.getPhoto();
-                ImagePattern img = new ImagePattern(new Image(imgPath));
-                imgCustomerPhoto.setFill(img);
+                File tmpPath = new File(imgPath.replace("file:", ""));
+
+                if(tmpPath.exists()) {
+                    ImagePattern img = new ImagePattern(new Image(imgPath));
+                    imgCustomerPhoto.setFill(img);
+                } else {
+                    imgPath = null;
+                    ImagePattern img = new ImagePattern(new Image("/resource/icons/user.png"));
+                    imgCustomerPhoto.setFill(img);
+                }
             } catch (Exception e) {
                 //Fallback photo: this will be applied if photo not found or remove in the directory specified directory
+                //imgPath = null;
                 ImagePattern img = new ImagePattern(new Image("/resource/icons/user.png"));
                 imgCustomerPhoto.setFill(img);
             }

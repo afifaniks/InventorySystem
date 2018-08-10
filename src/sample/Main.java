@@ -13,24 +13,31 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
+import java.io.IOException;
+
 public class Main extends Application {
 
 
 
     @Override
-    public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("/fxml/login.fxml"));
-        Scene scene = new Scene(root);
+    public void start(Stage primaryStage) {
+        Parent root = null;
+        try {
+            root = FXMLLoader.load(getClass().getResource("/fxml/login.fxml"));
+            Scene scene = new Scene(root);
 
-        String css = this.getClass().getResource("/css/login.css").toExternalForm();
-        scene.getStylesheets().add(css);
+            String css = this.getClass().getResource("/css/login.css").toExternalForm();
+            scene.getStylesheets().add(css);
 
-        primaryStage.setTitle("Log In Prompt");
-        primaryStage.setScene(scene);
-        primaryStage.getIcons().add(new Image("/resource/icons/Accounts_main.png"));
-        primaryStage.setResizable(false);
-       // primaryStage.initStyle(StageStyle.UNDECORATED);
-        primaryStage.show();
+            primaryStage.setTitle("Log In Prompt");
+            primaryStage.setScene(scene);
+            primaryStage.getIcons().add(new Image("/resource/icons/Accounts_main.png"));
+            primaryStage.setResizable(false);
+            // primaryStage.initStyle(StageStyle.UNDECORATED);
+            primaryStage.show();
+        } catch (IOException e) {
+            new Dialog("Error!", "Error Occured. Failed to initialize system. Either database server is not online or database dropped.");
+        }
 
     }
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="teslarentalinventory@localhost" uuid="e548023c-2596-4027-b6b2-afe7c46704bb">
+    <data-source source="LOCAL" name="teslarentalinventory@localhost" uuid="b41d40ed-0845-4871-8332-8970d1cc81df">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>

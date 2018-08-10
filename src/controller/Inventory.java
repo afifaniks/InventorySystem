@@ -295,8 +295,18 @@ public class Inventory implements Initializable{
         } else {
             try {
                 imgPath = onView.getPhoto();
-                ImagePattern img = new ImagePattern(new Image(imgPath));
-                imgCustomerPhoto.setFill(img);
+
+                File tmpPath = new File(imgPath.replace("file:", ""));
+
+                if(tmpPath.exists()) {
+                    ImagePattern img = new ImagePattern(new Image(imgPath));
+                    imgCustomerPhoto.setFill(img);
+                } else {
+                    imgPath = null;
+                    ImagePattern img = new ImagePattern(new Image("/resource/icons/trolley.png"));
+                    imgCustomerPhoto.setFill(img);
+                }
+
             } catch (Exception e) {
                 //Fallback photo in case image not found
                 ImagePattern img = new ImagePattern(new Image("/resource/icons/trolley.png"));

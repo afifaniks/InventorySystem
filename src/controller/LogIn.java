@@ -15,6 +15,7 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 import sample.DBConnection;
+import sample.Dialog;
 
 import java.io.*;
 import java.sql.*;
@@ -97,28 +98,26 @@ public class LogIn implements Initializable{
                 txtUsername.setText(resultSet.getString(1)); //Getting Saved Username
                 txtPassword.setText(resultSet.getString(2)); //Getting Saved Password
             }
+            txtPasswordShown.setVisible(false);
+
+            txtUsername.setOnMouseClicked(event -> {
+                lblWarnUsername.setVisible(false);
+            });
+
+            txtPasswordShown.setOnMouseClicked(event -> {
+                lblWarnPassword.setVisible(false);
+            });
+
+            txtPassword.setOnMouseClicked(event -> {
+                lblWarnPassword.setVisible(false);
+            });
+
+           connection.close();
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        txtPasswordShown.setVisible(false);
 
-        txtUsername.setOnMouseClicked(event -> {
-            lblWarnUsername.setVisible(false);
-        });
-
-        txtPasswordShown.setOnMouseClicked(event -> {
-            lblWarnPassword.setVisible(false);
-        });
-
-        txtPassword.setOnMouseClicked(event -> {
-            lblWarnPassword.setVisible(false);
-        });
-
-        try {
-            connection.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
     }
 
     private void userLogger() {

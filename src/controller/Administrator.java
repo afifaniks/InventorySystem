@@ -128,9 +128,9 @@ public class Administrator implements Initializable {
                 ps4.executeUpdate();
                 //py.executeUpdate();
                 ps5.executeUpdate();
-            }
 
-            new Dialog("Operation Successful!", "The database is reset to initial state.");
+                new Dialog("Operation Successful!", "The database is reset to initial state.");
+            }
 
 
         } catch (SQLException e) {

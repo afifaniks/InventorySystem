@@ -14,7 +14,7 @@ public class DBConnection {
     public static Connection getConnection() {
         Connection con;
         try {
-            con = DriverManager.getConnection(URL, "root", "3267");;
+            con = DriverManager.getConnection(URL, "root", "root");;
         } catch (SQLException e) {
             if (e.getErrorCode() == 0) { //Error Code 0: database server offline
                 new sample.Dialog("Error!", "Database server is offline!");
