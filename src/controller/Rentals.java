@@ -368,14 +368,13 @@ public class Rentals implements Initializable {
             txtCustomerId.setText("");
             txtItemId.setText("");
             lblVerify.setText("Verify Input");
+            btnIcon.setGlyphName("QUESTION");
+
 
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
-
     }
-
 
     @FXML
     void btnBarchartAction(ActionEvent event) {

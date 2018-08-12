@@ -78,7 +78,7 @@ public class CustomersRental implements Initializable {
         empName.setCellValueFactory(new PropertyValueFactory<>("user"));
 
         try {
-            PreparedStatement getRentalList = con.prepareStatement("SELECT * FROM rentals WHERE  rentalDate = '"+ Date.valueOf(LocalDate.now()) +"'"+"AND Customers_customerID ="+customerID);
+            PreparedStatement getRentalList = con.prepareStatement("SELECT * FROM rentals WHERE Customers_customerID ="+customerID);
             ResultSet rentList = getRentalList.executeQuery();
 
             ObservableList<Rent> rentsListByUser = FXCollections.observableArrayList();

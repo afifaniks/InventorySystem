@@ -77,9 +77,6 @@ public class Inventory implements Initializable{
     private JFXButton btnListAll;
 
     @FXML
-    private JFXButton btnMostSold;
-
-    @FXML
     private JFXButton btnOutOfStock, btnGoBack, btnDelete;
 
     @FXML
@@ -313,7 +310,6 @@ public class Inventory implements Initializable{
                 imgCustomerPhoto.setFill(img);
             }
         }
-
     }
 
     @FXML
@@ -430,8 +426,8 @@ public class Inventory implements Initializable{
             btnNextEntry.setDisable(false);
             btnListAll.setDisable(false);
             btnSearch.setDisable(false);
-            btnMostSold.setDisable(false);
             btnOutOfStock.setDisable(false);
+            btnDelete.setDisable(false);
 
             String defColor = "#263238";
 
@@ -471,9 +467,9 @@ public class Inventory implements Initializable{
                 btnPrevEntry.setDisable(true);
                 btnNextEntry.setDisable(true);
                 btnOutOfStock.setDisable(true);
-                btnMostSold.setDisable(true);
                 btnListAll.setDisable(true);
                 btnSearch.setDisable(true);
+                btnDelete.setDisable(true);
 
 
 

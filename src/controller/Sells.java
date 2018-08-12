@@ -193,6 +193,7 @@ public class Sells implements Initializable{
             txtItemId.setText("");
             txtDate.setValue(LocalDate.now());
             lblVerify.setText("Verify Input");
+            btnIcon.setGlyphName("QUESTION");
 
         } catch (SQLException e) {
             e.printStackTrace();

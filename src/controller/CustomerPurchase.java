@@ -75,7 +75,7 @@ public class CustomerPurchase implements Initializable {
 
         try {
             Connection con = DBConnection.getConnection();
-            PreparedStatement getSellsList = con.prepareStatement("SELECT * FROM purchases WHERE purchaseDate ='"+ Date.valueOf(LocalDate.now()) +"'"+"AND Customers_customerID = "+customerID);
+            PreparedStatement getSellsList = con.prepareStatement("SELECT * FROM purchases WHERE Customers_customerID = "+customerID);
             ResultSet sellsList = getSellsList.executeQuery();
 
             ObservableList<Purchase> list = FXCollections.observableArrayList();
@@ -104,6 +104,7 @@ public class CustomerPurchase implements Initializable {
             lblAmount.setText(total.toString() + " $");
             lblSellCount.setText(ctr.toString());
 
+            System.out.println(list.size());
             tblRecent.setItems(list);
             con.close();
         } catch (SQLException e) {

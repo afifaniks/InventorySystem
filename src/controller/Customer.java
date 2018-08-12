@@ -536,6 +536,7 @@ public class Customer implements Initializable {
             btnPurchases.setDisable(false);
             btnLViewAllCustomers.setDisable(false);
             btnEditMode.setSelected(false);
+            btnDelete.setDisable(false);
 
             String defColor = "#263238";
 
@@ -576,6 +577,7 @@ public class Customer implements Initializable {
                 btnPurchases.setDisable(true);
                 btnLViewAllCustomers.setDisable(true);
                 btnSearch.setDisable(true);
+                btnDelete.setDisable(true);
                 btnEditMode.setSelected(true);
 
                 //Cleaning fields
