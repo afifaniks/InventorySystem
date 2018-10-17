@@ -23,6 +23,7 @@ import java.util.ResourceBundle;
  * Written on: 7/15/2018
  * Project: TeslaRentalInventory
  **/
+
 public class Dashboard implements Initializable{
 
     @FXML
@@ -44,33 +45,20 @@ public class Dashboard implements Initializable{
     private Label lblTodaysRentalAmount;
 
     @FXML
-    private JFXButton btnTodaysDue, loadAgain;
+    private JFXButton loadAgain;
 
     @FXML
-    private Label lblTodaysDueCtr;
+    private Label lblOutOfStock;
+
+    @FXML
+    private Label lblTotalDueAmount;
 
     @FXML
     private Label lblTodaysDueAmount;
 
-    @FXML
-    private JFXButton btnTotalAmountDue;
-
-    @FXML
-    private Label lblTotalDueCtr;
-
-    @FXML
-    private Label lblTotalDueAmount, lblOutOfStock;
-
-    @FXML
-    private JFXButton btnTotalRentalDue;
-
-    @FXML
-    private Label lblTotalRentalCtr;
-
     public static Integer todaysRentalCtr = 0;
     public static Integer totalDueCtr = 0;
     public static Integer todaySellCtr = 0;
-    public static Integer todaysDueCtr = 0;
     public static Double todaysTotalDue = 0.0;
     public static Double todaysTotalSell = 0.0;
     public static Double todayTotalRental = 0.0;
@@ -85,7 +73,6 @@ public class Dashboard implements Initializable{
     private void setFields() {
         //Setting total due amount
         lblTotalDueAmount.setText(totalDueAmount.toString() + " $");
-        lblTotalDueCtr.setText(totalDueCtr.toString());
 
         //Setting todays sell amount
         lblTodaySellCtr.setText(todaySellCtr.toString());
@@ -97,7 +84,6 @@ public class Dashboard implements Initializable{
 
         //Setting todays due
         lblTodaysDueAmount.setText(todaysTotalDue.toString() + " $");
-        lblTodaysDueCtr.setText(todaysDueCtr.toString());
 
         //Setting out of stock
         lblOutOfStock.setText(stockOut.toString());
@@ -123,21 +109,18 @@ public class Dashboard implements Initializable{
             ResultSet todysPurchaseDue = getTodaysPurchaseDue.executeQuery();
             ResultSet stockOutRs = getOutOfStock.executeQuery();
 
-            Double tDAmount = 0.0;
-            Integer tDCtr = 0;
+            Double tDAmount = 0.0; //Total Due Amount
 
             while (rentalDue.next()) {
-                tDCtr += rentalDue.getInt(1);
                 tDAmount += rentalDue.getDouble(2);
             }
 
             while (purchaseDue.next()) {
-                tDCtr += purchaseDue.getInt(1);
                 tDAmount += purchaseDue.getDouble(2);
             }
 
-            Double tSell = 0.0;
-            Double tRent = 0.0;
+            Double tSell = 0.0; //Today's sell
+            Double tRent = 0.0; //Today's rent
             Integer rCount = 0;
             Integer sCount = 0;
 
@@ -170,15 +153,12 @@ public class Dashboard implements Initializable{
                 sOCtr += 1;
             }
 
-
-            totalDueCtr = tDCtr;
             totalDueAmount = tDAmount;
             todaySellCtr = sCount;
             todaysTotalSell = tSell;
             todaysRentalCtr = rCount;
             todayTotalRental = tRent;
             todaysTotalDue = todayDAmount;
-            todaysDueCtr = dCtr;
             stockOut = sOCtr;
 
             //Setting values
@@ -220,8 +200,4 @@ public class Dashboard implements Initializable{
         }
     }
 
-    @FXML
-    void showStockOut(ActionEvent event) {
-
-    }
 }

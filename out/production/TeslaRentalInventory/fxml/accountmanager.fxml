@@ -110,5 +110,6 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
+      <Label layoutX="584.0" layoutY="538.0" text="Double click on an entry to update." />
    </children>
 </AnchorPane>

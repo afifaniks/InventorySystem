@@ -9,12 +9,26 @@
     <bookmark url="file://$PROJECT_DIR$/src/controller/Initializer.java" line="270" />
     <bookmark url="file://$PROJECT_DIR$/src/controller/Initializer.java" line="174" />
     <bookmark url="file://$PROJECT_DIR$/src/controller/Transaction.java" line="168" />
-    <bookmark url="file://$PROJECT_DIR$/src/controller/Dashboard.java" line="70" />
+    <bookmark url="file://$PROJECT_DIR$/src/controller/Dashboard.java" line="59" />
     <bookmark url="file://$PROJECT_DIR$/src/controller/RentalList.java" line="24" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/controller/Administrator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TeslaRentalInventory/controller/Administrator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/controller/Base$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TeslaRentalInventory/controller/Base$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/controller/Base$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TeslaRentalInventory/controller/Base$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/controller/Base.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TeslaRentalInventory/controller/Base.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/controller/Dashboard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TeslaRentalInventory/controller/Dashboard.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/controller/Initializer$NewTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TeslaRentalInventory/controller/Initializer$NewTask.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/fxml/accountlist.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/fxml/dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TeslaRentalInventory/fxml/dashboard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/Administrator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Administrator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/Base.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Base.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/Dashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Dashboard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/Initializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Initializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fxml/accountlist.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/accountmanager.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fxml/dashboard.fxml" beforeDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -184,29 +198,30 @@
           <entry key="project.open.time.59" value="1" />
           <entry key="project.open.time.70" value="1" />
           <entry key="project.open.time.71" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="fxml" value="1" />
-          <entry key="java" value="6" />
+          <entry key="fxml" value="3" />
+          <entry key="java" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="6" />
-          <entry key="XML" value="1" />
+          <entry key="JAVA" value="9" />
+          <entry key="XML" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="48" />
+          <entry key="java" value="133" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="48" />
+          <entry key="JAVA" value="133" />
         </counts>
       </usages-collector>
     </session>
@@ -216,11 +231,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controller/Customer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
-              <caret line="302" column="13" selection-start-line="302" selection-start-column="13" selection-end-line="302" selection-end-column="13" />
+            <state relative-caret-position="-1401">
+              <caret line="536" column="51" lean-forward="true" selection-start-line="536" selection-start-column="51" selection-end-line="536" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -229,62 +244,32 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/Rentals.java">
+        <entry file="file://$PROJECT_DIR$/src/controller/Dashboard.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2091">
-              <caret line="159" selection-start-line="159" selection-end-line="159" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/Account.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="42" column="18" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
+            <state relative-caret-position="221">
+              <caret line="74" column="68" selection-start-line="74" selection-start-column="68" selection-end-line="74" selection-end-column="68" />
               <folding>
-                <element signature="e#862#863#0" expanded="true" />
-                <element signature="e#890#891#0" expanded="true" />
+                <element signature="e#1848#1849#0" expanded="true" />
+                <element signature="e#1875#1876#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/DBConnection.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/Dialog.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/src/fxml/dashboard.fxml">
+          <provider selected="true" editor-type-id="text-editor" />
+          <provider editor-type-id="JavaFX-Scene-Builder" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+            <state relative-caret-position="527">
+              <caret line="31" column="51" lean-forward="true" selection-start-line="31" selection-start-column="51" selection-end-line="31" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/Account.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3893">
-              <caret line="257" column="16" selection-start-line="257" selection-start-column="16" selection-end-line="257" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -292,8 +277,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controller/Administrator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1683">
-              <caret line="122" column="36" selection-start-line="122" selection-start-column="36" selection-end-line="122" selection-end-column="36" />
+            <state relative-caret-position="1462">
+              <caret line="106" column="82" lean-forward="true" selection-start-line="106" selection-start-column="82" selection-end-line="106" selection-end-column="82" />
             </state>
           </provider>
         </entry>
@@ -301,15 +286,53 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controller/LogIn.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1615">
+            <state relative-caret-position="1360">
               <caret line="117" column="32" selection-start-line="117" selection-start-column="32" selection-end-line="117" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b41d40ed-0845-4871-8332-8970d1cc81df/console.sql">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/src/controller/Initializer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="714">
+              <caret line="67" selection-start-line="67" selection-end-line="67" />
+              <folding>
+                <marker date="1539793171258" expanded="true" signature="3228:3251" ph="SELECT * FRO... customers" />
+                <marker date="1539793171258" expanded="true" signature="3328:3433" ph="SELECT *FROM... item" />
+                <marker date="1539793171258" expanded="true" signature="3328:3449" ph="SELECT *FROM... item" />
+                <marker date="1539793171258" expanded="true" signature="3527:3610" ph="SELECT * FRO... purchases" />
+                <marker date="1539793171258" expanded="true" signature="3689:3733" ph="SELECT * FRO... rentals" />
+                <marker date="1539793171258" expanded="true" signature="3689:3770" ph="SELECT * FRO... rentals" />
+                <marker date="1539793171258" expanded="true" signature="3850:4033" ph="SELECT * FRO... accounts" />
+                <marker date="1539793171258" expanded="true" signature="3850:4070" ph="SELECT FROM accounts" />
+                <marker date="1539793171258" expanded="true" signature="3850:4108" ph="SELECT first... accounts" />
+                <marker date="1539793171258" expanded="true" signature="4185:4207" ph="SELECT * FRO... itemtype" />
+                <marker date="1539793171258" expanded="true" signature="4286:4365" ph="SELECT * FRO... item" />
+                <marker date="1539793171258" expanded="true" signature="4476:4541" ph="SELECT COUNT... rentals" />
+                <marker date="1539793171258" expanded="true" signature="4621:4688" ph="SELECT COUNT... purchases" />
+                <marker date="1539793171258" expanded="true" signature="4767:4834" ph="SELECT COUNT... purchases" />
+                <marker date="1539793171258" expanded="true" signature="4767:4835" ph="SELECT COUNT... purchases" />
+                <marker date="1539793171258" expanded="true" signature="4767:4836" ph="SELECT COUNT... purchases" />
+                <marker date="1539793171258" expanded="true" signature="4767:4873" ph="SELECT COUNT... purchases" />
+                <marker date="1539793171258" expanded="true" signature="4952:5049" ph="SELECT COUNT... rentals" />
+                <marker date="1539793171258" expanded="true" signature="5133:5217" ph="SELECT COUNT... rentals" />
+                <marker date="1539793171258" expanded="true" signature="5133:5254" ph="SELECT COUNT... rentals" />
+                <marker date="1539793171258" expanded="true" signature="5340:5407" ph="SELECT COUNT... purchases" />
+                <marker date="1539793171258" expanded="true" signature="5340:5428" ph="SELECT COUNT... purchases" />
+                <marker date="1539793171258" expanded="true" signature="5340:5465" ph="SELECT COUNT... purchases" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/controller/Base.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="106">
+              <caret line="79" column="71" lean-forward="true" selection-start-line="79" selection-start-column="71" selection-end-line="79" selection-end-column="71" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -382,7 +405,6 @@
         <option value="$PROJECT_DIR$/src/sample/Dialog.java" />
         <option value="$PROJECT_DIR$/src/css/customer.css" />
         <option value="$PROJECT_DIR$/src/controller/Transaction.java" />
-        <option value="$PROJECT_DIR$/src/fxml/dashboard.fxml" />
         <option value="$PROJECT_DIR$/src/css/dashboard.css" />
         <option value="$PROJECT_DIR$/src/css/inventory.css" />
         <option value="$PROJECT_DIR$/src/css/administrator.css" />
@@ -405,10 +427,7 @@
         <option value="$PROJECT_DIR$/src/controller/RentalList.java" />
         <option value="$PROJECT_DIR$/src/fxml/customerpurchase.fxml" />
         <option value="$PROJECT_DIR$/src/fxml/customerrentals.fxml" />
-        <option value="$PROJECT_DIR$/src/controller/Initializer.java" />
-        <option value="$PROJECT_DIR$/src/controller/Dashboard.java" />
         <option value="$PROJECT_DIR$/src/fxml/dueupdate.fxml" />
-        <option value="$PROJECT_DIR$/src/controller/Base.java" />
         <option value="$PROJECT_DIR$/src/controller/DueUpdate.java" />
         <option value="$PROJECT_DIR$/src/controller/TransactionList.java" />
         <option value="$PROJECT_DIR$/src/sample/DBConnection.java" />
@@ -421,6 +440,10 @@
         <option value="$PROJECT_DIR$/src/controller/CustomerPurchase.java" />
         <option value="$PROJECT_DIR$/src/controller/Customer.java" />
         <option value="$PROJECT_DIR$/src/controller/Inventory.java" />
+        <option value="$PROJECT_DIR$/src/controller/Initializer.java" />
+        <option value="$PROJECT_DIR$/src/fxml/dashboard.fxml" />
+        <option value="$PROJECT_DIR$/src/controller/Dashboard.java" />
+        <option value="$PROJECT_DIR$/src/controller/Base.java" />
       </list>
     </option>
   </component>
@@ -454,6 +477,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -499,9 +525,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -516,7 +539,7 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/Progs/TeslaRentalInventory/src/fxml/initializer.fxml" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537466709401" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539794682766" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL&#10;Amazon Redshift" />
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -528,16 +551,17 @@
     <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Project_Final\IntellijIDEA\TeslaRentalInventory\src\fxml" />
+      <recent name="D:\Progs\TeslaRentalInventory\src\fxml" />
+      <recent name="D:\Progs\TeslaRentalInventory\src\resource\icons" />
+      <recent name="D:\Progs\TeslaRentalInventory\src\css" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Progs\TeslaRentalInventory\src\resource\icons" />
       <recent name="D:\Progs\TeslaRentalInventory\src\resource\" />
       <recent name="D:\Progs\TeslaRentalInventory\src" />
       <recent name="D:\Progs\TeslaRentalInventory\src\resource" />
-      <recent name="D:\Progs\TeslaRentalInventory\src\css" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Progs\TeslaRentalInventory\src\fxml" />
-      <recent name="D:\Progs\TeslaRentalInventory\src\resource\icons" />
       <recent name="D:\Progs\TeslaRentalInventory\src\css" />
     </key>
   </component>
@@ -726,6 +750,7 @@
       <workItem from="1537444574912" duration="533000" />
       <workItem from="1537508293683" duration="3143000" />
       <workItem from="1537707625524" duration="81000" />
+      <workItem from="1539787673160" duration="5133000" />
     </task>
     <task id="LOCAL-00001" summary="Multiple view added.">
       <created>1531118175694</created>
@@ -745,7 +770,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="424661000" />
+    <option name="totallyTimeSpent" value="429794000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -759,8 +784,46 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.17246597" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.17473525" />
       <window_info id="Structure" order="1" weight="0.24281392" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" />
+      <window_info id="Image Layers" order="6" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32998326" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.4067524" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39865997" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32998326" />
+      <window_info anchor="bottom" id="Event Log" order="7" weight="0.32998326" />
+      <window_info anchor="bottom" id="Application Servers" order="8" />
+      <window_info anchor="bottom" id="Profiler" order="9" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.7504188" />
+      <window_info anchor="bottom" id="Changes" order="11" />
+      <window_info anchor="bottom" id="Terminal" order="12" weight="0.329582" />
+      <window_info anchor="bottom" id="Problems" order="13" />
+      <window_info anchor="bottom" id="Database Console" order="14" weight="0.32998326" />
+      <window_info anchor="bottom" id="SQL Generator" order="15" weight="0.8324958" />
+      <window_info anchor="bottom" id="Messages" order="16" weight="0.32636657" />
+      <window_info anchor="bottom" id="Database Changes" order="17" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Maven Projects" order="4" weight="0.3295107" />
+      <window_info anchor="right" id="Database" order="5" weight="0.17397882" />
+      <window_info anchor="right" id="JetGradle" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Palette&#9;" order="9" />
+      <window_info anchor="right" x="92" y="92" width="1182" height="554" id="Documentation" order="10" type="FLOATING" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" weight="0.17473525" />
+      <window_info id="Structure" order="1" visible="true" weight="0.24281392" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -789,48 +852,12 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Maven Projects" order="4" weight="0.3295107" />
-      <window_info active="true" anchor="right" id="Database" order="5" visible="true" weight="0.32980332" />
+      <window_info anchor="right" id="Database" order="5" weight="0.17397882" />
       <window_info anchor="right" id="JetGradle" order="6" />
       <window_info anchor="right" id="Capture Analysis" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info anchor="right" id="Palette&#9;" order="9" />
       <window_info anchor="right" x="92" y="92" width="1182" height="554" id="Documentation" order="10" type="FLOATING" />
-    </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.26605505" />
-      <window_info id="Structure" order="1" weight="0.25" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Image Layers" order="5" />
-      <window_info id="Favorites" order="6" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32998326" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.35845897" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39865997" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" weight="0.32998326" />
-      <window_info anchor="bottom" id="Application Servers" order="8" />
-      <window_info anchor="bottom" id="Profiler" order="9" />
-      <window_info anchor="bottom" id="Changes" order="10" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32663316" />
-      <window_info anchor="bottom" id="Version Control" order="12" weight="0.7504188" />
-      <window_info anchor="bottom" id="Terminal" order="13" weight="0.32998326" />
-      <window_info anchor="bottom" id="Problems" order="14" />
-      <window_info anchor="bottom" id="Database Console" order="15" weight="0.32998326" />
-      <window_info anchor="bottom" id="SQL Generator" order="16" weight="0.8324958" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Maven Projects" order="4" weight="0.3295107" />
-      <window_info anchor="right" id="Database" order="5" weight="0.26987767" />
-      <window_info anchor="right" id="JetGradle" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Capture Analysis" order="8" />
-      <window_info anchor="right" id="Theme Preview" order="9" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -877,21 +904,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/css/administrator.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fxml/employeelist.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Employee.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
@@ -923,7 +935,7 @@
       <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/javafx-src.zip!/com/sun/javafx/tk/quantum/QuantumToolkit.java" />
-    <entry file="file://$PROJECT_DIR$/src/fxml/accountlist.fxml">
+    <entry file="file://$PROJECT_DIR$/src/fxml/accountmanager.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
           <caret line="13" column="201" selection-start-line="13" selection-start-column="201" selection-end-line="13" selection-end-column="201" />
@@ -1034,54 +1046,8 @@
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/Dashboard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2822">
-          <caret line="184" column="24" selection-start-line="184" selection-start-column="24" selection-end-line="184" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/ee4b0f82-0338-4a5e-9529-e880997d76a7/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/Initializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1615">
-          <caret line="120" column="62" selection-start-line="120" selection-start-column="12" selection-end-line="120" selection-end-column="62" />
-          <folding>
-            <marker date="1533145219812" expanded="true" signature="3228:3251" ph="SELECT * FRO... customers" />
-            <marker date="1533145219812" expanded="true" signature="3328:3433" ph="SELECT *FROM... item" />
-            <marker date="1533145219812" expanded="true" signature="3328:3449" ph="SELECT *FROM... item" />
-            <marker date="1533145219812" expanded="true" signature="3527:3610" ph="SELECT * FRO... purchases" />
-            <marker date="1533145219812" expanded="true" signature="3689:3733" ph="SELECT * FRO... rentals" />
-            <marker date="1533145219812" expanded="true" signature="3689:3770" ph="SELECT * FRO... rentals" />
-            <marker date="1533145219812" expanded="true" signature="3850:4033" ph="SELECT * FRO... accounts" />
-            <marker date="1533145219812" expanded="true" signature="3850:4070" ph="SELECT FROM accounts" />
-            <marker date="1533145219812" expanded="true" signature="3850:4108" ph="SELECT first... accounts" />
-            <marker date="1533145219812" expanded="true" signature="4185:4207" ph="SELECT * FRO... itemtype" />
-            <marker date="1533145219812" expanded="true" signature="4286:4365" ph="SELECT * FRO... item" />
-            <marker date="1533145219812" expanded="true" signature="4476:4541" ph="SELECT COUNT... rentals" />
-            <marker date="1533145219812" expanded="true" signature="4621:4688" ph="SELECT COUNT... purchases" />
-            <marker date="1533145219812" expanded="true" signature="4767:4834" ph="SELECT COUNT... purchases" />
-            <marker date="1533145219812" expanded="true" signature="4767:4835" ph="SELECT COUNT... purchases" />
-            <marker date="1533145219812" expanded="true" signature="4767:4836" ph="SELECT COUNT... purchases" />
-            <marker date="1533145219812" expanded="true" signature="4767:4873" ph="SELECT COUNT... purchases" />
-            <marker date="1533145219812" expanded="true" signature="4952:5049" ph="SELECT COUNT... rentals" />
-            <marker date="1533145219812" expanded="true" signature="5133:5217" ph="SELECT COUNT... rentals" />
-            <marker date="1533145219812" expanded="true" signature="5133:5254" ph="SELECT COUNT... rentals" />
-            <marker date="1533145219812" expanded="true" signature="5340:5407" ph="SELECT COUNT... purchases" />
-            <marker date="1533145219812" expanded="true" signature="5340:5428" ph="SELECT COUNT... purchases" />
-            <marker date="1533145219812" expanded="true" signature="5340:5465" ph="SELECT COUNT... purchases" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/Base.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2686">
-          <caret line="178" column="36" selection-start-line="178" selection-start-column="36" selection-end-line="178" selection-end-column="36" />
-        </state>
-      </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/javafx-src.zip!/javafx/scene/paint/ImagePattern.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1143,16 +1109,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/Customer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="302" column="13" selection-start-line="302" selection-start-column="13" selection-end-line="302" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/Rentals.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2091">
@@ -1185,10 +1141,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b41d40ed-0845-4871-8332-8970d1cc81df/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/Customer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+        <state relative-caret-position="-1401">
+          <caret line="536" column="51" lean-forward="true" selection-start-line="536" selection-start-column="51" selection-end-line="536" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1197,27 +1156,92 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/Account.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3893">
+        <state relative-caret-position="843">
           <caret line="257" column="16" selection-start-line="257" selection-start-column="16" selection-end-line="257" selection-end-column="16" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="51" lean-forward="true" selection-start-line="31" selection-start-column="51" selection-end-line="31" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fxml/dashboard.fxml">
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/Administrator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1683">
-          <caret line="122" column="36" selection-start-line="122" selection-start-column="36" selection-end-line="122" selection-end-column="36" />
+        <state relative-caret-position="1462">
+          <caret line="106" column="82" lean-forward="true" selection-start-line="106" selection-start-column="82" selection-end-line="106" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/Initializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="67" selection-start-line="67" selection-end-line="67" />
+          <folding>
+            <marker date="1539793171258" expanded="true" signature="3228:3251" ph="SELECT * FRO... customers" />
+            <marker date="1539793171258" expanded="true" signature="3328:3433" ph="SELECT *FROM... item" />
+            <marker date="1539793171258" expanded="true" signature="3328:3449" ph="SELECT *FROM... item" />
+            <marker date="1539793171258" expanded="true" signature="3527:3610" ph="SELECT * FRO... purchases" />
+            <marker date="1539793171258" expanded="true" signature="3689:3733" ph="SELECT * FRO... rentals" />
+            <marker date="1539793171258" expanded="true" signature="3689:3770" ph="SELECT * FRO... rentals" />
+            <marker date="1539793171258" expanded="true" signature="3850:4033" ph="SELECT * FRO... accounts" />
+            <marker date="1539793171258" expanded="true" signature="3850:4070" ph="SELECT FROM accounts" />
+            <marker date="1539793171258" expanded="true" signature="3850:4108" ph="SELECT first... accounts" />
+            <marker date="1539793171258" expanded="true" signature="4185:4207" ph="SELECT * FRO... itemtype" />
+            <marker date="1539793171258" expanded="true" signature="4286:4365" ph="SELECT * FRO... item" />
+            <marker date="1539793171258" expanded="true" signature="4476:4541" ph="SELECT COUNT... rentals" />
+            <marker date="1539793171258" expanded="true" signature="4621:4688" ph="SELECT COUNT... purchases" />
+            <marker date="1539793171258" expanded="true" signature="4767:4834" ph="SELECT COUNT... purchases" />
+            <marker date="1539793171258" expanded="true" signature="4767:4835" ph="SELECT COUNT... purchases" />
+            <marker date="1539793171258" expanded="true" signature="4767:4836" ph="SELECT COUNT... purchases" />
+            <marker date="1539793171258" expanded="true" signature="4767:4873" ph="SELECT COUNT... purchases" />
+            <marker date="1539793171258" expanded="true" signature="4952:5049" ph="SELECT COUNT... rentals" />
+            <marker date="1539793171258" expanded="true" signature="5133:5217" ph="SELECT COUNT... rentals" />
+            <marker date="1539793171258" expanded="true" signature="5133:5254" ph="SELECT COUNT... rentals" />
+            <marker date="1539793171258" expanded="true" signature="5340:5407" ph="SELECT COUNT... purchases" />
+            <marker date="1539793171258" expanded="true" signature="5340:5428" ph="SELECT COUNT... purchases" />
+            <marker date="1539793171258" expanded="true" signature="5340:5465" ph="SELECT COUNT... purchases" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/LogIn.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1615">
+        <state relative-caret-position="1360">
           <caret line="117" column="32" selection-start-line="117" selection-start-column="32" selection-end-line="117" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b41d40ed-0845-4871-8332-8970d1cc81df/console.sql">
+    <entry file="file://$PROJECT_DIR$/src/controller/Dashboard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="74" column="68" selection-start-line="74" selection-start-column="68" selection-end-line="74" selection-end-column="68" />
+          <folding>
+            <element signature="e#1848#1849#0" expanded="true" />
+            <element signature="e#1875#1876#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fxml/dashboard.fxml">
       <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/Base.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="79" column="71" lean-forward="true" selection-start-line="79" selection-start-column="71" selection-end-line="79" selection-end-column="71" />
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">

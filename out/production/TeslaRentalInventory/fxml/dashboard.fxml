@@ -26,7 +26,7 @@
             <Line endX="143.0" layoutX="319.0" layoutY="90.0" startX="448.0" AnchorPane.leftAnchor="461.5" AnchorPane.rightAnchor="401.5" />
          </children>
       </AnchorPane>
-      <Pane layoutX="228.0" layoutY="109.0" prefHeight="240.0" prefWidth="244.0">
+      <Pane layoutX="210.0" layoutY="229.0" prefHeight="240.0" prefWidth="225.0">
          <children>
             <JFXButton fx:id="btnTodaySell" buttonType="RAISED" contentDisplay="TOP" layoutX="35.0" layoutY="23.0" onAction="#showSell" prefHeight="154.0" prefWidth="160.0" ripplerFill="GREEN" stylesheets="@../css/dashboard.css" text="Sells">
                <font>
@@ -56,7 +56,7 @@
             </Label>
          </children>
       </Pane>
-      <Pane layoutX="509.0" layoutY="109.0" prefHeight="240.0" prefWidth="244.0">
+      <Pane layoutX="435.0" layoutY="229.0" prefHeight="240.0" prefWidth="225.0">
          <children>
             <JFXButton fx:id="btnTodayRental" buttonType="RAISED" contentDisplay="TOP" layoutX="35.0" layoutY="23.0" onAction="#showRent" prefHeight="154.0" prefWidth="160.0" ripplerFill="GREEN" stylesheets="@../css/dashboard.css" text="Rentals">
                <font>
@@ -86,101 +86,7 @@
             </Label>
          </children>
       </Pane>
-      <Pane layoutX="790.0" layoutY="109.0" prefHeight="240.0" prefWidth="244.0">
-         <children>
-            <JFXButton fx:id="btnTodaysDue" buttonType="RAISED" contentDisplay="TOP" layoutX="35.0" layoutY="23.0" prefHeight="154.0" prefWidth="160.0" ripplerFill="RED" stylesheets="@../css/dashboard.css" text="Due">
-               <font>
-                  <Font name="System Bold" size="20.0" />
-               </font>
-               <graphic>
-                  <FontAwesomeIconView fill="RED" glyphName="RECYCLE" size="30" />
-               </graphic>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </JFXButton>
-            <Label fx:id="lblTodaysDueCtr" alignment="CENTER" layoutX="120.0" layoutY="14.0" prefHeight="50.0" prefWidth="47.0" style="-fx-background-color: red; -fx-text-fill: white; -fx-background-radius: 30 30 30 30;" text="Label">
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font>
-            </Label>
-            <Label layoutX="38.0" layoutY="196.0" prefHeight="29.0" prefWidth="57.0" text="Due: ">
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font>
-            </Label>
-            <Label fx:id="lblTodaysDueAmount" layoutX="100.0" layoutY="196.0" prefHeight="30.0" prefWidth="196.0" style="-fx-text-fill: red;" text="Amount" textFill="#08b50e">
-               <font>
-                  <Font name="System Bold" size="20.0" />
-               </font>
-            </Label>
-            <Pane layoutX="15.0" prefHeight="200.0" prefWidth="200.0" />
-         </children>
-      </Pane>
-      <Pane layoutX="368.0" layoutY="390.0" prefHeight="240.0" prefWidth="244.0">
-         <children>
-            <JFXButton fx:id="btnTotalAmountDue" buttonType="RAISED" contentDisplay="TOP" layoutX="35.0" layoutY="23.0" prefHeight="154.0" prefWidth="160.0" ripplerFill="RED" stylesheets="@../css/dashboard.css" text="Due">
-               <font>
-                  <Font name="System Bold" size="20.0" />
-               </font>
-               <graphic>
-                  <FontAwesomeIconView fill="RED" glyphName="MONEY" size="30" wrappingWidth="30.571430206298828" />
-               </graphic>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </JFXButton>
-            <Label fx:id="lblTotalDueCtr" alignment="CENTER" layoutX="120.0" layoutY="14.0" prefHeight="50.0" prefWidth="47.0" style="-fx-background-color: red; -fx-text-fill: white; -fx-background-radius: 30 30 30 30;" text="Label">
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font>
-            </Label>
-            <Label layoutX="14.0" layoutY="197.0" prefHeight="29.0" prefWidth="79.0" text="Total Due: ">
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font>
-            </Label>
-            <Label fx:id="lblTotalDueAmount" alignment="CENTER" layoutX="97.0" layoutY="197.0" prefHeight="29.0" prefWidth="145.0" text="Amount" textFill="RED">
-               <font>
-                  <Font name="System Bold" size="20.0" />
-               </font>
-            </Label>
-            <Pane layoutX="15.0" prefHeight="200.0" prefWidth="200.0" />
-         </children>
-      </Pane>
-      <Pane layoutX="649.0" layoutY="390.0" prefHeight="240.0" prefWidth="244.0">
-         <children>
-            <JFXButton fx:id="btnTotalRentalDue" buttonType="RAISED" contentDisplay="TOP" layoutX="35.0" layoutY="23.0" onAction="#showStockOut" prefHeight="154.0" prefWidth="160.0" ripplerFill="RED" stylesheets="@../css/dashboard.css" text="Items">
-               <font>
-                  <Font name="System Bold" size="20.0" />
-               </font>
-               <graphic>
-                  <FontAwesomeIconView fill="RED" glyphName="EXCLAMATION" size="30" />
-               </graphic>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </JFXButton>
-            <Label fx:id="lblOutOfStock" alignment="CENTER" layoutX="120.0" layoutY="14.0" prefHeight="50.0" prefWidth="47.0" style="-fx-background-color: red; -fx-text-fill: white; -fx-background-radius: 30 30 30 30;" text="Label">
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font>
-            </Label>
-            <Label alignment="CENTER" layoutX="14.0" layoutY="197.0" prefHeight="29.0" prefWidth="214.0" text="Out of Stock">
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font>
-            </Label>
-            <Pane layoutX="15.0" prefHeight="200.0" prefWidth="200.0" />
-         </children>
-      </Pane>
-      <Separator layoutX="356.0" layoutY="365.0" prefHeight="1.0" prefWidth="513.0" style="-fx-background-color: #263238;" />
-      <Label alignment="CENTER" layoutX="75.0" layoutY="204.0" prefHeight="29.0" prefWidth="121.0" text="Today's">
-         <font>
-            <Font size="34.0" />
-         </font>
-      </Label>
-      <Label alignment="CENTER" layoutX="168.0" layoutY="485.0" prefHeight="50.0" prefWidth="121.0" text="Total">
+      <Label alignment="CENTER" layoutX="69.0" layoutY="324.0" prefHeight="29.0" prefWidth="121.0" text="Today's">
          <font>
             <Font size="34.0" />
          </font>
@@ -200,5 +106,41 @@
          </tooltip>
       </JFXButton>
       <Label layoutX="75.0" layoutY="631.0" prefHeight="17.0" prefWidth="61.0" text="Refresh" />
+      <Label alignment="CENTER" layoutX="747.0" layoutY="179.0" prefHeight="50.0" prefWidth="141.0" text="Overview">
+         <font>
+            <Font size="34.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="740.0" layoutY="369.0" prefHeight="29.0" prefWidth="114.0" text="Out of Stock:">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblOutOfStock" layoutX="868.0" layoutY="354.0" prefHeight="59.0" prefWidth="225.0" style="-fx-text-fill: red;" text="Label">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTotalDueAmount" layoutX="869.0" layoutY="430.0" prefHeight="59.0" prefWidth="225.0" style="-fx-text-fill: red;" text="Label">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <Label layoutX="754.0" layoutY="445.0" prefHeight="29.0" prefWidth="79.0" text="Total Due: ">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="741.0" layoutY="297.0" prefHeight="29.0" prefWidth="114.0" text="Today's Due:">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTodaysDueAmount" layoutX="869.0" layoutY="282.0" prefHeight="59.0" prefWidth="225.0" style="-fx-text-fill: red;" text="Label">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <Separator layoutX="706.0" layoutY="167.0" orientation="VERTICAL" prefHeight="368.0" prefWidth="8.0" />
    </children>
 </AnchorPane>

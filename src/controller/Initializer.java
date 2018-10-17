@@ -339,7 +339,6 @@ public class Initializer implements Initializable {
             Dashboard.todaysRentalCtr = rentCount;
             Dashboard.todayTotalRental = todayRent;
             Dashboard.todaysTotalDue = todaysDueAmount;
-            Dashboard.todaysDueCtr = dueCtr;
             Dashboard.stockOut = stockOutCtr;
 
             Thread.sleep(200);

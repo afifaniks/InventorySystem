@@ -10,9 +10,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.AnchorPane;
-import javafx.stage.Modality;
 import javafx.stage.Stage;
 import sample.DBConnection;
 import sample.Dialog;
@@ -68,7 +65,7 @@ public class Administrator implements Initializable {
     @FXML
     void accUpdate(ActionEvent event) {
         try {
-            Parent acc = FXMLLoader.load(getClass().getResource("/fxml/accountlist.fxml"));
+            Parent acc = FXMLLoader.load(getClass().getResource("/fxml/accountmanager.fxml"));
             Scene s = new Scene(acc);
             Stage stg = new Stage();
             stg.setTitle("Account Management");
