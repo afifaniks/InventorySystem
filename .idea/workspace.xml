@@ -460,7 +460,7 @@
     </treeState>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="158" />
     <option name="y" value="-8" />
     <option name="width" value="1378" />
@@ -539,7 +539,7 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/Progs/TeslaRentalInventory/src/fxml/initializer.fxml" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539794682766" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539794832096" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL&#10;Amazon Redshift" />
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
