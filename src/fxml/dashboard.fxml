@@ -86,7 +86,7 @@
             </Label>
          </children>
       </Pane>
-      <Label alignment="CENTER" layoutX="69.0" layoutY="324.0" prefHeight="29.0" prefWidth="121.0" text="Today's">
+      <Label alignment="CENTER" layoutX="69.0" layoutY="309.0" prefHeight="29.0" prefWidth="121.0" text="Today's">
          <font>
             <Font size="34.0" />
          </font>
@@ -121,12 +121,12 @@
             <Font size="29.0" />
          </font>
       </Label>
-      <Label fx:id="lblTotalDueAmount" layoutX="869.0" layoutY="430.0" prefHeight="59.0" prefWidth="225.0" style="-fx-text-fill: red;" text="Label">
+      <Label fx:id="lblTotalDueAmount" layoutX="869.0" layoutY="427.0" prefHeight="59.0" prefWidth="225.0" style="-fx-text-fill: red;" text="Label">
          <font>
             <Font size="29.0" />
          </font>
       </Label>
-      <Label layoutX="754.0" layoutY="445.0" prefHeight="29.0" prefWidth="79.0" text="Total Due: ">
+      <Label layoutX="754.0" layoutY="442.0" prefHeight="29.0" prefWidth="79.0" text="Total Due: ">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>

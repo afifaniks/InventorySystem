@@ -23,7 +23,6 @@ import javafx.stage.Stage;
 import org.controlsfx.control.textfield.TextFields;
 import sample.DBConnection;
 import sample.Dialog;
-
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
@@ -398,8 +397,7 @@ public class Customer implements Initializable {
                         customerResultSet.getString(6),
                         customerResultSet.getString(7),
                         customerResultSet.getString(8),
-                        customerResultSet.getString(9),
-                        customerResultSet.getDate(10)));;
+                        customerResultSet.getDate(9)));;
             }
 
             initialView();
@@ -425,6 +423,7 @@ public class Customer implements Initializable {
 
             String idSQL = "SELECT * FROM customers WHERE customerID = ?";
             String nameSQL = "SELECT * FROM customers WHERE firstName COLLATE UTF8_GENERAL_CI like ? OR lastName COLLATE UTF8_GENERAL_CI like ?";
+
             ObservableList<sample.Customer> searchResult = FXCollections.observableArrayList(); //list to hold search result
 
             try {
@@ -446,8 +445,7 @@ public class Customer implements Initializable {
                             customerResultSet.getString(6),
                             customerResultSet.getString(7),
                             customerResultSet.getString(8),
-                            customerResultSet.getString(9),
-                            customerResultSet.getDate(10)));
+                            customerResultSet.getDate(9)));
 
                 }
 
@@ -488,8 +486,7 @@ public class Customer implements Initializable {
                                 customerResultSet2.getString(6),
                                 customerResultSet2.getString(7),
                                 customerResultSet2.getString(8),
-                                customerResultSet2.getString(9),
-                                customerResultSet2.getDate(10)));
+                                customerResultSet2.getDate(9)));
 
                     }
 
@@ -642,22 +639,21 @@ public class Customer implements Initializable {
                 if (result.get() == ButtonType.OK) {
                     Connection con = DBConnection.getConnection();
                     try {
-                        PreparedStatement ps = con.prepareStatement("INSERT INTO customers VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+                        PreparedStatement ps = con.prepareStatement("INSERT INTO customers VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)");
                         ps.setInt(1, Integer.valueOf(customerID.getText()));
                         ps.setString(2, txtFName.getText());
                         ps.setString(3, txtLName.getText());
                         ps.setString(4, address.getText());
                         ps.setString(5, phone.getText());
                         ps.setString(6, email.getText());
-                        ps.setString(7, "null");
-                        ps.setString(8, imgPath);
+                        ps.setString(7, imgPath);
                         if(radioMale.isSelected()) {
-                            ps.setString(9, "Male");
+                            ps.setString(8, "Male");
                         } else if(radioFemale.isSelected()) {
-                            ps.setString(9, "Female");
+                            ps.setString(8, "Female");
                         }
 
-                        ps.setDate(10, Date.valueOf(LocalDate.now()));
+                        ps.setDate(9, Date.valueOf(LocalDate.now()));
 
                         ps.executeUpdate();
 
@@ -712,21 +708,23 @@ public class Customer implements Initializable {
                     Connection con = DBConnection.getConnection();
                     try {
                         PreparedStatement ps = con.prepareStatement("UPDATE customers SET customerID = ?, firstName = ?, lastName = ?, address = ?," +
-                                "phone = ?, email = ?, details = ?, photo = ?, gender = ?, memberSince = ? WHERE customerID =" + Integer.valueOf(customerID.getText()));
+                                "phone = ?, email = ?, photo = ?, gender = ?, memberSince = ? WHERE customerID =" + Integer.valueOf(customerID.getText()));
+
+                        //Setting fields
                         ps.setInt(1, Integer.valueOf(customerID.getText()));
                         ps.setString(2, txtFName.getText());
                         ps.setString(3, txtLName.getText());
                         ps.setString(4, address.getText());
                         ps.setString(5, phone.getText());
                         ps.setString(6, email.getText());
-                        ps.setString(7, "null");
-                        ps.setString(8, imgPath);
+                        //ps.setString(7, "null");
+                        ps.setString(7, imgPath);
                         if (radioMale.isSelected()) {
-                            ps.setString(9, "Male");
+                            ps.setString(8, "Male");
                         } else if (radioFemale.isSelected()) {
-                            ps.setString(9, "Female");
+                            ps.setString(8, "Female");
                         }
-                        ps.setDate(10, Date.valueOf(LocalDate.now()));
+                        ps.setDate(9, Date.valueOf(LocalDate.now()));
 
                         ps.executeUpdate();
 

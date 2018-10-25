@@ -35,6 +35,7 @@ import java.util.ResourceBundle;
  * Written on: 7/16/2018
  * Project: TeslaRentalInventory
  **/
+
 public class Account implements Initializable {
 
     @FXML
@@ -238,17 +239,17 @@ public class Account implements Initializable {
         } else {
             Connection con = DBConnection.getConnection();
             try {
-                PreparedStatement ps = con.prepareStatement("INSERT INTO accounts VALUES (?, ?, ?, ?, ?, ?)");
+                PreparedStatement ps = con.prepareStatement("INSERT INTO accounts VALUES (?, ?, ?, ?, ?)");
                 ps.setInt(1, Integer.valueOf(lblId.getText()));
                 ps.setString(2, txtAccountID.getText());
-                ps.setString(3, "NONE");
-                ps.setInt(4, Integer.valueOf(txtCustomerID.getText().substring(0, txtCustomerID.getText().indexOf('|') - 1)));
-                ps.setString(5, LogIn.loggerUsername);
-                ps.setString(6, txtPayMethod.getText());
+                ps.setInt(3, Integer.valueOf(txtCustomerID.getText().substring(0, txtCustomerID.getText().indexOf('|') - 1)));
+                ps.setString(4, LogIn.loggerUsername);
+                ps.setString(5, txtPayMethod.getText());
 
                 ps.executeUpdate();
 
                 String defColor = "#263238";
+
                 txtPayMethod.setUnFocusColor(Color.web(defColor));
                 txtCustomerID.setUnFocusColor(Color.web(defColor));
                 txtAccountID.setUnFocusColor(Color.web(defColor));

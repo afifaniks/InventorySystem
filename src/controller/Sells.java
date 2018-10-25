@@ -105,27 +105,28 @@ public class Sells implements Initializable{
     @FXML
     private JFXButton btnBarchart;
 
-    private static boolean toggle = true;
+    private static boolean toggle = true; //This field will be used to transition b/w Table and Chart
 
     @FXML
     void btnBarchartAction(ActionEvent event) {
-       if(toggle) {
-           toggle = false;
+       if(toggle) { //If toggle is true that means table view is currently in view
+           toggle = false; //Changing toggle value
            btnChartIcon.setGlyphName("TABLE");
            tblRecent.setVisible(false);
            lineChart.setVisible(true);
 
            Connection con = DBConnection.getConnection();
            try {
-               PreparedStatement ps = con.prepareStatement("SELECT purchaseDate, sum(payAmount) FROM purchases WHERE User_username='"+LogIn.loggerUsername+"' GROUP BY purchaseDate LIMIT 14");
+               //TODO: FIX SQL
+               PreparedStatement ps = con.prepareStatement("SELECT purchaseDate, sum(payAmount) FROM purchases WHERE User_username='"+LogIn.loggerUsername+"' GROUP BY purchaseDate DESC ORDER BY purchaseDate LIMIT 14");
                ResultSet rs = ps.executeQuery();
 
                XYChart.Series chartData = new XYChart.Series<>();
 
                while(rs.next()) {
                    chartData.getData().add(new XYChart.Data(rs.getString(1), rs.getInt(2)));
-
                }
+
                lineChart.getData().addAll(chartData);
 
            } catch (SQLException e) {
@@ -183,16 +184,18 @@ public class Sells implements Initializable{
                         sellsList.getDouble("amountDue")));
 
             }
+
+            //Resetting Fields
             purchaseList = sellsListByUser;
             tblRecent.getItems().clear();
             tblRecent.setItems(purchaseList);
-
             txtPayAmount.setText("");
             txtQty.setText("1");
             txtCustomerId.setText("");
             txtItemId.setText("");
             txtDate.setValue(LocalDate.now());
             lblVerify.setText("Verify Input");
+            lblCost.setText("??");
             btnIcon.setGlyphName("QUESTION");
 
         } catch (SQLException e) {
@@ -249,7 +252,7 @@ public class Sells implements Initializable{
             lblVerify.setText("Verify Input");
             Tooltip tooltip = new Tooltip("Verify Input");
             btnProcced.setTooltip(tooltip);
-            //Loading Transaction Window
+                //Loading Transaction Window
                 //Setting Values in Transaction Window
                 Transaction.cusID = Integer.valueOf(txtCustomerId.getText());
                 Transaction.purchaseId = lblId.getText();

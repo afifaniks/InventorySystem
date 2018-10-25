@@ -14,7 +14,6 @@ public class Customer {
     String address;
     String phone;
     String email;
-    String details;
     String photo;
     String gender;
     Date date;
@@ -67,14 +66,6 @@ public class Customer {
         this.email = email;
     }
 
-    public String getDetails() {
-        return details;
-    }
-
-    public void setDetails(String details) {
-        this.details = details;
-    }
-
     public String getPhoto() {
         return photo;
     }
@@ -99,7 +90,7 @@ public class Customer {
         this.date = date;
     }
 
-    public Customer(int id, String firstName, String lastName, String address, String phone, String email, String details, String photo, String gender, Date date) {
+    public Customer(int id, String firstName, String lastName, String address, String phone, String email, String photo, String gender, Date date) {
 
         this.id = id;
         this.firstName = firstName;
@@ -107,7 +98,6 @@ public class Customer {
         this.address = address;
         this.phone = phone;
         this.email = email;
-        this.details = details;
         this.photo = photo;
         this.gender = gender;
         this.date = date;

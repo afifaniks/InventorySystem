@@ -28,7 +28,6 @@ import javafx.stage.Stage;
 import org.controlsfx.control.textfield.TextFields;
 import sample.DBConnection;
 import sample.Dialog;
-import sample.Purchase;
 import sample.Rent;
 
 import java.net.URL;
@@ -43,6 +42,7 @@ import java.util.ResourceBundle;
  * Written on: 7/16/2018
  * Project: TeslaRentalInventory
  **/
+
 public class Rentals implements Initializable {
 
     @FXML
@@ -130,7 +130,7 @@ public class Rentals implements Initializable {
     private NumberAxis amountAxis;
 
 
-    private static boolean toggle = true;
+    private static boolean toggle = true; //This field will be used to transition b/w Table and Chart
     private static boolean startTransaction = false;
     public static ObservableList<Rent> rentalList;
     public static ArrayList<String> customerIDName = null; //Will hold auto completion data for customer ID text field
@@ -188,7 +188,7 @@ public class Rentals implements Initializable {
                 }
 
                 if(stock == 0) {
-                    new Dialog("Insuffecient Stock!", "This item is not currently available for renting.");
+                    new Dialog("Insufficient Stock!", "This item is not currently available for renting.");
                     return;
                 }
 
@@ -359,14 +359,15 @@ public class Rentals implements Initializable {
                         rentList.getDouble("amountDue")));
             }
 
+            //Resetting Fields
             tblRecent.getItems().clear();
             rentalList = rentsListByUser;
             tblRecent.setItems(rentalList);
-
             txtPayAmount.setText("");
             txtReturnDate.setValue(null);
             txtCustomerId.setText("");
             txtItemId.setText("");
+            lblCost.setText("??");
             lblVerify.setText("Verify Input");
             btnIcon.setGlyphName("QUESTION");
 
@@ -378,14 +379,15 @@ public class Rentals implements Initializable {
 
     @FXML
     void btnBarchartAction(ActionEvent event) {
-        if(toggle) {
-            toggle = false;
+        if(toggle) { //If toggle is true that means table view is currently in view
+            toggle = false; //Changing toggle value
             btnChartIcon.setGlyphName("TABLE");
             tblRecent.setVisible(false);
             lineChart.setVisible(true);
 
             Connection con = DBConnection.getConnection();
             try {
+                //TODO: FIX SQL
                 PreparedStatement ps = con.prepareStatement("SELECT rentalDate, sum(paid) FROM rentals WHERE User_username ='"+LogIn.loggerUsername+"' GROUP BY rentalDate LIMIT 14");
                 ResultSet rs = ps.executeQuery();
 

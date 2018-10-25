@@ -161,7 +161,7 @@ public class Dashboard implements Initializable{
             todaysTotalDue = todayDAmount;
             stockOut = sOCtr;
 
-            //Setting values
+            //Setting values on the fields
             setFields();
 
         } catch (SQLException e) {

@@ -34,6 +34,7 @@ import java.util.TreeMap;
  **/
 public class Initializer implements Initializable {
 
+    private static final int THREAD_SLEEP_INTERVAL = 100;
     @FXML
     private JFXProgressBar progressIndicator;
 
@@ -130,7 +131,7 @@ public class Initializer implements Initializable {
 
             //Updating task message
             this.updateMessage("Loading Customers...");
-            Thread.sleep(200);
+            Thread.sleep(THREAD_SLEEP_INTERVAL);
 
             ArrayList<String> customerIDNameHolder = new ArrayList<>(); //Will store ID and Name from ResultSet
             ArrayList<String> itemIDNameForSale = new ArrayList<>(); //Will hold item id name for sell
@@ -160,8 +161,7 @@ public class Initializer implements Initializable {
                         customerResultSet.getString(6),
                         customerResultSet.getString(7),
                         customerResultSet.getString(8),
-                        customerResultSet.getString(9),
-                        customerResultSet.getDate(10)));
+                        customerResultSet.getDate(9)));
 
                 customerID.add(customerResultSet.getInt(1));
             }
@@ -177,7 +177,7 @@ public class Initializer implements Initializable {
             Rentals.customerID = customerID;
             controller.Account.customerIDName = customerIDNameHolder;
 
-            Thread.sleep(500);
+            Thread.sleep(THREAD_SLEEP_INTERVAL);
             //Updating Task status
             this.updateMessage("Loading Items...");
 
@@ -219,7 +219,7 @@ public class Initializer implements Initializable {
             Rentals.inventoryItem = itemIDNameForRentals;
             Rentals.itemIDForRent = itemIDForRent;
 
-            Thread.sleep(200);
+            Thread.sleep(THREAD_SLEEP_INTERVAL);
 
             //Updating task status
             this.updateMessage("Loading Sells...");
@@ -239,7 +239,7 @@ public class Initializer implements Initializable {
             //Setting Purchases on Sell Class
             Sells.purchaseList = sellsListByUser;
 
-            Thread.sleep(200);
+            Thread.sleep(THREAD_SLEEP_INTERVAL);
 
             //Updating Task Status
             this.updateMessage("Loading Rentals...");
@@ -258,7 +258,7 @@ public class Initializer implements Initializable {
             //Setting Rents on Rental Class
             Rentals.rentalList = rentsListByUser;
 
-            Thread.sleep(200);
+            Thread.sleep(THREAD_SLEEP_INTERVAL);
 
             //Updating task status
             this.updateMessage("Loading Accounts...");
@@ -278,7 +278,7 @@ public class Initializer implements Initializable {
             controller.Account.accountList = accountListByUser;
             controller.Account.accountNames = accountNames;
 
-            Thread.sleep(200);
+            Thread.sleep(THREAD_SLEEP_INTERVAL);
 
             //Updating Task Message
             //Dashboard contents
@@ -341,7 +341,7 @@ public class Initializer implements Initializable {
             Dashboard.todaysTotalDue = todaysDueAmount;
             Dashboard.stockOut = stockOutCtr;
 
-            Thread.sleep(200);
+            Thread.sleep(THREAD_SLEEP_INTERVAL);
             this.updateMessage("Loading Item Types....");
 
             while (itemType.next()) {
@@ -354,7 +354,7 @@ public class Initializer implements Initializable {
 
             //Updating Status of the Task
             this.updateMessage("Loading Finished!");
-            Thread.sleep(200);
+            Thread.sleep(THREAD_SLEEP_INTERVAL);
 
             return null;
         }

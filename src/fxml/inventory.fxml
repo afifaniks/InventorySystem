@@ -74,19 +74,32 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Circle>
-            <JFXTextField fx:id="txtItemName" alignment="CENTER" focusColor="#263238" layoutX="392.0" layoutY="161.0" prefHeight="31.0" prefWidth="232.0">
+            <JFXTextField fx:id="txtItemName" alignment="CENTER" focusColor="#263238" layoutX="392.0" layoutY="162.0" prefHeight="31.0" prefWidth="232.0">
                <font>
                   <Font size="15.0" />
                </font>
             </JFXTextField>
-            <Label layoutX="301.0" layoutY="271.0" prefHeight="44.0" prefWidth="85.0" text="Rental/Sale:">
+            <JFXComboBox fx:id="txtType" layoutX="392.0" layoutY="222.0" prefHeight="25.0" prefWidth="232.0" style="-fx-text-size: 15px;" />
+            <Label layoutX="301.0" layoutY="268.0" prefHeight="44.0" prefWidth="85.0" text="Rental/Sale:">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <JFXTextField fx:id="txtRentRate" alignment="CENTER" focusColor="#263238" layoutX="392.0" layoutY="327.0" prefHeight="31.0" prefWidth="232.0" text="NULL">
+            <JFXCheckBox fx:id="chkSale" layoutX="392.0" layoutY="280.0" text="Sale" />
+            <JFXCheckBox fx:id="chkRent" layoutX="478.0" layoutY="280.0" text="Rent" />
+            <JFXTextField fx:id="txtPrice" alignment="CENTER" focusColor="#263238" layoutX="388.0" layoutY="316.0" prefHeight="31.0" prefWidth="232.0" text="NULL">
                <font>
                   <Font size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtRentRate" alignment="CENTER" focusColor="#263238" layoutX="388.0" layoutY="370.0" prefHeight="31.0" prefWidth="232.0" text="NULL">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtStock" alignment="CENTER" focusColor="#263238" layoutX="73.0" layoutY="409.0" prefHeight="72.0" prefWidth="145.0">
+               <font>
+                  <Font name="System Bold" size="30.0" />
                </font>
             </JFXTextField>
             <Label layoutX="304.0" layoutY="106.0" prefHeight="44.0" prefWidth="78.0" text="Item ID:">
@@ -99,17 +112,17 @@
                   <Font name="System Bold" size="20.0" />
                </font>
             </Label>
-            <Label layoutX="304.0" layoutY="321.0" prefHeight="44.0" prefWidth="78.0" text="Rent Rate:">
+            <Label layoutX="300.0" layoutY="364.0" prefHeight="44.0" prefWidth="78.0" text="Rent Rate:">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label layoutX="304.0" layoutY="155.0" prefHeight="44.0" prefWidth="78.0" text="Name:">
+            <Label layoutX="304.0" layoutY="156.0" prefHeight="44.0" prefWidth="78.0" text="Name:">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label layoutX="304.0" layoutY="214.0" prefHeight="44.0" prefWidth="78.0" text="Type:">
+            <Label layoutX="304.0" layoutY="212.0" prefHeight="44.0" prefWidth="78.0" text="Type:">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
@@ -119,20 +132,13 @@
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label layoutX="304.0" layoutY="378.0" prefHeight="44.0" prefWidth="78.0" text="Price:">
+            <Label layoutX="300.0" layoutY="315.0" prefHeight="44.0" prefWidth="78.0" text="Price:">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <JFXTextField fx:id="txtPrice" alignment="CENTER" focusColor="#263238" layoutX="392.0" layoutY="379.0" prefHeight="31.0" prefWidth="232.0" text="NULL">
-               <font>
-                  <Font size="15.0" />
-               </font>
-            </JFXTextField>
             <Separator layoutX="671.0" layoutY="120.0" orientation="VERTICAL" prefHeight="332.0" prefWidth="5.0" style="-fx-background-color: #263238;" />
             <Label fx:id="lblPageIndex" alignment="CENTER" layoutX="503.0" layoutY="496.0" prefHeight="31.0" prefWidth="349.0" text="Showing m of n results." textAlignment="CENTER" />
-            <JFXCheckBox fx:id="chkRent" layoutX="478.0" layoutY="283.0" text="Rent" />
-            <JFXCheckBox fx:id="chkSale" layoutX="392.0" layoutY="283.0" text="Sale" />
             <JFXButton fx:id="btnListAll" alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="767.0" layoutY="196.0" onAction="#listAllItems" prefHeight="50.0" prefWidth="147.0" ripplerFill="#37474f" text="List All">
                <cursor>
                   <Cursor fx:constant="HAND" />
@@ -213,13 +219,7 @@
                   <Font size="27.0" />
                </font>
             </Label>
-            <JFXTextField fx:id="lblStock" alignment="CENTER" focusColor="#263238" layoutX="73.0" layoutY="409.0" prefHeight="72.0" prefWidth="145.0">
-               <font>
-                  <Font name="System Bold" size="30.0" />
-               </font>
-            </JFXTextField>
             <Label fx:id="lblSearchResults" alignment="CENTER_RIGHT" layoutX="631.0" layoutY="48.0" prefHeight="17.0" prefWidth="154.0" text="Results found!" visible="false" />
-            <JFXComboBox fx:id="txtType" layoutX="392.0" layoutY="224.0" prefHeight="25.0" prefWidth="232.0" style="-fx-text-size: 15px;" />
             <JFXButton fx:id="btnDelete" alignment="CENTER" buttonType="RAISED" disable="true" graphicTextGap="10.0" layoutX="767.0" layoutY="322.0" onAction="#btnDelAction" prefHeight="50.0" prefWidth="147.0" ripplerFill="WHITE" style="-fx-background-color: red; -fx-text-fill: white;" text="Delete Entry" textFill="WHITE">
                <cursor>
                   <Cursor fx:constant="HAND" />

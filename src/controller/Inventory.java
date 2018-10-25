@@ -59,7 +59,7 @@ public class Inventory implements Initializable{
     private Circle imgCustomerPhoto;
 
     @FXML
-    private JFXTextField lblStock;
+    private JFXTextField txtStock;
 
     @FXML
     private JFXTextField txtPrice;
@@ -262,7 +262,7 @@ public class Inventory implements Initializable{
 
     //This method will set navigate between Items
     private void recordNavigator() {
-        lblStock.setStyle("-fx-text-fill: #263238"); //Resetting stock color
+        txtStock.setStyle("-fx-text-fill: #263238"); //Resetting stock color
 
         chkRent.setSelected(false);
         chkSale.setSelected(false);
@@ -280,10 +280,10 @@ public class Inventory implements Initializable{
             chkSale.setSelected(true);
             txtPrice.setText(Double.toString(onView.getSalePrice()));
         }
-        lblStock.setText(Integer.toString(onView.getStock()));
+        txtStock.setText(Integer.toString(onView.getStock()));
 
         if(onView.getStock() <= 5) //Setting stock color red if it's very limited
-            lblStock.setStyle("-fx-text-fill: red");
+            txtStock.setStyle("-fx-text-fill: red");
 
         //Setting Image
         if (onView.getPhoto() == null) {
@@ -437,6 +437,7 @@ public class Inventory implements Initializable{
             txtRentRate.setUnFocusColor(Color.web(defColor));
             txtType.setUnFocusColor(Color.web(defColor));
             txtSearch.setUnFocusColor(Color.web(defColor));
+            txtStock.setUnFocusColor(Color.web(defColor));
 
             //Setting Label
             lblMode.setText("Navigation Mode");
@@ -471,15 +472,13 @@ public class Inventory implements Initializable{
                 btnSearch.setDisable(true);
                 btnDelete.setDisable(true);
 
-
-
                 //Cleaning fields
                 txtItemName.setText("");
                 txtType.setValue("");
                 txtRentRate.setText("");
                 txtPrice.setText("");
                 imgPath = null;
-                lblStock.setText("");
+                txtStock.setText("");
             } catch (SQLException e) {
                 new Dialog("SQL Error!", "Error occured while executing Query.\nSQL Error Code: " + e.getErrorCode());
             }
@@ -608,7 +607,6 @@ public class Inventory implements Initializable{
                 new Dialog("SQL Error!", "Error occured while executing Query.\nSQL Error Code: " + eS.getErrorCode());
             }
         }
-
     }
 
     @FXML
@@ -638,6 +636,11 @@ public class Inventory implements Initializable{
                 txtType.setUnFocusColor(Color.web("red"));
                 entryFlag = false;;
             }
+            
+            if(txtStock.getText().equals("")) {
+                txtStock.setUnFocusColor(Color.web("red"));
+                entryFlag = false;;
+            }
 
             if(entryFlag) {
                 Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
@@ -653,19 +656,18 @@ public class Inventory implements Initializable{
                     Connection con = DBConnection.getConnection();
 
                     try {
-                        PreparedStatement ps = con.prepareStatement("INSERT INTO item VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)");
+                        PreparedStatement ps = con.prepareStatement("INSERT INTO item VALUES(?, ?, ?, ?, ?, ?, ?, ?)");
 
                         ps.setInt(1, Integer.valueOf(itemID.getText()));
                         ps.setString(2, txtItemName.getText());
-                        ps.setString(3, "null");
-                        ps.setInt(4, Integer.valueOf(lblStock.getText()));
+                        ps.setInt(3, Integer.valueOf(txtStock.getText()));
 
                         if(chkRent.isSelected() && chkSale.isSelected())
-                            ps.setString(5, "Rental,Sale");
+                            ps.setString(4, "Rental,Sale");
                         else if(chkSale.isSelected())
-                            ps.setString(5, "Sale");
+                            ps.setString(4, "Sale");
                         else if(chkRent.isSelected())
-                            ps.setString(5, "Rental");
+                            ps.setString(4, "Rental");
 
                         Double salePrice = 0.0;
 
@@ -679,10 +681,10 @@ public class Inventory implements Initializable{
                             rentPrice = Double.valueOf(txtRentRate.getText());
                         }
 
-                        ps.setDouble(6, salePrice);
-                        ps.setDouble(7, rentPrice);
-                        ps.setString(8, imgPath);
-                        ps.setInt(9, itemType.get(txtType.getValue()));
+                        ps.setDouble(5, salePrice);
+                        ps.setDouble(6, rentPrice);
+                        ps.setString(7, imgPath);
+                        ps.setInt(8, itemType.get(txtType.getValue()));
 
                         ps.executeUpdate();
 
@@ -737,19 +739,18 @@ public class Inventory implements Initializable{
                 if (result.get() == ButtonType.OK) {
                     Connection con = DBConnection.getConnection();
                     try {
-                        PreparedStatement ps = con.prepareStatement("UPDATE item SET itemID = ?, itemName = ?, description = ?," +
+                        PreparedStatement ps = con.prepareStatement("UPDATE item SET itemID = ?, itemName = ?," +
                                 "stock = ?, rentalOrSale = ?, salePrice = ?, rentRate = ?, photo = ?, ItemType_itemTypeId = ? WHERE itemID = "+Integer.valueOf(itemID.getText()));
                         ps.setInt(1, Integer.valueOf(itemID.getText()));
                         ps.setString(2, txtItemName.getText());
-                        ps.setString(3, "null");
-                        ps.setInt(4, Integer.valueOf(lblStock.getText()));
+                        ps.setInt(3, Integer.valueOf(txtStock.getText()));
 
                         if(chkRent.isSelected() && chkSale.isSelected())
-                            ps.setString(5, "Rental,Sale");
+                            ps.setString(4, "Rental,Sale");
                         else if(chkSale.isSelected())
-                            ps.setString(5, "Sale");
+                            ps.setString(4, "Sale");
                         else if(chkRent.isSelected())
-                            ps.setString(5, "Rental");
+                            ps.setString(4, "Rental");
 
                         Double salePrice = 0.0;
 
@@ -763,10 +764,10 @@ public class Inventory implements Initializable{
                             rentPrice = Double.valueOf(txtRentRate.getText());
                         }
 
-                        ps.setDouble(6, salePrice);
-                        ps.setDouble(7, rentPrice);
-                        ps.setString(8, imgPath);
-                        ps.setInt(9, itemType.get(txtType.getValue()));
+                        ps.setDouble(5, salePrice);
+                        ps.setDouble(6, rentPrice);
+                        ps.setString(7, imgPath);
+                        ps.setInt(8, itemType.get(txtType.getValue()));
 
                         ps.executeUpdate();
 
