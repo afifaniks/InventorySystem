@@ -2,7 +2,7 @@
   <artifact type="jar" name="TeslaRentalInventory:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/TeslaRentalInventory_jar</output-path>
     <root id="archive" name="TeslaRentalInventory.jar">
-      <element id="module-output" name="TeslaRentalInventory" />
+      <element id="module-output" name="InventorySystem" />
       <element id="extracted-dir" path="$PROJECT_DIR$/lib/controlsfx-8.40.12.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/lib/mysql-connector-java-8.0.11.jar" path-in-jar="/" />
       <element id="library" level="project" name="controlsfx-8.0.1" />

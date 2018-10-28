@@ -70,7 +70,7 @@ public class Initializer implements Initializable {
                 Scene scene = new Scene(root);
                 String css = this.getClass().getResource("/css/base.css").toExternalForm();
                 scene.getStylesheets().add(css);
-                base.setTitle("Tesla Rental Inventory");
+                base.setTitle("Inventory System");
                 base.getIcons().add(new Image("/resource/icons/Logo.png"));
                 base.setScene(scene);
                 base.setMaximized(true);

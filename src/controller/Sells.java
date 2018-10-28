@@ -41,6 +41,7 @@ import java.util.ResourceBundle;
  * Written on: 7/15/2018
  * Project: TeslaRentalInventory
  **/
+
 public class Sells implements Initializable{
     @FXML
     private JFXTextField txtCustomerId;

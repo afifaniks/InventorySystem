@@ -184,22 +184,17 @@
                   <Image url="@../resource/icons/Logo.png" />
                </image>
             </ImageView>
-            <Label layoutX="84.0" layoutY="25.0" prefHeight="21.0" prefWidth="100.0" text="Tesla" textFill="WHITE">
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font>
-            </Label>
-            <Label layoutX="104.0" layoutY="53.0" prefHeight="21.0" prefWidth="100.0" text="Rental" textFill="WHITE">
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font>
-            </Label>
-            <Label layoutX="127.0" layoutY="81.0" prefHeight="21.0" prefWidth="100.0" text="Inventory" textFill="WHITE">
+            <Label alignment="CENTER" layoutX="94.0" layoutY="37.0" prefHeight="21.0" prefWidth="100.0" text="Inventory" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
             </Label>
             <Line endX="298.0" layoutX="-19.0" layoutY="126.0" startX="14.5" stroke="WHITE" AnchorPane.leftAnchor="-5.0" AnchorPane.rightAnchor="0.5" />
+            <Label alignment="CENTER" layoutX="94.0" layoutY="64.0" prefHeight="21.0" prefWidth="100.0" text="System" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
          </children></AnchorPane>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
          <children>

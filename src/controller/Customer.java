@@ -181,14 +181,17 @@ public class Customer implements Initializable {
 
                 File imgFile = fc.showOpenDialog(btnEditMode.getScene().getWindow());
 
-                imgPath = imgFile.toURI().toString();
+                if(imgFile != null) { //This block will be only executed if there is any file chosen
+                    imgPath = imgFile.toURI().toString();
 
-                if(imgPath.contains(".jpg") || imgPath.contains(".png") || imgPath.contains(".gif") ||imgPath.contains(".jpeg")) {
-                    ImagePattern gg = new ImagePattern(new Image(imgPath));
-                    imgCustomerPhoto.setFill(gg);
-                } else {
-                    new Dialog("File Format Error!", "Please select a valid image file. You can select JPG, JPEG, PNG, GIF");
+                    if(imgPath.contains(".jpg") || imgPath.contains(".png") || imgPath.contains(".gif") ||imgPath.contains(".jpeg")) {
+                        ImagePattern gg = new ImagePattern(new Image(imgPath));
+                        imgCustomerPhoto.setFill(gg);
+                    } else {
+                        new Dialog("File Format Error!", "Please select a valid image file. You can select JPG, JPEG, PNG, GIF");
+                    }
                 }
+
             }
         });
 

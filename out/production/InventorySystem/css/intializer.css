@@ -1,0 +1,7 @@
+.jfx-progress-bar > .bar {
+    -fx-background-color: #263238;
+}
+
+.label {
+    -fx-text-fill: #263238;
+}

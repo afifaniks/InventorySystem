@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/TeslaRentalInventory.iml" filepath="$PROJECT_DIR$/TeslaRentalInventory.iml" />
+      <module fileurl="file://$PROJECT_DIR$/InventorySystem.iml" filepath="$PROJECT_DIR$/InventorySystem.iml" />
     </modules>
   </component>
 </project>

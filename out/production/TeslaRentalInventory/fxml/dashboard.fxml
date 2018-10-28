@@ -15,7 +15,7 @@
    <children>
       <AnchorPane prefHeight="109.0" prefWidth="1169.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
-            <Label alignment="CENTER" layoutX="446.0" layoutY="18.0" prefHeight="72.0" prefWidth="338.0" text="Dashboard" textFill="#263238">
+            <Label alignment="CENTER" layoutX="427.0" layoutY="18.0" prefHeight="72.0" prefWidth="338.0" text="Dashboard" textFill="#263238">
                <font>
                   <Font name="System Bold" size="45.0" />
                </font>
@@ -23,7 +23,7 @@
                   <FontAwesomeIconView fill="#263238" glyphName="HOME" size="70" />
                </graphic>
             </Label>
-            <Line endX="143.0" layoutX="319.0" layoutY="90.0" startX="448.0" AnchorPane.leftAnchor="461.5" AnchorPane.rightAnchor="401.5" />
+            <Line endX="143.0" layoutX="300.0" layoutY="90.0" startX="448.0" AnchorPane.leftAnchor="442.5" AnchorPane.rightAnchor="420.5" />
          </children>
       </AnchorPane>
       <Pane layoutX="210.0" layoutY="229.0" prefHeight="240.0" prefWidth="225.0">

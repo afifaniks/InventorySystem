@@ -8,11 +8,11 @@ package sample;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.print.PrinterJob;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 
 public class Main extends Application {
@@ -35,6 +35,9 @@ public class Main extends Application {
             primaryStage.setResizable(false);
             // primaryStage.initStyle(StageStyle.UNDECORATED);
             primaryStage.show();
+//            PrinterJob j = PrinterJob.createPrinterJob();
+//            j.showPrintDialog(primaryStage);
+
         } catch (IOException e) {
             new Dialog("Error!", "Error Occured. Failed to initialize system. Either database server is not online or database dropped.");
         }

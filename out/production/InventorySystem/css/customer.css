@@ -1,0 +1,27 @@
+.root {
+    -fx-background-color: white;
+}
+
+#topPane {
+    -fx-background-color:  #37474f;
+}
+
+.jfx-radio-button {
+    -fx-selected-color: #263238;
+    -fx-unselected-color: white;
+}
+
+.button {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #263238;
+    -fx-text-alignment: center;
+}
+
+.button:hover {
+    -fx-background-color: white;
+    -fx-font-weight: bold;
+}
+
+.button:pressed:hover {
+    -fx-background-color: #b0bec5;
+}
