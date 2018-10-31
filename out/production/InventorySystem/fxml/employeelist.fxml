@@ -14,7 +14,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="497.0" prefWidth="865.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EmployeeList">
+<AnchorPane prefHeight="497.0" prefWidth="865.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EmployeeListGUI">
    <children>
       <JFXTextField fx:id="txtUser" alignment="CENTER" focusColor="#263238" layoutX="137.0" layoutY="150.0" prefHeight="31.0" prefWidth="200.0">
          <font>

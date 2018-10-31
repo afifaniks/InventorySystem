@@ -6,60 +6,163 @@
     </artifacts-to-build>
   </component>
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/controller/Initializer.java" line="270" />
-    <bookmark url="file://$PROJECT_DIR$/src/controller/Initializer.java" line="174" />
-    <bookmark url="file://$PROJECT_DIR$/src/controller/Transaction.java" line="168" />
-    <bookmark url="file://$PROJECT_DIR$/src/controller/Dashboard.java" line="59" />
-    <bookmark url="file://$PROJECT_DIR$/src/controller/RentalList.java" line="24" />
+    <bookmark url="file://$PROJECT_DIR$/src/controller/InitializerGUI.java" line="270" />
+    <bookmark url="file://$PROJECT_DIR$/src/controller/InitializerGUI.java" line="174" />
+    <bookmark url="file://$PROJECT_DIR$/src/controller/TransactionGUI.java" line="167" />
+    <bookmark url="file://$PROJECT_DIR$/src/controller/DashboardGUI.java" line="58" />
+    <bookmark url="file://$PROJECT_DIR$/src/controller/RentalListGUI.java" line="23" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/TeslaRentalInventory_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/TeslaRentalInventory_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TeslaRentalInventory.iml" beforeDir="false" afterPath="$PROJECT_DIR$/InventorySystem.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/TeslaRentalInventory_jar/TeslaRentalInventory.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TeslaRentalInventory_jar/TeslaRentalInventory.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/controller/Account.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/controller/AccountList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/controller/Administrator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/controller/Base$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/controller/Base$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/controller/Base.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/controller/Customer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/controller/CustomerPurchase.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/controller/CustomersRental.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/controller/Dashboard.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/controller/DueUpdate.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/controller/EmployeeList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/controller/Initializer$NewTask.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/controller/Initializer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/controller/Inventory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/controller/LogIn.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/controller/NewEmployee.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/controller/RentalList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/controller/Rentals.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/controller/SellList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/controller/Sells.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/controller/Transaction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/controller/TransactionList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/fxml/dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TeslaRentalInventory/fxml/dashboard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/sample/Account.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/sample/Customer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/sample/DBConnection.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/sample/Dialog.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/sample/Employee.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/sample/Item.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/sample/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/sample/Purchase.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/sample/Rent.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/sample/Transact.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/Initializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Initializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Inventory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/Sells.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Sells.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InventorySystem/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/controller/Account.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/controller/AccountList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/controller/Administrator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/controller/Base$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/controller/Base$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/controller/Base.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/controller/Customer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/controller/CustomerPurchase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/controller/CustomersRental.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/controller/Dashboard.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/controller/DueUpdate.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/controller/EmployeeList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/controller/Initializer$NewTask.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/controller/Initializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/controller/Inventory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/controller/LogIn.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/controller/NewEmployee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/controller/RentalList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/controller/Rentals.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/controller/SellList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/controller/Sells.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/controller/Transaction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/controller/TransactionList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/fxml/accountmanager.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InventorySystem/fxml/accountmanager.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/fxml/accounts.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InventorySystem/fxml/accounts.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/fxml/administrator.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InventorySystem/fxml/administrator.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/fxml/base.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InventorySystem/fxml/base.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/fxml/customer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InventorySystem/fxml/customer.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/fxml/customerpurchase.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InventorySystem/fxml/customerpurchase.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/fxml/customerrentals.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InventorySystem/fxml/customerrentals.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/fxml/dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InventorySystem/fxml/dashboard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/fxml/dueupdate.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InventorySystem/fxml/dueupdate.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/fxml/employeelist.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InventorySystem/fxml/employeelist.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/fxml/initializer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InventorySystem/fxml/initializer.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/fxml/inventory.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InventorySystem/fxml/inventory.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/fxml/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InventorySystem/fxml/login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/fxml/newemployee.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InventorySystem/fxml/newemployee.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/fxml/rentallist.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InventorySystem/fxml/rentallist.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/fxml/rentals.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InventorySystem/fxml/rentals.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/fxml/selllist.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InventorySystem/fxml/selllist.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/fxml/sells.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InventorySystem/fxml/sells.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/fxml/transaction.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InventorySystem/fxml/transaction.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/fxml/translist.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InventorySystem/fxml/translist.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/sample/Account.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/sample/Customer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/sample/DBConnection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/sample/Dialog.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/sample/Employee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/sample/Item.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/sample/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/sample/Purchase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/sample/Rent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/sample/Transact.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/css/accounts.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/css/administrator.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/css/base.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/css/customer.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/css/dashboard.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/css/intializer.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/css/inventory.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/css/login.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/css/rentals.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/css/sells.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/fxml/accountmanager.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/fxml/accounts.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/fxml/administrator.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/fxml/base.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/fxml/customer.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/fxml/customerpurchase.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/fxml/customerrentals.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/fxml/dashboard.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/fxml/dialog.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/fxml/dueupdate.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/fxml/employeelist.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/fxml/home.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/fxml/initializer.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/fxml/inventory.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/fxml/login.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/fxml/newemployee.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/fxml/rentallist.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/fxml/rentals.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/fxml/selllist.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/fxml/sells.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/fxml/transaction.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/fxml/translist.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/resource/config.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/resource/icons/Accounts_main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/resource/icons/Logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/resource/icons/cart 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/resource/icons/question (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/resource/icons/question (2).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/resource/icons/question.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/resource/icons/trolley.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/resource/icons/user.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeslaRentalInventory/resource/icons/x-button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/AccountGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/AccountList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/AccountListGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/Administrator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/AdministratorGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/Base.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/BaseGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/CustomerGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/CustomerPurchase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/CustomerPurchaseListGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/CustomersRental.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/CustomersRentalListGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/Dashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/DashboardGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/DueUpdate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/DueUpdateGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/EmployeeList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/EmployeeListGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/Initializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/InitializerGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/InventoryGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/LogIn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/LogInGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/NewEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/NewEmployeeGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/RentalList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/RentalListGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/Rentals.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/RentalsGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/SellList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/SellListGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/Sells.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/SellsGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/TransactionGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/TransactionList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/TransactionListGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fxml/accountmanager.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/accountmanager.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fxml/accounts.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/accounts.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fxml/administrator.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/administrator.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/fxml/base.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/base.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fxml/customer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/customer.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fxml/customerpurchase.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/customerpurchase.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fxml/customerrentals.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/customerrentals.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/fxml/dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/dashboard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fxml/dueupdate.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/dueupdate.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fxml/employeelist.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/employeelist.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fxml/initializer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/initializer.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fxml/inventory.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/inventory.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fxml/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fxml/newemployee.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/newemployee.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fxml/rentallist.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/rentallist.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fxml/rentals.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/rentals.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fxml/selllist.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/selllist.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fxml/sells.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/sells.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fxml/transaction.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/transaction.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fxml/translist.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/translist.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/DBConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/DBConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Dialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/PromptDialogGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Purchase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Purchase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Rent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Rent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Transact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Transact.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -261,6 +364,42 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="1136038920">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.34" value="1" />
+          <entry key="project.open.time.79" value="1" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="25" />
+          <entry key="png" value="1" />
+          <entry key="uml" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Image" value="1" />
+          <entry key="JAVA" value="25" />
+          <entry key="UML" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="dummy" value="100" />
+          <entry key="java" value="31" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="31" />
+          <entry key="PLAIN_TEXT" value="100" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FavoritesManager">
     <favorites_list name="JavaFxApplication" />
@@ -268,10 +407,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/controller/Customer.java">
+        <entry file="file://$PROJECT_DIR$/src/controller/CustomerGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3655">
-              <caret line="166" column="23" lean-forward="true" selection-start-line="166" selection-start-column="23" selection-end-line="166" selection-end-column="23" />
+            <state relative-caret-position="114">
+              <caret line="40" column="4" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -280,19 +419,28 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/Sells.java">
+        <entry file="file://$PROJECT_DIR$/src/controller/BaseGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="50" selection-start-line="50" selection-end-line="50" />
+            <state relative-caret-position="97">
+              <caret line="201" column="27" selection-start-line="201" selection-start-column="24" selection-end-line="201" selection-end-column="27" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
+        <entry file="file://$PROJECT_DIR$/src/controller/AdministratorGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="35" column="62" lean-forward="true" selection-start-line="35" selection-start-column="62" selection-end-line="35" selection-end-column="62" />
+            <state relative-caret-position="97">
+              <caret line="28" column="29" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controller/AccountListGUI.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="97">
+              <caret line="27" column="27" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -301,99 +449,55 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/css/base.css">
+        <entry file="file://$PROJECT_DIR$/src/controller/AccountGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="258">
+              <caret line="229" column="41" selection-start-line="229" selection-start-column="41" selection-end-line="229" selection-end-column="41" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/Inventory.java">
+        <entry file="file://$PROJECT_DIR$/src/controller/TransactionGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="79">
-              <caret line="208" column="100" lean-forward="true" selection-start-line="208" selection-start-column="38" selection-end-line="208" selection-end-column="100" />
-              <folding>
-                <element signature="e#7910#9890#0" />
-                <element signature="e#9896#10196#0" />
-                <element signature="e#11259#13160#0" />
-                <element signature="e#11341#11502#0" />
-                <element signature="e#13166#13986#0" />
-              </folding>
+            <state relative-caret-position="97">
+              <caret line="172" column="43" lean-forward="true" selection-start-line="172" selection-start-column="43" selection-end-line="172" selection-end-column="43" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/LogIn.java">
+        <entry file="file://$PROJECT_DIR$/src/controller/DueUpdateGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="117" column="32" selection-start-line="117" selection-start-column="32" selection-end-line="117" selection-end-column="32" />
+            <state relative-caret-position="97">
+              <caret line="22" column="25" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/Item.java">
+        <entry file="file://$PROJECT_DIR$/src/controller/DashboardGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+            <state relative-caret-position="97">
+              <caret line="174" column="25" selection-start-line="174" selection-start-column="22" selection-end-line="174" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/AccountList.java">
+        <entry file="file://$PROJECT_DIR$/src/controller/CustomersRentalListGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1360">
-              <caret line="101" column="50" selection-start-line="101" selection-start-column="50" selection-end-line="101" selection-end-column="50" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="97">
+              <caret line="23" column="35" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/Account.java">
+        <entry file="file://$PROJECT_DIR$/src/controller/CustomerPurchaseListGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="35" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/Initializer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="72" column="50" lean-forward="true" selection-start-line="72" selection-start-column="50" selection-end-line="72" selection-end-column="50" />
-              <folding>
-                <marker date="1540739997200" expanded="true" signature="3280:3303" ph="SELECT * FRO... customers" />
-                <marker date="1540739997200" expanded="true" signature="3380:3485" ph="SELECT *FROM... item" />
-                <marker date="1540739997200" expanded="true" signature="3380:3501" ph="SELECT *FROM... item" />
-                <marker date="1540739997200" expanded="true" signature="3579:3662" ph="SELECT * FRO... purchases" />
-                <marker date="1540739997200" expanded="true" signature="3741:3785" ph="SELECT * FRO... rentals" />
-                <marker date="1540739997200" expanded="true" signature="3741:3822" ph="SELECT * FRO... rentals" />
-                <marker date="1540739997200" expanded="true" signature="3902:4085" ph="SELECT * FRO... accounts" />
-                <marker date="1540739997200" expanded="true" signature="3902:4122" ph="SELECT FROM accounts" />
-                <marker date="1540739997200" expanded="true" signature="3902:4160" ph="SELECT first... accounts" />
-                <marker date="1540739997200" expanded="true" signature="4237:4259" ph="SELECT * FRO... itemtype" />
-                <marker date="1540739997200" expanded="true" signature="4338:4417" ph="SELECT * FRO... item" />
-                <marker date="1540739997200" expanded="true" signature="4528:4593" ph="SELECT COUNT... rentals" />
-                <marker date="1540739997200" expanded="true" signature="4673:4740" ph="SELECT COUNT... purchases" />
-                <marker date="1540739997200" expanded="true" signature="4819:4886" ph="SELECT COUNT... purchases" />
-                <marker date="1540739997200" expanded="true" signature="4819:4887" ph="SELECT COUNT... purchases" />
-                <marker date="1540739997200" expanded="true" signature="4819:4888" ph="SELECT COUNT... purchases" />
-                <marker date="1540739997200" expanded="true" signature="4819:4925" ph="SELECT COUNT... purchases" />
-                <marker date="1540739997200" expanded="true" signature="5004:5101" ph="SELECT COUNT... rentals" />
-                <marker date="1540739997200" expanded="true" signature="5185:5269" ph="SELECT COUNT... rentals" />
-                <marker date="1540739997200" expanded="true" signature="5185:5306" ph="SELECT COUNT... rentals" />
-                <marker date="1540739997200" expanded="true" signature="5392:5459" ph="SELECT COUNT... purchases" />
-                <marker date="1540739997200" expanded="true" signature="5392:5480" ph="SELECT COUNT... purchases" />
-                <marker date="1540739997200" expanded="true" signature="5392:5517" ph="SELECT COUNT... purchases" />
-              </folding>
+            <state relative-caret-position="97">
+              <caret line="23" column="36" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -411,7 +515,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>pri</find>
       <find>cus</find>
       <find>clear`</find>
       <find>customerL</find>
@@ -441,6 +544,7 @@
       <find>lbl</find>
       <find>lblStock</find>
       <find>txtSt</find>
+      <find>GUI</find>
     </findStrings>
     <replaceStrings>
       <replace>btnDashboard</replace>
@@ -463,16 +567,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/fxml/customer.fxml" />
-        <option value="$PROJECT_DIR$/src/fxml/base.fxml" />
-        <option value="$PROJECT_DIR$/src/css/base.css" />
-        <option value="$PROJECT_DIR$/src/sample/Sell.java" />
-        <option value="$PROJECT_DIR$/src/controller/Purchase.java" />
-        <option value="src:table:/efd3858a/069f59d7-a8e4-4dc6-90e4-1354d003b371/teslarentalinventory.customers" />
-        <option value="$PROJECT_DIR$/src/fxml/accounts.fxml" />
-        <option value="$PROJECT_DIR$/src/fxml/transaction.fxml" />
-        <option value="$PROJECT_DIR$/src/sample/Dialog.java" />
-        <option value="$PROJECT_DIR$/src/css/customer.css" />
         <option value="$PROJECT_DIR$/src/controller/Transaction.java" />
         <option value="$PROJECT_DIR$/src/css/dashboard.css" />
         <option value="$PROJECT_DIR$/src/css/inventory.css" />
@@ -506,14 +600,24 @@
         <option value="$PROJECT_DIR$/src/controller/Base.java" />
         <option value="$PROJECT_DIR$/src/controller/Dashboard.java" />
         <option value="$PROJECT_DIR$/src/sample/Customer.java" />
-        <option value="$PROJECT_DIR$/src/controller/AccountList.java" />
         <option value="$PROJECT_DIR$/src/controller/Account.java" />
-        <option value="$PROJECT_DIR$/src/controller/Rentals.java" />
-        <option value="$PROJECT_DIR$/src/controller/Sells.java" />
         <option value="$PROJECT_DIR$/src/sample/Main.java" />
         <option value="$PROJECT_DIR$/src/controller/Initializer.java" />
         <option value="$PROJECT_DIR$/src/controller/Inventory.java" />
         <option value="$PROJECT_DIR$/src/controller/Customer.java" />
+        <option value="$PROJECT_DIR$/src/controller/AccountList.java" />
+        <option value="$PROJECT_DIR$/src/controller/CustomerPurchaseListGUI.java" />
+        <option value="$PROJECT_DIR$/src/controller/Rentals.java" />
+        <option value="$PROJECT_DIR$/src/controller/Sells.java" />
+        <option value="$PROJECT_DIR$/src/controller/NewEmployeeGUI.java" />
+        <option value="$PROJECT_DIR$/src/controller/TransactionGUI.java" />
+        <option value="$PROJECT_DIR$/src/controller/SellsGUI.java" />
+        <option value="$PROJECT_DIR$/src/controller/RentalsGUI.java" />
+        <option value="$PROJECT_DIR$/src/controller/InventoryGUI.java" />
+        <option value="$PROJECT_DIR$/src/controller/InitializerGUI.java" />
+        <option value="$PROJECT_DIR$/src/controller/AdministratorGUI.java" />
+        <option value="$PROJECT_DIR$/src/controller/AccountGUI.java" />
+        <option value="$PROJECT_DIR$/src/controller/CustomerGUI.java" />
       </list>
     </option>
   </component>
@@ -547,30 +651,41 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="TeslaRentalInventory" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TeslaRentalInventory" type="462c0819:PsiDirectoryNode" />
+              <item name="InventorySystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="InventorySystem" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="TeslaRentalInventory" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TeslaRentalInventory" type="462c0819:PsiDirectoryNode" />
+              <item name="InventorySystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="InventorySystem" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="TeslaRentalInventory" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TeslaRentalInventory" type="462c0819:PsiDirectoryNode" />
+              <item name="InventorySystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="InventorySystem" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="InventorySystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="InventorySystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="InventorySystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="InventorySystem" type="462c0819:PsiDirectoryNode" />
+              <item name="uml" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -585,10 +700,10 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/Progs/TeslaRentalInventory/src/fxml/initializer.fxml" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540741834516" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541006376099" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL&#10;Amazon Redshift" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.153125" />
@@ -597,17 +712,20 @@
     <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Project_Final\IntellijIDEA\TeslaRentalInventory\src\fxml" />
-      <recent name="D:\Progs\TeslaRentalInventory\src\fxml" />
-      <recent name="D:\Progs\TeslaRentalInventory\src\resource\icons" />
-      <recent name="D:\Progs\TeslaRentalInventory\src\css" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Progs\TeslaRentalInventory\src\resource\icons" />
       <recent name="D:\Progs\TeslaRentalInventory\src\resource\" />
       <recent name="D:\Progs\TeslaRentalInventory\src" />
       <recent name="D:\Progs\TeslaRentalInventory\src\resource" />
+      <recent name="D:\Progs\TeslaRentalInventory\src\css" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="controller" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Project_Final\IntellijIDEA\TeslaRentalInventory\src\fxml" />
+      <recent name="D:\Progs\TeslaRentalInventory\src\fxml" />
+      <recent name="D:\Progs\TeslaRentalInventory\src\resource\icons" />
       <recent name="D:\Progs\TeslaRentalInventory\src\css" />
     </key>
   </component>
@@ -643,12 +761,12 @@
       </method>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="sample.Main" />
+      <option name="MAIN_CLASS_NAME" value="main.Main" />
       <module name="InventorySystem" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="sample.*" />
+          <option name="PATTERN" value="controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -683,53 +801,6 @@
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="moduleWithDependencies" />
       </option>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
-      <module name="InventorySystem" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
-      <module name="InventorySystem" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -848,6 +919,8 @@
       <workItem from="1540478783512" duration="10791000" />
       <workItem from="1540527017946" duration="3671000" />
       <workItem from="1540735514242" duration="4716000" />
+      <workItem from="1540793431585" duration="1473000" />
+      <workItem from="1541003227779" duration="3132000" />
     </task>
     <task id="LOCAL-00001" summary="Multiple view added.">
       <created>1531118175694</created>
@@ -867,7 +940,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="451498000" />
+    <option name="totallyTimeSpent" value="456103000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -881,7 +954,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.18154311" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.18683812" />
       <window_info id="Structure" order="1" weight="0.24281392" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="3" />
@@ -889,7 +962,7 @@
       <window_info id="Favorites" order="5" weight="0.32980332" />
       <window_info id="Image Layers" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32998326" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.329582" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.40836012" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39865997" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -1010,8 +1083,8 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/controller/Inventory.java</url>
-          <line>193</line>
+          <url>file://$PROJECT_DIR$/src/controller/InventoryGUI.java</url>
+          <line>188</line>
           <properties />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
@@ -1023,56 +1096,27 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/sample/Purchase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1241">
-          <caret line="95" column="29" selection-start-line="95" selection-start-column="29" selection-end-line="95" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fxml/selllist.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="10" column="161" selection-start-line="10" selection-start-column="161" selection-end-line="10" selection-end-column="161" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/fxml/rentallist.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="10" column="200" selection-start-line="10" selection-start-column="200" selection-end-line="10" selection-end-column="200" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/javafx-src.zip!/com/sun/javafx/tk/quantum/QuantumToolkit.java" />
     <entry file="file://$PROJECT_DIR$/src/fxml/accountmanager.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
           <caret line="13" column="201" selection-start-line="13" selection-start-column="201" selection-end-line="13" selection-end-column="201" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/e548023c-2596-4027-b6b2-afe7c46704bb/console.sql" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/javafx-src.zip!/com/sun/javafx/tk/quantum/GlassViewEventHandler.java" />
-    <entry file="file://$PROJECT_DIR$/src/controller/EmployeeList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="104" column="32" lean-forward="true" selection-start-line="104" selection-start-column="32" selection-end-line="104" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/javafx-src.zip!/com/sun/glass/ui/win/WinApplication.java" />
-    <entry file="file://$PROJECT_DIR$/src/controller/NewEmployee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="64" column="58" lean-forward="true" selection-start-line="64" selection-start-column="58" selection-end-line="64" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Transact.java">
+    <entry file="file://$PROJECT_DIR$/src/main/Transact.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="29" />
@@ -1080,14 +1124,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fxml/translist.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="10" column="205" selection-start-line="10" selection-start-column="205" selection-end-line="10" selection-end-column="205" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Rent.java">
+    <entry file="file://$PROJECT_DIR$/src/main/Rent.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="576">
           <caret line="36" selection-start-line="36" selection-end-line="36" />
@@ -1095,54 +1139,40 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fxml/customerpurchase.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="15" column="77" lean-forward="true" selection-start-line="15" selection-start-column="77" selection-end-line="15" selection-end-column="77" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/SellList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="912">
-          <caret line="128" column="49" lean-forward="true" selection-start-line="128" selection-start-column="49" selection-end-line="128" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/RentalList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="135" column="48" lean-forward="true" selection-start-line="113" selection-start-column="12" selection-end-line="135" selection-end-column="48" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fxml/customerrentals.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="10" column="205" selection-start-line="10" selection-start-column="205" selection-end-line="10" selection-end-column="205" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/META-INF/desktop.ini" />
     <entry file="file://$PROJECT_DIR$/src/desktop.ini" />
     <entry file="file://$PROJECT_DIR$/src/fxml/desktop.ini" />
     <entry file="file://$PROJECT_DIR$/src/resource/icons/desktop.ini" />
     <entry file="file://$PROJECT_DIR$/src/fxml/inventory.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="229">
           <caret line="239" column="19" selection-start-line="239" selection-start-column="19" selection-end-line="239" selection-end-column="19" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fxml/dueupdate.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
           <caret line="21" column="280" selection-start-line="21" selection-start-column="280" selection-end-line="21" selection-end-column="280" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/ee4b0f82-0338-4a5e-9529-e880997d76a7/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
@@ -1154,53 +1184,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/DueUpdate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1751">
-          <caret line="118" column="27" selection-start-line="118" selection-start-column="27" selection-end-line="118" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/Transaction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/TransactionList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1275">
-          <caret line="93" column="47" selection-start-line="93" selection-start-column="47" selection-end-line="93" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/fxml/base.fxml">
-      <provider editor-type-id="text-editor" />
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/CustomerPurchase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1530">
-          <caret line="104" column="13" selection-start-line="104" selection-start-column="13" selection-end-line="104" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/CustomersRental.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1122">
-          <caret line="80" column="96" selection-start-line="80" selection-start-column="96" selection-end-line="80" selection-end-column="96" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/DBConnection.java">
+    <entry file="file://$PROJECT_DIR$/src/main/DBConnection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Dialog.java">
+    <entry file="file://$PROJECT_DIR$/src/controller/PromptDialogGUI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
@@ -1211,86 +1206,63 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fxml/dashboard.fxml">
-      <provider selected="true" editor-type-id="text-editor" />
       <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/Administrator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1462">
-          <caret line="106" column="82" selection-start-line="106" selection-start-column="82" selection-end-line="106" selection-end-column="82" />
+    <entry file="file://$PROJECT_DIR$/uml/classdiagram.uml">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement />
+          <nodes>
+            <node x="" y="">controller.LogIn</node>
+            <node x="" y="">controller.TransactionList</node>
+            <node x="" y="">sample.Main</node>
+            <node x="" y="">controller.CustomerPurchase</node>
+            <node x="" y="">controller.SellList</node>
+            <node x="" y="">sample.Purchase</node>
+            <node x="" y="">controller.NewEmployee</node>
+            <node x="" y="">controller.Dashboard</node>
+            <node x="" y="">sample.Employee</node>
+            <node x="" y="">controller.Initializer</node>
+            <node x="" y="">sample.DBConnection</node>
+            <node x="" y="">controller.RentalList</node>
+            <node x="" y="">controller.DueUpdate</node>
+            <node x="" y="">controller.Customer</node>
+            <node x="" y="">controller.Account</node>
+            <node x="" y="">controller.Inventory</node>
+            <node x="" y="">sample.Customer</node>
+            <node x="" y="">controller.Sells</node>
+            <node x="" y="">sample.Transact</node>
+            <node x="" y="">controller.CustomersRental</node>
+            <node x="" y="">controller.Base</node>
+            <node x="" y="">sample.Item</node>
+            <node x="" y="">sample.Dialog</node>
+            <node x="" y="">controller.Rentals</node>
+            <node x="" y="">controller.EmployeeList</node>
+            <node x="" y="">controller.AccountList</node>
+            <node x="" y="">controller.Administrator</node>
+            <node x="" y="">controller.Transaction</node>
+            <node x="" y="">sample.Rent</node>
+            <node x="" y="">sample.Account</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.1264752791068577" x="1316.0" y="796.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/Base.java">
+    <entry file="file://$PROJECT_DIR$/src/main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1377">
-          <caret line="97" column="23" selection-start-line="97" selection-start-column="23" selection-end-line="97" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Customer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="92" column="106" selection-start-line="92" selection-start-column="106" selection-end-line="92" selection-end-column="106" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/Dashboard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1003">
-          <caret line="77" column="57" selection-start-line="77" selection-start-column="57" selection-end-line="77" selection-end-column="57" />
-          <folding>
-            <element signature="e#1577#1578#0" expanded="true" />
-            <element signature="e#1604#1605#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/Account.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3621">
-          <caret line="241" column="98" selection-start-line="241" selection-start-column="98" selection-end-line="241" selection-end-column="98" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/Rentals.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6120">
-          <caret line="395" column="34" selection-start-line="395" selection-start-column="34" selection-end-line="395" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/Sells.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="50" selection-start-line="50" selection-end-line="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Item.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/AccountList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1360">
-          <caret line="101" column="50" selection-start-line="101" selection-start-column="50" selection-end-line="101" selection-end-column="50" />
+        <state relative-caret-position="476">
+          <caret line="34" column="62" selection-start-line="34" selection-start-column="62" selection-end-line="34" selection-end-column="62" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Account.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="35" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -1301,73 +1273,195 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/main/Item.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="35" column="62" lean-forward="true" selection-start-line="35" selection-start-column="62" selection-end-line="35" selection-end-column="62" />
+        <state relative-caret-position="238">
+          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Customer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="92" column="106" selection-start-line="92" selection-start-column="106" selection-end-line="92" selection-end-column="106" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uml/classdiagram.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Account.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="9" column="19" lean-forward="true" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/TransactionListGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="26" column="31" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/SellsGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="420" column="69" selection-start-line="420" selection-start-column="69" selection-end-line="420" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/SellListGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="23" column="24" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/RentalsGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="346" column="30" selection-start-line="346" selection-start-column="27" selection-end-line="346" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/RentalListGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="23" column="26" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/NewEmployeeGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="23" column="27" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/LogInGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="171" column="46" selection-start-line="171" selection-start-column="43" selection-end-line="171" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/InventoryGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="37" column="25" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/InitializerGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="34" column="27" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="27" />
+          <folding>
+            <marker date="1541006026124" expanded="true" signature="3283:3306" ph="SELECT * FRO... customers" />
+            <marker date="1541006026124" expanded="true" signature="3383:3488" ph="SELECT *FROM... item" />
+            <marker date="1541006026124" expanded="true" signature="3383:3504" ph="SELECT *FROM... item" />
+            <marker date="1541006026124" expanded="true" signature="3582:3665" ph="SELECT * FRO... purchases" />
+            <marker date="1541006026124" expanded="true" signature="3744:3788" ph="SELECT * FRO... rentals" />
+            <marker date="1541006026124" expanded="true" signature="3744:3825" ph="SELECT * FRO... rentals" />
+            <marker date="1541006026124" expanded="true" signature="3905:4088" ph="SELECT * FRO... accounts" />
+            <marker date="1541006026124" expanded="true" signature="3905:4125" ph="SELECT FROM accounts" />
+            <marker date="1541006026124" expanded="true" signature="3905:4163" ph="SELECT first... accounts" />
+            <marker date="1541006026124" expanded="true" signature="4240:4262" ph="SELECT * FRO... itemtype" />
+            <marker date="1541006026124" expanded="true" signature="4341:4420" ph="SELECT * FRO... item" />
+            <marker date="1541006026124" expanded="true" signature="4534:4599" ph="SELECT COUNT... rentals" />
+            <marker date="1541006026124" expanded="true" signature="4679:4746" ph="SELECT COUNT... purchases" />
+            <marker date="1541006026124" expanded="true" signature="4825:4892" ph="SELECT COUNT... purchases" />
+            <marker date="1541006026124" expanded="true" signature="4825:4893" ph="SELECT COUNT... purchases" />
+            <marker date="1541006026124" expanded="true" signature="4825:4894" ph="SELECT COUNT... purchases" />
+            <marker date="1541006026124" expanded="true" signature="4825:4931" ph="SELECT COUNT... purchases" />
+            <marker date="1541006026124" expanded="true" signature="5010:5107" ph="SELECT COUNT... rentals" />
+            <marker date="1541006026124" expanded="true" signature="5191:5275" ph="SELECT COUNT... rentals" />
+            <marker date="1541006026124" expanded="true" signature="5191:5312" ph="SELECT COUNT... rentals" />
+            <marker date="1541006026124" expanded="true" signature="5398:5465" ph="SELECT COUNT... purchases" />
+            <marker date="1541006026124" expanded="true" signature="5398:5486" ph="SELECT COUNT... purchases" />
+            <marker date="1541006026124" expanded="true" signature="5398:5523" ph="SELECT COUNT... purchases" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/EmployeeListGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="30" column="28" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/DueUpdateGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="22" column="25" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/DashboardGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="174" column="25" selection-start-line="174" selection-start-column="22" selection-end-line="174" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/CustomersRentalListGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="23" column="35" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/CustomerPurchaseListGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="23" column="36" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/BaseGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="201" column="27" selection-start-line="201" selection-start-column="24" selection-end-line="201" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/AdministratorGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="28" column="29" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/AccountListGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="27" column="27" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/LogIn.java">
+    <entry file="file://$PROJECT_DIR$/src/controller/AccountGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="117" column="32" selection-start-line="117" selection-start-column="32" selection-end-line="117" selection-end-column="32" />
+        <state relative-caret-position="258">
+          <caret line="229" column="41" selection-start-line="229" selection-start-column="41" selection-end-line="229" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/Initializer.java">
+    <entry file="file://$PROJECT_DIR$/src/controller/TransactionGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="72" column="50" lean-forward="true" selection-start-line="72" selection-start-column="50" selection-end-line="72" selection-end-column="50" />
-          <folding>
-            <marker date="1540739997200" expanded="true" signature="3280:3303" ph="SELECT * FRO... customers" />
-            <marker date="1540739997200" expanded="true" signature="3380:3485" ph="SELECT *FROM... item" />
-            <marker date="1540739997200" expanded="true" signature="3380:3501" ph="SELECT *FROM... item" />
-            <marker date="1540739997200" expanded="true" signature="3579:3662" ph="SELECT * FRO... purchases" />
-            <marker date="1540739997200" expanded="true" signature="3741:3785" ph="SELECT * FRO... rentals" />
-            <marker date="1540739997200" expanded="true" signature="3741:3822" ph="SELECT * FRO... rentals" />
-            <marker date="1540739997200" expanded="true" signature="3902:4085" ph="SELECT * FRO... accounts" />
-            <marker date="1540739997200" expanded="true" signature="3902:4122" ph="SELECT FROM accounts" />
-            <marker date="1540739997200" expanded="true" signature="3902:4160" ph="SELECT first... accounts" />
-            <marker date="1540739997200" expanded="true" signature="4237:4259" ph="SELECT * FRO... itemtype" />
-            <marker date="1540739997200" expanded="true" signature="4338:4417" ph="SELECT * FRO... item" />
-            <marker date="1540739997200" expanded="true" signature="4528:4593" ph="SELECT COUNT... rentals" />
-            <marker date="1540739997200" expanded="true" signature="4673:4740" ph="SELECT COUNT... purchases" />
-            <marker date="1540739997200" expanded="true" signature="4819:4886" ph="SELECT COUNT... purchases" />
-            <marker date="1540739997200" expanded="true" signature="4819:4887" ph="SELECT COUNT... purchases" />
-            <marker date="1540739997200" expanded="true" signature="4819:4888" ph="SELECT COUNT... purchases" />
-            <marker date="1540739997200" expanded="true" signature="4819:4925" ph="SELECT COUNT... purchases" />
-            <marker date="1540739997200" expanded="true" signature="5004:5101" ph="SELECT COUNT... rentals" />
-            <marker date="1540739997200" expanded="true" signature="5185:5269" ph="SELECT COUNT... rentals" />
-            <marker date="1540739997200" expanded="true" signature="5185:5306" ph="SELECT COUNT... rentals" />
-            <marker date="1540739997200" expanded="true" signature="5392:5459" ph="SELECT COUNT... purchases" />
-            <marker date="1540739997200" expanded="true" signature="5392:5480" ph="SELECT COUNT... purchases" />
-            <marker date="1540739997200" expanded="true" signature="5392:5517" ph="SELECT COUNT... purchases" />
-          </folding>
+        <state relative-caret-position="97">
+          <caret line="172" column="43" lean-forward="true" selection-start-line="172" selection-start-column="43" selection-end-line="172" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/Inventory.java">
+    <entry file="file://$PROJECT_DIR$/src/controller/CustomerGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="208" column="100" lean-forward="true" selection-start-line="208" selection-start-column="38" selection-end-line="208" selection-end-column="100" />
-          <folding>
-            <element signature="e#7910#9890#0" />
-            <element signature="e#9896#10196#0" />
-            <element signature="e#11259#13160#0" />
-            <element signature="e#11341#11502#0" />
-            <element signature="e#13166#13986#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/Customer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3655">
-          <caret line="166" column="23" lean-forward="true" selection-start-line="166" selection-start-column="23" selection-end-line="166" selection-end-column="23" />
+        <state relative-caret-position="114">
+          <caret line="40" column="4" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

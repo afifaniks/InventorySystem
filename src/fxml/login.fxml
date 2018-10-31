@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="paneLogIn" prefHeight="421.0" prefWidth="663.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LogIn">
+<AnchorPane fx:id="paneLogIn" prefHeight="421.0" prefWidth="663.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LogInGUI">
    <children>
       <JFXTextField fx:id="txtUsername" focusColor="#243035" layoutX="184.0" layoutY="134.0" onKeyPressed="#onEnterKey" prefHeight="30.0" prefWidth="311.0" promptText="username">
          <font>
