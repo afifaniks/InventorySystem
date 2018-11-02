@@ -12,7 +12,9 @@ import java.sql.SQLException;
  * Project: TeslaRentalInventory
  **/
 public class DBConnection {
+
     private static final String URL = "jdbc:mysql://localhost:3306/teslarentalinventory?autoReconnect=yes&useSSL=no";
+
     public static Connection getConnection() {
         Connection con;
         try {

@@ -51,12 +51,12 @@
             <Font size="15.0" />
          </font>
       </JFXButton>
-      <Label layoutX="52.0" layoutY="269.0" prefHeight="51.0" prefWidth="306.0" text="Employee Management" textFill="GREEN">
+      <Label layoutX="52.0" layoutY="238.0" prefHeight="51.0" prefWidth="306.0" text="Employee Management" textFill="GREEN">
          <font>
             <Font size="27.0" />
          </font>
       </Label>
-      <JFXButton fx:id="btnAddNew" alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="141.0" layoutY="335.0" onAction="#addNewEmployee" prefHeight="50.0" prefWidth="147.0" ripplerFill="WHITE" style="-fx-background-color: white; -fx-text-fill: green;" text="Add New" textFill="GREEN">
+      <JFXButton fx:id="btnAddNew" alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="141.0" layoutY="304.0" onAction="#addNewEmployee" prefHeight="50.0" prefWidth="147.0" ripplerFill="WHITE" style="-fx-background-color: white; -fx-text-fill: green;" text="Add New" textFill="GREEN">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -67,7 +67,7 @@
             <Font size="15.0" />
          </font>
       </JFXButton>
-      <Label layoutX="59.0" layoutY="440.0" prefHeight="51.0" prefWidth="445.0" text="Customer's Account Management" textFill="GREEN">
+      <Label layoutX="52.0" layoutY="380.0" prefHeight="51.0" prefWidth="445.0" text="Customer's Account Management" textFill="GREEN">
          <font>
             <Font size="27.0" />
          </font>
@@ -83,7 +83,7 @@
             <Font size="15.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="btEmpList" alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="345.0" layoutY="335.0" onAction="#empList" prefHeight="50.0" prefWidth="147.0" ripplerFill="WHITE" style="-fx-background-color: white;" text="List">
+      <JFXButton fx:id="btEmpList" alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="345.0" layoutY="304.0" onAction="#empList" prefHeight="50.0" prefWidth="147.0" ripplerFill="WHITE" style="-fx-background-color: white;" text="List">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -105,7 +105,23 @@
             <Font size="15.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="btnAccUpdate" alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="139.0" layoutY="513.0" onAction="#accUpdate" prefHeight="50.0" prefWidth="147.0" ripplerFill="WHITE" style="-fx-background-color: white;" text="Update" textFill="#263238">
+      <JFXButton fx:id="btnAccUpdate" alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="137.0" layoutY="442.0" onAction="#accUpdate" prefHeight="50.0" prefWidth="147.0" ripplerFill="WHITE" style="-fx-background-color: white;" text="Update" textFill="#263238">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIconView fill="#263238" glyphName="EDIT" size="30" />
+         </graphic>
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="52.0" layoutY="510.0" prefHeight="51.0" prefWidth="445.0" text="Item Type" textFill="GREEN">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnItemTypeManage" alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="137.0" layoutY="567.0" onAction="#itemTypeManage" prefHeight="50.0" prefWidth="147.0" ripplerFill="WHITE" style="-fx-background-color: white;" text="Manage" textFill="#263238">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>

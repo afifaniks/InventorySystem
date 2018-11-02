@@ -60,13 +60,15 @@ public class AdministratorGUI implements Initializable {
     @FXML
     private JFXButton btnAccUpdate;
 
-    @FXML
-    void accUpdate(ActionEvent event) {
+    //This method will take Window Title and Scene location as arguments
+    //and will show a new window
+
+    void loadWindow(String title, String URL) {
         try {
-            Parent acc = FXMLLoader.load(getClass().getResource("/fxml/accountmanager.fxml"));
+            Parent acc = FXMLLoader.load(getClass().getResource(URL));
             Scene s = new Scene(acc);
             Stage stg = new Stage();
-            stg.setTitle("Account Management");
+            stg.setTitle(title);
             stg.setScene(s);
             stg.setResizable(false);
             stg.show();
@@ -76,17 +78,18 @@ public class AdministratorGUI implements Initializable {
     }
 
     @FXML
+    void accUpdate(ActionEvent event) {
+        loadWindow("Account Management", "/fxml/accountmanager.fxml");
+    }
+
+    @FXML
+    void itemTypeManage(ActionEvent event) {
+        loadWindow("Item Type Management", "/fxml/itemtypemanager.fxml");
+    }
+
+    @FXML
     void addNewEmployee(ActionEvent event) {
-        try {
-            Parent addEmp = FXMLLoader.load(getClass().getResource("/fxml/newemployee.fxml"));
-            Scene s = new Scene(addEmp);
-            Stage stg = new Stage();
-            stg.setScene(s);
-            stg.setResizable(false);
-            stg.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        loadWindow("Add Employee", "/fxml/newemployee.fxml");
     }
 
     @FXML
@@ -135,61 +138,23 @@ public class AdministratorGUI implements Initializable {
 
     @FXML
     void empList(ActionEvent event) {
-        try {
-            Parent listView = FXMLLoader.load(getClass().getResource("/fxml/employeelist.fxml"));
-            Scene s = new Scene(listView);
-            Stage stg = new Stage();
-            stg.setResizable(false);
-            stg.setScene(s);
-            stg.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        loadWindow("Employee Management", "/fxml/employeelist.fxml");
     }
 
 
     @FXML
     void showTransactions(ActionEvent event) {
-        System.out.println(111);
-        try {
-            Parent trans = FXMLLoader.load(getClass().getResource("/fxml/translist.fxml"));
-            Scene s = new Scene(trans);
-            Stage stg = new Stage();
-            stg.setScene(s);
-            stg.setResizable(false);
-            stg.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        loadWindow("Transaction List", "/fxml/translist.fxml");
     }
 
     @FXML
     void totalRents(ActionEvent event) {
-
-        try {
-            Parent rentList = FXMLLoader.load(getClass().getResource("/fxml/rentallist.fxml"));
-            Scene s = new Scene(rentList);
-            Stage stg = new Stage();
-            stg.setScene(s);
-            stg.setResizable(false);
-            stg.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        loadWindow("Rental List", "/fxml/rentallist.fxml");
     }
 
     @FXML
     void totalSell(ActionEvent event) {
-        try {
-            Parent sellsList = FXMLLoader.load(getClass().getResource("/fxml/selllist.fxml"));
-            Scene s = new Scene(sellsList);
-            Stage stg = new Stage();
-            stg.setScene(s);
-            stg.setResizable(false);
-            stg.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        loadWindow("Sell List", "/fxml/selllist.fxml");
     }
 
 
