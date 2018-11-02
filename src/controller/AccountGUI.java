@@ -18,7 +18,6 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import org.controlsfx.control.textfield.TextFields;
 import main.DBConnection;
-
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;

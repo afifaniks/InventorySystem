@@ -10,7 +10,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import main.DBConnection;
-
 import java.net.URL;
 import java.sql.*;
 import java.util.ResourceBundle;

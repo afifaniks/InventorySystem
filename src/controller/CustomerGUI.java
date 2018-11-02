@@ -22,7 +22,6 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import org.controlsfx.control.textfield.TextFields;
 import main.DBConnection;
-
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;

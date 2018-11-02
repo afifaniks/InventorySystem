@@ -3,435 +3,394 @@
   <ID>JAVA</ID>
   <OriginalElement />
   <nodes>
-    <node x="859.6843994876428" y="290.0">controller.LogIn</node>
-    <node x="1864.095510598754" y="290.0">controller.TransactionList</node>
-    <node x="1167.9609126984126" y="130.0">sample.Main</node>
-    <node x="400.031621709865" y="560.0">controller.CustomerPurchase</node>
-    <node x="296.031621709865" y="560.0">controller.SellList</node>
-    <node x="391.9429350010047" y="410.0">sample.Purchase</node>
-    <node x="1434.6288439320872" y="290.0">controller.NewEmployee</node>
-    <node x="267.8939521800278" y="690.0">controller.Dashboard</node>
-    <node x="1743.095510598754" y="130.0">sample.Employee</node>
-    <node x="822.1843994876428" y="410.0">controller.Initializer</node>
-    <node x="792.8634882961619" y="130.0">sample.DBConnection</node>
-    <node x="965.0277488949165" y="560.0">controller.RentalList</node>
-    <node x="1578.6288439320872" y="290.0">controller.DueUpdate</node>
-    <node x="1251.5203410689169" y="690.0">controller.Customer</node>
-    <node x="161.64950773558348" y="410.0">controller.Account</node>
-    <node x="1977.095510598754" y="410.0">controller.Inventory</node>
-    <node x="1306.6843994876428" y="560.0">sample.Customer</node>
-    <node x="568.031621709865" y="560.0">controller.Sells</node>
-    <node x="1897.095510598754" y="130.0">sample.Transact</node>
-    <node x="1084.0277488949164" y="560.0">controller.CustomersRental</node>
-    <node x="1170.0468994876428" y="410.0">controller.Base</node>
-    <node x="2013.095510598754" y="290.0">sample.Item</node>
-    <node x="841.5763600060275" y="0.0">sample.Dialog</node>
-    <node x="821.2318238898936" y="560.0">controller.Rentals</node>
-    <node x="1705.6288439320872" y="290.0">controller.EmployeeList</node>
-    <node x="10.5" y="410.0">controller.AccountList</node>
-    <node x="196.58154385171747" y="290.0">controller.Administrator</node>
-    <node x="621.656621709865" y="410.0">controller.Transaction</node>
-    <node x="1012.4261904761904" y="410.0">sample.Rent</node>
-    <node x="82.58154385171747" y="290.0">sample.Account</node>
+    <node x="0.0" y="470.0">controller.InventoryGUI</node>
+    <node x="1540.0137362762057" y="280.0">controller.NewEmployeeGUI</node>
+    <node x="1508.3838904151403" y="470.0">controller.BaseGUI</node>
+    <node x="78.9336273736701" y="760.0">controller.CustomerGUI</node>
+    <node x="1055.1588904151404" y="650.0">controller.SellListGUI</node>
+    <node x="1996.0137362762057" y="470.0">controller.AccountListGUI</node>
+    <node x="13.5" y="280.0">main.Item</node>
+    <node x="1913.942307704777" y="280.0">main.Account</node>
+    <node x="1224.3838904151403" y="470.0">controller.TransactionGUI</node>
+    <node x="304.9999999999999" y="280.0">controller.DueUpdateGUI</node>
+    <node x="1422.0137362762057" y="280.0">controller.LogInGUI</node>
+    <node x="1385.1338904151403" y="0.0">controller.PromptDialogGUI</node>
+    <node x="450.9999999999999" y="280.0">controller.EmployeeListGUI</node>
+    <node x="1703.0137362762057" y="280.0">controller.AdministratorGUI</node>
+    <node x="1227.0088904151403" y="650.0">controller.SellsGUI</node>
+    <node x="137.9999999999999" y="280.0">controller.TransactionListGUI</node>
+    <node x="469.4999999999999" y="130.0">main.Employee</node>
+    <node x="810.9503609260654" y="760.0">controller.DashboardGUI</node>
+    <node x="508.80594923866965" y="650.0">controller.CustomersRentalListGUI</node>
+    <node x="635.6542156089641" y="470.0">main.Rent</node>
+    <node x="148.9279697936862" y="130.0">main.Transact</node>
+    <node x="2084.3838904151403" y="130.0">main.Main</node>
+    <node x="16.999999999999886" y="650.0">main.Customer</node>
+    <node x="1030.451499205451" y="470.0">main.Purchase</node>
+    <node x="810.7838904151404" y="130.0">main.DBConnection</node>
+    <node x="703.8059492386697" y="650.0">controller.RentalListGUI</node>
+    <node x="1374.3838904151403" y="470.0">controller.InitializerGUI</node>
+    <node x="1864.0137362762057" y="470.0">controller.AccountGUI</node>
+    <node x="850.1588904151404" y="650.0">controller.CustomerPurchaseListGUI</node>
   </nodes>
   <notes />
   <edges>
-    <edge source="controller.Inventory" target="controller.LogIn">
-      <point x="-42.0" y="-15.0" />
-      <point x="1984.095510598754" y="360.0" />
-      <point x="932.8093994876428" y="360.0" />
-      <point x="34.125" y="15.0" />
+    <edge source="controller.AdministratorGUI" target="controller.PromptDialogGUI">
+      <point x="35.0" y="-15.0" />
+      <point x="1808.0137362762057" y="90.0" />
+      <point x="1477.326198107448" y="90.0" />
+      <point x="21.692307692307622" y="15.0" />
     </edge>
-    <edge source="controller.Rentals" target="controller.LogIn">
-      <point x="-5.375000000000114" y="-15.0" />
-      <point x="858.8568238898935" y="470.0" />
-      <point x="927.6843994876428" y="470.0" />
-      <point x="927.6843994876428" y="390.0" />
-      <point x="903.5593994876428" y="390.0" />
-      <point x="4.875" y="15.0" />
+    <edge source="controller.CustomersRentalListGUI" target="main.Rent">
+      <point x="-21.875" y="-15.0" />
+      <point x="574.4309492386697" y="620.0" />
+      <point x="641.6542156089641" y="620.0" />
+      <point x="-30.0" y="15.0" />
     </edge>
-    <edge source="sample.Main" target="sample.Dialog">
+    <edge source="controller.SellsGUI" target="main.DBConnection">
+      <point x="5.625" y="-15.0" />
+      <point x="1277.6338904151403" y="520.0" />
+      <point x="1213.8838904151403" y="520.0" />
+      <point x="1213.8838904151403" y="240.0" />
+      <point x="887.9897727680816" y="240.0" />
+      <point x="14.705882352941217" y="15.0" />
+    </edge>
+    <edge source="controller.AccountGUI" target="controller.PromptDialogGUI">
+      <point x="-16.0" y="-15.0" />
+      <point x="1904.0137362762057" y="380.0" />
+      <point x="1884.1868131992824" y="380.0" />
+      <point x="1884.1868131992824" y="70.0" />
+      <point x="1499.018505799756" y="70.0" />
+      <point x="43.38461538461547" y="15.0" />
+    </edge>
+    <edge source="controller.EmployeeListGUI" target="main.DBConnection">
+      <point x="54.799999999999955" y="-15.0" />
+      <point x="574.2999999999998" y="210.0" />
+      <point x="829.166243356317" y="210.0" />
+      <point x="-44.11764705882342" y="15.0" />
+    </edge>
+    <edge source="controller.RentalListGUI" target="main.DBConnection">
+      <point x="44.25" y="-15.0" />
+      <point x="807.0559492386697" y="600.0" />
+      <point x="760.6139705882351" y="600.0" />
+      <point x="760.6139705882351" y="240.0" />
+      <point x="851.2250668857287" y="240.0" />
+      <point x="-22.05882352941171" y="15.0" />
+    </edge>
+    <edge source="controller.NewEmployeeGUI" target="main.DBConnection">
+      <point x="-35.75" y="-15.0" />
+      <point x="1575.7637362762057" y="190.0" />
+      <point x="924.7544786504345" y="190.0" />
+      <point x="51.470588235294144" y="15.0" />
+    </edge>
+    <edge source="controller.SellsGUI" target="controller.LogInGUI">
+      <point x="28.125" y="-15.0" />
+      <point x="1300.1338904151403" y="620.0" />
+      <point x="1363.8838904151403" y="620.0" />
+      <point x="1363.8838904151403" y="440.0" />
+      <point x="1456.6565934190626" y="440.0" />
+      <point x="-13.85714285714289" y="15.0" />
+    </edge>
+    <edge source="controller.SellListGUI" target="main.Purchase">
+      <point x="12.875" y="-15.0" />
+      <point x="1119.5338904151404" y="580.0" />
+      <point x="1073.6514992054508" y="580.0" />
+      <point x="-4.800000000000068" y="15.0" />
+    </edge>
+    <edge source="controller.BaseGUI" target="controller.LogInGUI">
       <point x="0.0" y="-15.0" />
-      <point x="1205.4609126984126" y="100.0" />
-      <point x="891.3620742917417" y="100.0" />
-      <point x="8.78571428571422" y="15.0" />
+      <point x="1553.8838904151403" y="450.0" />
+      <point x="1484.3708791333484" y="450.0" />
+      <point x="13.85714285714289" y="15.0" />
     </edge>
-    <edge source="controller.Administrator" target="sample.DBConnection">
-      <point x="30.25" y="-15.0" />
-      <point x="287.33154385171747" y="210.0" />
-      <point x="810.224599407273" y="210.0" />
-      <point x="-45.138888888888914" y="15.0" />
+    <edge source="controller.EmployeeListGUI" target="controller.PromptDialogGUI">
+      <point x="-54.799999999999955" y="-15.0" />
+      <point x="464.69999999999993" y="180.0" />
+      <point x="432.0530080621992" y="180.0" />
+      <point x="432.0530080621992" y="90.0" />
+      <point x="1423.0954288766789" y="90.0" />
+      <point x="-32.53846153846143" y="15.0" />
     </edge>
-    <edge source="controller.RentalList" target="sample.DBConnection">
-      <point x="-37.125" y="-15.0" />
-      <point x="977.4027488949165" y="470.0" />
-      <point x="978.8912660739397" y="470.0" />
-      <point x="978.8912660739397" y="260.0" />
-      <point x="865.7801549628286" y="260.0" />
-      <point x="10.416666666666742" y="15.0" />
+    <edge source="controller.SellsGUI" target="controller.TransactionGUI">
+      <point x="16.875" y="-15.0" />
+      <point x="0.0" y="15.0" />
     </edge>
-    <edge source="controller.DueUpdate" target="sample.Dialog">
-      <point x="26.75" y="-15.0" />
-      <point x="1658.8788439320872" y="80.0" />
-      <point x="903.0763600060275" y="80.0" />
-      <point x="20.5" y="15.0" />
+    <edge source="controller.DueUpdateGUI" target="controller.PromptDialogGUI">
+      <point x="-31.5" y="-15.0" />
+      <point x="336.4999999999999" y="80.0" />
+      <point x="1412.249275030525" y="80.0" />
+      <point x="-43.38461538461547" y="15.0" />
     </edge>
-    <edge source="controller.DueUpdate" target="sample.DBConnection">
-      <point x="-26.75" y="-15.0" />
-      <point x="1605.3788439320872" y="210.0" />
-      <point x="900.5023771850508" y="210.0" />
-      <point x="45.138888888888914" y="15.0" />
+    <edge source="controller.DashboardGUI" target="controller.RentalListGUI">
+      <point x="-41.33333333333326" y="-15.0" />
+      <point x="831.6170275927321" y="700.0" />
+      <point x="762.8059492386697" y="700.0" />
+      <point x="0.0" y="15.0" />
     </edge>
-    <edge source="controller.Administrator" target="sample.Dialog">
-      <point x="-30.25" y="-15.0" />
-      <point x="226.83154385171747" y="70.0" />
-      <point x="856.2192171488846" y="70.0" />
-      <point x="-26.35714285714289" y="15.0" />
+    <edge source="controller.AccountListGUI" target="main.Account">
+      <point x="26.0" y="-15.0" />
+      <point x="2087.0137362762057" y="340.0" />
+      <point x="2000.2994505619197" y="340.0" />
+      <point x="39.85714285714266" y="15.0" />
     </edge>
-    <edge source="controller.Inventory" target="sample.Dialog">
-      <point x="-14.0" y="-15.0" />
-      <point x="2012.095510598754" y="340.0" />
-      <point x="2002.595510598754" y="340.0" />
-      <point x="2002.595510598754" y="50.0" />
-      <point x="920.6477885774561" y="50.0" />
-      <point x="38.07142857142867" y="15.0" />
+    <edge source="main.DBConnection" target="controller.PromptDialogGUI">
+      <point x="0.0" y="-15.0" />
+      <point x="873.2838904151404" y="100.0" />
+      <point x="1433.9415827228327" y="100.0" />
+      <point x="-21.692307692307622" y="15.0" />
     </edge>
-    <edge source="controller.Account" target="sample.Account">
-      <point x="-13.285714285714278" y="-15.0" />
-      <point x="194.86379344986926" y="370.0" />
-      <point x="155.65297242314602" y="370.0" />
-      <point x="26.571428571428555" y="15.0" />
+    <edge source="controller.TransactionListGUI" target="main.DBConnection">
+      <point x="55.125" y="-15.0" />
+      <point x="266.6249999999999" y="190.0" />
+      <point x="814.4603610033757" y="190.0" />
+      <point x="-58.82352941176464" y="15.0" />
     </edge>
-    <edge source="controller.EmployeeList" target="sample.Employee">
-      <point x="47.200000000000045" y="-15.0" />
-      <point x="1811.8288439320872" y="270.0" />
-      <point x="1826.4288439320871" y="270.0" />
+    <edge source="controller.LogInGUI" target="controller.PromptDialogGUI">
+      <point x="24.25" y="-15.0" />
+      <point x="1494.7637362762057" y="110.0" />
+      <point x="1455.6338904151403" y="110.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="controller.AdministratorGUI" target="main.DBConnection">
+      <point x="-35.0" y="-15.0" />
+      <point x="1738.0137362762057" y="180.0" />
+      <point x="932.107419826905" y="180.0" />
+      <point x="58.82352941176464" y="15.0" />
+    </edge>
+    <edge source="controller.CustomerGUI" target="controller.CustomersRentalListGUI">
+      <point x="13.222222222222229" y="-15.0" />
+      <point x="151.65584959589228" y="700.0" />
+      <point x="596.3059492386697" y="700.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="controller.SellsGUI" target="controller.PromptDialogGUI">
+      <point x="39.375" y="-15.0" />
+      <point x="1311.3838904151403" y="630.0" />
+      <point x="1853.5137362762057" y="630.0" />
+      <point x="1853.5137362762057" y="80.0" />
+      <point x="1488.1723519536022" y="80.0" />
+      <point x="32.53846153846166" y="15.0" />
+    </edge>
+    <edge source="controller.CustomersRentalListGUI" target="main.DBConnection">
+      <point x="-65.625" y="-15.0" />
+      <point x="530.6809492386697" y="610.0" />
+      <point x="605.8529411764704" y="610.0" />
+      <point x="605.8529411764704" y="230.0" />
+      <point x="843.872125709258" y="230.0" />
+      <point x="-29.411764705882433" y="15.0" />
+    </edge>
+    <edge source="controller.InventoryGUI" target="main.DBConnection">
+      <point x="33.428571428571445" y="-15.0" />
+      <point x="91.92857142857144" y="410.0" />
+      <point x="598.4999999999999" y="410.0" />
+      <point x="598.4999999999999" y="220.0" />
+      <point x="836.5191845327874" y="220.0" />
+      <point x="-36.76470588235293" y="15.0" />
+    </edge>
+    <edge source="controller.NewEmployeeGUI" target="controller.PromptDialogGUI">
+      <point x="35.75" y="-15.0" />
+      <point x="1647.2637362762057" y="100.0" />
+      <point x="1466.480044261294" y="100.0" />
+      <point x="10.846153846153811" y="15.0" />
+    </edge>
+    <edge source="controller.LogInGUI" target="main.DBConnection">
+      <point x="-24.25" y="-15.0" />
+      <point x="1446.2637362762057" y="210.0" />
+      <point x="910.0485962974933" y="210.0" />
+      <point x="36.76470588235293" y="15.0" />
+    </edge>
+    <edge source="controller.DashboardGUI" target="main.DBConnection">
+      <point x="0.0" y="-15.0" />
+      <point x="872.9503609260654" y="710.0" />
+      <point x="839.6588904151404" y="710.0" />
+      <point x="839.6588904151404" y="260.0" />
+      <point x="865.9309492386699" y="260.0" />
+      <point x="-7.352941176470495" y="15.0" />
+    </edge>
+    <edge source="controller.AccountGUI" target="main.Account">
+      <point x="0.0" y="-15.0" />
+      <point x="-39.85714285714289" y="15.0" />
+    </edge>
+    <edge source="controller.AccountListGUI" target="main.DBConnection">
+      <point x="-52.0" y="-15.0" />
+      <point x="2009.0137362762057" y="370.0" />
+      <point x="1529.5137362762057" y="370.0" />
+      <point x="1529.5137362762057" y="200.0" />
+      <point x="917.4015374739638" y="200.0" />
+      <point x="44.11764705882342" y="15.0" />
+    </edge>
+    <edge source="controller.EmployeeListGUI" target="main.Employee">
+      <point x="27.40000000000009" y="-15.0" />
+      <point x="546.9" y="180.0" />
+      <point x="552.8333333333331" y="180.0" />
       <point x="33.33333333333326" y="15.0" />
     </edge>
-    <edge source="controller.Rentals" target="sample.DBConnection">
-      <point x="-16.125000000000114" y="-15.0" />
-      <point x="848.1068238898935" y="520.0" />
-      <point x="811.6843994876428" y="520.0" />
-      <point x="811.6843994876428" y="270.0" />
-      <point x="851.8912660739397" y="270.0" />
-      <point x="-3.4722222222221717" y="15.0" />
+    <edge source="controller.TransactionGUI" target="controller.LogInGUI">
+      <point x="43.0" y="-15.0" />
+      <point x="1331.8838904151403" y="430.0" />
+      <point x="1442.79945056192" y="430.0" />
+      <point x="-27.714285714285666" y="15.0" />
     </edge>
-    <edge source="controller.Account" target="sample.Dialog">
-      <point x="13.28571428571422" y="-15.0" />
-      <point x="221.4352220212977" y="350.0" />
-      <point x="186.08154385171747" y="350.0" />
-      <point x="186.08154385171747" y="60.0" />
-      <point x="850.3620742917417" y="60.0" />
-      <point x="-32.21428571428578" y="15.0" />
+    <edge source="controller.InventoryGUI" target="controller.PromptDialogGUI">
+      <point x="-50.14285714285711" y="-15.0" />
+      <point x="8.35714285714289" y="450.0" />
+      <point x="3.0" y="450.0" />
+      <point x="3.0" y="60.0" />
+      <point x="1390.5569673382174" y="60.0" />
+      <point x="-65.0769230769231" y="15.0" />
     </edge>
-    <edge source="controller.Dashboard" target="controller.SellList">
+    <edge source="controller.RentalListGUI" target="main.Rent">
+      <point x="14.75" y="-15.0" />
+      <point x="777.5559492386697" y="610.0" />
+      <point x="701.6542156089641" y="610.0" />
+      <point x="30.0" y="15.0" />
+    </edge>
+    <edge source="controller.TransactionGUI" target="main.DBConnection">
+      <point x="-43.0" y="-15.0" />
+      <point x="1245.8838904151403" y="410.0" />
+      <point x="1258.2074198269052" y="410.0" />
+      <point x="1258.2074198269052" y="230.0" />
+      <point x="895.3427139445521" y="230.0" />
+      <point x="22.05882352941171" y="15.0" />
+    </edge>
+    <edge source="controller.CustomerGUI" target="controller.PromptDialogGUI">
       <point x="0.0" y="-15.0" />
-      <point x="320.3939521800278" y="670.0" />
-      <point x="338.031621709865" y="670.0" />
-      <point x="0.0" y="15.0" />
+      <point x="138.4336273736701" y="700.0" />
+      <point x="127.49999999999989" y="700.0" />
+      <point x="127.49999999999989" y="70.0" />
+      <point x="1401.4031211843712" y="70.0" />
+      <point x="-54.23076923076928" y="15.0" />
     </edge>
-    <edge source="controller.LogIn" target="sample.Dialog">
-      <point x="19.5" y="-15.0" />
-      <point x="918.1843994876428" y="270.0" />
-      <point x="934.2662660739397" y="270.0" />
-      <point x="934.2662660739397" y="110.0" />
-      <point x="885.5049314345988" y="110.0" />
-      <point x="2.928571428571331" y="15.0" />
+    <edge source="controller.InventoryGUI" target="controller.LogInGUI">
+      <point x="50.14285714285717" y="-15.0" />
+      <point x="108.64285714285711" y="420.0" />
+      <point x="1428.942307704777" y="420.0" />
+      <point x="-41.571428571428555" y="15.0" />
     </edge>
-    <edge source="controller.Account" target="controller.LogIn">
-      <point x="39.85714285714289" y="-15.0" />
-      <point x="248.00665059272637" y="360.0" />
-      <point x="864.5593994876428" y="360.0" />
-      <point x="-34.125" y="15.0" />
+    <edge source="controller.SellListGUI" target="main.DBConnection">
+      <point x="-38.625" y="-15.0" />
+      <point x="1068.0338904151404" y="600.0" />
+      <point x="1018.5183823529412" y="600.0" />
+      <point x="1018.5183823529412" y="250.0" />
+      <point x="880.6368315916109" y="250.0" />
+      <point x="7.352941176470495" y="15.0" />
     </edge>
-    <edge source="controller.NewEmployee" target="sample.DBConnection">
-      <point x="-31.0" y="-15.0" />
-      <point x="1465.6288439320872" y="220.0" />
-      <point x="893.5579327406062" y="220.0" />
-      <point x="38.19444444444434" y="15.0" />
+    <edge source="controller.AccountGUI" target="controller.LogInGUI">
+      <point x="-32.0" y="-15.0" />
+      <point x="1888.0137362762057" y="390.0" />
+      <point x="1512.0851648476341" y="390.0" />
+      <point x="41.571428571428555" y="15.0" />
     </edge>
-    <edge source="controller.Sells" target="controller.LogIn">
-      <point x="22.1875" y="-15.0" />
-      <point x="625.719121709865" y="460.0" />
-      <point x="611.156621709865" y="460.0" />
-      <point x="611.156621709865" y="370.0" />
-      <point x="874.3093994876428" y="370.0" />
-      <point x="-24.375" y="15.0" />
-    </edge>
-    <edge source="controller.AccountList" target="sample.Dialog">
-      <point x="-44.40000000000009" y="-15.0" />
-      <point x="21.59999999999991" y="390.0" />
-      <point x="18.381543851717424" y="390.0" />
-      <point x="18.381543851717424" y="50.0" />
-      <point x="844.5049314345988" y="50.0" />
-      <point x="-38.07142857142867" y="15.0" />
-    </edge>
-    <edge source="controller.Transaction" target="sample.DBConnection">
+    <edge source="main.Main" target="controller.PromptDialogGUI">
       <point x="0.0" y="-15.0" />
-      <point x="676.656621709865" y="350.0" />
-      <point x="667.6666377838053" y="350.0" />
-      <point x="667.6666377838053" y="260.0" />
-      <point x="844.9468216294952" y="260.0" />
-      <point x="-10.416666666666742" y="15.0" />
+      <point x="2121.8838904151403" y="50.0" />
+      <point x="1520.7108134920636" y="50.0" />
+      <point x="65.0769230769231" y="15.0" />
     </edge>
-    <edge source="controller.TransactionList" target="sample.DBConnection">
-      <point x="-48.0" y="-15.0" />
-      <point x="1880.095510598754" y="180.0" />
-      <point x="914.3912660739397" y="180.0" />
-      <point x="59.02777777777783" y="15.0" />
+    <edge source="controller.CustomerGUI" target="main.DBConnection">
+      <point x="26.444444444444457" y="-15.0" />
+      <point x="164.87807181811456" y="710.0" />
+      <point x="832.3059492386697" y="710.0" />
+      <point x="832.3059492386697" y="250.0" />
+      <point x="858.5780080621992" y="250.0" />
+      <point x="-14.705882352941217" y="15.0" />
     </edge>
-    <edge source="controller.RentalList" target="sample.Rent">
-      <point x="12.375" y="-15.0" />
-      <point x="1026.9027488949164" y="530.0" />
-      <point x="1052.0261904761905" y="530.0" />
-      <point x="3.6000000000000227" y="15.0" />
-    </edge>
-    <edge source="controller.Account" target="sample.DBConnection">
-      <point x="26.571428571428555" y="-15.0" />
-      <point x="234.72093630701204" y="350.0" />
-      <point x="328.08154385171747" y="350.0" />
-      <point x="328.08154385171747" y="220.0" />
-      <point x="817.1690438517176" y="220.0" />
-      <point x="-38.19444444444434" y="15.0" />
-    </edge>
-    <edge source="controller.Transaction" target="sample.Dialog">
-      <point x="-36.66666666666674" y="-15.0" />
-      <point x="639.469121709865" y="90.0" />
-      <point x="867.9335028631704" y="90.0" />
-      <point x="-14.64285714285711" y="15.0" />
-    </edge>
-    <edge source="controller.Customer" target="sample.Customer">
-      <point x="22.22222222222223" y="-15.0" />
-      <point x="1323.742563291139" y="650.0" />
-      <point x="1394.1843994876428" y="650.0" />
-      <point x="37.5" y="15.0" />
-    </edge>
-    <edge source="controller.Rentals" target="controller.Transaction">
-      <point x="-37.625000000000114" y="-15.0" />
-      <point x="826.6068238898935" y="540.0" />
-      <point x="704.156621709865" y="540.0" />
-      <point x="27.5" y="15.0" />
-    </edge>
-    <edge source="controller.Inventory" target="sample.DBConnection">
-      <point x="-28.0" y="-15.0" />
-      <point x="1998.095510598754" y="350.0" />
-      <point x="1424.1288439320872" y="350.0" />
-      <point x="1424.1288439320872" y="230.0" />
-      <point x="886.6134882961619" y="230.0" />
-      <point x="31.25" y="15.0" />
-    </edge>
-    <edge source="controller.Sells" target="controller.Transaction">
-      <point x="31.0625" y="-15.0" />
-      <point x="634.594121709865" y="540.0" />
-      <point x="649.156621709865" y="540.0" />
-      <point x="-27.5" y="15.0" />
-    </edge>
-    <edge source="controller.SellList" target="sample.Purchase">
-      <point x="-10.5" y="-15.0" />
-      <point x="327.531621709865" y="510.0" />
-      <point x="396.74293500100464" y="510.0" />
-      <point x="-43.200000000000045" y="15.0" />
-    </edge>
-    <edge source="controller.Customer" target="controller.CustomerPurchase">
-      <point x="-44.44444444444446" y="-15.0" />
-      <point x="1257.0758966244723" y="660.0" />
-      <point x="474.031621709865" y="660.0" />
-      <point x="0.0" y="15.0" />
-    </edge>
-    <edge source="controller.EmployeeList" target="sample.Dialog">
-      <point x="-23.59999999999991" y="-15.0" />
-      <point x="1741.0288439320873" y="190.0" />
-      <point x="1703.3179350010046" y="190.0" />
-      <point x="1703.3179350010046" y="70.0" />
-      <point x="908.9335028631704" y="70.0" />
-      <point x="26.35714285714289" y="15.0" />
-    </edge>
-    <edge source="controller.Customer" target="controller.LogIn">
-      <point x="-22.22222222222223" y="-15.0" />
-      <point x="1279.2981188466947" y="610.0" />
-      <point x="1296.1843994876428" y="610.0" />
-      <point x="1296.1843994876428" y="370.0" />
-      <point x="923.0593994876428" y="370.0" />
-      <point x="24.375" y="15.0" />
-    </edge>
-    <edge source="controller.Dashboard" target="controller.RentalList">
-      <point x="35.0" y="-15.0" />
-      <point x="355.3939521800278" y="670.0" />
-      <point x="1014.5277488949165" y="670.0" />
-      <point x="0.0" y="15.0" />
-    </edge>
-    <edge source="controller.CustomersRental" target="sample.Rent">
-      <point x="-17.25" y="-15.0" />
-      <point x="1135.7777488949164" y="530.0" />
-      <point x="1073.6261904761905" y="530.0" />
-      <point x="25.200000000000045" y="15.0" />
-    </edge>
-    <edge source="controller.Rentals" target="sample.Rent">
-      <point x="26.874999999999886" y="-15.0" />
-      <point x="891.1068238898935" y="500.0" />
-      <point x="1030.4261904761904" y="500.0" />
-      <point x="-18.0" y="15.0" />
-    </edge>
-    <edge source="controller.Sells" target="sample.Dialog">
-      <point x="4.4375" y="-15.0" />
-      <point x="607.969121709865" y="480.0" />
-      <point x="593.406621709865" y="480.0" />
-      <point x="593.406621709865" y="80.0" />
-      <point x="862.0763600060275" y="80.0" />
-      <point x="-20.5" y="15.0" />
-    </edge>
-    <edge source="controller.Customer" target="sample.DBConnection">
-      <point x="33.333333333333314" y="-15.0" />
-      <point x="1334.8536744022501" y="660.0" />
-      <point x="1417.1843994876428" y="660.0" />
-      <point x="1417.1843994876428" y="240.0" />
-      <point x="879.6690438517176" y="240.0" />
-      <point x="24.305555555555657" y="15.0" />
-    </edge>
-    <edge source="controller.Initializer" target="controller.LogIn">
-      <point x="0.0" y="-15.0" />
-      <point x="869.6843994876428" y="390.0" />
-      <point x="893.8093994876428" y="390.0" />
-      <point x="-4.875" y="15.0" />
-    </edge>
-    <edge source="controller.Sells" target="sample.DBConnection">
-      <point x="13.3125" y="-15.0" />
-      <point x="616.844121709865" y="470.0" />
-      <point x="602.281621709865" y="470.0" />
-      <point x="602.281621709865" y="250.0" />
-      <point x="838.0023771850508" y="250.0" />
-      <point x="-17.361111111111086" y="15.0" />
-    </edge>
-    <edge source="sample.DBConnection" target="sample.Dialog">
-      <point x="0.0" y="-15.0" />
-      <point x="855.3634882961619" y="110.0" />
-      <point x="879.6477885774561" y="110.0" />
-      <point x="-2.928571428571331" y="15.0" />
-    </edge>
-    <edge source="controller.AccountList" target="sample.Account">
-      <point x="0.0" y="-15.0" />
-      <point x="66.0" y="380.0" />
-      <point x="89.22440099457458" y="380.0" />
-      <point x="-39.85714285714286" y="15.0" />
-    </edge>
-    <edge source="controller.TransactionList" target="sample.Transact">
-      <point x="48.0" y="-15.0" />
-      <point x="1976.095510598754" y="270.0" />
-      <point x="1974.595510598754" y="270.0" />
-      <point x="31.0" y="15.0" />
-    </edge>
-    <edge source="controller.Dashboard" target="sample.DBConnection">
-      <point x="-35.0" y="-15.0" />
-      <point x="285.3939521800278" y="670.0" />
-      <point x="0.0" y="670.0" />
-      <point x="0.0" y="190.0" />
-      <point x="796.3357105183841" y="190.0" />
-      <point x="-59.02777777777783" y="15.0" />
-    </edge>
-    <edge source="controller.Customer" target="controller.CustomersRental">
-      <point x="-33.33333333333334" y="-15.0" />
-      <point x="1268.1870077355834" y="650.0" />
-      <point x="1153.0277488949164" y="650.0" />
-      <point x="0.0" y="15.0" />
-    </edge>
-    <edge source="controller.Sells" target="sample.Purchase">
-      <point x="-31.0625" y="-15.0" />
-      <point x="572.469121709865" y="520.0" />
-      <point x="454.34293500100455" y="520.0" />
-      <point x="14.399999999999864" y="15.0" />
-    </edge>
-    <edge source="controller.AccountList" target="sample.DBConnection">
-      <point x="-22.200000000000045" y="-15.0" />
-      <point x="43.799999999999955" y="390.0" />
-      <point x="29.381543851717424" y="390.0" />
-      <point x="29.381543851717424" y="200.0" />
-      <point x="803.2801549628286" y="200.0" />
-      <point x="-52.08333333333326" y="15.0" />
-    </edge>
-    <edge source="controller.CustomerPurchase" target="sample.Purchase">
-      <point x="-55.5" y="-15.0" />
-      <point x="418.531621709865" y="540.0" />
-      <point x="425.5429350010046" y="540.0" />
-      <point x="-14.400000000000091" y="15.0" />
-    </edge>
-    <edge source="controller.Rentals" target="sample.Dialog">
-      <point x="-26.875000000000114" y="-15.0" />
-      <point x="837.3568238898935" y="530.0" />
-      <point x="742.156621709865" y="530.0" />
-      <point x="742.156621709865" y="100.0" />
-      <point x="873.7906457203133" y="100.0" />
-      <point x="-8.78571428571422" y="15.0" />
-    </edge>
-    <edge source="controller.NewEmployee" target="sample.Dialog">
-      <point x="31.0" y="-15.0" />
-      <point x="1527.6288439320872" y="90.0" />
-      <point x="897.2192171488846" y="90.0" />
-      <point x="14.64285714285711" y="15.0" />
-    </edge>
-    <edge source="controller.Transaction" target="controller.LogIn">
-      <point x="36.66666666666674" y="-15.0" />
-      <point x="713.3232883765318" y="380.0" />
-      <point x="884.0593994876428" y="380.0" />
-      <point x="-14.625" y="15.0" />
-    </edge>
-    <edge source="controller.Base" target="controller.LogIn">
-      <point x="0.0" y="-15.0" />
-      <point x="1206.0468994876428" y="380.0" />
-      <point x="913.3093994876428" y="380.0" />
-      <point x="14.625" y="15.0" />
-    </edge>
-    <edge source="controller.CustomerPurchase" target="sample.DBConnection">
-      <point x="55.5" y="-15.0" />
-      <point x="529.531621709865" y="540.0" />
-      <point x="523.8116850010047" y="540.0" />
-      <point x="523.8116850010047" y="240.0" />
-      <point x="831.0579327406062" y="240.0" />
-      <point x="-24.305555555555657" y="15.0" />
-    </edge>
-    <edge source="controller.SellList" target="sample.DBConnection">
-      <point x="-31.5" y="-15.0" />
-      <point x="306.531621709865" y="500.0" />
-      <point x="335.0259882961618" y="500.0" />
-      <point x="335.0259882961618" y="230.0" />
-      <point x="824.1134882961619" y="230.0" />
-      <point x="-31.25" y="15.0" />
-    </edge>
-    <edge source="controller.Customer" target="sample.Dialog">
-      <point x="44.44444444444446" y="-15.0" />
-      <point x="1345.9647855133612" y="670.0" />
-      <point x="1853.595510598754" y="670.0" />
-      <point x="1853.595510598754" y="60.0" />
-      <point x="914.7906457203133" y="60.0" />
-      <point x="32.21428571428578" y="15.0" />
-    </edge>
-    <edge source="controller.LogIn" target="sample.DBConnection">
-      <point x="-19.5" y="-15.0" />
-      <point x="879.1843994876428" y="270.0" />
-      <point x="858.8357105183841" y="270.0" />
-      <point x="3.4722222222221717" y="15.0" />
-    </edge>
-    <edge source="controller.CustomersRental" target="sample.DBConnection">
-      <point x="51.75" y="-15.0" />
-      <point x="1204.7777488949164" y="510.0" />
-      <point x="1159.5468994876428" y="510.0" />
-      <point x="1159.5468994876428" y="250.0" />
-      <point x="872.724599407273" y="250.0" />
-      <point x="17.361111111111086" y="15.0" />
-    </edge>
-    <edge source="controller.EmployeeList" target="sample.DBConnection">
-      <point x="-47.200000000000045" y="-15.0" />
-      <point x="1717.4288439320871" y="200.0" />
-      <point x="907.4468216294952" y="200.0" />
-      <point x="52.08333333333326" y="15.0" />
-    </edge>
-    <edge source="controller.Inventory" target="sample.Item">
-      <point x="42.0" y="-15.0" />
-      <point x="2068.095510598754" y="390.0" />
-      <point x="2076.095510598754" y="390.0" />
+    <edge source="controller.InventoryGUI" target="main.Item">
+      <point x="16.714285714285722" y="-15.0" />
+      <point x="75.21428571428578" y="450.0" />
+      <point x="76.5" y="450.0" />
       <point x="27.0" y="15.0" />
     </edge>
+    <edge source="controller.CustomerPurchaseListGUI" target="main.Purchase">
+      <point x="69.375" y="-15.0" />
+      <point x="1012.0338904151404" y="630.0" />
+      <point x="1054.451499205451" y="630.0" />
+      <point x="-24.0" y="15.0" />
+    </edge>
+    <edge source="controller.DashboardGUI" target="controller.SellListGUI">
+      <point x="41.33333333333326" y="-15.0" />
+      <point x="914.2836942593987" y="730.0" />
+      <point x="1106.6588904151404" y="730.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="controller.AccountGUI" target="main.DBConnection">
+      <point x="-48.0" y="-15.0" />
+      <point x="1872.0137362762057" y="400.0" />
+      <point x="1265.5603610033756" y="400.0" />
+      <point x="1265.5603610033756" y="220.0" />
+      <point x="902.6956551210226" y="220.0" />
+      <point x="29.411764705882206" y="15.0" />
+    </edge>
+    <edge source="controller.CustomerGUI" target="controller.LogInGUI">
+      <point x="52.888888888888914" y="-15.0" />
+      <point x="191.32251626255902" y="740.0" />
+      <point x="1609.8838904151403" y="740.0" />
+      <point x="1609.8838904151403" y="440.0" />
+      <point x="1498.2280219904912" y="440.0" />
+      <point x="27.714285714285666" y="15.0" />
+    </edge>
+    <edge source="controller.CustomerGUI" target="controller.CustomerPurchaseListGUI">
+      <point x="39.66666666666666" y="-15.0" />
+      <point x="178.10029404033673" y="720.0" />
+      <point x="942.6588904151404" y="720.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="controller.InitializerGUI" target="controller.LogInGUI">
+      <point x="0.0" y="-15.0" />
+      <point x="1431.3838904151403" y="450.0" />
+      <point x="1470.5137362762057" y="450.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="controller.CustomerGUI" target="main.Customer">
+      <point x="-52.888888888888914" y="-15.0" />
+      <point x="85.54473848478119" y="740.0" />
+      <point x="29.499999999999886" y="740.0" />
+      <point x="-37.5" y="15.0" />
+    </edge>
+    <edge source="controller.SellsGUI" target="main.Purchase">
+      <point x="-39.375" y="-15.0" />
+      <point x="1232.6338904151403" y="560.0" />
+      <point x="1092.851499205451" y="560.0" />
+      <point x="14.399999999999977" y="15.0" />
+    </edge>
+    <edge source="controller.CustomerPurchaseListGUI" target="main.DBConnection">
+      <point x="-69.375" y="-15.0" />
+      <point x="873.2838904151404" y="630.0" />
+      <point x="911.1991354358694" y="630.0" />
+      <point x="911.1991354358694" y="260.0" />
+      <point x="873.2838904151404" y="260.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="controller.DueUpdateGUI" target="main.DBConnection">
+      <point x="31.5" y="-15.0" />
+      <point x="399.4999999999999" y="200.0" />
+      <point x="821.8133021798462" y="200.0" />
+      <point x="-51.470588235294144" y="15.0" />
+    </edge>
+    <edge source="controller.AccountListGUI" target="controller.PromptDialogGUI">
+      <point x="52.0" y="-15.0" />
+      <point x="2113.0137362762057" y="330.0" />
+      <point x="2073.8838904151403" y="330.0" />
+      <point x="2073.8838904151403" y="60.0" />
+      <point x="1509.8646596459098" y="60.0" />
+      <point x="54.23076923076928" y="15.0" />
+    </edge>
+    <edge source="controller.TransactionGUI" target="controller.PromptDialogGUI">
+      <point x="0.0" y="-15.0" />
+      <point x="1288.8838904151403" y="410.0" />
+      <point x="1276.5603610033756" y="410.0" />
+      <point x="1276.5603610033756" y="110.0" />
+      <point x="1444.7877365689865" y="110.0" />
+      <point x="-10.846153846153811" y="15.0" />
+    </edge>
+    <edge source="controller.TransactionListGUI" target="main.Transact">
+      <point x="-18.375" y="-15.0" />
+      <point x="193.1249999999999" y="260.0" />
+      <point x="195.4279697936862" y="260.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="1.1264752791068577" x="1316.1441036768001" y="1867.2871760334601" />
+  <settings layout="Hierarchic Group" zoom="1.4000000000000001" x="1467.5" y="475.0000000000002" />
   <SelectedNodes />
   <Categories />
   <SCOPE>All</SCOPE>

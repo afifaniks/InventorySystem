@@ -12,7 +12,6 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import main.DBConnection;
-
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
