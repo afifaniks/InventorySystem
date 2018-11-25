@@ -1,7 +1,6 @@
 package controller;
 
 import com.jfoenix.controls.JFXButton;
-import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import javafx.collections.FXCollections;
@@ -24,7 +23,6 @@ import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 public class ItemTypeGUI implements Initializable {
-    //TODO: ADD Option TO DELETE AND UPDATE ITEMTYPE
     @FXML
     private TableView<ItemType> tbl;
 
@@ -56,13 +54,86 @@ public class ItemTypeGUI implements Initializable {
     private JFXTextField txtItemType;
 
     @FXML
-    void addItemType(ActionEvent event) {
+    private JFXButton btnRefresh;
+    private boolean updateMode = false; //This is variable will be used to differentiate
+                                        //between update mode and new entry mode
+                                            //false = new entry; true = update
+    @FXML
+    void reload(ActionEvent event) {
+        //Setting Values to null and normal
+        lblType.setText("");
+        txtItemType.setText("");
+        btnAddIcon.setGlyphName("PLUS");
+        updateMode = false;
 
+        setTableData();
+    }
+
+    private void loadContents() {
+        ItemType selectedItem = tbl.getSelectionModel().getSelectedItem();
+
+        //Setting Values on field
+        lblType.setText(selectedItem.getItemTypeID().toString());
+        txtItemType.setText(selectedItem.getItemTypeName());
+    }
+
+    @FXML
+    void addOrUpdateItemType(ActionEvent event) {
+        Connection con = DBConnection.getConnection();
+
+       if (updateMode) {
+           try {
+               PreparedStatement stmtInsert = con.prepareStatement("UPDATE itemtype SET typeName = ? WHERE itemTypeId = ?");
+
+               stmtInsert.setString(1, txtItemType.getText());
+               stmtInsert.setInt(2, Integer.parseInt(lblType.getText()));
+
+               stmtInsert.executeUpdate();
+               con.close();
+
+               new PromptDialogGUI("Success!","Updating Entry Successful");
+           } catch (SQLException e) {
+               new PromptDialogGUI("Error","Error Code: " + e.getErrorCode());
+           }
+       } else {
+           try {
+               PreparedStatement stmtInsert = con.prepareStatement("INSERT INTO itemtype VALUES(?, ?)");
+
+               stmtInsert.setInt(1, Integer.parseInt(lblType.getText()));
+               stmtInsert.setString(2, txtItemType.getText());
+
+               stmtInsert.executeUpdate();
+               con.close();
+
+               new PromptDialogGUI("Success!","New Entry Added");
+           } catch (SQLException e) {
+               new PromptDialogGUI("Error","Error Code: " + e.getErrorCode());
+
+           }
+       }
+
+       reload(null);
     }
 
     @FXML
     void deleteItemType(ActionEvent event) {
+        Connection con = DBConnection.getConnection();
+        try {
+            PreparedStatement stmtInsert = con.prepareStatement("DELETE FROM itemtype WHERE itemTypeId = ?");
 
+            stmtInsert.setInt(1, Integer.parseInt(lblType.getText()));
+
+            stmtInsert.executeUpdate();
+            con.close();
+
+            new PromptDialogGUI("Success!","Deleting Entry Successful");
+        } catch (SQLException e) {
+            if(e.getErrorCode() == 1451) //Has foreign key constraints
+                new PromptDialogGUI("Error","Error Code: " + e.getErrorCode() +"\n" +
+                        "Can't delete type. The type has one or more item entries listed.");
+            else
+                new PromptDialogGUI("Error","Error Code: " + e.getErrorCode());
+        }
     }
 
     private void setTableData() {
@@ -80,8 +151,8 @@ public class ItemTypeGUI implements Initializable {
             ObservableList<ItemType> typeList = FXCollections.observableArrayList();
 
             while(itemRS.next()) {
-                Integer typeID = itemRS.getInt(1); //0 = itemTypeID column index
-                String typeName = itemRS.getString(2); //1 = Name obviously
+                Integer typeID = itemRS.getInt(1); //1 = itemTypeID column index
+                String typeName = itemRS.getString(2); //2 = itemTypeName column index
                 //Getting total number of items of that type
                 PreparedStatement stmtItemCount = con.prepareStatement("SELECT COUNT(*) FROM item WHERE ItemType_itemTypeId ="+typeID);
 
@@ -105,6 +176,8 @@ public class ItemTypeGUI implements Initializable {
                 lblType.setText(Integer.toString(getMaxValueID.getInt(1) + 1));
             }
 
+            con.close();
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -112,6 +185,14 @@ public class ItemTypeGUI implements Initializable {
     }
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        tbl.setOnMouseClicked(event -> {
+            if(event.getClickCount() == 2)
+            {
+                updateMode = true;
+                btnAddIcon.setGlyphName("SAVE");
+                loadContents();
+            }
+        });
         setTableData();
 
     }

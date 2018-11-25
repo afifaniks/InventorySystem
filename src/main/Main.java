@@ -33,10 +33,7 @@ public class Main extends Application {
             primaryStage.setScene(scene);
             primaryStage.getIcons().add(new Image("/resource/icons/Accounts_main.png"));
             primaryStage.setResizable(false);
-            // primaryStage.initStyle(StageStyle.UNDECORATED);
             primaryStage.show();
-//            PrinterJob j = PrinterJob.createPrinterJob();
-//            j.showPrintDialog(primaryStage);
 
         } catch (IOException e) {
             new PromptDialogGUI("Error!", "Error Occured. Failed to initialize system. Either database server is not online or database dropped.");

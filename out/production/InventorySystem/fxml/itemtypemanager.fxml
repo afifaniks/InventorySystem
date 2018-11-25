@@ -36,7 +36,7 @@
             <Tooltip text="Click on any row to edit" />
          </tooltip>
       </TableView>
-      <JFXButton fx:id="btnUpdate" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="206.0" layoutY="369.0" onAction="#addItemType" prefHeight="61.0" prefWidth="59.0" ripplerFill="#c9c3c3" style="-fx-background-radius: 40 40 40 40;" stylesheets="@../css/customer.css" text="Button">
+      <JFXButton fx:id="btnUpdate" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="168.0" layoutY="375.0" onAction="#addOrUpdateItemType" prefHeight="61.0" prefWidth="59.0" ripplerFill="#c9c3c3" style="-fx-background-radius: 40 40 40 40;" stylesheets="@../css/customer.css">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -56,12 +56,12 @@
             </Label>
          </children>
       </AnchorPane>
-      <JFXButton fx:id="btnDelete" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="132.0" layoutY="369.0" onAction="#deleteItemType" prefHeight="61.0" prefWidth="59.0" ripplerFill="#c9c3c3" style="-fx-background-radius: 40 40 40 40;" stylesheets="@../css/customer.css" text="Button">
+      <JFXButton fx:id="btnDelete" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="245.0" layoutY="375.0" onAction="#deleteItemType" prefHeight="61.0" prefWidth="59.0" ripplerFill="#c9c3c3" style="-fx-background-radius: 40 40 40 40;" stylesheets="@../css/customer.css">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
          <graphic>
-            <FontAwesomeIconView fx:id="btnAddIcon1" fill="#263238" glyphName="TRASH" size="30" />
+            <FontAwesomeIconView fx:id="btnAddIcon1" fill="RED" glyphName="TRASH" size="30" />
          </graphic>
       </JFXButton>
       <Label fx:id="lblType" layoutX="133.0" layoutY="176.0" prefHeight="44.0" prefWidth="134.0" textFill="GREEN">
@@ -70,5 +70,13 @@
          </font>
       </Label>
       <JFXTextField fx:id="txtItemType" layoutX="133.0" layoutY="235.0" prefHeight="25.0" prefWidth="187.0" />
+      <JFXButton fx:id="btnRefresh" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="86.0" layoutY="375.0" onAction="#reload" prefHeight="61.0" prefWidth="59.0" ripplerFill="#c9c3c3" style="-fx-background-radius: 40 40 40 40;" stylesheets="@../css/customer.css">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIconView fx:id="btnAddIcon2" fill="#263238" glyphName="REFRESH" size="30" />
+         </graphic>
+      </JFXButton>
    </children>
 </AnchorPane>

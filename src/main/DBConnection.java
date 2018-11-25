@@ -22,7 +22,6 @@ public class DBConnection {
         } catch (SQLException e) {
             if (e.getErrorCode() == 0) { //Error Code 0: database server offline
                 new PromptDialogGUI("Error!", "Database server is offline!");
-
             }
             return null;
         }

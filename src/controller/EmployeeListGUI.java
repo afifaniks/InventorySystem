@@ -67,9 +67,6 @@ public class EmployeeListGUI implements Initializable {
     private JFXButton btnDelete;
 
     @FXML
-    private FontAwesomeIconView btnAddIcon1;
-
-    @FXML
     void deleteEmp(ActionEvent event) {
         Connection con = DBConnection.getConnection();
         try {
