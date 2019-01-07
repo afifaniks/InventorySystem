@@ -16,9 +16,6 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class Main extends Application {
-
-
-
     @Override
     public void start(Stage primaryStage) {
         Parent root = null;
@@ -26,8 +23,8 @@ public class Main extends Application {
             root = FXMLLoader.load(getClass().getResource("/fxml/login.fxml"));
             Scene scene = new Scene(root);
 
-            String css = this.getClass().getResource("/css/login.css").toExternalForm();
-            scene.getStylesheets().add(css);
+            String css = this.getClass().getResource("/css/login.css").toExternalForm(); // Getting stylesheet
+            scene.getStylesheets().add(css); // Adding stylesheet
 
             primaryStage.setTitle("Log In Prompt");
             primaryStage.setScene(scene);
@@ -36,7 +33,7 @@ public class Main extends Application {
             primaryStage.show();
 
         } catch (IOException e) {
-            new PromptDialogGUI("Error!", "Error Occured. Failed to initialize system. Either database server is not online or database dropped.");
+            new PromptDialogGUI("Error!", "Error Occured. Failed to initialize system.");
         }
 
     }

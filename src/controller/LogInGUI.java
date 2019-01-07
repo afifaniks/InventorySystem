@@ -85,6 +85,11 @@ public class LogInGUI implements Initializable{
         }
     }
 
+
+    // This method will set the previous saved username
+    // password if any. In addition this method is responsible
+    // for password visibility toggling
+
     @Override
     public void initialize(java.net.URL location, ResourceBundle resources) {
         Connection connection = DBConnection.getConnection();
@@ -119,12 +124,18 @@ public class LogInGUI implements Initializable{
 
     }
 
+    /**
+     *
+     */
     private void userLogger() {
         //Taking input from the username & password fields
         String username = txtUsername.getText();
         String password;
 
-        //Checking from the actual selected field
+        //Getting input from the field in which
+        //user inputted password.
+	    //Note: We have two password field.
+	    //One for visible password and another for hidden.
         if(chkPasswordMask.isSelected())
             password = txtPasswordShown.getText();
         else

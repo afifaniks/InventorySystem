@@ -99,50 +99,66 @@ public class SellsGUI implements Initializable{
     @FXML
     private JFXButton btnBarchart;
 
-    private static boolean toggle = true; //This field will be used to transition b/w Table and Chart
+    /**
+     * This field will be used to transition b/w Table and Chart
+     * toggleTable = true; Table View is being showed
+     * toggleTable = false; LineChart is being showed
+     */
+    private static boolean toggleTable = true;
+
+    private void generateLineChart() {
+        lineChart.getData().clear();
+        Connection con = DBConnection.getConnection();
+        try {
+            //TODO: FIX SQL
+            PreparedStatement ps = con.prepareStatement("SELECT purchaseDate, sum(payAmount) FROM purchases WHERE User_username='"+ LogInGUI.loggerUsername+"' GROUP BY purchaseDate ORDER BY UNIX_TIMESTAMP(purchaseDate) DESC LIMIT 15");
+            ResultSet rs = ps.executeQuery();
+
+            XYChart.Series chartData = new XYChart.Series<>();
+
+            while(rs.next()) {
+                chartData.getData().add(new XYChart.Data(rs.getString(1), rs.getInt(2)));
+            }
+
+            lineChart.getData().addAll(chartData);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            new PromptDialogGUI("SQL Error!", "Error occured while executing Query.\nSQL Error Code: " + e.getErrorCode());
+        }
+    }
 
     @FXML
     void btnBarchartAction(ActionEvent event) {
-       if(toggle) { //If toggle is true that means table view is currently in view
-           toggle = false; //Changing toggle value
-           btnChartIcon.setGlyphName("TABLE");
-           tblRecent.setVisible(false);
-           lineChart.setVisible(true);
+        if(toggleTable) { //If toggleTable is true that means table view is currently in view
+            toggleTable = false; //Changing toggleTable value
+            btnChartIcon.setGlyphName("TABLE");
+            tblRecent.setVisible(false);
+            lineChart.setVisible(true);
 
-           Connection con = DBConnection.getConnection();
-           try {
-               //TODO: FIX SQL
-               PreparedStatement ps = con.prepareStatement("SELECT purchaseDate, sum(payAmount) FROM purchases WHERE User_username='"+ LogInGUI.loggerUsername+"' GROUP BY purchaseDate DESC ORDER BY purchaseDate LIMIT 14");
-               ResultSet rs = ps.executeQuery();
+            generateLineChart();
 
-               XYChart.Series chartData = new XYChart.Series<>();
-
-               while(rs.next()) {
-                   chartData.getData().add(new XYChart.Data(rs.getString(1), rs.getInt(2)));
-               }
-
-               lineChart.getData().addAll(chartData);
-
-           } catch (SQLException e) {
-               e.printStackTrace();
-               new PromptDialogGUI("SQL Error!", "Error occured while executing Query.\nSQL Error Code: " + e.getErrorCode());
-           }
-       } else {
-           toggle = true;
-           btnChartIcon.setGlyphName("LINE_CHART");
-           lineChart.setVisible(false);
-           lineChart.getData().clear();
-           tblRecent.setVisible(true);
-       }
+        } else {
+            toggleTable = true;
+            btnChartIcon.setGlyphName("LINE_CHART");
+            lineChart.setVisible(false);
+            lineChart.getData().clear();
+            tblRecent.setVisible(true);
+        }
     }
 
     @FXML
     private AnchorPane rightPane;
 
+    /**
+     * startTransaction variable will be used to verify inputs - That is
+     * if all the inputs are OK then start transaction, otherwise not
+     */
     private static boolean startTransaction = false;
+
     public static ObservableList<Purchase> purchaseList;
     public static ArrayList<String> customerIDName = null; //Will hold auto completion data for customer ID text field
-                                                    //The field will be initiated in InitializerGUI class
+    //The field will be initiated in InitializerGUI class
     public static ArrayList<String> inventoryItem = null;
     public static ArrayList<Integer> customerID = null;
     public static ArrayList<Integer> itemIDForSale = null;
@@ -179,7 +195,7 @@ public class SellsGUI implements Initializable{
 
             }
 
-            //Resetting Fields
+            // Resetting Fields
             purchaseList = sellsListByUser;
             tblRecent.getItems().clear();
             tblRecent.setItems(purchaseList);
@@ -192,6 +208,11 @@ public class SellsGUI implements Initializable{
             lblCost.setText("??");
             btnIcon.setGlyphName("QUESTION");
 
+            // Resetting lineChart if toggleTable is false
+            if(!toggleTable) {
+                generateLineChart();
+            }
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -201,7 +222,7 @@ public class SellsGUI implements Initializable{
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        toggle = true;
+        toggleTable = true;
         startTransaction = false;
         txtQty.setText("1");
         txtDate.setValue(LocalDate.now());
@@ -209,7 +230,7 @@ public class SellsGUI implements Initializable{
         Tooltip tooltip = new Tooltip("Verify Input");
         btnProcced.setTooltip(tooltip);
 
-        //Getting new connection to db to set new purchaseID
+        // Getting new connection to db to set new purchaseID
         Connection con = DBConnection.getConnection();
 
         try{
@@ -226,7 +247,7 @@ public class SellsGUI implements Initializable{
         TextFields.bindAutoCompletion(txtCustomerId, customerIDName);
         TextFields.bindAutoCompletion(txtItemId, inventoryItem);
 
-        //Setting up table on load
+        // Setting up table on load
         purID.setCellValueFactory(new PropertyValueFactory<>("purID"));
         cusID.setCellValueFactory(new PropertyValueFactory<>("cusID"));
         itemID.setCellValueFactory(new PropertyValueFactory<>("itemID"));
@@ -246,74 +267,74 @@ public class SellsGUI implements Initializable{
             lblVerify.setText("Verify Input");
             Tooltip tooltip = new Tooltip("Verify Input");
             btnProcced.setTooltip(tooltip);
-                //Loading TransactionGUI Window
-                //Setting Values in TransactionGUI Window
-                TransactionGUI.cusID = Integer.valueOf(txtCustomerId.getText());
-                TransactionGUI.purchaseId = lblId.getText();
-                TransactionGUI.purchaseQty = Integer.valueOf(txtQty.getText());
-                TransactionGUI.itemID = Integer.valueOf(txtItemId.getText());
-                TransactionGUI.rentOrSale = true;
+            //Loading TransactionGUI Window
+            //Setting Values in TransactionGUI Window
+            TransactionGUI.cusID = Integer.valueOf(txtCustomerId.getText());
+            TransactionGUI.purchaseId = lblId.getText();
+            TransactionGUI.purchaseQty = Integer.valueOf(txtQty.getText());
+            TransactionGUI.itemID = Integer.valueOf(txtItemId.getText());
+            TransactionGUI.rentOrSale = true;
 
-                Double paid = 0.0;
+            Double paid = 0.0;
 
-                //Checking if input is valid
-                try {
-                    if(txtPayAmount.getText().equals(""))
-                        paid = 0.0;
-                    else
-                        paid = Double.valueOf(txtPayAmount.getText());
+            //Checking if input is valid
+            try {
+                if(txtPayAmount.getText().equals(""))
+                    paid = 0.0;
+                else
+                    paid = Double.valueOf(txtPayAmount.getText());
 
-                    TransactionGUI.payAmount = paid;
-                    TransactionGUI.due = Double.valueOf(lblCost.getText()) - paid;
+                TransactionGUI.payAmount = paid;
+                TransactionGUI.due = Double.valueOf(lblCost.getText()) - paid;
 
 
-                    Connection connection = DBConnection.getConnection();
+                Connection connection = DBConnection.getConnection();
 
-                    //Checking for stock availability
-                    PreparedStatement checkItemStock = connection.prepareStatement("SELECT stock FROM item WHERE itemID = "+Integer.valueOf(txtItemId.getText()));
-                    ResultSet itemStock = checkItemStock.executeQuery();
+                //Checking for stock availability
+                PreparedStatement checkItemStock = connection.prepareStatement("SELECT stock FROM item WHERE itemID = "+Integer.valueOf(txtItemId.getText()));
+                ResultSet itemStock = checkItemStock.executeQuery();
 
-                    Integer stock = 0;
+                Integer stock = 0;
 
-                    while(itemStock.next()) {
-                        stock = itemStock.getInt(1);
-                    }
-
-                    if((stock - Integer.valueOf(txtQty.getText())) < 0) {
-                        new PromptDialogGUI("Insuffecient Stock!", "Stock is insuffecient to validate this purchase.\nRequired: " +
-                                Integer.valueOf(txtQty.getText()) +"\nIn Stock:" + stock);
-                        return;
-                    }
-
-                    TransactionGUI.stock = stock;
-
-                    //Checking for accounnts
-                    PreparedStatement preparedStatement = connection.prepareStatement("SELECT count(*) from accounts, customers where customerID = Customers_customerID AND Customers_customerID = "+Integer.valueOf(txtCustomerId.getText()));
-                    ResultSet rs = preparedStatement.executeQuery();
-
-                    int chk = 0;
-
-                    while(rs.next()) {
-                        chk = rs.getInt(1);
-                    }
-                    if(chk <= 0) {
-                        new PromptDialogGUI("No Account!", "Customer has no account. Please create an account first then try again.");
-                    } else {
-                        Parent trPanel = FXMLLoader.load(getClass().getResource("/fxml/transaction.fxml"));
-                        Scene trScene = new Scene(trPanel);
-                        Stage trStage = new Stage();
-                        trStage.setScene(trScene);
-                        trStage.setResizable(false);
-                        trStage.show();
-                    }
-
-                    connection.close();
-
-                } catch (Exception e) {
-                    txtPayAmount.setUnFocusColor(Color.web("red"));
-                    JFXSnackbar snackbar = new JFXSnackbar(rightPane);
-                    snackbar.show("Invalid Input Format", 3000);
+                while(itemStock.next()) {
+                    stock = itemStock.getInt(1);
                 }
+
+                if((stock - Integer.valueOf(txtQty.getText())) < 0) {
+                    new PromptDialogGUI("Insuffecient Stock!", "Stock is insuffecient to validate this purchase.\nRequired: " +
+                            Integer.valueOf(txtQty.getText()) +"\nIn Stock:" + stock);
+                    return;
+                }
+
+                TransactionGUI.stock = stock;
+
+                //Checking for accounnts
+                PreparedStatement preparedStatement = connection.prepareStatement("SELECT count(*) from accounts, customers where customerID = Customers_customerID AND Customers_customerID = "+Integer.valueOf(txtCustomerId.getText()));
+                ResultSet rs = preparedStatement.executeQuery();
+
+                int chk = 0;
+
+                while(rs.next()) {
+                    chk = rs.getInt(1);
+                }
+                if(chk <= 0) {
+                    new PromptDialogGUI("No Account!", "Customer has no account. Please create an account first then try again.");
+                } else {
+                    Parent trPanel = FXMLLoader.load(getClass().getResource("/fxml/transaction.fxml"));
+                    Scene trScene = new Scene(trPanel);
+                    Stage trStage = new Stage();
+                    trStage.setScene(trScene);
+                    trStage.setResizable(false);
+                    trStage.show();
+                }
+
+                connection.close();
+
+            } catch (Exception e) {
+                txtPayAmount.setUnFocusColor(Color.web("red"));
+                JFXSnackbar snackbar = new JFXSnackbar(rightPane);
+                snackbar.show("Invalid Input Format", 3000);
+            }
 
         } else {
             boolean flag = true;

@@ -129,7 +129,7 @@ public class RentalsGUI implements Initializable {
     private NumberAxis amountAxis;
 
 
-    private static boolean toggle = true; //This field will be used to transition b/w Table and Chart
+    private static boolean toggleTable = true; //This field will be used to transition b/w Table and Chart
     private static boolean startTransaction = false;
     public static ObservableList<Rent> rentalList;
     public static ArrayList<String> customerIDName = null; //Will hold auto completion data for customer ID text field
@@ -370,40 +370,48 @@ public class RentalsGUI implements Initializable {
             lblVerify.setText("Verify Input");
             btnIcon.setGlyphName("QUESTION");
 
+            // Resetting Line Chart if toggleTable is false
+            if (!toggleTable) {
+                generateLineChart();
+            }
 
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
+    private void generateLineChart() {
+        lineChart.getData().clear();
+        Connection con = DBConnection.getConnection();
+        try {
+            PreparedStatement ps = con.prepareStatement("SELECT rentalDate, sum(paid) FROM rentals WHERE User_username ='"+ LogInGUI.loggerUsername+"' GROUP BY rentalDate ORDER BY UNIX_TIMESTAMP(rentalDate) DESC LIMIT 15");
+            ResultSet rs = ps.executeQuery();
+
+            XYChart.Series chartData = new XYChart.Series<>();
+
+            while(rs.next()) {
+                chartData.getData().add(new XYChart.Data(rs.getString(1), rs.getInt(2)));
+            }
+            lineChart.getData().addAll(chartData);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            new PromptDialogGUI("SQL Error!", "Error occured while executing Query.\nSQL Error Code: " + e.getErrorCode());
+        }
+    }
+
     @FXML
     void btnBarchartAction(ActionEvent event) {
-        if(toggle) { //If toggle is true that means table view is currently in view
-            toggle = false; //Changing toggle value
+        if(toggleTable) { //If toggleTable is true that means table view is currently in view
+            toggleTable = false; //Changing toggleTable value
             btnChartIcon.setGlyphName("TABLE");
             tblRecent.setVisible(false);
             lineChart.setVisible(true);
 
-            Connection con = DBConnection.getConnection();
-            try {
-                //TODO: FIX SQL
-                PreparedStatement ps = con.prepareStatement("SELECT rentalDate, sum(paid) FROM rentals WHERE User_username ='"+ LogInGUI.loggerUsername+"' GROUP BY rentalDate LIMIT 14");
-                ResultSet rs = ps.executeQuery();
+            generateLineChart();
 
-                XYChart.Series chartData = new XYChart.Series<>();
-
-                while(rs.next()) {
-                    chartData.getData().add(new XYChart.Data(rs.getString(1), rs.getInt(2)));
-
-                }
-                lineChart.getData().addAll(chartData);
-
-            } catch (SQLException e) {
-                e.printStackTrace();
-                new PromptDialogGUI("SQL Error!", "Error occured while executing Query.\nSQL Error Code: " + e.getErrorCode());
-            }
         } else {
-            toggle = true;
+            toggleTable = true;
             btnChartIcon.setGlyphName("LINE_CHART");
             lineChart.setVisible(false);
             lineChart.getData().clear();
@@ -416,7 +424,7 @@ public class RentalsGUI implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         TextFields.bindAutoCompletion(txtCustomerId, customerIDName);
         TextFields.bindAutoCompletion(txtItemId, inventoryItem);
-        toggle = true;
+        toggleTable = true;
 
         Tooltip tooltip = new Tooltip("Verify Input");
         btnProcced.setTooltip(tooltip);

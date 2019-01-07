@@ -11,7 +11,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="661.0" prefWidth="1107.0" stylesheets="/css/dashboard.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashboardGUI">
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="661.0" prefWidth="1107.0" stylesheets="/css/dashboard.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashboardGUI">
    <children>
       <AnchorPane prefHeight="109.0" prefWidth="1169.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
@@ -106,7 +106,7 @@
          </tooltip>
       </JFXButton>
       <Label layoutX="75.0" layoutY="631.0" prefHeight="17.0" prefWidth="61.0" text="Refresh" />
-      <Label alignment="CENTER" layoutX="747.0" layoutY="179.0" prefHeight="50.0" prefWidth="141.0" text="Overview">
+      <Label alignment="CENTER" layoutX="745.0" layoutY="179.0" prefHeight="50.0" prefWidth="168.0" text="Overview">
          <font>
             <Font size="34.0" />
          </font>
