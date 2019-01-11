@@ -231,14 +231,35 @@ public class BaseGUI implements Initializable{
     }
 
     //This method will set the clock running
+//    private void runClock() {
+//        while (true) {
+//            Platform.runLater(new Runnable() {
+//                @Override
+//                public void run() {
+//                    // Getting the system time in a string
+//                    String time = LocalTime.now().format(DateTimeFormatter.ofPattern("hh:mm:ss a"));
+//                    // Setting the time in a label
+//                    lblClock.setText(time);
+//                }
+//            });
+//
+//            try {
+//                Thread.sleep(1000);
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
+//            }
+//        }
+//    }
+
     private void runClock() {
         while (true) {
             Platform.runLater(new Runnable() {
                 @Override
                 public void run() {
-                    lblClock.setText(LocalTime.now().format(
-                            DateTimeFormatter.ofPattern("hh:mm:ss a")));
-
+                    // Getting the system time in a string
+                    String time = LocalTime.now().format(DateTimeFormatter.ofPattern("hh:mm:ss a"));
+                    // Setting the time in a label
+                    lblClock.setText(time);
                 }
             });
 

@@ -419,7 +419,6 @@ public class RentalsGUI implements Initializable {
         }
     }
 
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         TextFields.bindAutoCompletion(txtCustomerId, customerIDName);

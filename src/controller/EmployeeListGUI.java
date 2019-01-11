@@ -111,13 +111,18 @@ public class EmployeeListGUI implements Initializable {
         tbl.setOnMouseClicked(event -> {
             if(event.getClickCount() == 2)
             {
-                loadContents();
+                loadClickedContents();
             }
         });
 
+        loadTableData();
+    }
+
+    private void loadTableData() {
         Connection connection = DBConnection.getConnection();
         ObservableList<Employee> list = FXCollections.observableArrayList();
 
+        // Setting cell value factories to populate table with database query result set
         username.setCellValueFactory(new PropertyValueFactory<>("username"));
         pass.setCellValueFactory(new PropertyValueFactory<>("pass"));
         email.setCellValueFactory(new PropertyValueFactory<>("email"));
@@ -128,9 +133,13 @@ public class EmployeeListGUI implements Initializable {
             ResultSet rs = ps.executeQuery();
 
             while (rs.next()) {
-                list.add(new Employee(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4)));
+                list.add(new Employee(rs.getString("username"),
+                        rs.getString("password"),
+                        rs.getString("email"),
+                        rs.getString("accessLevel")));
             }
 
+            // Setting table data
             tbl.setItems(list);
 
             connection.close();
@@ -140,7 +149,7 @@ public class EmployeeListGUI implements Initializable {
         }
     }
 
-    private void loadContents() {
+    private void loadClickedContents() {
         Employee e = tbl.getSelectionModel().getSelectedItem();
 
         txtUser.setText(e.getUsername());

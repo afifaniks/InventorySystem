@@ -31,8 +31,14 @@ public class TransactionGUI implements Initializable {
     public static Integer cusID = null;
     public static Double payAmount = null;
     public static LocalDate rentalReturnDate = null;
-    public static boolean rentOrSale = false; //false for rent & true for sale.
-                                                // Field value will be initiated from RentalsGUI or SellsGUI Class
+    /**
+     * rentOrSale is a field to distinguish between
+     * a transaction type.
+     * Field value will be set from RentalsGUI or SellsGUI class before starting transaction
+     * True: If the transaction is for selling an item
+     * False: If the transaction is for renting an item
+     */
+    public static boolean rentOrSale = false;
     public static Double due = null;
     private static TreeMap<String, Integer> trType = new TreeMap<>();
 
@@ -83,6 +89,7 @@ public class TransactionGUI implements Initializable {
         btnCancel.setOnAction(e -> {
             hideWindow();
         });
+
         Connection connection = DBConnection.getConnection();
         try {
             PreparedStatement preparedStatement = connection.prepareStatement("SELECT firstName, lastName FROM customers WHERE customerID =" + cusID);
@@ -152,9 +159,9 @@ public class TransactionGUI implements Initializable {
     @FXML
     void btnProceedAction(ActionEvent event) {
         if (rentOrSale) {
-            finalizePurchase();
+            finalizePurchase(); // Calling method to finalize the purchase
         } else {
-            finalizeRental();
+            finalizeRental(); // Calling method to finalize rent
         }
     }
 
@@ -199,11 +206,10 @@ public class TransactionGUI implements Initializable {
             new PromptDialogGUI("Transaction Complete!", "Purchase & Transaction are successful! " +
                     "You can close this dialog and start over.");
 
+            // Updating stock of the item
             PreparedStatement updateStock = con.prepareStatement("UPDATE item SET stock = ? WHERE itemID = ?");
-
-            updateStock.setInt(1, stock - purchaseQty);
+            updateStock.setInt(1, stock - purchaseQty); // NewStock = PreviousStock - PurchasedQty
             updateStock.setInt(2, itemID);
-
             updateStock.executeUpdate();
 
             con.close();
@@ -254,11 +260,10 @@ public class TransactionGUI implements Initializable {
             new PromptDialogGUI("Transaction Complete!", "Rent & Transaction are successful! " +
                     "You can close this dialog and start over.");
 
+            // Updating stock of the item
             PreparedStatement updateStock = con.prepareStatement("UPDATE item SET stock = ? WHERE itemID = ?");
-
-            updateStock.setInt(1, stock - 1);
+            updateStock.setInt(1, stock - 1); // NewStock = PrevStock - 1 ; As we considered only one item will be rented once
             updateStock.setInt(2, itemID);
-
             updateStock.executeUpdate();
 
             con.close();

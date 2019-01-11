@@ -166,7 +166,6 @@ public class DashboardGUI implements Initializable{
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
     }
 
     @FXML

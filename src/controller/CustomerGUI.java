@@ -75,7 +75,7 @@ public class CustomerGUI implements Initializable {
     private JFXButton btnNextEntry;
 
     @FXML
-    private Label customerID, lblSearchResults, lblMode;
+    private Label customerID, customerDue, lblSearchResults, lblMode;
 
     @FXML
     private Label lblPageIndex;
@@ -150,6 +150,10 @@ public class CustomerGUI implements Initializable {
     public static ObservableList<main.Customer> customersList = FXCollections.observableArrayList(); //This field will auto set from InitializerGUI Class
     public static ObservableList<main.Customer> tempList = FXCollections.observableArrayList(); //Will hold the main list while searching
     public static ArrayList<String> customerNames = new ArrayList<>();
+    /**
+     * onView field is used to hold the Customer object
+     * that is currently loaded on screen
+     */
     private main.Customer onView = null;
     private static boolean searchDone = false;
     private static boolean addFlag = false;
@@ -259,9 +263,55 @@ public class CustomerGUI implements Initializable {
         }
     }
 
-    //This method will navigate between customer records
+    /**
+     * This method will calculate a customer's total amount of due
+     * @param id : This is the customer's id whose due we want to calculate
+     * @return : Returns the total due of a customer
+     */
+
+    private Double setDue(Integer id) {
+        Connection connection = DBConnection.getConnection();
+        Double purchaseDue = 0.0;
+        Double rentalDue = 0.0;
+        try {
+            // Getting total purchase due of customer
+            PreparedStatement statement = connection.prepareStatement(
+                    "SELECT SUM(amountDue) FROM purchases WHERE Customers_customerID = ?");
+            statement.setInt(1, id);
+            ResultSet rs = statement.executeQuery();
+
+            while (rs.next()) {
+                purchaseDue += rs.getDouble(1);
+            }
+
+            // Getting total rental due of customer
+            statement = connection.prepareStatement(
+                    "SELECT SUM(amountDue) FROM rentals WHERE Customers_customerID = ?");
+            statement.setInt(1, id);
+
+            rs = statement.executeQuery();
+
+            while (rs.next()) {
+                rentalDue += rs.getDouble(1);
+            }
+
+            return purchaseDue + rentalDue;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return null;
+    }
+
+    /**
+     * This method will navigate between the customer records.
+     * Before calling this method the onView field must be set
+     * to the item that is going to be displayed.
+     */
 
     private void recordNavigator() {
+        // Resetting fields from the data of onView field
         customerID.setText(String.valueOf(onView.getId()));
         txtFName.setText(onView.getFirstName());
         txtLName.setText(onView.getLastName());
@@ -269,8 +319,17 @@ public class CustomerGUI implements Initializable {
         email.setText(onView.getEmail());
         phone.setText(onView.getPhone());
         memberSince.setText(onView.getDate().toString());
+        customerDue.setText(Double.valueOf(setDue(onView.getId())).toString() + " $");
 
-        //Setting Image
+        if (onView.getGender().equals("Male"))
+            radioMale.setSelected(true);
+        else
+            radioFemale.setSelected(true);
+
+        // Setting Image..
+        // If no image is specified/the image path specified is not loadable/image does not exist anymore
+        //      we set the default image
+        // Otherwise we load the photo from hard disk
         if (onView.getPhoto() == null) {
             ImagePattern img = new ImagePattern(new Image("/resource/icons/user.png"));
             imgCustomerPhoto.setFill(img);
@@ -283,22 +342,16 @@ public class CustomerGUI implements Initializable {
                     ImagePattern img = new ImagePattern(new Image(imgPath));
                     imgCustomerPhoto.setFill(img);
                 } else {
-                    imgPath = null;
+                    imgPath = null; // Setting imgPath to null cause no valid image found
                     ImagePattern img = new ImagePattern(new Image("/resource/icons/user.png"));
                     imgCustomerPhoto.setFill(img);
                 }
             } catch (Exception e) {
                 //Fallback photo: this will be applied if photo not found or remove in the directory specified directory
-                //imgPath = null;
                 ImagePattern img = new ImagePattern(new Image("/resource/icons/user.png"));
-                imgCustomerPhoto.setFill(img);
+                imgCustomerPhoto.setFill(img); //Setting image
             }
         }
-
-        if (onView.getGender().equals("Male"))
-            radioMale.setSelected(true);
-        else
-            radioFemale.setSelected(true);
 
     }
 

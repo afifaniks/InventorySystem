@@ -104,7 +104,6 @@ public class CustomerPurchaseListGUI implements Initializable {
             lblAmount.setText(total.toString() + " $");
             lblSellCount.setText(ctr.toString());
 
-            System.out.println(list.size());
             tblRecent.setItems(list);
             con.close();
         } catch (SQLException e) {

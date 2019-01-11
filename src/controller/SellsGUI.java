@@ -110,7 +110,6 @@ public class SellsGUI implements Initializable{
         lineChart.getData().clear();
         Connection con = DBConnection.getConnection();
         try {
-            //TODO: FIX SQL
             PreparedStatement ps = con.prepareStatement("SELECT purchaseDate, sum(payAmount) FROM purchases WHERE User_username='"+ LogInGUI.loggerUsername+"' GROUP BY purchaseDate ORDER BY UNIX_TIMESTAMP(purchaseDate) DESC LIMIT 15");
             ResultSet rs = ps.executeQuery();
 

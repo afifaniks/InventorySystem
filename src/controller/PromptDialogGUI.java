@@ -18,13 +18,20 @@ import java.io.IOException;
  **/
 public class PromptDialogGUI {
 
-    //Constructor will pop up a new stage which will contain
-    //type of error(header) and details(error).
+    /**
+     * Constructor will pop up a new stage which will contain
+     * type of error/notification(header) and its details.
+     * @param header : Prompt headline
+     * @param error : Description message of prompt
+     */
+
     public PromptDialogGUI(String header, String error) {
 
         Stage stg = new Stage();
         stg.setAlwaysOnTop(true);
-        stg.initModality(Modality.WINDOW_MODAL);
+
+        //Modality is so that this window must be interacted before others
+        stg.initModality(Modality.APPLICATION_MODAL);
         stg.setResizable(false);
 
         try {
@@ -33,7 +40,6 @@ public class PromptDialogGUI {
             Scene s = new Scene(root);
 
             //Getting useful nodes from FXML to set error report
-
             Label lblHeader = (Label) root.lookup("#lblHeader");
             JFXTextArea txtError = (JFXTextArea) root.lookup("#txtError");
             JFXButton btnClose = (JFXButton) root.lookup("#btnClose");
@@ -41,6 +47,7 @@ public class PromptDialogGUI {
             lblHeader.setText(header);
             txtError.setText(error);
 
+            //Setting close button event
             btnClose.setOnAction(event -> {
                 stg.hide();
             });

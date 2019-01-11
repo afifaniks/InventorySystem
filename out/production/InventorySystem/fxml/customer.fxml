@@ -88,7 +88,8 @@
                  <JFXTextField fx:id="address" alignment="CENTER" editable="false" focusColor="#263238" layoutX="380.0" layoutY="275.0" prefHeight="31.0" prefWidth="232.0">
                     <font>
                        <Font size="15.0" />
-                    </font></JFXTextField>
+                    </font>
+            </JFXTextField>
                  <Label layoutX="295.0" layoutY="387.0" prefHeight="44.0" prefWidth="78.0" text="Email:">
                     <font>
                        <Font name="System Bold" size="14.0" />
@@ -102,7 +103,8 @@
                  <JFXTextField fx:id="email" alignment="CENTER" editable="false" focusColor="#263238" layoutX="380.0" layoutY="396.0" prefHeight="31.0" prefWidth="232.0">
                     <font>
                        <Font size="15.0" />
-                    </font></JFXTextField>
+                    </font>
+            </JFXTextField>
                  <Separator layoutX="661.0" layoutY="160.0" orientation="VERTICAL" prefHeight="332.0" prefWidth="5.0" style="-fx-background-color: #263238;" />
                  <Label layoutX="47.0" layoutY="436.0" prefHeight="44.0" prefWidth="78.0" text="Gender:">
                     <font>
@@ -159,7 +161,7 @@
                        <MaterialDesignIconView fill="#263238" glyphName="CONTENT_SAVE" size="30" />
                     </graphic>
                  </JFXButton>
-                 <JFXButton fx:id="btnPurchases" alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="795.0" layoutY="236.0" onAction="#showPurchases" prefHeight="50.0" prefWidth="147.0" ripplerFill="WHITE" stylesheets="@../css/customer.css" text="Purchases">
+                 <JFXButton fx:id="btnPurchases" alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="795.0" layoutY="219.0" onAction="#showPurchases" prefHeight="50.0" prefWidth="147.0" ripplerFill="WHITE" stylesheets="@../css/customer.css" text="Purchases">
                     <cursor>
                        <Cursor fx:constant="HAND" />
                     </cursor>
@@ -170,7 +172,7 @@
                        <Font size="15.0" />
                     </font>
                  </JFXButton>
-                 <JFXButton fx:id="btnRentals" alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="795.0" layoutY="291.0" onAction="#showrentals" prefHeight="50.0" prefWidth="147.0" ripplerFill="WHITE" stylesheets="@../css/customer.css" text="Rentals">
+                 <JFXButton fx:id="btnRentals" alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="795.0" layoutY="274.0" onAction="#showrentals" prefHeight="50.0" prefWidth="147.0" ripplerFill="WHITE" stylesheets="@../css/customer.css" text="Rentals">
                     <cursor>
                        <Cursor fx:constant="HAND" />
                     </cursor>
@@ -196,7 +198,7 @@
                        <Font name="System Bold" size="14.0" />
                     </font>
                  </Label>
-                 <JFXButton fx:id="btnLViewAllCustomers" alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="795.0" layoutY="346.0" onAction="#listAllCustomers" prefHeight="50.0" prefWidth="147.0" ripplerFill="WHITE" style="-fx-background-color: green; -fx-text-fill: white;" stylesheets="@../css/customer.css" text="Table View">
+                 <JFXButton fx:id="btnLViewAllCustomers" alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="795.0" layoutY="329.0" onAction="#listAllCustomers" prefHeight="50.0" prefWidth="147.0" ripplerFill="WHITE" style="-fx-background-color: green; -fx-text-fill: white;" stylesheets="@../css/customer.css" text="Table View">
                     <cursor>
                        <Cursor fx:constant="HAND" />
                     </cursor>
@@ -254,7 +256,7 @@
                   <Font size="27.0" />
                </font>
             </Label>
-            <JFXButton fx:id="btnDelete" alignment="CENTER" buttonType="RAISED" disable="true" graphicTextGap="10.0" layoutX="795.0" layoutY="401.0" onAction="#btnDelAction" prefHeight="50.0" prefWidth="147.0" ripplerFill="WHITE" style="-fx-background-color: red; -fx-text-fill: white;" text="Delete Entry" textFill="WHITE">
+            <JFXButton fx:id="btnDelete" alignment="CENTER" buttonType="RAISED" disable="true" graphicTextGap="10.0" layoutX="795.0" layoutY="384.0" onAction="#btnDelAction" prefHeight="50.0" prefWidth="147.0" ripplerFill="WHITE" style="-fx-background-color: red; -fx-text-fill: white;" text="Delete Entry" textFill="WHITE">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -268,6 +270,16 @@
             <Label layoutX="692.0" layoutY="148.0" prefHeight="51.0" prefWidth="134.0" text="Operations" textFill="GREEN">
                <font>
                   <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="795.0" layoutY="458.0" prefHeight="44.0" prefWidth="78.0" text="Total Due:">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="customerDue" layoutX="880.0" layoutY="464.0" prefHeight="31.0" prefWidth="189.0" text="Label" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="20.0" />
                </font>
             </Label>
               </children>
