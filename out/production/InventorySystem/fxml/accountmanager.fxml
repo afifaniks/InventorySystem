@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="615.0" prefWidth="1042.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AccountListGUI">
+<AnchorPane prefHeight="615.0" prefWidth="1042.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AccountListController">
    <children>
       <JFXTextField fx:id="txtAccID" alignment="CENTER" focusColor="#263238" layoutX="137.0" layoutY="150.0" prefHeight="31.0" prefWidth="200.0">
          <font>

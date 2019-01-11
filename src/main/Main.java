@@ -6,7 +6,7 @@ package main;
  * Project: TeslaRentalInventory
  **/
 
-import controller.PromptDialogGUI;
+import controller.PromptDialogController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -33,7 +33,7 @@ public class Main extends Application {
             primaryStage.show();
 
         } catch (IOException e) {
-            new PromptDialogGUI("Error!", "Error Occured. Failed to initialize system.");
+            new PromptDialogController("Error!", "Error Occured. Failed to initialize system.");
         }
 
     }

@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="661.0" prefWidth="1107.0" style="-fx-background-color: white;" stylesheets="/css/administrator.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdministratorGUI">
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="661.0" prefWidth="1107.0" style="-fx-background-color: white;" stylesheets="/css/administrator.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdministratorController">
    <children>
       <Pane layoutX="803.0" layoutY="475.0" prefHeight="167.0" prefWidth="251.0" style="-fx-border-color: red; -fx-border-width: 2;" />
       <AnchorPane layoutX="4.0" prefHeight="85.0" prefWidth="1169.0" style="-fx-background-color: #253238;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
@@ -94,7 +94,7 @@
             <Font size="15.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="btnDelete" alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="834.0" layoutY="503.0" onAction="#deleteAll" prefHeight="118.0" prefWidth="198.0" ripplerFill="WHITE" style="-fx-background-color: red; -fx-background-radius: 100 100 100 100; -fx-text-fill: white;" text="Trancate Everything" textFill="WHITE">
+      <JFXButton fx:id="btnDelete" alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="834.0" layoutY="503.0" onAction="#deleteAll" prefHeight="118.0" prefWidth="198.0" ripplerFill="WHITE" style="-fx-background-color: red; -fx-background-radius: 100 100 100 100; -fx-text-fill: white;" text="Delete All Records" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>

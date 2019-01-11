@@ -6,11 +6,10 @@
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Tooltip?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="trPane" prefHeight="519.0" prefWidth="757.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TransactionGUI">
+<AnchorPane fx:id="trPane" prefHeight="519.0" prefWidth="757.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TransactionController">
    <children>
       <AnchorPane prefHeight="35.0" prefWidth="727.0" style="-fx-background-color: #263238;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
@@ -59,9 +58,6 @@
          <font>
             <Font size="15.0" />
          </font>
-         <tooltip>
-            <Tooltip text="Empty Tooltip" />
-         </tooltip>
       </JFXButton>
       <JFXButton fx:id="btnProcced" alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="359.0" layoutY="434.0" onAction="#btnProceedAction" prefHeight="59.0" prefWidth="133.0" ripplerFill="WHITE" style="-fx-background-color: green;" stylesheets="@../css/sells.css" text="Finalize" textFill="WHITE">
          <cursor>

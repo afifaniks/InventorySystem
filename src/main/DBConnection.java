@@ -1,6 +1,6 @@
 package main;
 
-import controller.PromptDialogGUI;
+import controller.PromptDialogController;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -21,7 +21,7 @@ public class DBConnection {
             con = DriverManager.getConnection(URL, "root", "root");
         } catch (SQLException e) {
             if (e.getErrorCode() == 0) { //Error Code 0: database server offline
-                new PromptDialogGUI("Error!", "Database server is offline!");
+                new PromptDialogController("Error!", "Database server is offline!");
             }
             return null;
         }
