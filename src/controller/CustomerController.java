@@ -20,6 +20,7 @@ import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import main.Customer;
 import org.controlsfx.control.textfield.TextFields;
 import main.DBConnection;
 import java.io.File;
@@ -36,8 +37,6 @@ import java.util.ResourceBundle;
  * Written on: 7/12/2018
  * Project: TeslaRentalInventory
  **/
-
-//TODO: Add a due option
 
 public class CustomerController implements Initializable {
 
@@ -166,10 +165,33 @@ public class CustomerController implements Initializable {
             btnDelete.setDisable(false);
 
         TextFields.bindAutoCompletion(txtSearch, customerNames); //Auto complete field is set now
-        initialView();
+
+        //Setting next entry if any on next button action
+        btnNextEntry.setOnAction(event -> {
+            onView = customersList.get(++recordIndex);
+            recordNavigator();
+            lblPageIndex.setText("Showing " + (recordIndex + 1) + " of " + recordSize + " results.");
+            if (recordIndex == recordSize - 1)
+                btnNextEntry.setDisable(true);
+            btnPrevEntry.setDisable(false);
+
+        });
+
+        //Setting previous entry if any on previous button action
+        btnPrevEntry.setOnAction(event -> {
+            onView = customersList.get(--recordIndex);
+            recordNavigator();
+            lblPageIndex.setText("Showing " + (recordIndex + 1) + " of " + recordSize + " results.");
+            btnNextEntry.setDisable(false);
+            if (recordIndex == 0)
+                btnPrevEntry.setDisable(true);
+        });
+        setView();
     }
 
-    private void initialView() {
+    // setView() method will set the record list of customers
+    // and re-initialize the view
+    private void setView() {
         imgPath = null;
         customerListPane.setVisible(false); //Initially customer list view is set as not visible
 
@@ -200,29 +222,6 @@ public class CustomerController implements Initializable {
 
             }
         });
-
-        //Setting next entry if any on next button action
-        btnNextEntry.setOnAction(event -> {
-            onView = customersList.get(++recordIndex);
-            recordNavigator();
-            lblPageIndex.setText("Showing " + (recordIndex + 1) + " of " + recordSize + " results.");
-            if (recordIndex == recordSize - 1)
-                btnNextEntry.setDisable(true);
-            btnPrevEntry.setDisable(false);
-
-        });
-
-        //Setting previous entry if any on previous button action
-        btnPrevEntry.setOnAction(event -> {
-            onView = customersList.get(--recordIndex);
-            recordNavigator();
-            lblPageIndex.setText("Showing " + (recordIndex + 1) + " of " + recordSize + " results.");
-            btnNextEntry.setDisable(false);
-            if (recordIndex == 0)
-                btnPrevEntry.setDisable(true);
-
-        });
-
 
         btnNextEntry.setDisable(true); //For purpose ;)
 
@@ -352,7 +351,6 @@ public class CustomerController implements Initializable {
                 imgCustomerPhoto.setFill(img); //Setting image
             }
         }
-
     }
 
     @FXML
@@ -458,16 +456,104 @@ public class CustomerController implements Initializable {
                         customerResultSet.getDate(9)));;
             }
 
-            initialView();
+            setView();
 
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
+    /**
+     * This method search into database with the id of a customer and returns the result
+     * @param id: ID of the customer
+     * @return: The search result of the query
+     */
+    private ObservableList<Customer> searchWithID(Integer id) {
+        Connection con = DBConnection.getConnection();
+
+        String idSQL = "SELECT * FROM customers WHERE customerID = ?";
+
+        ObservableList<main.Customer> searchResult = FXCollections.observableArrayList(); //list to hold search result
+
+        try {
+            PreparedStatement preparedStatement = con.prepareStatement(idSQL);
+            preparedStatement.setInt(1, id);
+
+            ResultSet customerResultSet = preparedStatement.executeQuery();
+
+            //Getting values from customers result set
+            while (customerResultSet.next()) {
+                searchResult.add(new Customer(
+                        customerResultSet.getInt("customerID"),
+                        customerResultSet.getString("firstName"),
+                        customerResultSet.getString("lastName"),
+                        customerResultSet.getString("address"),
+                        customerResultSet.getString("phone"),
+                        customerResultSet.getString("email"),
+                        customerResultSet.getString("photo"),
+                        customerResultSet.getString("gender"),
+                        customerResultSet.getDate("memberSince")));
+            }
+
+            con.close();
+
+        } catch (SQLException e) {
+            new PromptDialogController("SQL Error!",
+                    "Error occured while executing Query.\nSQL Error Code: " + e.getErrorCode());
+        }
+
+        return searchResult;
+    }
+
+    /**
+     * This method search into the customer databse with a string and
+     * returns any records that has a match with the search string
+     * @param name: Name of the customer
+     * @return: List of the result
+     */
+
+    private ObservableList<Customer> searchWithName(String name) {
+        Connection con = DBConnection.getConnection();
+        String nameSQL = "SELECT * FROM customers " +
+                "WHERE firstName COLLATE UTF8_GENERAL_CI like ? " +
+                "OR " +
+                "lastName COLLATE UTF8_GENERAL_CI like ?";
+        ObservableList<main.Customer> searchResult = FXCollections.observableArrayList(); //list to hold search result
+
+        try {
+            PreparedStatement preparedStatement = con.prepareStatement(nameSQL);
+            preparedStatement.setString(1, "%" + name + "%");
+            preparedStatement.setString(2, "%" + name + "%");
+
+            ResultSet customerResultSet = preparedStatement.executeQuery();
+
+            //Getting values from customers result set
+            while (customerResultSet.next()) {
+                searchResult.add(new Customer(
+                        customerResultSet.getInt("customerID"),
+                        customerResultSet.getString("firstName"),
+                        customerResultSet.getString("lastName"),
+                        customerResultSet.getString("address"),
+                        customerResultSet.getString("phone"),
+                        customerResultSet.getString("email"),
+                        customerResultSet.getString("photo"),
+                        customerResultSet.getString("gender"),
+                        customerResultSet.getDate("memberSince")));
+
+            }
+        } catch (SQLException e) {
+            new PromptDialogController("SQL Error!",
+                    "Error occured while executing Query.\nSQL Error Code: " + e.getErrorCode());
+        }
+        return searchResult;
+    }
 
     @FXML
     void btnSearchAction(ActionEvent event) {
+        // searchDone is a boolean field that will store the searching status
+        // True: If the searching process is finished
+        //       do -> Reset the records to initial
+        // False: In case of a new search
         if (searchDone) {
             searchDone = false;
             lblSearchResults.setVisible(false);
@@ -475,38 +561,19 @@ public class CustomerController implements Initializable {
             recordSize = customersList.size();
             btnSearch.setTooltip(new Tooltip("Search with customers name or id"));
             btnSeachIcon.setGlyphName("SEARCH");
-            initialView();
+            setView();
         } else {
-            Connection con = DBConnection.getConnection();
-
-            String idSQL = "SELECT * FROM customers WHERE customerID = ?";
-            String nameSQL = "SELECT * FROM customers WHERE firstName COLLATE UTF8_GENERAL_CI like ? OR lastName COLLATE UTF8_GENERAL_CI like ?";
-
-            ObservableList<main.Customer> searchResult = FXCollections.observableArrayList(); //list to hold search result
-
+            ObservableList<Customer> searchResult = FXCollections.observableArrayList();
             try {
-                //Checking if input field is a number then searching with ID
+                // Checking if input field is a number then searching with ID
+                // If parsing of Integer fails then we shall try to search
+                // with name instead
                 Integer id = Integer.valueOf(txtSearch.getText());
-                PreparedStatement preparedStatement = con.prepareStatement(idSQL);
-                preparedStatement.setInt(1, id);
-
-                ResultSet customerResultSet = preparedStatement.executeQuery();
-
-                //Getting values from customers result set
-                while (customerResultSet.next()) {
-                    searchResult.add(new main.Customer(
-                            customerResultSet.getInt(1),
-                            customerResultSet.getString(2),
-                            customerResultSet.getString(3),
-                            customerResultSet.getString(4),
-                            customerResultSet.getString(5),
-                            customerResultSet.getString(6),
-                            customerResultSet.getString(7),
-                            customerResultSet.getString(8),
-                            customerResultSet.getDate(9)));
-
-                }
-
+                searchResult = searchWithID(id);
+            } catch (NumberFormatException e) {
+                String name = txtSearch.getText();
+                searchResult = searchWithName(name);
+            } finally {
                 if (searchResult.size() <= 0) {
                     lblSearchResults.setText("No Results Found!");
                     lblSearchResults.setVisible(true);
@@ -519,62 +586,11 @@ public class CustomerController implements Initializable {
                     recordSize = searchResult.size();
                     lblSearchResults.setText(recordSize + " results found!");
                     lblSearchResults.setVisible(true);
-                    initialView();
-
-                    con.close();
+                    // Resetting the view on screen with search results
+                    setView();
                 }
-
-            } catch (NumberFormatException eN) {
-
-                try {
-                    PreparedStatement preparedStatement2 = con.prepareStatement(nameSQL);
-                    preparedStatement2.setString(1, "%" + txtSearch.getText() + "%");
-                    preparedStatement2.setString(2, "%" + txtSearch.getText() + "%");
-
-                    ResultSet customerResultSet2 = preparedStatement2.executeQuery();
-
-                    //Getting values from customers result set
-                    while (customerResultSet2.next()) {
-                        searchResult.add(new main.Customer(
-                                customerResultSet2.getInt(1),
-                                customerResultSet2.getString(2),
-                                customerResultSet2.getString(3),
-                                customerResultSet2.getString(4),
-                                customerResultSet2.getString(5),
-                                customerResultSet2.getString(6),
-                                customerResultSet2.getString(7),
-                                customerResultSet2.getString(8),
-                                customerResultSet2.getDate(9)));
-
-                    }
-
-                    if (searchResult.size() <= 0) {
-                        lblSearchResults.setText("No Results Found!");
-                        lblSearchResults.setVisible(true);
-                    } else {
-                        tempList = FXCollections.observableArrayList(customersList);
-                        searchDone = true;
-                        btnSeachIcon.setGlyphName("CLOSE");
-                        btnSearch.setTooltip(new Tooltip("Reset Full List"));
-                        customersList = searchResult; //Assigning search result to customerList
-                        recordSize = searchResult.size();
-                        lblSearchResults.setText(recordSize + " results found!");
-                        lblSearchResults.setVisible(true);
-                        initialView();
-
-                        con.close();
-                    }
-
-                } catch (SQLException eS2) {
-
-                    new PromptDialogController("SQL Error!", "Error occured while executing Query.\nSQL Error Code: " + eS2.getErrorCode());
-                }
-
-            } catch (SQLException eS) {
-                new PromptDialogController("SQL Error!", "Error occured while executing Query.\nSQL Error Code: " + eS.getErrorCode());
             }
         }
-
     }
 
     @FXML

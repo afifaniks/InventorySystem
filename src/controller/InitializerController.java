@@ -211,7 +211,7 @@ public class InitializerController implements Initializable {
 
             }
 
-            //Setting OL to the static field of InventoryController
+            //Setting Observable Lists to the static field of InventoryController
             InventoryController.itemList = itemList;
             InventoryController.itemNames = itemNames;
             SellsController.inventoryItem = itemIDNameForSale; //Setting item id and name for sale & RentalsController

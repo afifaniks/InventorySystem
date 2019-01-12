@@ -11,97 +11,9 @@
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/controller/AccountGUI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/controller/AccountListGUI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/controller/AdministratorGUI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/controller/BaseGUI$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/controller/BaseGUI$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/controller/BaseGUI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/controller/CustomerGUI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/controller/CustomerPurchaseListGUI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/controller/CustomersRentalListGUI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/controller/DashboardGUI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/controller/DueUpdateGUI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/controller/EmployeeListGUI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/controller/InitializerGUI$NewTask.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/controller/InitializerGUI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/controller/InventoryGUI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/controller/ItemTypeGUI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/controller/LogInGUI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/controller/NewEmployeeGUI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/controller/PromptDialogGUI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/controller/RentalListGUI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/controller/RentalsGUI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/controller/SellListGUI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/controller/SellsGUI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/controller/TransactionGUI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/controller/TransactionListGUI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/fxml/accountmanager.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InventorySystem/fxml/accountmanager.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/fxml/accounts.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InventorySystem/fxml/accounts.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/fxml/administrator.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InventorySystem/fxml/administrator.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/fxml/base.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InventorySystem/fxml/base.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/fxml/customer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InventorySystem/fxml/customer.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/fxml/customerpurchase.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InventorySystem/fxml/customerpurchase.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/fxml/customerrentals.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InventorySystem/fxml/customerrentals.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/fxml/dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InventorySystem/fxml/dashboard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/fxml/dueupdate.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InventorySystem/fxml/dueupdate.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/fxml/employeelist.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InventorySystem/fxml/employeelist.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/fxml/initializer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InventorySystem/fxml/initializer.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/fxml/inventory.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InventorySystem/fxml/inventory.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/fxml/itemtypemanager.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InventorySystem/fxml/itemtypemanager.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/fxml/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InventorySystem/fxml/login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/fxml/newemployee.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InventorySystem/fxml/newemployee.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/fxml/rentallist.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InventorySystem/fxml/rentallist.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/fxml/rentals.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InventorySystem/fxml/rentals.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/fxml/selllist.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InventorySystem/fxml/selllist.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/fxml/sells.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InventorySystem/fxml/sells.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/fxml/transaction.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InventorySystem/fxml/transaction.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/fxml/translist.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InventorySystem/fxml/translist.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/AccountGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/AccountController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/AccountListGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/AccountListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/AdministratorGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/AdministratorController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/BaseGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/BaseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/CustomerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/CustomerPurchaseListGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/CustomerPurchaseListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/CustomersRentalListGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/CustomersRentalListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/DashboardGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/DashboardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/DueUpdateGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/DueUpdateController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/EmployeeListGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/EmployeeListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/InitializerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/InitializerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/InventoryGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/InventoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/ItemTypeGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ItemTypeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/LogInGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/LogInController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/NewEmployeeGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/NewEmployeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/PromptDialogGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/PromptDialogController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/RentalListGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/RentalListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/RentalsGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/RentalsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/SellListGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/SellListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/SellsGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/SellsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/TransactionGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/TransactionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/TransactionListGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/TransactionListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxml/accountmanager.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/accountmanager.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxml/accounts.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/accounts.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxml/administrator.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/administrator.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxml/base.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/base.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxml/customer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/customer.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxml/customerpurchase.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/customerpurchase.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxml/customerrentals.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/customerrentals.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxml/dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/dashboard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxml/dueupdate.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/dueupdate.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxml/employeelist.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/employeelist.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxml/initializer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/initializer.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxml/inventory.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/inventory.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxml/itemtypemanager.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/itemtypemanager.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxml/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxml/newemployee.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/newemployee.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxml/rentallist.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/rentallist.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxml/rentals.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/rentals.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxml/selllist.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/selllist.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxml/sells.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/sells.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxml/transaction.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/transaction.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxml/translist.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/translist.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/DBConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/DBConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/controller/CustomerController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/InitializerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/InitializerController.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -141,6 +53,13 @@
         <item name="teslarentalinventory@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="teslarentalinventory: schema" type="c314c289:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="teslarentalinventory@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="teslarentalinventory: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="customers: table" type="98d5ac3d:MysqlImplModel$Table" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
@@ -320,7 +239,7 @@
     <session id="1136038920">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="24" />
+          <entry key="project.closed" value="26" />
           <entry key="project.open.time.100" value="1" />
           <entry key="project.open.time.106" value="1" />
           <entry key="project.open.time.110" value="1" />
@@ -341,10 +260,11 @@
           <entry key="project.open.time.79" value="1" />
           <entry key="project.open.time.80" value="1" />
           <entry key="project.open.time.87" value="1" />
-          <entry key="project.open.time.89" value="1" />
+          <entry key="project.open.time.88" value="1" />
+          <entry key="project.open.time.89" value="2" />
           <entry key="project.open.time.91" value="1" />
           <entry key="project.open.time.92" value="1" />
-          <entry key="project.opened" value="24" />
+          <entry key="project.opened" value="26" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -352,7 +272,7 @@
           <entry key="class" value="1" />
           <entry key="css" value="6" />
           <entry key="fxml" value="4" />
-          <entry key="java" value="93" />
+          <entry key="java" value="97" />
           <entry key="png" value="3" />
           <entry key="uml" value="9" />
         </counts>
@@ -362,7 +282,7 @@
           <entry key="CLASS" value="1" />
           <entry key="CSS" value="6" />
           <entry key="Image" value="3" />
-          <entry key="JAVA" value="93" />
+          <entry key="JAVA" value="97" />
           <entry key="UML" value="9" />
           <entry key="XML" value="4" />
         </counts>
@@ -370,13 +290,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="142" />
-          <entry key="java" value="7630" />
+          <entry key="java" value="8823" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="7630" />
+          <entry key="JAVA" value="8820" />
           <entry key="PLAIN_TEXT" value="142" />
+          <entry key="SQL" value="3" />
         </counts>
       </usages-collector>
     </session>
@@ -410,14 +331,53 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controller/TransactionController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="503">
-              <caret line="196" column="93" lean-forward="true" selection-start-line="196" selection-start-column="82" selection-end-line="196" selection-end-column="103" />
+            <state relative-caret-position="3094">
+              <caret line="196" column="93" selection-start-line="196" selection-start-column="82" selection-end-line="196" selection-end-column="103" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/controller/CustomerController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="512" column="7" lean-forward="true" selection-start-line="512" selection-start-column="7" selection-end-line="512" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controller/InitializerController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3196">
+              <caret line="213" column="38" selection-start-line="213" selection-start-column="38" selection-end-line="213" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controller/BaseController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2108">
+              <caret line="140" column="54" selection-start-line="140" selection-start-column="54" selection-end-line="140" selection-end-column="54" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controller/InventoryController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1938">
+              <caret line="141" column="60" selection-start-line="141" selection-start-column="60" selection-end-line="141" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -435,7 +395,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>syste</find>
       <find>Dia</find>
       <find>dia</find>
       <find>itemN</find>
@@ -465,11 +424,13 @@
       <find>if \(startTransaction\) \{\n            startTransaction \= false\; \/\/Resetting TransactionGUI Value\n            btnIcon\.setGlyphName\(\&quot;QUESTION\&quot;\)\;\n            lblVerify\.setText\(\&quot;Verify Input\&quot;\)\;\n            Tooltip tooltip \= new Tooltip\(\&quot;Verify Input\&quot;\)\;\n            btnProcced\.setTooltip\(tooltip\)\;\n                \/\/Loading TransactionGUI Window\n                \/\/Setting Values in TransactionGUI Window\n                TransactionGUI\.cusID \= Integer\.valueOf\(txtCustomerId\.getText\(\)\)\;\n                TransactionGUI\.purchaseId \= lblId\.getText\(\)\;\n                TransactionGUI\.purchaseQty \= Integer\.valueOf\(txtQty\.getText\(\)\)\;\n                TransactionGUI\.itemID \= Integer\.valueOf\(txtItemId\.getText\(\)\)\;\n                TransactionGUI\.rentOrSale \= true\;\n\n                Double paid \= 0\.0\;\n\n                \/\/Checking if input is valid\n                try \{\n                    if\(txtPayAmount\.getText\(\)\.equals\(\&quot;\&quot;\)\)\n                        paid \= 0\.0\;\n                    else\n                        paid \= Double\.valueOf\(txtPayAmount\.getText\(\)\)\;\n\n                    TransactionGUI\.payAmount \= paid\;\n                    TransactionGUI\.due \= Double\.valueOf\(lblCost\.getText\(\)\) \- paid\;\n\n\n                    Connection connection \= DBConnection\.getConnection\(\)\;\n\n                    \/\/Checking for stock availability\n                    PreparedStatement checkItemStock \= connection\.prepareStatement\(\&quot;SELECT stock FROM item WHERE itemID \= \&quot;\+Integer\.valueOf\(txtItemId\.getText\(\)\)\)\;\n                    ResultSet itemStock \= checkItemStock\.executeQuery\(\)\;\n\n                    Integer stock \= 0\;\n\n                    while\(itemStock\.next\(\)\) \{\n                        stock \= itemStock\.getInt\(1\)\;\n                    \}\n\n                    if\(\(stock \- Integer\.valueOf\(txtQty\.getText\(\)\)\) \&lt; 0\) \{\n                        new PromptDialogGUI\(\&quot;Insuffecient Stock\!\&quot;\, \&quot;Stock is insuffecient to validate this purchase\.\\nRequired\: \&quot; \+\n                                Integer\.valueOf\(txtQty\.getText\(\)\) \+\&quot;\\nIn Stock\:\&quot; \+ stock\)\;\n                        return\;\n                    \}\n\n                    TransactionGUI\.stock \= stock\;\n\n                    \/\/Checking for accounnts\n                    PreparedStatement preparedStatement \= connection\.prepareStatement\(\&quot;SELECT count\(\*\) from accounts\, customers where customerID \= Customers_customerID AND Customers_customerID \= \&quot;\+Integer\.valueOf\(txtCustomerId\.getText\(\)\)\)\;\n                    ResultSet rs \= preparedStatement\.executeQuery\(\)\;\n\n                    int chk \= 0\;\n\n                    while\(rs\.next\(\)\) \{\n                        chk \= rs\.getInt\(1\)\;\n                    \}\n                    if\(chk \&lt;\= 0\) \{\n                        new PromptDialogGUI\(\&quot;No Account\!\&quot;\, \&quot;Customer has no account\. Please create an account first then try again\.\&quot;\)\;\n                    \} else \{\n                        Parent trPanel \= FXMLLoader\.load\(getClass\(\)\.getResource\(\&quot;\/fxml\/transaction\.fxml\&quot;\)\)\;\n                        Scene trScene \= new Scene\(trPanel\)\;\n                        Stage trStage \= new Stage\(\)\;\n                        trStage\.setScene\(trScene\)\;\n                        trStage\.setResizable\(false\)\;\n                        trStage\.show\(\)\;\n                    \}\n\n                    connection\.close\(\)\;\n\n                \} catch \(Exception e\) \{\n                    txtPayAmount\.setUnFocusColor\(Color\.web\(\&quot;red\&quot;\)\)\;\n                    JFXSnackbar snackbar \= new JFXSnackbar\(rightPane\)\;\n                    snackbar\.show\(\&quot;Invalid Input Format\&quot;\, 3000\)\;\n                \}\n\n        \} else \{</find>
       <find>toggle</find>
       <find>Syst</find>
+      <find>initialView</find>
     </findStrings>
     <replaceStrings>
       <replace>btnDashboard</replace>
       <replace>txtStock</replace>
       <replace>toggleTable</replace>
+      <replace>setView</replace>
     </replaceStrings>
   </component>
   <component name="FindManager">
@@ -488,7 +449,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/sample/Transact.java" />
         <option value="$PROJECT_DIR$/src/fxml/translist.fxml" />
         <option value="$PROJECT_DIR$/src/sample/Rent.java" />
         <option value="$PROJECT_DIR$/src/controller/RentalList.java" />
@@ -537,8 +497,9 @@
         <option value="$PROJECT_DIR$/src/controller/BaseGUI.java" />
         <option value="$PROJECT_DIR$/src/controller/TransactionGUI.java" />
         <option value="$PROJECT_DIR$/src/controller/InitializerGUI.java" />
-        <option value="$PROJECT_DIR$/src/controller/InitializerController.java" />
         <option value="$PROJECT_DIR$/src/controller/TransactionController.java" />
+        <option value="$PROJECT_DIR$/src/controller/InitializerController.java" />
+        <option value="$PROJECT_DIR$/src/controller/CustomerController.java" />
       </list>
     </option>
   </component>
@@ -571,6 +532,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -611,7 +573,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -873,6 +834,8 @@
       <workItem from="1547131192478" duration="5229000" />
       <workItem from="1547193332962" duration="3005000" />
       <workItem from="1547224565788" duration="9507000" />
+      <workItem from="1547285264760" duration="3519000" />
+      <workItem from="1547305232308" duration="5145000" />
     </task>
     <task id="LOCAL-00001" summary="Multiple view added.">
       <created>1531118175694</created>
@@ -892,7 +855,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="521208000" />
+    <option name="totallyTimeSpent" value="529872000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -907,8 +870,8 @@
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.17927383" />
-      <window_info id="Structure" order="1" weight="0.25718608" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" weight="0.18154311" />
+      <window_info active="true" id="Structure" order="1" visible="true" weight="0.26096824" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -939,7 +902,7 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Maven Projects" order="4" weight="0.3295107" />
-      <window_info active="true" anchor="right" id="Database" order="5" visible="true" weight="0.1354009" />
+      <window_info anchor="right" id="Database" order="5" weight="0.21482602" />
       <window_info anchor="right" id="JetGradle" order="6" />
       <window_info anchor="right" id="Capture Analysis" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
@@ -1784,13 +1747,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/CustomerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8347">
-          <caret line="268" column="52" selection-start-line="268" selection-start-column="52" selection-end-line="268" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -1816,9 +1772,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1843,34 +1796,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2040">
           <caret line="162" column="5" selection-start-line="162" selection-start-column="5" selection-end-line="162" selection-end-column="5" />
-          <folding>
-            <element signature="e#1911#1912#0" expanded="true" />
-            <element signature="e#1988#1989#0" expanded="true" />
-            <element signature="e#2044#2045#0" expanded="true" />
-            <element signature="e#2124#2125#0" expanded="true" />
-            <element signature="e#2180#2181#0" expanded="true" />
-            <element signature="e#2248#2249#0" expanded="true" />
-            <element signature="e#4404#4405#0" expanded="true" />
-            <element signature="e#4480#4481#0" expanded="true" />
-            <element signature="e#4539#4540#0" expanded="true" />
-            <element signature="e#4609#4610#0" expanded="true" />
-            <element signature="e#4661#4662#0" expanded="true" />
-            <element signature="e#4727#4728#0" expanded="true" />
-            <element signature="e#4778#4779#0" expanded="true" />
-            <element signature="e#4840#4841#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/BaseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="140" column="54" selection-start-line="140" selection-start-column="54" selection-end-line="140" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#6676#6677#0" expanded="true" />
-            <element signature="e#6718#6719#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1878,18 +1803,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="545">
           <caret line="91" column="38" selection-start-line="91" selection-start-column="38" selection-end-line="91" selection-end-column="38" />
-          <folding>
-            <element signature="e#1528#1529#0" expanded="true" />
-            <element signature="e#1555#1556#0" expanded="true" />
-            <element signature="method#loadAgain#0;class#DashboardGUI#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/InitializerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="177" column="12" selection-start-line="177" selection-start-column="12" selection-end-line="177" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -1897,20 +1810,44 @@
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/InventoryController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="183" selection-start-line="183" selection-end-line="183" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/TransactionController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="503">
-          <caret line="196" column="93" lean-forward="true" selection-start-line="196" selection-start-column="82" selection-end-line="196" selection-end-column="103" />
+        <state relative-caret-position="3094">
+          <caret line="196" column="93" selection-start-line="196" selection-start-column="82" selection-end-line="196" selection-end-column="103" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/InitializerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3196">
+          <caret line="213" column="38" selection-start-line="213" selection-start-column="38" selection-end-line="213" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/BaseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2108">
+          <caret line="140" column="54" selection-start-line="140" selection-start-column="54" selection-end-line="140" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/InventoryController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1938">
+          <caret line="141" column="60" selection-start-line="141" selection-start-column="60" selection-end-line="141" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/CustomerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="512" column="7" lean-forward="true" selection-start-line="512" selection-start-column="7" selection-end-line="512" selection-end-column="7" />
         </state>
       </provider>
     </entry>
