@@ -14,13 +14,9 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import main.java.others.*;
 import main.java.others.Customer;
-
 import java.io.IOException;
 import java.net.URL;
-import java.sql.Connection;
-import java.sql.Date;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
+import java.sql.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -45,8 +41,7 @@ public class InitializerController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
-        NewTask initializerTask = new NewTask();
+        LoadRecords initializerTask = new LoadRecords();
         progressIndicator.progressProperty().unbind();
        // progressIndicator.progressProperty().bind(t.progressProperty());
         taskName.textProperty().unbind();
@@ -59,35 +54,37 @@ public class InitializerController implements Initializable {
             //Closing Current Stage
             Stage currentSatge = (Stage) taskName.getScene().getWindow();
             currentSatge.close();
-
-            //Creating a new stage for main application
-            Parent root = null;
-            Stage base = new Stage();
-
-            try {
-                root = FXMLLoader.load(getClass().getResource("/main/resources/view/base.fxml"));
-                Scene scene = new Scene(root);
-                String css = this.getClass().getResource("/main/resources/css/base.css").toExternalForm();
-                scene.getStylesheets().add(css);
-                base.setTitle("Inventory System");
-                base.getIcons().add(new Image("/main/resources/icons/Logo.png"));
-                base.setScene(scene);
-                base.setMaximized(true);
-                base.show();
-            } catch (IOException ex) {
-                ex.printStackTrace();
-            }
+            loadApplication();
         });
     }
 
-    class NewTask extends Task {
+    private void loadApplication() {
+        //Creating a new stage for main application
+        Parent root = null;
+        Stage base = new Stage();
 
+        try {
+            root = FXMLLoader.load(getClass().getResource("/main/resources/view/base.fxml"));
+            Scene scene = new Scene(root);
+            String css = this.getClass().getResource("/main/resources/css/base.css").toExternalForm();
+            scene.getStylesheets().add(css);
+            base.setTitle("Inventory System");
+            base.getIcons().add(new Image("/main/resources/icons/Logo.png"));
+            base.setScene(scene);
+            base.setMaximized(true);
+            base.show();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+    }
+
+    class LoadRecords extends Task {
         @Override
         protected Object call() throws Exception {
             Connection connection = DBConnection.getConnection();
 
             //Creating OLs to save values from result set
-            ObservableList<Customer> customersList = FXCollections.observableArrayList();
+            ObservableList customersList = FXCollections.observableArrayList();
             ObservableList<Item> itemList = FXCollections.observableArrayList();
             ObservableList<String> itemTypeName = FXCollections.observableArrayList();
 
@@ -358,5 +355,4 @@ public class InitializerController implements Initializable {
             return null;
         }
     }
-
 }

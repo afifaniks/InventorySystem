@@ -10,7 +10,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/main/java/others/test.uml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/main/java/controllers/InitializerController$NewTask.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/main/java/controllers/InitializerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InventorySystem/main/java/controllers/InitializerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/InitializerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/InitializerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/initializer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/initializer.fxml" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -236,11 +240,12 @@
     <session id="1136038920">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="26" />
+          <entry key="project.closed" value="27" />
           <entry key="project.open.time.100" value="1" />
           <entry key="project.open.time.106" value="1" />
           <entry key="project.open.time.110" value="1" />
           <entry key="project.open.time.111" value="1" />
+          <entry key="project.open.time.123" value="1" />
           <entry key="project.open.time.131" value="1" />
           <entry key="project.open.time.143" value="1" />
           <entry key="project.open.time.150" value="1" />
@@ -261,15 +266,15 @@
           <entry key="project.open.time.89" value="2" />
           <entry key="project.open.time.91" value="1" />
           <entry key="project.open.time.92" value="1" />
-          <entry key="project.opened" value="27" />
+          <entry key="project.opened" value="28" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="1" />
           <entry key="css" value="6" />
-          <entry key="fxml" value="8" />
-          <entry key="java" value="107" />
+          <entry key="fxml" value="9" />
+          <entry key="java" value="111" />
           <entry key="png" value="3" />
           <entry key="properties" value="1" />
           <entry key="uml" value="9" />
@@ -280,25 +285,25 @@
           <entry key="CLASS" value="1" />
           <entry key="CSS" value="6" />
           <entry key="Image" value="3" />
-          <entry key="JAVA" value="107" />
+          <entry key="JAVA" value="111" />
           <entry key="Properties" value="1" />
           <entry key="UML" value="9" />
-          <entry key="XML" value="8" />
+          <entry key="XML" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="152" />
-          <entry key="fxml" value="13" />
-          <entry key="java" value="8883" />
+          <entry key="fxml" value="14" />
+          <entry key="java" value="10101" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="8880" />
+          <entry key="JAVA" value="10098" />
           <entry key="PLAIN_TEXT" value="152" />
           <entry key="SQL" value="3" />
-          <entry key="XML" value="13" />
+          <entry key="XML" value="14" />
         </counts>
       </usages-collector>
     </session>
@@ -333,37 +338,32 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/DashboardController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1393">
-              <caret line="91" column="38" selection-start-line="91" selection-start-column="38" selection-end-line="91" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/controllers/InitializerController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2176">
-              <caret line="212" column="38" selection-start-line="212" selection-start-column="38" selection-end-line="212" selection-end-column="38" />
+            <state relative-caret-position="-5300">
+              <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/view/initializer.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="350">
+              <caret line="14" column="129" selection-start-line="14" selection-start-column="129" selection-end-line="14" selection-end-column="129" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/PromptDialogController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/InventoryController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-160">
-              <caret line="24" column="51" selection-start-line="24" selection-start-column="51" selection-end-line="24" selection-end-column="51" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/RentalsController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1172">
-              <caret line="447" column="43" selection-start-line="447" selection-start-column="43" selection-end-line="447" selection-end-column="43" />
+            <state relative-caret-position="-8908">
+              <caret line="141" column="60" selection-start-line="141" selection-start-column="60" selection-end-line="141" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -371,54 +371,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/controllers/SellsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1835">
-              <caret line="258" column="5" selection-start-line="258" selection-start-column="5" selection-end-line="258" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/RentalListController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1003">
-              <caret line="30" column="9" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="32" column="32" lean-forward="true" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/view/test.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="21" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/AccountListController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/LogInController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="99" selection-start-line="99" selection-end-line="99" />
+            <state relative-caret-position="25">
+              <caret line="245" selection-start-line="245" selection-end-line="245" />
             </state>
           </provider>
         </entry>
@@ -490,9 +444,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/controller/CustomerPurchase.java" />
-        <option value="$PROJECT_DIR$/src/controller/Base.java" />
-        <option value="$PROJECT_DIR$/src/controller/Dashboard.java" />
         <option value="$PROJECT_DIR$/src/sample/Customer.java" />
         <option value="$PROJECT_DIR$/src/controller/Account.java" />
         <option value="$PROJECT_DIR$/src/sample/Main.java" />
@@ -541,6 +492,9 @@
         <option value="$PROJECT_DIR$/src/main/others/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/others/Main.java" />
         <option value="$PROJECT_DIR$/src/main/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/Twet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/InitializerController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/view/initializer.fxml" />
       </list>
     </option>
   </component>
@@ -557,7 +511,7 @@
     </treeState>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="20" />
     <option name="width" value="902" />
     <option name="height" value="500" />
@@ -614,6 +568,22 @@
               <item name="InventorySystem" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="InventorySystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="InventorySystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="others" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="InventorySystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="InventorySystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -653,7 +623,7 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/Progs/TeslaRentalInventory/src/fxml/initializer.fxml" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547372845050" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547402302153" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL&#10;Amazon Redshift" />
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -662,7 +632,7 @@
     <property name="project.structure.proportion" value="0.153125" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -878,7 +848,8 @@
       <workItem from="1547224565788" duration="9507000" />
       <workItem from="1547285264760" duration="3519000" />
       <workItem from="1547305232308" duration="5145000" />
-      <workItem from="1547365103527" duration="5961000" />
+      <workItem from="1547365103527" duration="6272000" />
+      <workItem from="1547392438020" duration="9729000" />
     </task>
     <task id="LOCAL-00001" summary="Multiple view added.">
       <created>1531118175694</created>
@@ -898,7 +869,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="535833000" />
+    <option name="totallyTimeSpent" value="545873000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -911,8 +882,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.2602118" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.22012103" />
       <window_info id="Structure" order="1" weight="0.2647504" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="3" />
@@ -921,7 +893,7 @@
       <window_info id="Image Layers" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329582" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.23311897" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3681672" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39865997" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1044,20 +1016,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/others/Account.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="9" column="19" lean-forward="true" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/TransactionListController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="26" column="31" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controllers/DueUpdateController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -1179,464 +1137,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/uml/final.uml" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/others/test.uml">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement />
-          <nodes>
-            <node x="3276.9884096816113" y="1800.0">controller.InventoryGUI</node>
-            <node x="2275.188771310991" y="2009.0">controller.BaseGUI</node>
-            <node x="4065.905162211082" y="1136.0">controller.NewEmployeeGUI</node>
-            <node x="1912.1887713109911" y="1745.0">controller.CustomerGUI</node>
-            <node x="1891.3749999999998" y="3236.0">controller.RentalsGUI</node>
-            <node x="191.0509096816113" y="1048.0">controller.SellListGUI</node>
-            <node x="3320.905162211082" y="926.5">main.Item</node>
-            <node x="4402.474485596706" y="2196.0">controller.AccountListGUI</node>
-            <node x="4361.905162211082" y="1014.5">main.Account</node>
-            <node x="2827.188771310991" y="2064.0">controller.TransactionGUI</node>
-            <node x="921.0509096816115" y="916.0">controller.DueUpdateGUI</node>
-            <node x="2541.112224233424" y="1037.0">controller.LogInGUI</node>
-            <node x="3237.4375858628036" y="0.0">controller.PromptDialogGUI</node>
-            <node x="4721.862224233423" y="1048.0">controller.EmployeeListGUI</node>
-            <node x="3783.905162211082" y="993.0">controller.AdministratorGUI</node>
-            <node x="49.77889090009057" y="3302.0">controller.SellsGUI</node>
-            <node x="5377.195557566756" y="1081.0">controller.TransactionListGUI</node>
-            <node x="4735.362224233423" y="295.0">main.Employee</node>
-            <node x="5040.862224233423" y="1081.0">controller.ItemTypeGUI</node>
-            <node x="1522.0509096816115" y="1070.0">controller.CustomersRentalListGUI</node>
-            <node x="1347.2788909000908" y="2152.0">controller.DashboardGUI</node>
-            <node x="1091.9663909000906" y="152.0">main.Rent</node>
-            <node x="5111.195557566756" y="328.0">main.ItemType</node>
-            <node x="5422.028890900089" y="262.0">main.Transact</node>
-            <node x="23.528890900090573" y="417.0">main.Main</node>
-            <node x="1818.0509096816115" y="926.5">main.Customer</node>
-            <node x="210.52889090009057" y="152.0">main.Purchase</node>
-            <node x="2960.106359649122" y="416.5">main.DBConnection</node>
-            <node x="1227.0509096816115" y="1048.0">controller.RentalListGUI</node>
-            <node x="2551.188771310991" y="2350.0">controller.InitializerGUI</node>
-            <node x="4081.4744855967056" y="2119.0">controller.AccountGUI</node>
-            <node x="539.0509096816115" y="1070.0">controller.CustomerPurchaseListGUI</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="controller.RentalsGUI" target="controller.TransactionGUI">
-              <point x="17.1875" y="-466.5" />
-              <point x="2046.0624999999998" y="3176.0" />
-              <point x="3050.688771310991" y="3176.0" />
-              <point x="74.5" y="356.5" />
-            </edge>
-            <edge source="controller.AdministratorGUI" target="controller.PromptDialogGUI">
-              <point x="65.25" y="-257.5" />
-              <point x="3979.655162211082" y="122.0" />
-              <point x="3382.5447287199463" y="122.0" />
-              <point x="25.60714285714289" y="26.0" />
-            </edge>
-            <edge source="controller.RentalsGUI" target="controller.PromptDialogGUI">
-              <point x="120.3125" y="-466.5" />
-              <point x="2149.1875" y="3216.0" />
-              <point x="5366.695557566756" y="3216.0" />
-              <point x="5366.695557566756" y="72.0" />
-              <point x="3467.901871577089" y="72.0" />
-              <point x="110.96428571428578" y="26.0" />
-            </edge>
-            <edge source="controller.CustomersRentalListGUI" target="main.Rent">
-              <point x="-103.125" y="-180.5" />
-              <point x="1556.4259096816115" y="796.0" />
-              <point x="1356.7163909000906" y="796.0" />
-              <point x="88.25" y="302.0" />
-            </edge>
-            <edge source="controller.SellsGUI" target="main.DBConnection">
-              <point x="143.5" y="-400.5" />
-              <point x="357.2788909000906" y="3196.0" />
-              <point x="3197.438771310991" y="3196.0" />
-              <point x="3197.438771310991" y="896.0" />
-              <point x="3069.606359649122" y="896.0" />
-              <point x="0.0" y="37.5" />
-            </edge>
-            <edge source="controller.AccountGUI" target="controller.PromptDialogGUI">
-              <point x="-43.0" y="-301.5" />
-              <point x="4188.974485596706" y="1615.0" />
-              <point x="4055.405162211082" y="1615.0" />
-              <point x="4055.405162211082" y="112.0" />
-              <point x="3399.616157291375" y="112.0" />
-              <point x="42.67857142857156" y="26.0" />
-            </edge>
-            <edge source="controller.EmployeeListGUI" target="main.DBConnection">
-              <point x="-119.60000000000002" y="-202.5" />
-              <point x="4751.762224233424" y="826.0" />
-              <point x="3150.290570175438" y="826.0" />
-              <point x="80.68421052631584" y="37.5" />
-            </edge>
-            <edge source="controller.NewEmployeeGUI" target="main.DBConnection">
-              <point x="-69.0" y="-114.5" />
-              <point x="4134.905162211082" y="836.0" />
-              <point x="3138.7642543859647" y="836.0" />
-              <point x="69.15789473684208" y="37.5" />
-            </edge>
-            <edge source="controller.RentalListGUI" target="main.DBConnection">
-              <point x="103.125" y="-202.5" />
-              <point x="1467.6759096816115" y="856.0" />
-              <point x="3000.4484649122805" y="856.0" />
-              <point x="-69.15789473684208" y="37.5" />
-            </edge>
-            <edge source="controller.SellsGUI" target="controller.LogInGUI">
-              <point x="61.5" y="-400.5" />
-              <point x="275.2788909000906" y="3156.0" />
-              <point x="2264.688771310991" y="3156.0" />
-              <point x="2264.688771310991" y="1705.0" />
-              <point x="2589.112224233424" y="1705.0" />
-              <point x="-80.0" y="213.5" />
-            </edge>
-            <edge source="controller.SellListGUI" target="main.Purchase">
-              <point x="-41.0" y="-202.5" />
-              <point x="314.0509096816113" y="886.0" />
-              <point x="408.5288909000906" y="886.0" />
-              <point x="18.0" y="302.0" />
-            </edge>
-            <edge source="controller.BaseGUI" target="controller.LogInGUI">
-              <point x="0.0" y="-411.5" />
-              <point x="2403.188771310991" y="1715.0" />
-              <point x="2621.112224233424" y="1715.0" />
-              <point x="-48.0" y="213.5" />
-            </edge>
-            <edge source="controller.EmployeeListGUI" target="controller.PromptDialogGUI">
-              <point x="119.59999999999991" y="-202.5" />
-              <point x="4990.962224233423" y="896.0" />
-              <point x="5017.862224233423" y="896.0" />
-              <point x="5017.862224233423" y="82.0" />
-              <point x="3450.8304430056605" y="82.0" />
-              <point x="93.89285714285711" y="26.0" />
-            </edge>
-            <edge source="controller.SellsGUI" target="controller.TransactionGUI">
-              <point x="102.5" y="-400.5" />
-              <point x="316.2788909000906" y="3166.0" />
-              <point x="2901.688771310991" y="3166.0" />
-              <point x="-74.5" y="356.5" />
-            </edge>
-            <edge source="controller.DueUpdateGUI" target="controller.PromptDialogGUI">
-              <point x="-71.5" y="-334.5" />
-              <point x="992.5509096816115" y="776.0" />
-              <point x="832.6262713109909" y="776.0" />
-              <point x="832.6262713109909" y="92.0" />
-              <point x="3280.1161572913747" y="92.0" />
-              <point x="-76.82142857142867" y="26.0" />
-            </edge>
-            <edge source="controller.DashboardGUI" target="controller.RentalListGUI">
-              <point x="-2.2737367544323206E-13" y="-268.5" />
-              <point x="1475.2788909000906" y="1715.0" />
-              <point x="1364.5509096816115" y="1715.0" />
-              <point x="0.0" y="202.5" />
-            </edge>
-            <edge source="controller.ItemTypeGUI" target="main.ItemType">
-              <point x="114.0" y="-169.5" />
-              <point x="5306.862224233423" y="896.0" />
-              <point x="5315.362224233422" y="896.0" />
-              <point x="81.66666666666652" y="126.0" />
-            </edge>
-            <edge source="controller.AccountListGUI" target="main.Account">
-              <point x="58.0" y="-224.5" />
-              <point x="4605.474485596706" y="1725.0" />
-              <point x="4610.762305068225" y="1725.0" />
-              <point x="114.85714285714283" y="236.0" />
-            </edge>
-            <edge source="controller.RentalsGUI" target="main.Rent">
-              <point x="-17.1875" y="-466.5" />
-              <point x="2011.6874999999998" y="3116.0" />
-              <point x="910.5509096816115" y="3116.0" />
-              <point x="910.5509096816115" y="816.0" />
-              <point x="1215.5163909000908" y="816.0" />
-              <point x="-52.94999999999982" y="302.0" />
-            </edge>
-            <edge source="main.DBConnection" target="controller.PromptDialogGUI">
-              <point x="0.0" y="-37.5" />
-              <point x="3069.606359649122" y="132.0" />
-              <point x="3348.401871577089" y="132.0" />
-              <point x="-8.53571428571422" y="26.0" />
-            </edge>
-            <edge source="controller.TransactionListGUI" target="main.DBConnection">
-              <point x="-113.625" y="-169.5" />
-              <point x="5415.070557566756" y="806.0" />
-              <point x="3173.3432017543855" y="806.0" />
-              <point x="103.73684210526335" y="37.5" />
-            </edge>
-            <edge source="controller.LogInGUI" target="controller.PromptDialogGUI">
-              <point x="-64.0" y="-213.5" />
-              <point x="2605.112224233424" y="122.0" />
-              <point x="3331.3304430056605" y="122.0" />
-              <point x="-25.60714285714289" y="26.0" />
-            </edge>
-            <edge source="controller.RentalsGUI" target="main.DBConnection">
-              <point x="85.9375" y="-466.5" />
-              <point x="2114.8125" y="3206.0" />
-              <point x="3208.438771310991" y="3206.0" />
-              <point x="3208.438771310991" y="886.0" />
-              <point x="3081.1326754385964" y="886.0" />
-              <point x="11.526315789473756" y="37.5" />
-            </edge>
-            <edge source="controller.AdministratorGUI" target="main.DBConnection">
-              <point x="-65.25" y="-257.5" />
-              <point x="3849.155162211082" y="846.0" />
-              <point x="3127.2379385964905" y="846.0" />
-              <point x="57.631578947368325" y="37.5" />
-            </edge>
-            <edge source="controller.CustomerGUI" target="controller.CustomersRentalListGUI">
-              <point x="-114.0" y="-675.5" />
-              <point x="1969.1887713109911" y="1695.0" />
-              <point x="1659.5509096816115" y="1695.0" />
-              <point x="0.0" y="180.5" />
-            </edge>
-            <edge source="controller.SellsGUI" target="controller.PromptDialogGUI">
-              <point x="-143.5" y="-400.5" />
-              <point x="70.27889090009057" y="3216.0" />
-              <point x="13.028890900090573" y="3216.0" />
-              <point x="13.028890900090573" y="72.0" />
-              <point x="3245.9733001485174" y="72.0" />
-              <point x="-110.96428571428578" y="26.0" />
-            </edge>
-            <edge source="controller.CustomersRentalListGUI" target="main.DBConnection">
-              <point x="103.125" y="-180.5" />
-              <point x="1762.6759096816115" y="866.0" />
-              <point x="3011.974780701754" y="866.0" />
-              <point x="-57.631578947368325" y="37.5" />
-            </edge>
-            <edge source="controller.InventoryGUI" target="main.DBConnection">
-              <point x="-92.28571428571468" y="-620.5" />
-              <point x="3346.2026953958966" y="1645.0" />
-              <point x="3219.438771310991" y="1645.0" />
-              <point x="3219.438771310991" y="876.0" />
-              <point x="3092.6589912280697" y="876.0" />
-              <point x="23.052631578947512" y="37.5" />
-            </edge>
-            <edge source="controller.NewEmployeeGUI" target="controller.PromptDialogGUI">
-              <point x="69.0" y="-114.5" />
-              <point x="4272.905162211082" y="102.0" />
-              <point x="3416.6875858628036" y="102.0" />
-              <point x="59.75" y="26.0" />
-            </edge>
-            <edge source="controller.LogInGUI" target="main.DBConnection">
-              <point x="64.0" y="-213.5" />
-              <point x="2733.112224233424" y="886.0" />
-              <point x="3035.0274122807014" y="886.0" />
-              <point x="-34.57894736842104" y="37.5" />
-            </edge>
-            <edge source="controller.DashboardGUI" target="main.DBConnection">
-              <point x="85.33333333333326" y="-268.5" />
-              <point x="1560.612224233424" y="1725.0" />
-              <point x="1807.5509096816115" y="1725.0" />
-              <point x="1807.5509096816115" y="876.0" />
-              <point x="3023.5010964912276" y="876.0" />
-              <point x="-46.1052631578948" y="37.5" />
-            </edge>
-            <edge source="controller.AccountGUI" target="main.Account">
-              <point x="129.0" y="-301.5" />
-              <point x="4360.974485596706" y="1715.0" />
-              <point x="4495.905162211082" y="1715.0" />
-              <point x="0.0" y="236.0" />
-            </edge>
-            <edge source="controller.AccountListGUI" target="main.DBConnection">
-              <point x="-116.0" y="-224.5" />
-              <point x="4431.474485596706" y="1605.0" />
-              <point x="3773.405162211082" y="1605.0" />
-              <point x="3773.405162211082" y="856.0" />
-              <point x="3115.711622807017" y="856.0" />
-              <point x="46.10526315789457" y="37.5" />
-            </edge>
-            <edge source="controller.EmployeeListGUI" target="main.Employee">
-              <point x="59.799999999999955" y="-202.5" />
-              <point x="4931.162224233423" y="896.0" />
-              <point x="4962.02889090009" y="896.0" />
-              <point x="90.66666666666674" y="159.0" />
-            </edge>
-            <edge source="controller.TransactionGUI" target="controller.LogInGUI">
-              <point x="0.0" y="-356.5" />
-              <point x="2976.188771310991" y="1675.0" />
-              <point x="2685.112224233424" y="1675.0" />
-              <point x="16.0" y="213.5" />
-            </edge>
-            <edge source="controller.InventoryGUI" target="controller.PromptDialogGUI">
-              <point x="138.42857142857156" y="-620.5" />
-              <point x="3576.916981110183" y="1725.0" />
-              <point x="3762.405162211082" y="1725.0" />
-              <point x="3762.405162211082" y="132.0" />
-              <point x="3365.4733001485174" y="132.0" />
-              <point x="8.53571428571422" y="26.0" />
-            </edge>
-            <edge source="controller.RentalListGUI" target="main.Rent">
-              <point x="-34.375" y="-202.5" />
-              <point x="1330.1759096816115" y="816.0" />
-              <point x="1286.1163909000907" y="816.0" />
-              <point x="17.65000000000009" y="302.0" />
-            </edge>
-            <edge source="controller.TransactionGUI" target="main.DBConnection">
-              <point x="99.33333333333348" y="-356.5" />
-              <point x="3075.522104644325" y="1725.0" />
-              <point x="3059.395833333333" y="1725.0" />
-              <point x="3059.395833333333" y="896.0" />
-              <point x="3058.080043859649" y="896.0" />
-              <point x="-11.526315789473756" y="37.5" />
-            </edge>
-            <edge source="controller.InventoryGUI" target="controller.LogInGUI">
-              <point x="-138.42857142857156" y="-620.5" />
-              <point x="3300.0598382530397" y="1655.0" />
-              <point x="2749.112224233424" y="1655.0" />
-              <point x="80.0" y="213.5" />
-            </edge>
-            <edge source="controller.CustomerGUI" target="controller.PromptDialogGUI">
-              <point x="76.0" y="-675.5" />
-              <point x="2159.188771310991" y="1685.0" />
-              <point x="2372.2788909000906" y="1685.0" />
-              <point x="2372.2788909000906" y="102.0" />
-              <point x="3297.1875858628036" y="102.0" />
-              <point x="-59.75" y="26.0" />
-            </edge>
-            <edge source="controller.SellListGUI" target="main.DBConnection">
-              <point x="123.0" y="-202.5" />
-              <point x="478.0509096816113" y="826.0" />
-              <point x="2965.8695175438593" y="826.0" />
-              <point x="-103.73684210526312" y="37.5" />
-            </edge>
-            <edge source="controller.AccountGUI" target="controller.LogInGUI">
-              <point x="-129.0" y="-301.5" />
-              <point x="4102.974485596706" y="1635.0" />
-              <point x="2781.112224233424" y="1635.0" />
-              <point x="112.0" y="213.5" />
-            </edge>
-            <edge source="main.Main" target="controller.PromptDialogGUI">
-              <point x="0.0" y="-37.0" />
-              <point x="107.02889090009057" y="82.0" />
-              <point x="3263.0447287199463" y="82.0" />
-              <point x="-93.89285714285711" y="26.0" />
-            </edge>
-            <edge source="controller.CustomerGUI" target="main.DBConnection">
-              <point x="152.0" y="-675.5" />
-              <point x="2235.188771310991" y="1725.0" />
-              <point x="2807.6122242334236" y="1725.0" />
-              <point x="2807.6122242334236" y="896.0" />
-              <point x="3046.553728070175" y="896.0" />
-              <point x="-23.052631578947285" y="37.5" />
-            </edge>
-            <edge source="controller.RentalsGUI" target="controller.LogInGUI">
-              <point x="51.5625" y="-466.5" />
-              <point x="2080.4375" y="3186.0" />
-              <point x="3135.688771310991" y="3186.0" />
-              <point x="3135.688771310991" y="1665.0" />
-              <point x="2717.112224233424" y="1665.0" />
-              <point x="48.0" y="213.5" />
-            </edge>
-            <edge source="controller.InventoryGUI" target="main.Item">
-              <point x="46.14285714285688" y="-620.5" />
-              <point x="3484.631266824468" y="1705.0" />
-              <point x="3590.280162211082" y="1705.0" />
-              <point x="53.875" y="324.0" />
-            </edge>
-            <edge source="controller.CustomerPurchaseListGUI" target="main.Purchase">
-              <point x="-123.0" y="-180.5" />
-              <point x="580.0509096816115" y="816.0" />
-              <point x="480.5288909000906" y="816.0" />
-              <point x="90.0" y="302.0" />
-            </edge>
-            <edge source="controller.DashboardGUI" target="controller.SellListGUI">
-              <point x="-85.33333333333348" y="-268.5" />
-              <point x="1389.9455575667573" y="1725.0" />
-              <point x="355.0509096816113" y="1725.0" />
-              <point x="0.0" y="202.5" />
-            </edge>
-            <edge source="controller.AccountGUI" target="main.DBConnection">
-              <point x="-86.0" y="-301.5" />
-              <point x="4145.974485596706" y="1625.0" />
-              <point x="3310.405162211082" y="1625.0" />
-              <point x="3310.405162211082" y="866.0" />
-              <point x="3104.185307017544" y="866.0" />
-              <point x="34.57894736842127" y="37.5" />
-            </edge>
-            <edge source="controller.CustomerGUI" target="controller.LogInGUI">
-              <point x="114.0" y="-675.5" />
-              <point x="2197.188771310991" y="1695.0" />
-              <point x="2557.112224233424" y="1695.0" />
-              <point x="-112.0" y="213.5" />
-            </edge>
-            <edge source="controller.InitializerGUI" target="controller.LogInGUI">
-              <point x="0.0" y="-70.5" />
-              <point x="2679.188771310991" y="1715.0" />
-              <point x="2653.112224233424" y="1715.0" />
-              <point x="-16.0" y="213.5" />
-            </edge>
-            <edge source="controller.CustomerGUI" target="controller.CustomerPurchaseListGUI">
-              <point x="-152.0" y="-675.5" />
-              <point x="1931.1887713109911" y="1705.0" />
-              <point x="703.0509096816115" y="1705.0" />
-              <point x="0.0" y="180.5" />
-            </edge>
-            <edge source="controller.CustomerGUI" target="main.Customer">
-              <point x="0.0" y="-675.5" />
-              <point x="2083.188771310991" y="1725.0" />
-              <point x="2088.6759096816113" y="1725.0" />
-              <point x="54.125" y="324.0" />
-            </edge>
-            <edge source="controller.DueUpdateGUI" target="main.DBConnection">
-              <point x="71.5" y="-334.5" />
-              <point x="1135.5509096816115" y="846.0" />
-              <point x="2988.9221491228063" y="846.0" />
-              <point x="-80.68421052631584" y="37.5" />
-            </edge>
-            <edge source="controller.AccountListGUI" target="controller.PromptDialogGUI">
-              <point x="116.0" y="-224.5" />
-              <point x="4663.474485596706" y="1725.0" />
-              <point x="4711.362224233423" y="1725.0" />
-              <point x="4711.362224233423" y="92.0" />
-              <point x="3433.759014434232" y="92.0" />
-              <point x="76.82142857142867" y="26.0" />
-            </edge>
-            <edge source="controller.SellsGUI" target="main.Purchase">
-              <point x="20.5" y="-400.5" />
-              <point x="234.27889090009057" y="3176.0" />
-              <point x="59.0" y="3176.0" />
-              <point x="59.0" y="866.0" />
-              <point x="336.5288909000906" y="866.0" />
-              <point x="-54.0" y="302.0" />
-            </edge>
-            <edge source="controller.CustomerPurchaseListGUI" target="main.DBConnection">
-              <point x="123.0" y="-180.5" />
-              <point x="826.0509096816115" y="836.0" />
-              <point x="2977.395833333333" y="836.0" />
-              <point x="-92.2105263157896" y="37.5" />
-            </edge>
-            <edge source="controller.ItemTypeGUI" target="main.DBConnection">
-              <point x="-114.0" y="-169.5" />
-              <point x="5078.862224233423" y="816.0" />
-              <point x="3161.816885964912" y="816.0" />
-              <point x="92.2105263157896" y="37.5" />
-            </edge>
-            <edge source="controller.TransactionGUI" target="controller.PromptDialogGUI">
-              <point x="-99.33333333333348" y="-356.5" />
-              <point x="2876.855437977658" y="1685.0" />
-              <point x="2530.612224233424" y="1685.0" />
-              <point x="2530.612224233424" y="112.0" />
-              <point x="3314.259014434232" y="112.0" />
-              <point x="-42.67857142857133" y="26.0" />
-            </edge>
-            <edge source="controller.TransactionListGUI" target="main.Transact">
-              <point x="113.625" y="-169.5" />
-              <point x="5642.320557566756" y="896.0" />
-              <point x="5688.695557566756" y="896.0" />
-              <point x="106.66666666666652" y="192.0" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="1.0" x="3111.0" y="580.0" />
-          <SelectedNodes>
-            <node>controller.CustomerPurchaseListGUI</node>
-          </SelectedNodes>
-          <Categories>
-            <Category>Fields</Category>
-            <Category>Constructors</Category>
-            <Category>Methods</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/others/test.uml" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/view/employeelist.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
@@ -1796,16 +1297,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/others/TestController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/view/selllist.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor" />
@@ -1827,84 +1318,104 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/InventoryController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/config.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/view/test.fxml" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/others/TestController.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/DashboardController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-738">
-          <caret line="141" column="60" selection-start-line="141" selection-start-column="60" selection-end-line="141" selection-end-column="60" />
+        <state>
+          <caret line="91" column="38" selection-start-line="91" selection-start-column="38" selection-end-line="91" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controllers/PromptDialogController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-160">
+        <state>
           <caret line="24" column="51" selection-start-line="24" selection-start-column="51" selection-end-line="24" selection-end-column="51" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controllers/RentalsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1172">
+        <state>
           <caret line="447" column="43" selection-start-line="447" selection-start-column="43" selection-end-line="447" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/SellsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1835">
-          <caret line="258" column="5" selection-start-line="258" selection-start-column="5" selection-end-line="258" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/config.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controllers/RentalListController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1003">
+        <state>
           <caret line="30" column="9" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/LogInController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="99" selection-start-line="99" selection-end-line="99" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controllers/AccountListController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
+        <state>
           <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/DashboardController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/LogInController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1393">
-          <caret line="91" column="38" selection-start-line="91" selection-start-column="38" selection-end-line="91" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/InitializerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2176">
-          <caret line="212" column="38" selection-start-line="212" selection-start-column="38" selection-end-line="212" selection-end-column="38" />
+        <state>
+          <caret line="99" selection-start-line="99" selection-end-line="99" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="32" column="32" lean-forward="true" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
+        <state relative-caret-position="-7">
+          <caret line="32" column="32" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/view/test.fxml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/SellsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="245" selection-start-line="245" selection-end-line="245" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/Foo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+          <folding>
+            <element signature="e#112#113#0" expanded="true" />
+            <element signature="e#144#145#0" expanded="true" />
+            <element signature="e#177#178#0" expanded="true" />
+            <element signature="e#204#205#0" expanded="true" />
+            <element signature="e#234#235#0" expanded="true" />
+            <element signature="e#275#276#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/InventoryController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8908">
+          <caret line="141" column="60" selection-start-line="141" selection-start-column="60" selection-end-line="141" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/InitializerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5300">
+          <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/view/initializer.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="21" selection-end-column="13" />
+        <state relative-caret-position="350">
+          <caret line="14" column="129" selection-start-line="14" selection-start-column="129" selection-end-line="14" selection-end-column="129" />
         </state>
       </provider>
     </entry>
