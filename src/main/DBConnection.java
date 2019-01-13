@@ -1,6 +1,6 @@
 package main;
 
-import controller.PromptDialogController;
+import controllers.PromptDialogController;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

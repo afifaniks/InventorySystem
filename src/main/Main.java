@@ -6,7 +6,7 @@ package main;
  * Project: TeslaRentalInventory
  **/
 
-import controller.PromptDialogController;
+import controllers.PromptDialogController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -20,15 +20,15 @@ public class Main extends Application {
     public void start(Stage primaryStage) {
         Parent root = null;
         try {
-            root = FXMLLoader.load(getClass().getResource("/fxml/login.fxml"));
+            root = FXMLLoader.load(getClass().getResource("/resources/view/login.fxml"));
             Scene scene = new Scene(root);
 
-            String css = this.getClass().getResource("/css/login.css").toExternalForm(); // Getting stylesheet
+            String css = this.getClass().getResource("/resources/css/login.css").toExternalForm(); // Getting stylesheet
             scene.getStylesheets().add(css); // Adding stylesheet
 
             primaryStage.setTitle("Log In Prompt");
             primaryStage.setScene(scene);
-            primaryStage.getIcons().add(new Image("/resource/icons/Accounts_main.png"));
+            primaryStage.getIcons().add(new Image("/resources/icons/Accounts_main.png"));
             primaryStage.setResizable(false);
             primaryStage.show();
 
