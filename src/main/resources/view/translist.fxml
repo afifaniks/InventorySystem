@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1200.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controllers.TransactionListController">
+   <children>
+      <AnchorPane layoutX="-9.0" layoutY="-9.0" prefHeight="85.0" prefWidth="1169.0" style="-fx-background-color: #253238;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" layoutX="271.0" layoutY="6.0" prefHeight="72.0" prefWidth="566.0" text="Transaction Report" textFill="WHITE" AnchorPane.leftAnchor="271.0" AnchorPane.rightAnchor="270.0">
+               <font>
+                  <Font name="System Bold" size="33.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="WHITE" glyphName="WUNDERLIST" size="40" textAlignment="JUSTIFY" />
+               </graphic>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label layoutX="11.0" layoutY="86.0" prefHeight="31.0" prefWidth="45.0" text="Date:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="today" layoutX="56.0" layoutY="86.0" prefHeight="31.0" prefWidth="139.0" text="date">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblP" layoutX="93.0" layoutY="172.0" prefHeight="458.0" prefWidth="465.0" tableMenuButtonVisible="true">
+         <columns>
+            <TableColumn fx:id="trIDP" text="Tr ID" />
+            <TableColumn fx:id="trDatePurch" prefWidth="88.0" text="Date" />
+            <TableColumn fx:id="trAccP" prefWidth="57.0" text="Acc ID" />
+            <TableColumn fx:id="purchID" prefWidth="98.0" text="Purchase ID" />
+            <TableColumn fx:id="trIssueP" prefWidth="69.0" text="Issued By" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+         <effect>
+            <DropShadow blurType="TWO_PASS_BOX" height="18.03" radius="7.775" spread="0.1" width="15.07" />
+         </effect>
+      </TableView>
+      <TableView fx:id="tblR" layoutX="643.0" layoutY="172.0" prefHeight="458.0" prefWidth="465.0" tableMenuButtonVisible="true">
+         <columns>
+            <TableColumn fx:id="trIDR" text="Tr ID" />
+            <TableColumn fx:id="trDateR" prefWidth="88.0" text="Date" />
+            <TableColumn fx:id="trAccR" prefWidth="57.0" text="Acc ID" />
+            <TableColumn fx:id="rentalID" prefWidth="98.0" text="Rental ID" />
+            <TableColumn fx:id="trIssuedR" prefWidth="69.0" text="Issued By" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+         <effect>
+            <DropShadow blurType="TWO_PASS_BOX" height="18.03" radius="7.775" spread="0.1" width="15.07" />
+         </effect>
+      </TableView>
+      <Label fx:id="lblCategory" alignment="CENTER" layoutX="179.0" layoutY="108.0" prefHeight="51.0" prefWidth="294.0" text="Transaction/Purchase" textFill="GREEN">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblCategory1" alignment="CENTER" layoutX="729.0" layoutY="108.0" prefHeight="51.0" prefWidth="294.0" text="Transaction/Rental" textFill="GREEN">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

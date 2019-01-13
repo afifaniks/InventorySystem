@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="empPane" prefHeight="486.0" prefWidth="672.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controllers.NewEmployeeController">
+   <children>
+      <AnchorPane prefHeight="78.0" prefWidth="600.0" style="-fx-background-color: #263238;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" graphicTextGap="10.0" layoutX="199.0" layoutY="5.0" prefHeight="68.0" prefWidth="275.0" text="Add Employee" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="29.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="USER_PLUS" size="35" />
+               </graphic>
+            </Label>
+         </children>
+      </AnchorPane>
+      <JFXTextField fx:id="txtUser" alignment="CENTER" focusColor="#263238" layoutX="284.0" layoutY="120.0" prefHeight="31.0" prefWidth="232.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXPasswordField fx:id="txtPass" alignment="CENTER" focusColor="#263238" layoutX="284.0" layoutY="176.0" prefHeight="25.0" prefWidth="232.0" />
+      <Label layoutX="140.0" layoutY="169.0" prefHeight="44.0" prefWidth="134.0" text="password:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <JFXPasswordField fx:id="txtPassConf" alignment="CENTER" focusColor="#263238" layoutX="284.0" layoutY="232.0" prefHeight="25.0" prefWidth="232.0" />
+      <JFXTextField fx:id="txtEmail" alignment="CENTER" focusColor="#263238" layoutX="284.0" layoutY="279.0" prefHeight="31.0" prefWidth="232.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXComboBox fx:id="cboAccessLevel" focusColor="#263238" layoutX="284.0" layoutY="336.0" prefHeight="25.0" prefWidth="232.0" style="-fx-text-size: 15px;" />
+      <Label layoutX="140.0" layoutY="278.0" prefHeight="44.0" prefWidth="134.0" text="email:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="140.0" layoutY="117.0" prefHeight="44.0" prefWidth="134.0" text="username:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="140.0" layoutY="326.0" prefHeight="44.0" prefWidth="134.0" text="Access Level:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="140.0" layoutY="225.0" prefHeight="44.0" prefWidth="134.0" text="confirm pswd:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="addEmployee" buttonType="RAISED" layoutX="516.0" layoutY="397.0" onAction="#saveEmployee" prefHeight="57.0" prefWidth="110.0" ripplerFill="WHITE" style="-fx-background-color: #263238;" text="Add Employee" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

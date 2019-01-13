@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="661.0" prefWidth="1107.0" stylesheets="/main/resources/css/dashboard.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controllers.DashboardController">
+   <children>
+      <AnchorPane prefHeight="109.0" prefWidth="1169.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" layoutX="427.0" layoutY="18.0" prefHeight="72.0" prefWidth="338.0" text="Dashboard" textFill="#263238">
+               <font>
+                  <Font name="System Bold" size="45.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="#263238" glyphName="HOME" size="70" />
+               </graphic>
+            </Label>
+            <Line endX="143.0" layoutX="300.0" layoutY="90.0" startX="448.0" AnchorPane.leftAnchor="442.5" AnchorPane.rightAnchor="420.5" />
+         </children>
+      </AnchorPane>
+      <Pane layoutX="210.0" layoutY="229.0" prefHeight="240.0" prefWidth="225.0">
+         <children>
+            <JFXButton fx:id="btnTodaySell" buttonType="RAISED" contentDisplay="TOP" layoutX="35.0" layoutY="23.0" onAction="#showSell" prefHeight="154.0" prefWidth="160.0" ripplerFill="GREEN" stylesheets="@../css/dashboard.css" text="Sells">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="#16861c" glyphName="MONEY" size="30" wrappingWidth="30.571430206298828" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Label fx:id="lblTodaySellCtr" alignment="CENTER" layoutX="120.0" layoutY="14.0" prefHeight="50.0" prefWidth="47.0" style="-fx-background-color: green; -fx-text-fill: white; -fx-background-radius: 30 30 30 30;" text="Label">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="30.0" layoutY="196.0" prefHeight="29.0" prefWidth="65.0" text="Sold: ">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTodaysSellAmount" layoutX="98.0" layoutY="196.0" prefHeight="30.0" prefWidth="160.0" text="Amount" textFill="#08b50e">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="435.0" layoutY="229.0" prefHeight="240.0" prefWidth="225.0">
+         <children>
+            <JFXButton fx:id="btnTodayRental" buttonType="RAISED" contentDisplay="TOP" layoutX="35.0" layoutY="23.0" onAction="#showRent" prefHeight="154.0" prefWidth="160.0" ripplerFill="GREEN" stylesheets="@../css/dashboard.css" text="Rentals">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="#16861c" glyphName="RECYCLE" size="30" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Label fx:id="lblTodaysRentalCtr" alignment="CENTER" layoutX="120.0" layoutY="14.0" prefHeight="50.0" prefWidth="47.0" style="-fx-background-color: green; -fx-text-fill: white; -fx-background-radius: 30 30 30 30;" text="Label">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="22.0" layoutY="197.0" prefHeight="29.0" prefWidth="79.0" text="Rentals: ">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTodaysRentalAmount" layoutX="106.0" layoutY="196.0" prefHeight="30.0" prefWidth="160.0" text="Amount" textFill="#08b50e">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label alignment="CENTER" layoutX="69.0" layoutY="309.0" prefHeight="29.0" prefWidth="121.0" text="Today's">
+         <font>
+            <Font size="34.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="loadAgain" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="8.0" layoutY="608.0" onAction="#loadAgain" prefHeight="59.0" prefWidth="61.0" ripplerFill="WHITE" style="-fx-background-color: white; -fx-border-color: white;" stylesheets="@../css/dashboard.css">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIconView fill="#263238" glyphName="REFRESH" size="30" />
+         </graphic>
+         <font>
+            <Font size="15.0" />
+         </font>
+         <tooltip>
+            <Tooltip text="Refresh" />
+         </tooltip>
+      </JFXButton>
+      <Label layoutX="75.0" layoutY="631.0" prefHeight="17.0" prefWidth="61.0" text="Refresh" />
+      <Label alignment="CENTER" layoutX="745.0" layoutY="179.0" prefHeight="50.0" prefWidth="168.0" text="Overview">
+         <font>
+            <Font size="34.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="740.0" layoutY="369.0" prefHeight="29.0" prefWidth="114.0" text="Out of Stock:">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblOutOfStock" layoutX="868.0" layoutY="354.0" prefHeight="59.0" prefWidth="225.0" style="-fx-text-fill: red;" text="Label">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTotalDueAmount" layoutX="869.0" layoutY="427.0" prefHeight="59.0" prefWidth="225.0" style="-fx-text-fill: red;" text="Label">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <Label layoutX="754.0" layoutY="442.0" prefHeight="29.0" prefWidth="79.0" text="Total Due: ">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="741.0" layoutY="297.0" prefHeight="29.0" prefWidth="114.0" text="Today's Due:">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTodaysDueAmount" layoutX="869.0" layoutY="282.0" prefHeight="59.0" prefWidth="225.0" style="-fx-text-fill: red;" text="Label">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <Separator layoutX="706.0" layoutY="167.0" orientation="VERTICAL" prefHeight="368.0" prefWidth="8.0" />
+   </children>
+</AnchorPane>

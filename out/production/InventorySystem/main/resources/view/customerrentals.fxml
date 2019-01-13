@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1200.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controllers.CustomersRentalListController">
+   <children>
+      <Label layoutX="147.0" layoutY="618.0" prefHeight="44.0" prefWidth="93.0" text="Sell Count:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblSellCount" layoutX="258.0" layoutY="623.0" prefHeight="31.0" prefWidth="195.0" text="Label" textFill="#0c9e33">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="453.0" layoutY="618.0" prefHeight="44.0" prefWidth="74.0" text="Total Due:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDue" layoutX="546.0" layoutY="624.0" prefHeight="31.0" prefWidth="195.0" text="Label" textFill="RED">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="781.0" layoutY="618.0" prefHeight="44.0" prefWidth="114.0" text="Total Amount:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblAmount" layoutX="895.0" layoutY="625.0" prefHeight="31.0" prefWidth="170.0" text="Label" textFill="#0c9e33">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="-9.0" layoutY="-9.0" prefHeight="85.0" prefWidth="1169.0" style="-fx-background-color: #253238;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" layoutX="271.0" layoutY="6.0" prefHeight="72.0" prefWidth="566.0" text="Customer's Rentals" textFill="WHITE" AnchorPane.leftAnchor="271.0" AnchorPane.rightAnchor="270.0">
+               <font>
+                  <Font name="System Bold" size="33.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="WHITE" glyphName="WUNDERLIST" size="40" textAlignment="JUSTIFY" />
+               </graphic>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label layoutX="11.0" layoutY="86.0" prefHeight="31.0" prefWidth="45.0" text="Date:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="today" layoutX="56.0" layoutY="86.0" prefHeight="31.0" prefWidth="139.0" text="date">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblRecent" layoutX="135.0" layoutY="139.0" prefHeight="458.0" prefWidth="919.0">
+         <columns>
+            <TableColumn fx:id="rentID" text="Rental ID" />
+            <TableColumn fx:id="cusID" prefWidth="88.0" text="Customer ID" />
+            <TableColumn fx:id="itemID" prefWidth="57.0" text="Item ID" />
+            <TableColumn fx:id="rentalDate" prefWidth="98.0" text="Rental Date" />
+            <TableColumn fx:id="returnDate" prefWidth="63.0" text="Return Date" />
+            <TableColumn fx:id="paid" prefWidth="54.0" text="Paid" />
+            <TableColumn fx:id="due" prefWidth="69.0" text="Due" />
+            <TableColumn fx:id="empName" prefWidth="75.0" text="Emp Name" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+         <effect>
+            <DropShadow blurType="TWO_PASS_BOX" height="18.03" radius="7.775" spread="0.1" width="15.07" />
+         </effect>
+      </TableView>
+   </children>
+</AnchorPane>

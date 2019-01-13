@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="661.0" prefWidth="1107.0" style="-fx-background-color: white;" stylesheets="/main/resources/css/administrator.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controllers.AdministratorController">
+   <children>
+      <Pane layoutX="803.0" layoutY="475.0" prefHeight="167.0" prefWidth="251.0" style="-fx-border-color: red; -fx-border-width: 2;" />
+      <AnchorPane layoutX="4.0" prefHeight="85.0" prefWidth="1169.0" style="-fx-background-color: #253238;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" layoutX="271.0" layoutY="6.0" prefHeight="72.0" prefWidth="566.0" text="Admin Panel" textFill="WHITE" AnchorPane.leftAnchor="271.0" AnchorPane.rightAnchor="270.0">
+               <font>
+                  <Font name="System Bold" size="33.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="RED" glyphName="ACCOUNT_KEY" size="40" textAlignment="JUSTIFY" />
+               </graphic>
+            </Label>
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="btnTotalRents" alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="346.0" layoutY="166.0" onAction="#totalRents" prefHeight="50.0" prefWidth="147.0" ripplerFill="WHITE" style="-fx-background-color: white;" text="Total Rents">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIconView fill="#263238" glyphName="RECYCLE" size="30" />
+         </graphic>
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="52.0" layoutY="113.0" prefHeight="51.0" prefWidth="134.0" text="Report" textFill="GREEN">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnTotalSell" alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="137.0" layoutY="166.0" onAction="#totalSell" prefHeight="50.0" prefWidth="147.0" ripplerFill="WHITE" style="-fx-background-color: white;" text="Total Sell">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIconView fill="#263238" glyphName="DOLLAR" size="30" />
+         </graphic>
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="52.0" layoutY="238.0" prefHeight="51.0" prefWidth="306.0" text="Employee Management" textFill="GREEN">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnAddNew" alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="141.0" layoutY="304.0" onAction="#addNewEmployee" prefHeight="50.0" prefWidth="147.0" ripplerFill="WHITE" style="-fx-background-color: white; -fx-text-fill: green;" text="Add New" textFill="GREEN">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIconView fill="GREEN" glyphName="PLUS" size="30" />
+         </graphic>
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="52.0" layoutY="380.0" prefHeight="51.0" prefWidth="445.0" text="Customer's Account Management" textFill="GREEN">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnTrans" alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="553.0" layoutY="166.0" onAction="#showTransactions" prefHeight="50.0" prefWidth="147.0" ripplerFill="WHITE" style="-fx-background-color: white;" text="Trans.">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIconView fill="#263238" glyphName="CC_VISA" size="30" />
+         </graphic>
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btEmpList" alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="345.0" layoutY="304.0" onAction="#empList" prefHeight="50.0" prefWidth="147.0" ripplerFill="WHITE" style="-fx-background-color: white;" text="List">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIconView fill="#263238" glyphName="TABLE" size="30" />
+         </graphic>
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnDelete" alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="834.0" layoutY="503.0" onAction="#deleteAll" prefHeight="118.0" prefWidth="198.0" ripplerFill="WHITE" style="-fx-background-color: red; -fx-background-radius: 100 100 100 100; -fx-text-fill: white;" text="Delete All Records" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="TRASH" size="30" />
+         </graphic>
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnAccUpdate" alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="137.0" layoutY="442.0" onAction="#accUpdate" prefHeight="50.0" prefWidth="147.0" ripplerFill="WHITE" style="-fx-background-color: white;" text="Update" textFill="#263238">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIconView fill="#263238" glyphName="EDIT" size="30" />
+         </graphic>
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="52.0" layoutY="510.0" prefHeight="51.0" prefWidth="445.0" text="Item Type" textFill="GREEN">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnItemTypeManage" alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="137.0" layoutY="567.0" onAction="#itemTypeManage" prefHeight="50.0" prefWidth="147.0" ripplerFill="WHITE" style="-fx-background-color: white;" text="Manage" textFill="#263238">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIconView fill="#263238" glyphName="EDIT" size="30" />
+         </graphic>
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="paneLogIn" prefHeight="421.0" prefWidth="663.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controllers.LogInController">
+   <children>
+      <JFXTextField fx:id="txtUsername" focusColor="#243035" layoutX="184.0" layoutY="134.0" onKeyPressed="#onEnterKey" prefHeight="30.0" prefWidth="311.0" promptText="username">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXPasswordField fx:id="txtPassword" focusColor="#243035" layoutX="184.0" layoutY="209.0" onKeyPressed="#onEnterKey" prefHeight="30.0" prefWidth="311.0" promptText="password">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXPasswordField>
+      <JFXCheckBox fx:id="chkPasswordMask" checkedColor="#263238" layoutX="499.0" layoutY="216.0" onAction="#chkPasswordMaskAction" prefHeight="8.0" prefWidth="4.0" text=" ">
+         <tooltip>
+            <Tooltip text="Show/Hide Password" />
+         </tooltip>
+      </JFXCheckBox>
+      <JFXButton fx:id="btnLogIn" layoutX="448.0" layoutY="305.0" onAction="#ctrlLogInCheck" onKeyPressed="#onEnterKey" prefHeight="51.0" prefWidth="112.0" text="Log In">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXTextField fx:id="txtPasswordShown" focusColor="#243035" layoutX="184.0" layoutY="209.0" onKeyPressed="#onEnterKey" prefHeight="30.0" prefWidth="311.0" promptText="password">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <AnchorPane fx:id="topPane" prefHeight="81.0" prefWidth="663.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" layoutX="201.0" layoutY="15.0" prefHeight="51.0" prefWidth="285.0" text="Log In" textFill="WHITE">
+               <font>
+                  <Font size="35.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="62.0" fitWidth="59.0" layoutX="214.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/Logo.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+      <Label fx:id="lblWarnUsername" layoutX="473.0" layoutY="134.0" prefHeight="30.0" prefWidth="137.0" text="field requird!" textFill="RED" visible="false">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblWarnPassword" focusTraversable="false" layoutX="498.0" layoutY="210.0" prefHeight="30.0" prefWidth="137.0" text="field requird!" textFill="RED" visible="false">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <JFXCheckBox fx:id="chkSaveCredentials" checkedColor="#263238" layoutX="120.0" layoutY="321.0" prefHeight="18.0" prefWidth="128.0" text="Save Credentials">
+         <tooltip>
+            <Tooltip text="Save credentials for later use" />
+         </tooltip>
+      </JFXCheckBox>
+      <MaterialDesignIconView fill="#263238" glyphName="ACCOUNT" layoutX="139.0" layoutY="165.0" size="35" />
+      <MaterialDesignIconView fill="#263238" glyphName="ACCOUNT_KEY" layoutX="135.0" layoutY="239.0" size="35" />
+   </children>
+</AnchorPane>

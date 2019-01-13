@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="trPane" prefHeight="519.0" prefWidth="757.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controllers.TransactionController">
+   <children>
+      <AnchorPane prefHeight="35.0" prefWidth="727.0" style="-fx-background-color: #263238;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" layoutX="210.0" prefHeight="63.0" prefWidth="338.0" text="Transaction" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="RECYCLE" size="40" />
+               </graphic>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label layoutX="415.0" layoutY="286.0" prefHeight="44.0" prefWidth="120.0" text="Choose Account:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="74.0" layoutY="154.0" prefHeight="44.0" prefWidth="104.0" text="TrID:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTrID" layoutX="150.0" layoutY="161.0" prefHeight="31.0" prefWidth="183.0" text="Label" textFill="#0c9e33">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="72.0" layoutY="286.0" prefHeight="44.0" prefWidth="78.0" text="Tr Type:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblCategory" layoutX="58.0" layoutY="88.0" prefHeight="51.0" prefWidth="294.0" text="New" textFill="GREEN">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnCancel" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="266.0" layoutY="434.0" prefHeight="59.0" prefWidth="60.0" ripplerFill="WHITE" style="-fx-background-color: #263238;" stylesheets="@../css/sells.css">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="CLOSE" size="30" />
+         </graphic>
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnProcced" alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="359.0" layoutY="434.0" onAction="#btnProceedAction" prefHeight="59.0" prefWidth="133.0" ripplerFill="WHITE" style="-fx-background-color: green;" stylesheets="@../css/sells.css" text="Finalize" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIconView fx:id="btnIcon" fill="WHITE" glyphName="CHECK" size="30" />
+         </graphic>
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="71.0" layoutY="218.0" prefHeight="44.0" prefWidth="93.0" text="Tr Date:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <JFXDatePicker fx:id="txtTrDate" defaultColor="#263238" editable="false" layoutX="175.0" layoutY="229.0" prefHeight="26.0" prefWidth="163.0" />
+      <Label fx:id="lblPurchaseOrRent" layoutX="411.0" layoutY="154.0" prefHeight="44.0" prefWidth="104.0" text="Purchase ID:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblPurID" layoutX="529.0" layoutY="161.0" prefHeight="31.0" prefWidth="183.0" text="Label" textFill="#0c9e33">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cboChooseAccount" layoutX="560.0" layoutY="296.0" prefHeight="25.0" prefWidth="120.0" />
+      <Label layoutX="415.0" layoutY="220.0" prefHeight="44.0" prefWidth="104.0" text="Customer:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblCusID" layoutX="529.0" layoutY="227.0" prefHeight="31.0" prefWidth="183.0" text="Label" textFill="#0c9e33">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="75.0" layoutY="347.0" prefHeight="44.0" prefWidth="104.0" text="Amount Paid:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblAmounPaid" layoutX="193.0" layoutY="354.0" prefHeight="31.0" prefWidth="183.0" text="Label" textFill="#0c9e33">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="419.0" layoutY="347.0" prefHeight="44.0" prefWidth="104.0" text="Due:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDue" layoutX="533.0" layoutY="354.0" prefHeight="31.0" prefWidth="183.0" text="Label" textFill="RED">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cboTrType" layoutX="175.0" layoutY="296.0" prefHeight="25.0" prefWidth="163.0" />
+   </children>
+</AnchorPane>

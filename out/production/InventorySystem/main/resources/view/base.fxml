@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1197.0" stylesheets="@../css/base.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controllers.BaseController">
+  <items>
+    <AnchorPane id="leftPane" fx:id="paneLeft" maxWidth="280.0" minHeight="0.0" minWidth="75.0" prefHeight="454.0" prefWidth="238.0" stylesheets="@../css/base.css">
+         <children>
+            <AnchorPane fx:id="paneMenuHolder" layoutY="180.0" prefHeight="449.0" prefWidth="212.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="140.0">
+               <children>
+                  <JFXButton fx:id="btnDashboard" alignment="BASELINE_LEFT" graphicTextGap="40.0" layoutX="8.0" layoutY="26.0" onAction="#btnNavigators" prefHeight="50.0" prefWidth="264.0" ripplerFill="WHITE" text="Dashboard" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="26.0">
+                     <graphic>
+                        <MaterialDesignIconView fill="WHITE" glyphName="HOME" size="30" />
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <tooltip>
+                        <Tooltip text="View Summery of Everything" />
+                     </tooltip>
+                  </JFXButton>
+                  <JFXButton fx:id="btnInventoryItem" alignment="BASELINE_LEFT" graphicTextGap="40.0" layoutX="8.0" layoutY="76.0" onAction="#btnNavigators" prefHeight="50.0" prefWidth="238.0" ripplerFill="WHITE" text="Items" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="76.0">
+                     <graphic>
+                        <MaterialDesignIconView fill="WHITE" glyphName="BASKET" size="30" />
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <tooltip>
+                        <Tooltip text="Add, Delete, Update, List Inventory Items" />
+                     </tooltip>
+                  </JFXButton>
+                  <JFXButton fx:id="btnCustomers" alignment="BASELINE_LEFT" graphicTextGap="40.0" layoutX="8.0" layoutY="126.0" onAction="#btnNavigators" prefHeight="50.0" prefWidth="238.0" ripplerFill="WHITE" text="Customers" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0">
+                     <graphic>
+                        <MaterialDesignIconView fill="WHITE" glyphName="ACCOUNT_CIRCLE" size="30" />
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <tooltip>
+                        <Tooltip text="Add, Delete, Update, List Customers" />
+                     </tooltip>
+                  </JFXButton>
+                  <JFXButton fx:id="btnSells" alignment="BASELINE_LEFT" graphicTextGap="40.0" layoutX="8.0" layoutY="176.0" onAction="#btnNavigators" prefHeight="50.0" prefWidth="238.0" ripplerFill="WHITE" text="Sells" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="LINE_CHART" size="30" wrappingWidth="32.28571319580078" />
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <tooltip>
+                        <Tooltip text="Issue New Sell, Show History" />
+                     </tooltip>
+                  </JFXButton>
+                  <JFXButton fx:id="btnRentals" alignment="BASELINE_LEFT" graphicTextGap="40.0" layoutX="8.0" layoutY="226.0" onAction="#btnNavigators" prefHeight="50.0" prefWidth="238.0" ripplerFill="WHITE" text="Rentals" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0">
+                     <graphic>
+                        <MaterialDesignIconView fill="WHITE" glyphName="BACKUP_RESTORE" size="30" />
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <tooltip>
+                        <Tooltip text="Issue New Rent, Show History" />
+                     </tooltip>
+                  </JFXButton>
+                  <JFXButton fx:id="btnAccounts" alignment="BASELINE_LEFT" graphicTextGap="40.0" layoutX="8.0" layoutY="326.0" onAction="#btnNavigators" prefHeight="50.0" prefWidth="238.0" ripplerFill="WHITE" text="Accounts" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="MONEY" size="30" wrappingWidth="30.571430206298828" />
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <tooltip>
+                        <Tooltip text="Create New Account" />
+                     </tooltip>
+                  </JFXButton>
+                  <JFXButton fx:id="btnAdmin" alignment="BASELINE_LEFT" graphicTextGap="40.0" layoutX="8.0" layoutY="376.0" onAction="#btnNavigators" prefHeight="50.0" prefWidth="238.0" ripplerFill="WHITE" text="Administrative" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0">
+                     <graphic>
+                        <MaterialDesignIconView fill="RED" glyphName="ACCOUNT_KEY" size="30" textAlignment="JUSTIFY" />
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <tooltip>
+                        <Tooltip text="Show Report, Control Access, Account Mgmt." />
+                     </tooltip>
+                  </JFXButton>
+                  <AnchorPane fx:id="paneAccountSection" layoutX="8.0" layoutY="449.0" prefHeight="109.0" prefWidth="229.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="92.0" layoutY="65.0" prefHeight="21.0" prefWidth="83.0" text="Access Level:" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="90.0">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblAccessLevel" alignment="CENTER" contentDisplay="CENTER" layoutX="92.0" layoutY="80.0" prefHeight="21.0" prefWidth="83.0" text="Level" textAlignment="CENTER" textFill="#00ff22" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="90.0">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="94.0" layoutY="29.0" prefHeight="21.0" prefWidth="83.0" text="Logged in as:" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="90.0">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblUsername" alignment="CENTER" contentDisplay="CENTER" layoutX="93.0" layoutY="46.0" prefHeight="21.0" prefWidth="83.0" text="username" textAlignment="CENTER" textFill="#00ff22" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="90.0">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblClock" alignment="CENTER" contentDisplay="CENTER" layoutX="53.0" layoutY="4.0" prefHeight="21.0" prefWidth="160.0" text="Clock" textAlignment="CENTER" textFill="#03d1ff" AnchorPane.leftAnchor="53.0" AnchorPane.rightAnchor="53.0">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <JFXButton alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="6.0" layoutY="30.0" onAction="#logOut" prefHeight="50.0" prefWidth="50.0" ripplerFill="WHITE" style="-fx-background-radius: 30 30 30 30; -fx-border-radius: 30 30 30 30;" AnchorPane.leftAnchor="5.0">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="KEY" size="30" wrappingWidth="24.28571319580078" />
+                           </graphic>
+                           <tooltip>
+                              <Tooltip text="Click to log out" />
+                           </tooltip>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="200.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/Accounts_main.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <JFXButton fx:id="btnDueUpdate" alignment="BASELINE_LEFT" graphicTextGap="40.0" layoutX="8.0" layoutY="276.0" onAction="#btnNavigators" prefHeight="50.0" prefWidth="238.0" ripplerFill="WHITE" text="Update Due" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="CHEVRON_CIRCLE_UP" size="30" wrappingWidth="30.571430206298828" />
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <tooltip>
+                        <Tooltip text="Update Due" />
+                     </tooltip>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <ImageView fitHeight="67.0" fitWidth="69.0" layoutX="5.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="5.0">
+               <image>
+                  <Image url="@../icons/Logo.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="94.0" layoutY="37.0" prefHeight="21.0" prefWidth="100.0" text="Inventory" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Line endX="298.0" layoutX="-19.0" layoutY="126.0" startX="14.5" stroke="WHITE" AnchorPane.leftAnchor="-5.0" AnchorPane.rightAnchor="0.5" />
+            <Label alignment="CENTER" layoutX="94.0" layoutY="64.0" prefHeight="21.0" prefWidth="100.0" text="System" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <AnchorPane fx:id="paneRight" layoutX="6.0" prefHeight="698.0" prefWidth="1169.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children></AnchorPane>
+  </items>
+</SplitPane>

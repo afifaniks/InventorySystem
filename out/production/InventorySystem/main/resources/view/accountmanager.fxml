@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="615.0" prefWidth="1042.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controllers.AccountListController">
+   <children>
+      <JFXTextField fx:id="txtAccID" alignment="CENTER" focusColor="#263238" layoutX="137.0" layoutY="150.0" prefHeight="31.0" prefWidth="200.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="36.0" layoutY="202.0" prefHeight="44.0" prefWidth="96.0" text="Name:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtCusID" alignment="CENTER" focusColor="#263238" layoutX="137.0" layoutY="265.0" prefHeight="31.0" prefWidth="200.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="36.0" layoutY="263.0" prefHeight="44.0" prefWidth="96.0" text="Cus ID:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="36.0" layoutY="146.0" prefHeight="44.0" prefWidth="96.0" text="Account ID:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tbl" layoutX="366.0" layoutY="120.0" prefHeight="392.0" prefWidth="621.0">
+        <columns>
+          <TableColumn fx:id="accID" prefWidth="75.0" text="AccID" />
+          <TableColumn fx:id="accName" prefWidth="75.0" text="Acc Name" />
+            <TableColumn fx:id="cusID" prefWidth="75.0" text="Cus ID" />
+            <TableColumn fx:id="issued" prefWidth="75.0" text="Issued by" />
+            <TableColumn fx:id="payType" prefWidth="75.0" text="Pay Type" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+         <tooltip>
+            <Tooltip text="Click on any row to edit" />
+         </tooltip>
+         <effect>
+            <DropShadow />
+         </effect>
+      </TableView>
+      <JFXButton fx:id="btnAddNew" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="200.0" layoutY="485.0" onAction="#updateAcc" prefHeight="61.0" prefWidth="59.0" ripplerFill="#c9c3c3" style="-fx-background-radius: 40 40 40 40;" stylesheets="@../css/customer.css">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIconView fx:id="btnAddIcon" fill="#263238" glyphName="EDIT" size="30" />
+         </graphic>
+      </JFXButton>
+      <AnchorPane prefHeight="75.0" prefWidth="865.0" style="-fx-background-color: #263238;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" graphicTextGap="10.0" layoutX="347.0" layoutY="7.0" prefHeight="61.0" prefWidth="349.0" text="Update Accounts" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="29.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="MONEY" size="35" />
+               </graphic>
+            </Label>
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="btnDelete" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="126.0" layoutY="485.0" onAction="#deleteAcc" prefHeight="61.0" prefWidth="59.0" ripplerFill="#c9c3c3" style="-fx-background-radius: 40 40 40 40;" stylesheets="@../css/customer.css">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIconView fx:id="btnAddIcon1" fill="#263238" glyphName="TRASH" size="30" />
+         </graphic>
+      </JFXButton>
+      <JFXTextField fx:id="txtAccName" alignment="CENTER" focusColor="#263238" layoutX="137.0" layoutY="209.0" prefHeight="31.0" prefWidth="200.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtPayMethod" alignment="CENTER" focusColor="#263238" layoutX="137.0" layoutY="388.0" prefHeight="31.0" prefWidth="200.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="36.0" layoutY="386.0" prefHeight="44.0" prefWidth="96.0" text="Pay Method:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtEmpName" alignment="CENTER" focusColor="#263238" layoutX="137.0" layoutY="328.0" prefHeight="31.0" prefWidth="200.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="36.0" layoutY="326.0" prefHeight="44.0" prefWidth="96.0" text="Issued By:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="584.0" layoutY="538.0" text="Double click on an entry to update." />
+   </children>
+</AnchorPane>
