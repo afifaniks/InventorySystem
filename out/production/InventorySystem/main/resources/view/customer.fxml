@@ -223,7 +223,7 @@
                        <FontAwesomeIconView fx:id="btnSeachIcon" fill="#263238" glyphName="SEARCH" size="25" />
                     </graphic>
                     <tooltip>
-                       <Tooltip text="Search with customers name or id" />
+                       <Tooltip text="Search" />
                     </tooltip>
                  </JFXButton>
                  <Circle fx:id="imgCustomerPhoto" fill="#ffffff00" layoutX="145.0" layoutY="222.0" radius="124.0" stroke="WHITE" strokeType="INSIDE">

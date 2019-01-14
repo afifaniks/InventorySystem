@@ -179,7 +179,7 @@
                   <FontAwesomeIconView fx:id="btnSearchIcon" fill="#263238" glyphName="SEARCH" size="25" />
                </graphic>
                <tooltip>
-                  <Tooltip text="Search with customers name" />
+                  <Tooltip text="Search" />
                </tooltip>
             </JFXButton>
             <JFXButton fx:id="btnPrevEntry" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="242.0" layoutY="492.0" prefHeight="61.0" prefWidth="59.0" ripplerFill="#c9c3c3" style="-fx-background-radius: 40 40 40 40; -fx-border-radius: 40 40 40 40;" stylesheets="@../css/customer.css">

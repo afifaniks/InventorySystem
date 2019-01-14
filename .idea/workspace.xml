@@ -11,10 +11,9 @@
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/main/java/controllers/InitializerController$NewTask.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/main/java/controllers/InitializerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InventorySystem/main/java/controllers/InitializerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/InitializerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/InitializerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/initializer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/initializer.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/InventoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/InventoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/customer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/customer.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/inventory.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/inventory.fxml" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -240,7 +239,7 @@
     <session id="1136038920">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="27" />
+          <entry key="project.closed" value="28" />
           <entry key="project.open.time.100" value="1" />
           <entry key="project.open.time.106" value="1" />
           <entry key="project.open.time.110" value="1" />
@@ -261,12 +260,13 @@
           <entry key="project.open.time.78" value="2" />
           <entry key="project.open.time.79" value="1" />
           <entry key="project.open.time.80" value="1" />
+          <entry key="project.open.time.86" value="1" />
           <entry key="project.open.time.87" value="1" />
           <entry key="project.open.time.88" value="1" />
           <entry key="project.open.time.89" value="2" />
           <entry key="project.open.time.91" value="1" />
           <entry key="project.open.time.92" value="1" />
-          <entry key="project.opened" value="28" />
+          <entry key="project.opened" value="29" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -274,7 +274,7 @@
           <entry key="class" value="1" />
           <entry key="css" value="6" />
           <entry key="fxml" value="9" />
-          <entry key="java" value="111" />
+          <entry key="java" value="112" />
           <entry key="png" value="3" />
           <entry key="properties" value="1" />
           <entry key="uml" value="9" />
@@ -285,7 +285,7 @@
           <entry key="CLASS" value="1" />
           <entry key="CSS" value="6" />
           <entry key="Image" value="3" />
-          <entry key="JAVA" value="111" />
+          <entry key="JAVA" value="112" />
           <entry key="Properties" value="1" />
           <entry key="UML" value="9" />
           <entry key="XML" value="9" />
@@ -295,12 +295,12 @@
         <counts>
           <entry key="dummy" value="152" />
           <entry key="fxml" value="14" />
-          <entry key="java" value="10101" />
+          <entry key="java" value="10294" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="10098" />
+          <entry key="JAVA" value="10291" />
           <entry key="PLAIN_TEXT" value="152" />
           <entry key="SQL" value="3" />
           <entry key="XML" value="14" />
@@ -340,7 +340,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/controllers/InitializerController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-5300">
+            <state relative-caret-position="50">
               <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -349,30 +349,30 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/view/initializer.fxml">
           <provider editor-type-id="JavaFX-Scene-Builder" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="14" column="129" selection-start-line="14" selection-start-column="129" selection-end-line="14" selection-end-column="129" />
+            <state relative-caret-position="203">
+              <caret line="14" column="128" lean-forward="true" selection-start-line="14" selection-start-column="128" selection-end-line="14" selection-end-column="128" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/controllers/InventoryController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-8908">
-              <caret line="141" column="60" selection-start-line="141" selection-start-column="60" selection-end-line="141" selection-end-column="60" />
+            <state relative-caret-position="-3768">
+              <caret line="534" column="47" lean-forward="true" selection-start-line="534" selection-start-column="47" selection-end-line="534" selection-end-column="47" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/SellsController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/CustomerController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
-              <caret line="245" selection-start-line="245" selection-end-line="245" />
+            <state relative-caret-position="290">
+              <caret line="507" selection-start-line="507" selection-end-line="512" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -444,7 +444,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/sample/Customer.java" />
         <option value="$PROJECT_DIR$/src/controller/Account.java" />
         <option value="$PROJECT_DIR$/src/sample/Main.java" />
         <option value="$PROJECT_DIR$/src/controller/Initializer.java" />
@@ -495,6 +494,7 @@
         <option value="$PROJECT_DIR$/src/main/java/controllers/Twet.java" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/InitializerController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/view/initializer.fxml" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/InventoryController.java" />
       </list>
     </option>
   </component>
@@ -527,12 +527,12 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+      <pane id="PackagesPane">
+        <subPane>
           <expand>
             <path>
-              <item name="InventorySystem" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="InventorySystem" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="InventorySystem" type="58d84e3e:PackageViewProjectNode" />
+              <item name="InventorySystem" type="616d4139:PackageViewModuleNode" />
             </path>
           </expand>
           <select />
@@ -598,12 +598,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane">
-        <subPane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
             <path>
-              <item name="InventorySystem" type="58d84e3e:PackageViewProjectNode" />
-              <item name="InventorySystem" type="616d4139:PackageViewModuleNode" />
+              <item name="InventorySystem" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="InventorySystem" type="2674bda8:ScopeViewTreeModel$GroupNode" />
             </path>
           </expand>
           <select />
@@ -623,7 +623,7 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/Progs/TeslaRentalInventory/src/fxml/initializer.fxml" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547402302153" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547482167639" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL&#10;Amazon Redshift" />
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -849,7 +849,8 @@
       <workItem from="1547285264760" duration="3519000" />
       <workItem from="1547305232308" duration="5145000" />
       <workItem from="1547365103527" duration="6272000" />
-      <workItem from="1547392438020" duration="9729000" />
+      <workItem from="1547392438020" duration="9952000" />
+      <workItem from="1547480023450" duration="2077000" />
     </task>
     <task id="LOCAL-00001" summary="Multiple view added.">
       <created>1531118175694</created>
@@ -869,7 +870,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="545873000" />
+    <option name="totallyTimeSpent" value="548173000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -884,8 +885,8 @@
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.22012103" />
-      <window_info id="Structure" order="1" weight="0.2647504" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" weight="0.25113463" />
+      <window_info active="true" id="Structure" order="1" visible="true" weight="0.2647504" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -1311,13 +1312,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/CustomerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3309">
-          <caret line="512" column="7" selection-start-line="512" selection-start-column="7" selection-end-line="512" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/config.properties">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1372,38 +1366,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/SellsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="245" selection-start-line="245" selection-end-line="245" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/Foo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-          <folding>
-            <element signature="e#112#113#0" expanded="true" />
-            <element signature="e#144#145#0" expanded="true" />
-            <element signature="e#177#178#0" expanded="true" />
-            <element signature="e#204#205#0" expanded="true" />
-            <element signature="e#234#235#0" expanded="true" />
-            <element signature="e#275#276#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/InventoryController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8908">
-          <caret line="141" column="60" selection-start-line="141" selection-start-column="60" selection-end-line="141" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/Foo.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/controllers/InitializerController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5300">
+        <state relative-caret-position="50">
           <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1414,8 +1380,29 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/view/initializer.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="14" column="129" selection-start-line="14" selection-start-column="129" selection-end-line="14" selection-end-column="129" />
+        <state relative-caret-position="203">
+          <caret line="14" column="128" lean-forward="true" selection-start-line="14" selection-start-column="128" selection-end-line="14" selection-end-column="128" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/SellsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-425">
+          <caret line="245" selection-start-line="245" selection-end-line="245" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/CustomerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="507" selection-start-line="507" selection-end-line="512" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/InventoryController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3768">
+          <caret line="534" column="47" lean-forward="true" selection-start-line="534" selection-start-column="47" selection-end-line="534" selection-end-column="47" />
         </state>
       </provider>
     </entry>

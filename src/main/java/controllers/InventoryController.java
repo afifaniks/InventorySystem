@@ -140,8 +140,9 @@ public class InventoryController implements Initializable{
         }
         txtType.setItems(itemTypeNames);
         TextFields.bindAutoCompletion(txtSearch, itemNames);
-        initialView();
+        setView();
     }
+
     private void reloadRecords(){
         itemList.clear();
         Connection connection = DBConnection.getConnection();
@@ -175,14 +176,14 @@ public class InventoryController implements Initializable{
 
             }
 
-            initialView();
+            setView();
 
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
-    private void initialView() {
+    private void setView() {
         itemListPane.setVisible(false);
         recordIndex = 0; //Resetting index value
         recordSize = itemList.size();
@@ -479,6 +480,107 @@ public class InventoryController implements Initializable{
         }
     }
 
+    /**
+     * This method search into database with the id of a item and returns the result
+     * @param id: ID of the item
+     * @return: The search result of the query
+     */
+    private ObservableList<Item> searchWithID(Integer id) {
+        Connection con = DBConnection.getConnection();
+
+        String idSQL = "SELECT * FROM item, itemtype WHERE itemID = ? AND itemTypeId = ItemType_itemTypeId";
+
+        ObservableList<Item> searchResult = FXCollections.observableArrayList(); //list to hold search result
+
+        try {
+            PreparedStatement preparedStatement = con.prepareStatement(idSQL);
+            preparedStatement.setInt(1, id);
+
+            ResultSet itemResultSet = preparedStatement.executeQuery();
+
+            //Getting values from Items result set
+            while (itemResultSet.next()) {
+                Item item = new Item(itemResultSet.getInt("itemID"),
+                        itemResultSet.getString("itemName"),
+                        itemResultSet.getInt("stock"),
+                        false,
+                        false,
+                        itemResultSet.getDouble("salePrice"),
+                        itemResultSet.getDouble("rentRate"),
+                        itemResultSet.getString("photo"),
+                        itemResultSet.getString("typeName"));
+
+                if (itemResultSet.getString("rentalOrSale").contains("Rental")) {
+                    item.setRent(true);
+                }
+                if (itemResultSet.getString("rentalOrSale").contains("Sale")) {
+                    item.setSale(true);
+                }
+
+                searchResult.add(item);
+            }
+
+            con.close();
+
+        } catch (SQLException e) {
+            new PromptDialogController("SQL Error!",
+                    "Error occured while executing Query.\nSQL Error Code: " + e.getErrorCode());
+        }
+
+        return searchResult;
+    }
+
+    /**
+     * This method search into the customer database with a string and
+     * returns any records that has a match with the search string
+     * @param name: Name of the item
+     * @return: List of the result
+     */
+
+    private ObservableList<Item> searchWithName(String name) {
+        Connection con = DBConnection.getConnection();
+
+        String nameSQL = "SELECT * FROM item, itemtype WHERE itemName COLLATE UTF8_GENERAL_CI like ? AND itemTypeId = ItemType_itemTypeId";
+
+        ObservableList<Item> searchResult = FXCollections.observableArrayList(); //list to hold search result
+
+        try {
+            PreparedStatement preparedStatement2 = con.prepareStatement(nameSQL);
+            preparedStatement2.setString(1, "%" + txtSearch.getText() + "%");
+
+            ResultSet itemResultSet = preparedStatement2.executeQuery();
+
+            //Getting values from customers result set
+            while (itemResultSet.next()) {
+                Item item = new Item(itemResultSet.getInt("itemID"),
+                        itemResultSet.getString("itemName"),
+                        itemResultSet.getInt("stock"),
+                        false,
+                        false,
+                        itemResultSet.getDouble("salePrice"),
+                        itemResultSet.getDouble("rentRate"),
+                        itemResultSet.getString("photo"),
+                        itemResultSet.getString("typeName"));
+
+                if(itemResultSet.getString("rentalOrSale").contains("Rental")) {
+                    item.setRent(true);
+                }
+                if(itemResultSet.getString("rentalOrSale").contains("Sale")) {
+                    item.setSale(true);
+                }
+                searchResult.add(item);
+            }
+
+            con.close();
+
+        } catch (SQLException e) {
+            new PromptDialogController("SQL Error!",
+                    "Error occured while executing Query.\nSQL Error Code: " + e.getErrorCode());
+        }
+
+        return searchResult;
+    }
+
     @FXML
     void btnSearchAction(ActionEvent event) {
         if (searchDone) {
@@ -488,46 +590,19 @@ public class InventoryController implements Initializable{
             recordSize = itemList.size();
             btnSearch.setTooltip(new Tooltip("Search with customers name or id"));
             btnSearchIcon.setGlyphName("SEARCH");
-            initialView();
+            setView();
         } else {
-            Connection con = DBConnection.getConnection();
-
-            String idSQL = "SELECT * FROM item, itemtype WHERE itemID = ? AND itemTypeId = ItemType_itemTypeId";
-            String nameSQL = "SELECT * FROM item, itemtype WHERE itemName COLLATE UTF8_GENERAL_CI like ? AND itemTypeId = ItemType_itemTypeId";
-
             ObservableList<Item> searchResult = FXCollections.observableArrayList(); //list to hold search result
-
             try {
-                //Checking if input field is a number then searching with ID
+                // Checking if input field is a number then searching with ID
+                // If parsing of Integer fails then we shall try to search
+                // with name instead
                 Integer id = Integer.valueOf(txtSearch.getText());
-                PreparedStatement preparedStatement = con.prepareStatement(idSQL);
-                preparedStatement.setInt(1, id);
-
-                ResultSet itemResultSet = preparedStatement.executeQuery();
-
-                //Getting values from customers result set
-                while (itemResultSet.next()) {
-                    Item item = new Item(itemResultSet.getInt("itemID"),
-                            itemResultSet.getString("itemName"),
-                            itemResultSet.getInt("stock"),
-                            false,
-                            false,
-                            itemResultSet.getDouble("salePrice"),
-                            itemResultSet.getDouble("rentRate"),
-                            itemResultSet.getString("photo"),
-                            itemResultSet.getString("typeName"));
-
-                    if(itemResultSet.getString("rentalOrSale").contains("Rental")) {
-                        item.setRent(true);
-                    }
-                    if(itemResultSet.getString("rentalOrSale").contains("Sale")) {
-                        item.setSale(true);
-                    }
-
-                    searchResult.add(item);
-
-                }
-
+                searchResult = searchWithID(id);
+            } catch (NumberFormatException e) {
+                String name = txtSearch.getText();
+                searchResult = searchWithName(name);
+            } finally {
                 if (searchResult.size() <= 0) {
                     lblSearchResults.setText("No Results Found!");
                     lblSearchResults.setVisible(true);
@@ -540,66 +615,10 @@ public class InventoryController implements Initializable{
                     recordSize = searchResult.size();
                     lblSearchResults.setText(recordSize + " results found!");
                     lblSearchResults.setVisible(true);
-                    initialView();
-
-                    con.close();
+                    setView();
                 }
-
-            } catch (NumberFormatException eN) {
-                try {
-                    PreparedStatement preparedStatement2 = con.prepareStatement(nameSQL);
-                    preparedStatement2.setString(1, "%" + txtSearch.getText() + "%");
-
-                    ResultSet itemResultSet = preparedStatement2.executeQuery();
-
-                    //Getting values from customers result set
-                    while (itemResultSet.next()) {
-                        Item item = new Item(itemResultSet.getInt("itemID"),
-                                itemResultSet.getString("itemName"),
-                                itemResultSet.getInt("stock"),
-                                false,
-                                false,
-                                itemResultSet.getDouble("salePrice"),
-                                itemResultSet.getDouble("rentRate"),
-                                itemResultSet.getString("photo"),
-                                itemResultSet.getString("typeName"));
-
-                        if(itemResultSet.getString("rentalOrSale").contains("Rental")) {
-                            item.setRent(true);
-                        }
-                        if(itemResultSet.getString("rentalOrSale").contains("Sale")) {
-                            item.setSale(true);
-                        }
-                        searchResult.add(item);
-                    }
-
-                    if (searchResult.size() <= 0) {
-                        lblSearchResults.setText("No Results Found!");
-                        lblSearchResults.setVisible(true);
-                    } else {
-                        tempList = FXCollections.observableArrayList(itemList);
-                        searchDone = true;
-                        btnSearchIcon.setGlyphName("CLOSE");
-                        btnSearch.setTooltip(new Tooltip("Reset Full List"));
-                        itemList = searchResult; //Assigning search result to customerList
-                        recordSize = searchResult.size();
-                        lblSearchResults.setText(recordSize + " results found!");
-                        lblSearchResults.setVisible(true);
-                        initialView();
-
-                        con.close();
-                    }
-
-                } catch (SQLException eS2) {
-
-                    eS2.printStackTrace();
-                    new PromptDialogController("SQL Error!", "Error occured while executing Query.\nSQL Error Code: " + eS2.getErrorCode());
-                }
-
-            } catch (SQLException eS) {
-                eS.printStackTrace();
-                new PromptDialogController("SQL Error!", "Error occured while executing Query.\nSQL Error Code: " + eS.getErrorCode());
             }
+
         }
     }
 
@@ -718,7 +737,6 @@ public class InventoryController implements Initializable{
                 txtType.setUnFocusColor(Color.web("red"));
                 entryFlag = false;;
             }
-
 
             if(entryFlag) {
                 Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
