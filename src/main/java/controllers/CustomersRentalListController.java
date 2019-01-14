@@ -24,40 +24,28 @@ import java.util.ResourceBundle;
 public class CustomersRentalListController implements Initializable {
     @FXML
     private Label lblSellCount;
-
     @FXML
     private Label lblDue;
-
     @FXML
     private Label lblAmount;
-
     @FXML
     private Label today;
-
     @FXML
     private TableView<Rent> tblRecent;
-
     @FXML
     private TableColumn<Rent, Integer> rentID;
-
     @FXML
     private TableColumn<Rent, Integer> cusID;
-
     @FXML
     private TableColumn<Rent, Integer> itemID;
-
     @FXML
     private TableColumn<Rent, String> rentalDate;
-
     @FXML
     private TableColumn<Rent, String> returnDate;
-
     @FXML
     private TableColumn<Rent, String> empName;
-
     @FXML
     private TableColumn<Rent, Double> paid;
-
     @FXML
     private TableColumn<Rent, Double> due;
     public static int customerID = 0;

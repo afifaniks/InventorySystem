@@ -33,49 +33,34 @@ import java.util.ResourceBundle;
  * Project: TeslaRentalInventory
  **/
 public class AccountController implements Initializable {
-
     @FXML
     private JFXTextField txtAccountID;
-
     @FXML
     private Label lblId, lblS, lblSearchResults;
-
     @FXML
     private JFXTextField txtCustomerID;
-
     @FXML
     private Label lblProcessedBy;
-
     @FXML
     private TableView<Account> tblRecent;
-
     @FXML
     private TableColumn<Account, String> customer;
-
     @FXML
     private TableColumn<Account, Integer> accID;
-
     @FXML
     private TableColumn<Account, String> accName;
-
     @FXML
     private TableColumn<Account, String> payMethod;
-
     @FXML
     private JFXTextField txtPayMethod;
-
     @FXML
     private JFXTextField txtSearch;
-
     @FXML
     private JFXButton btnSearch;
-
     @FXML
     private AnchorPane accountPane;
-
     @FXML
     private FontAwesomeIconView btnSearchIcon;
-
     public static ObservableList<Account> accountList;
     public static ObservableList<Account> tempList;
     public static ArrayList<String> customerIDName = null; //Will hold auto completion data for customer ID text field

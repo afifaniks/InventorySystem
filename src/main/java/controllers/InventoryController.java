@@ -35,99 +35,75 @@ import java.util.TreeMap;
  * Project: TeslaRentalInventory
  **/
 public class InventoryController implements Initializable{
-
     @FXML
     private JFXTextField txtItemName;
-
     @FXML
     private JFXComboBox<String> txtType;
-
     @FXML
     private JFXTextField txtRentRate;
-
     @FXML
     private Label itemID;
-
     @FXML
     private Circle imgCustomerPhoto;
-
     @FXML
     private JFXTextField txtStock;
-
     @FXML
     private JFXTextField txtPrice;
-
     @FXML
     private Label lblPageIndex, lblMode, lblSearchResults;
-
     @FXML
     private JFXButton btnPrevEntry;
-
     @FXML
     private JFXButton btnNextEntry;
-
     @FXML
     private JFXButton btnListAll;
-
     @FXML
     private JFXButton btnOutOfStock, btnGoBack, btnDelete;
-
     @FXML
     private JFXTextField txtSearch;
-
     @FXML
     private FontAwesomeIconView btnAddIcon;
-
     @FXML
     private JFXButton btnSearch;
-
     @FXML
     private AnchorPane itemPane;
-
     @FXML
     private AnchorPane itemListPane;
-
     @FXML
     private TableView<Item> tbl;
-
     @FXML
     private TableColumn<Item, Integer> columnItemID;
-
     @FXML
     private TableColumn<Item, String> columnItemName;
-
     @FXML
     private TableColumn<Item, String> columnItemType;
-
     @FXML
     private TableColumn<Item, Boolean> columnForRent;
-
     @FXML
     private TableColumn<Item, Boolean> columnForSale;
-
     @FXML
     private TableColumn<Item, Double> columnRentalRate;
-
     @FXML
     private TableColumn<Item, Double> columnPrice;
-
     @FXML
     private TableColumn<Item, Integer> columnStock;
-
     @FXML
     private JFXCheckBox chkRent, chkSale;
-
     @FXML
     private FontAwesomeIconView btnSearchIcon;
-
     private static int recordIndex = 0;
     private static int recordSize = 0;
     private Item onView = null;
+    /**
+     * addFlag will differentiate b/w Adding a new entry
+     * and updating an existing entry.
+     * True: New Record Entry Mode
+     * False: Updating an Existing Entry
+     */
     private static boolean addFlag = false;
     private static boolean searchDone = false;
     private static String imgPath = null;
     public static TreeMap<String, Integer> itemType = new TreeMap<>();
-
     public static ObservableList<Item> itemList = FXCollections.observableArrayList(); //This field will auto set from InitializerController Class
     public static ObservableList<Item> tempList = FXCollections.observableArrayList(); //Will hold the main list while searching
     public static ArrayList<String> itemNames = new ArrayList<>();

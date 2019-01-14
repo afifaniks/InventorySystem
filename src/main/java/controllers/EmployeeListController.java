@@ -29,40 +29,28 @@ import java.util.ResourceBundle;
  * Project: TeslaRentalInventory
  **/
 public class EmployeeListController implements Initializable {
-
     @FXML
     private JFXTextField txtUser;
-
     @FXML
     private JFXPasswordField txtPass;
-
     @FXML
     private JFXTextField txtEmail;
-
     @FXML
     private JFXComboBox<String> cboAccessLevel;
-
     @FXML
     private TableView<Employee> tbl;
-
     @FXML
     private TableColumn<Employee, String> username;
-
     @FXML
     private TableColumn<Employee, String> pass;
-
     @FXML
     private TableColumn<Employee, String> email;
-
     @FXML
     private TableColumn<Employee, String> access;
-
     @FXML
     private JFXButton btnAddNew;
-
     @FXML
     private FontAwesomeIconView btnAddIcon;
-
     @FXML
     private JFXButton btnDelete;
 
@@ -100,6 +88,7 @@ public class EmployeeListController implements Initializable {
             e.printStackTrace();
         }
     }
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
@@ -141,7 +130,6 @@ public class EmployeeListController implements Initializable {
 
             // Setting table data
             tbl.setItems(list);
-
             connection.close();
 
         } catch (SQLException e) {

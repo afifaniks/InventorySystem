@@ -20,77 +20,52 @@ import java.util.ResourceBundle;
  * Project: TeslaRentalInventory
  **/
 public class DueUpdateController implements Initializable {
-
-
     @FXML
     private AnchorPane rightPane;
-
     @FXML
     private JFXTextField txtCustomerId;
-
     @FXML
     private JFXTextField txtItemId;
-
     @FXML
     private Label lblCategory;
-
     @FXML
     private JFXDatePicker txtSellDate;
-
     @FXML
     private JFXTextField txtPaid;
-
     @FXML
     private JFXButton btnProcced;
-
     @FXML
     private FontAwesomeIconView btnIcon;
-
     @FXML
     private JFXTextField txtDue;
-
     @FXML
     private JFXTextField txtNewPay;
-
     @FXML
     private JFXTextField txtSellId;
-
     @FXML
     private JFXButton btnSearch;
-
     @FXML
     private FontAwesomeIconView btnSearchIcon;
-
     @FXML
     private JFXTextField txtCustomerId1;
-
     @FXML
     private JFXTextField txtItemRental;
-
     @FXML
     private JFXDatePicker txtRentalDate;
-
     @FXML
     private JFXTextField txtPaidRental;
-
     @FXML
     private JFXButton btnProceedRental;
-
     @FXML
     private FontAwesomeIconView btnIcon1;
-
     @FXML
     private JFXTextField txtRentalDue;
-
     @FXML
     private JFXTextField txtNewPayRental;
-
     @FXML
     private JFXTextField txtRentalID;
-
     @FXML
     private JFXButton btnSearchRental;
-
     @FXML
     private FontAwesomeIconView btnSearchIcon1;
 
@@ -118,7 +93,6 @@ public class DueUpdateController implements Initializable {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
     }
 
     @FXML

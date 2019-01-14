@@ -32,13 +32,10 @@ public class InitializerController implements Initializable {
     private static final int THREAD_SLEEP_INTERVAL = 100;
     @FXML
     private JFXProgressBar progressIndicator;
-
     @FXML
     private Label taskName;
-
     public String sessionUser = LogInController.loggerUsername; //This firld will hold userName whos currently using the system
                                                 //The field is initiated from LogInController Class
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         LoadRecords initializerTask = new LoadRecords();

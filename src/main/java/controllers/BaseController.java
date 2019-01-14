@@ -24,52 +24,36 @@ import java.util.ResourceBundle;
  * Project: TeslaRentalInventory
  **/
 public class BaseController implements Initializable{
-
     @FXML
     private AnchorPane paneRight;
-
     @FXML
     private AnchorPane paneLeft;
-
     @FXML
     private JFXButton btnDashboard;
-
     @FXML
     private Label lblAccessLevel;
-
     @FXML
     private Label lblUsername;
-
     @FXML
     private JFXButton btnCustomers;
-
     @FXML
     private JFXButton btnInventoryItem;
-
     @FXML
     private JFXButton btnAccounts;
-
     @FXML
     private JFXButton btnDueUpdate;
-
     @FXML
     private JFXButton btnAdmin;
-
     @FXML
     private JFXButton btn;
-
     @FXML
     private Label lblClock;
-
     @FXML
     private JFXButton btnRentals;
-
     @FXML
     private JFXButton btnSells;
-
     private static String username = "";
     private static String accessLevel = "";
-
     private AnchorPane newRightPane = null;
     private JFXButton temp = null;
     private JFXButton recover = null;
@@ -120,9 +104,12 @@ public class BaseController implements Initializable{
         }
     }
 
-    //The method here is universal method for all the navigators from left
-    //pane which will identify the selection by user and
-    //set the respective right pane FXML
+    /**
+     * The method here is universal method for all the navigators from left
+     * pane which will identify the selection by user and
+     * set the respective right pane FXML
+     * @param event
+     */
 
     @FXML
     void btnNavigators(ActionEvent event) {
@@ -160,10 +147,12 @@ public class BaseController implements Initializable{
         FXML_URL.put("Update Due", "/main/resources/view/dueupdate.fxml");
     }
 
-    //This method will mark selected navigator
-    //from left navigation pane and will remove it if another
-    //navition button is clicked.
-
+    /**
+     * This method will mark selected navigator
+     * from left navigation pane and will remove it if another
+     * navition button is clicked.
+     * @param event
+     */
     private void borderSelector(ActionEvent event) {
         JFXButton btn = (JFXButton)event.getSource();
 
@@ -231,8 +220,10 @@ public class BaseController implements Initializable{
         }
     }
 
-    //Upon logging out this method will set log in prompt on
-    //screen by closing main application
+    /**
+     * Upon logging out this method will set log in prompt on
+     * screen by closing main application
+     */
     @FXML
     private void logOut() {
         Stage current = (Stage)lblUsername.getScene().getWindow();

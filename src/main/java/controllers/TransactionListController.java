@@ -25,43 +25,30 @@ import java.util.ResourceBundle;
  * Project: TeslaRentalInventory
  **/
 public class TransactionListController implements Initializable {
-
     @FXML
     private Label today;
-
     @FXML
     private TableView<Transact> tblP;
-
     @FXML
     private TableColumn<Transact, Integer> trIDP;
-
     @FXML
     private TableColumn<Transact, String> trDatePurch;
-
     @FXML
     private TableColumn<Transact, Integer> trAccP;
-
     @FXML
     private TableColumn<Transact, Integer> purchID;
-
     @FXML
     private TableColumn<Transact, String> trIssueP;
-
     @FXML
     private TableView<Transact> tblR;
-
     @FXML
     private TableColumn<Transact, Integer> trIDR;
-
     @FXML
     private TableColumn<Transact, String> trDateR;
-
     @FXML
     private TableColumn<Transact, Integer> trAccR;
-
     @FXML
     private TableColumn<Transact, Integer> rentalID;
-
     @FXML
     private TableColumn<Transact, String> trIssuedR;
 
@@ -77,7 +64,6 @@ public class TransactionListController implements Initializable {
         trDatePurch.setCellValueFactory(new PropertyValueFactory<>("date"));
         purchID.setCellValueFactory(new PropertyValueFactory<>("purchaseOrRentID"));
         trIssueP.setCellValueFactory(new PropertyValueFactory<>("issuedBy"));
-
         trIDR.setCellValueFactory(new PropertyValueFactory<>("trID"));
         trAccR.setCellValueFactory(new PropertyValueFactory<>("accID"));
         trDateR.setCellValueFactory(new PropertyValueFactory<>("date"));
@@ -102,10 +88,8 @@ public class TransactionListController implements Initializable {
 
             tblP.setItems(purchase);
             tblR.setItems(rent);
-
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
     }
 }

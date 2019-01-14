@@ -21,29 +21,20 @@ import java.util.ResourceBundle;
  * Project: TeslaRentalInventory
  **/
 public class NewEmployeeController implements Initializable {
-
-
     @FXML
     private JFXTextField txtUser;
-
     @FXML
     private JFXTextField txtEmail;
-
     @FXML
     private JFXComboBox<String> cboAccessLevel;
-
     @FXML
     private JFXPasswordField txtPass;
-
     @FXML
     private AnchorPane empPane;
-
     @FXML
     private JFXPasswordField txtPassConf;
-
     @FXML
     private JFXButton addEmployee;
-
     @FXML
     void saveEmployee(ActionEvent event) {
         boolean flag = true;
@@ -78,7 +69,6 @@ public class NewEmployeeController implements Initializable {
                     new PromptDialogController("Operation failed", "This username is already taken. Try another!");
                 }
             }
-
         }
     }
 

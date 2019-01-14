@@ -27,36 +27,26 @@ import java.util.ResourceBundle;
  * Project: TeslaRentalInventory
  **/
 public class LogInController implements Initializable{
+    @FXML
+    private JFXButton btnLogIn;
+    @FXML
+    private JFXTextField txtUsername;
+    @FXML
+    private Label lblWarnUsername;
+    @FXML
+    private Label lblWarnPassword;
+    @FXML
+    private JFXPasswordField txtPassword;
+    @FXML
+    private JFXTextField txtPasswordShown;
+    @FXML
+    private JFXCheckBox chkPasswordMask;
+    @FXML
+    private JFXCheckBox chkSaveCredentials;
     private static final String DIALOG_URL = "/main/resources/view/dialog.fxml";
     private static final String RED = "-fx-text-fill: red";
     public static String loggerUsername = "";
     public static String loggerAccessLevel = "";
-
-    @FXML
-    private JFXButton btnLogIn;
-
-    @FXML
-    private JFXTextField txtUsername;
-
-    @FXML
-    private Label lblWarnUsername;
-
-    @FXML
-    private Label lblWarnPassword;
-
-    @FXML
-    private JFXPasswordField txtPassword;
-
-    @FXML
-    private JFXTextField txtPasswordShown;
-
-    @FXML
-    private JFXCheckBox chkPasswordMask;
-
-    @FXML
-    private JFXCheckBox chkSaveCredentials;
-
-    private Properties credentials = new Properties();
 
     @FXML
     void ctrlLogInCheck(ActionEvent event)  {
@@ -85,11 +75,11 @@ public class LogInController implements Initializable{
         }
     }
 
-
-    // This method will set the previous saved username
-    // password if any. In addition this method is responsible
-    // for password visibility toggling
-
+    /**
+     * This method will set the previous saved username
+     * password if any. In addition this method is responsible
+     * for password visibility toggling
+     */
     @Override
     public void initialize(java.net.URL location, ResourceBundle resources) {
         Connection connection = DBConnection.getConnection();

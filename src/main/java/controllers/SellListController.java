@@ -22,43 +22,30 @@ import java.util.ResourceBundle;
  * Project: TeslaRentalInventory
  **/
 public class SellListController implements Initializable {
-
     @FXML
     private TableView<Purchase> tblRecent;
-
     @FXML
     private TableColumn<Purchase, Integer> purID;
-
     @FXML
     private TableColumn<Purchase, Integer> cusID;
-
     @FXML
     private TableColumn<Purchase, Integer> itemID;
-
     @FXML
     private TableColumn<Purchase, String> date;
-
     @FXML
     private TableColumn<Purchase, Integer> qty;
-
     @FXML
     private TableColumn<Purchase, Double> paidAmmount;
-
     @FXML
     private TableColumn<Purchase, Double> dueAmount;
-
     @FXML
     private TableColumn<Purchase, String> empName;
-
     @FXML
     private Label lblSellCount;
-
     @FXML
     private Label lblDue, today;
-
     @FXML
     private Label lblAmount;
-
     public static boolean todayFlag = false;
     PreparedStatement getSellsList;
 
@@ -84,11 +71,9 @@ public class SellListController implements Initializable {
                 e.printStackTrace();
             }
         }
-
     }
 
     private void showReport() {
-
         today.setText(LocalDate.now().toString());
         purID.setCellValueFactory(new PropertyValueFactory<>("purID"));
         cusID.setCellValueFactory(new PropertyValueFactory<>("cusID"));

@@ -27,49 +27,34 @@ import java.util.ResourceBundle;
  * Project: TeslaRentalInventory
  **/
 public class AccountListController implements Initializable {
-
     @FXML
     private JFXTextField txtAccID;
-
     @FXML
     private JFXTextField txtCusID;
-
     @FXML
     private TableView<Account> tbl;
-
     @FXML
     private TableColumn<Account, Integer> accID;
-
     @FXML
     private TableColumn<Account, String> accName;
-
     @FXML
     private TableColumn<Account, Integer> cusID;
-
     @FXML
     private TableColumn<Account, String> issued;
-
     @FXML
     private TableColumn<Account, String> payType;
-
     @FXML
     private JFXButton btnAddNew;
-
     @FXML
     private FontAwesomeIconView btnAddIcon;
-
     @FXML
     private JFXButton btnDelete;
-
     @FXML
     private FontAwesomeIconView btnAddIcon1;
-
     @FXML
     private JFXTextField txtAccName;
-
     @FXML
     private JFXTextField txtPayMethod;
-
     @FXML
     private JFXTextField txtEmpName;
 

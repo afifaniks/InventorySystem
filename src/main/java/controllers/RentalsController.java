@@ -43,92 +43,62 @@ import java.util.ResourceBundle;
  **/
 
 public class RentalsController implements Initializable {
-
     @FXML
     private JFXTextField txtSearch;
-
     @FXML
     private Label lblCategory;
-
     @FXML
     private JFXButton btnSearch;
-
     @FXML
     private JFXTextField txtCustomerId;
-
     @FXML
     private Label lblId, lblVerify;
-
     @FXML
     private JFXTextField txtItemId;
-
     @FXML
     private JFXDatePicker txtRentalDate;
-
     @FXML
     private Label lblCost;
-
     @FXML
     private JFXTextField txtPayAmount;
-
     @FXML
     private JFXButton btnRefresh;
-
     @FXML
     private JFXButton btnProcced;
-
     @FXML
     private JFXDatePicker txtReturnDate;
-
     @FXML
     private JFXButton btnRentalReturned;
-
     @FXML
     private AnchorPane rightPane;
-
     @FXML
     private TableView<Rent> tblRecent;
-
     @FXML
     private TableColumn<Rent, Integer> rentID;
-
     @FXML
     private TableColumn<Rent, Integer> cusID;
-
     @FXML
     private TableColumn<Rent, Integer> itemID;
-
     @FXML
     private TableColumn<Rent, String> rentalDate;
-
     @FXML
     private TableColumn<Rent, String> returnDate;
-
     @FXML
     private TableColumn<Rent, Double> paid;
-
     @FXML
     private TableColumn<Rent, Double> due;
-
     @FXML
     private FontAwesomeIconView btnIcon;
-
     @FXML
     private JFXButton btnBarchart;
-
     @FXML
     private FontAwesomeIconView btnChartIcon;
-
     @FXML
     private LineChart<String, Integer> lineChart;
-
     @FXML
     private CategoryAxis dateAxis;
-
     @FXML
     private NumberAxis amountAxis;
-
-
     private static boolean toggleTable = true; //This field will be used to transition b/w Table and Chart
     private static boolean startTransaction = false;
     public static ObservableList<Rent> rentalList;
@@ -137,7 +107,6 @@ public class RentalsController implements Initializable {
     public static ArrayList<String> inventoryItem = null;
     public static ArrayList<Integer> customerID = null;
     public static ArrayList<Integer> itemIDForRent = null;
-
 
     @FXML
     void ctrlRefreshAction(ActionEvent event) {
@@ -323,7 +292,6 @@ public class RentalsController implements Initializable {
                 } catch (SQLException e) {
                     new PromptDialogController("SQL Error!", "Error occured while executing Query.\nSQL Error Code: " + e.getErrorCode());
                 }
-
             }
         }
     }
@@ -455,5 +423,4 @@ public class RentalsController implements Initializable {
 
         tblRecent.setItems(rentalList);
     }
-
 }

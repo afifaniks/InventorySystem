@@ -39,113 +39,77 @@ import java.util.ResourceBundle;
  **/
 
 public class CustomerController implements Initializable {
-
     @FXML
     private AnchorPane cusTomerPane;
-
     @FXML
     private AnchorPane customerPane;
-
     @FXML
     private JFXTextField txtFName;
-
     @FXML
     private JFXTextField txtLName;
-
     @FXML
     private JFXTextField address;
-
     @FXML
     private JFXTextField phone;
-
     @FXML
     private JFXTextField email;
-
     @FXML
     private Label memberSince;
-
     @FXML
     private JFXToggleButton btnEditMode;
-
     @FXML
     private JFXButton btnPrevEntry;
-
     @FXML
     private JFXButton btnNextEntry;
-
     @FXML
     private Label customerID, customerDue, lblSearchResults, lblMode;
-
     @FXML
     private Label lblPageIndex;
-
     @FXML
     private JFXTextField txtSearch;
-
     @FXML
     private JFXButton btnSearch;
-
     @FXML
     private Circle imgCustomerPhoto;
-
     @FXML
     private JFXRadioButton radioMale;
-
     @FXML
     private ToggleGroup gender;
-
     @FXML
     private JFXRadioButton radioFemale;
-
     @FXML
     private AnchorPane customerListPane;
-
     @FXML
     private JFXButton btnLViewAllCustomers, btnGoBack;
-
     @FXML
     private FontAwesomeIconView btnSeachIcon;
-
     @FXML
     private JFXButton btnAddNew, btnSave;
-
     @FXML
     private JFXButton btnPurchases;
-
     @FXML
     private JFXButton btnRentals, btnDelete;
-
     @FXML
     private FontAwesomeIconView btnAddIcon;
-
     @FXML
     private TableView<Customer> tbl;
-
     @FXML
     private TableColumn<Customer, Integer> columnID;
-
     @FXML
     private TableColumn<Customer, String> columnFirstName;
-
     @FXML
     private TableColumn<Customer, String> columnLastName;
-
     @FXML
     private TableColumn<Customer, String> columnGender;
-
     @FXML
     private TableColumn<Customer, String> columnAddress;
-
     @FXML
     private TableColumn<Customer, String> columnPhone;
-
     @FXML
     private TableColumn<Customer, String> columnEmail;
 
-
     private static int recordIndex = 0;
     private static int recordSize = 0;
-
     public static ObservableList<Customer> customersList = FXCollections.observableArrayList(); //This field will auto set from InitializerController Class
     public static ObservableList<Customer> tempList = FXCollections.observableArrayList(); //Will hold the main list while searching
     public static ArrayList<String> customerNames = new ArrayList<>();
@@ -155,9 +119,14 @@ public class CustomerController implements Initializable {
      */
     private Customer onView = null;
     private static boolean searchDone = false;
+    /**
+     * addFlag will differentiate b/w Adding a new entry
+     * and updating an existing entry.
+     * True: New Record Entry Mode
+     * False: Updating an Existing Entry
+     */
     private static boolean addFlag = false;
     private static String imgPath = null;
-
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {

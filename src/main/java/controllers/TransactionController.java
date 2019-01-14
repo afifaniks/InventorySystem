@@ -22,7 +22,32 @@ import java.util.TreeMap;
  * Project: TeslaRentalInventory
  **/
 public class TransactionController implements Initializable {
-
+    @FXML
+    private Label lblTrID;
+    @FXML
+    private Label lblCategory;
+    @FXML
+    private JFXButton btnCancel;
+    @FXML
+    private JFXButton btnProcced;
+    @FXML
+    private AnchorPane trPane;
+    @FXML
+    private FontAwesomeIconView btnIcon;
+    @FXML
+    private JFXDatePicker txtTrDate;
+    @FXML
+    private Label lblPurID;
+    @FXML
+    private JFXComboBox<String> cboChooseAccount;
+    @FXML
+    private JFXComboBox<String> cboTrType;
+    @FXML
+    private Label lblCusID, lblPurchaseOrRent;
+    @FXML
+    private Label lblAmounPaid;
+    @FXML
+    private Label lblDue;
     public static String cusName = null; //These static fields will be initiated from Sells or Purchases
     public static String purchaseId = null;
     public static String rentalId = null;
@@ -41,46 +66,6 @@ public class TransactionController implements Initializable {
     public static boolean rentOrSale = false;
     public static Double due = null;
     private static TreeMap<String, Integer> trType = new TreeMap<>();
-
-    @FXML
-    private Label lblTrID;
-
-    @FXML
-    private Label lblCategory;
-
-    @FXML
-    private JFXButton btnCancel;
-
-    @FXML
-    private JFXButton btnProcced;
-
-    @FXML
-    private AnchorPane trPane;
-
-    @FXML
-    private FontAwesomeIconView btnIcon;
-
-    @FXML
-    private JFXDatePicker txtTrDate;
-
-    @FXML
-    private Label lblPurID;
-
-    @FXML
-    private JFXComboBox<String> cboChooseAccount;
-
-    @FXML
-    private JFXComboBox<String> cboTrType;
-
-    @FXML
-    private Label lblCusID, lblPurchaseOrRent;
-
-    @FXML
-    private Label lblAmounPaid;
-
-    @FXML
-    private Label lblDue;
-
     public static Integer stock = 0;
 
     @Override

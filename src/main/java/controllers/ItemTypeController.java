@@ -25,34 +25,24 @@ import java.util.ResourceBundle;
 public class ItemTypeController implements Initializable {
     @FXML
     private TableView<ItemType> tbl;
-
     @FXML
     private TableColumn<ItemType, Integer> typeID;
-
     @FXML
     private TableColumn<ItemType, String> typeName;
-
     @FXML
     private TableColumn<ItemType, Integer> totalItems;
-
     @FXML
     private JFXButton btnUpdate;
-
     @FXML
     private FontAwesomeIconView btnAddIcon;
-
     @FXML
     private JFXButton btnDelete;
-
     @FXML
     private FontAwesomeIconView btnAddIcon1;
-
     @FXML
     private Label lblType;
-
     @FXML
     private JFXTextField txtItemType;
-
     @FXML
     private JFXButton btnRefresh;
     private boolean updateMode = false; //This is variable will be used to differentiate
@@ -108,10 +98,8 @@ public class ItemTypeController implements Initializable {
                new PromptDialogController("Success!","New Entry Added");
            } catch (SQLException e) {
                new PromptDialogController("Error","Error Code: " + e.getErrorCode());
-
            }
        }
-
        reload(null);
     }
 
@@ -181,7 +169,6 @@ public class ItemTypeController implements Initializable {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
     }
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -194,6 +181,5 @@ public class ItemTypeController implements Initializable {
             }
         });
         setTableData();
-
     }
 }

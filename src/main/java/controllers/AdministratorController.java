@@ -26,37 +26,26 @@ import java.util.ResourceBundle;
  * Project: TeslaRentalInventory
  **/
 public class AdministratorController implements Initializable {
-
     @FXML
     private JFXButton btnLastThirty, btnTrans;
-
     @FXML
     private JFXButton btnUpdateEmp;
-
     @FXML
     private JFXButton btnTotalRents;
-
     @FXML
     private JFXButton btnTotalSell;
-
     @FXML
     private JFXButton btnAddNew;
-
     @FXML
     private JFXButton btnRemoveEmployee;
-
     @FXML
     private JFXButton btEmpList;
-
     @FXML
     private JFXButton btnTopTen;
-
     @FXML
     private JFXButton btnMostDue;
-
     @FXML
     private JFXButton btnAccDelete;
-
     @FXML
     private JFXButton btnAccUpdate;
 

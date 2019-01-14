@@ -17,14 +17,12 @@ import java.io.IOException;
  * Project: TeslaRentalInventory
  **/
 public class PromptDialogController {
-
     /**
      * Constructor will pop up a new stage which will contain
      * type of error/notification(header) and its details.
      * @param header : Prompt headline
      * @param error : Description message of prompt
      */
-
     public PromptDialogController(String header, String error) {
 
         Stage stg = new Stage();

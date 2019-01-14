@@ -38,67 +38,46 @@ import java.util.ResourceBundle;
 public class SellsController implements Initializable{
     @FXML
     private JFXTextField txtCustomerId;
-
     @FXML
     private Label lblId;
-
     @FXML
     private JFXTextField txtItemId;
-
     @FXML
     private JFXDatePicker txtDate;
-
     @FXML
     private Label lblCost, lblVerify;
-
     @FXML
     private JFXTextField txtPayAmount, txtQty;
-
     @FXML
     private JFXButton btnProcced;
-
     @FXML
     private FontAwesomeIconView btnIcon;
-
     @FXML
     private TableView<Purchase> tblRecent;
-
     @FXML
     private TableColumn<Purchase, Integer> purID;
-
     @FXML
     private TableColumn<Purchase, Integer> cusID;
-
     @FXML
     private TableColumn<Purchase, Integer> itemID;
-
     @FXML
     private TableColumn<Purchase, String> date;
-
     @FXML
     private TableColumn<Purchase, Integer> qty;
-
     @FXML
     private TableColumn<Purchase, Double> paidAmmount;
-
     @FXML
     private TableColumn<Purchase, Double> dueAmount;
-
     @FXML
     private LineChart<String, Integer> lineChart;
-
     @FXML
     private FontAwesomeIconView btnChartIcon;
-
     @FXML
     private CategoryAxis dateAxis;
-
     @FXML
     private NumberAxis amountAxis;
-
     @FXML
     private JFXButton btnBarchart;
-
     /**
      * This field will be used to transition b/w Table and Chart
      * toggleTable = true; Table View is being showed

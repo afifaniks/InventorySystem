@@ -24,37 +24,26 @@ import java.util.ResourceBundle;
  **/
 
 public class DashboardController implements Initializable{
-
     @FXML
     private JFXButton btnTodaySell;
-
     @FXML
     private Label lblTodaySellCtr;
-
     @FXML
     private Label lblTodaysSellAmount;
-
     @FXML
     private JFXButton btnTodayRental;
-
     @FXML
     private Label lblTodaysRentalCtr;
-
     @FXML
     private Label lblTodaysRentalAmount;
-
     @FXML
     private JFXButton loadAgain;
-
     @FXML
     private Label lblOutOfStock;
-
     @FXML
     private Label lblTotalDueAmount;
-
     @FXML
     private Label lblTodaysDueAmount;
-
     public static Integer todaysRentalCtr = 0;
     public static Integer totalDueCtr = 0;
     public static Integer todaySellCtr = 0;
