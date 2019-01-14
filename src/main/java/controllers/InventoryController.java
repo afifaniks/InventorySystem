@@ -622,40 +622,133 @@ public class InventoryController implements Initializable{
         }
     }
 
+    private boolean checkFields() {
+        boolean entryFlag = true;
+        if (txtItemName.getText().equals("")) {
+            txtItemName.setUnFocusColor(Color.web("red"));
+            entryFlag = false;
+        }
+
+        if(chkSale.isSelected() && txtPrice.getText().equals("")) {
+            txtPrice.setUnFocusColor(Color.web("red"));
+            entryFlag = false;
+        }
+
+        if(!chkRent.isSelected() && !chkSale.isSelected()) {
+            entryFlag = false;
+        }
+
+        if(chkRent.isSelected() && txtRentRate.getText().equals("")) {
+            txtRentRate.setUnFocusColor(Color.web("red"));
+            entryFlag = false;
+        }
+
+        if(txtType.getValue().equals("")) {
+            txtType.setUnFocusColor(Color.web("red"));
+            entryFlag = false;;
+        }
+
+        if(txtStock.getText().equals("")) {
+            txtStock.setUnFocusColor(Color.web("red"));
+            entryFlag = false;;
+        }
+
+        return entryFlag;
+    }
+
+    private void addRecordToDatabase() {
+        Connection con = DBConnection.getConnection();
+        try {
+            PreparedStatement ps = con.prepareStatement("INSERT INTO item VALUES(?, ?, ?, ?, ?, ?, ?, ?)");
+
+            ps.setInt(1, Integer.valueOf(itemID.getText()));
+            ps.setString(2, txtItemName.getText());
+            ps.setInt(3, Integer.valueOf(txtStock.getText()));
+
+            if(chkRent.isSelected() && chkSale.isSelected())
+                ps.setString(4, "Rental,Sale");
+            else if(chkSale.isSelected())
+                ps.setString(4, "Sale");
+            else if(chkRent.isSelected())
+                ps.setString(4, "Rental");
+
+            Double salePrice = 0.0;
+
+            if(!txtPrice.getText().equals("")) {
+                salePrice = Double.valueOf(txtPrice.getText());
+            }
+
+            Double rentPrice = 0.0;
+
+            if(!txtRentRate.getText().equals("")) {
+                rentPrice = Double.valueOf(txtRentRate.getText());
+            }
+
+            ps.setDouble(5, salePrice);
+            ps.setDouble(6, rentPrice);
+            ps.setString(7, imgPath);
+            ps.setInt(8, itemType.get(txtType.getValue()));
+
+            ps.executeUpdate();
+
+            new PromptDialogController("Operation Successful!", "New Item Added!");
+
+
+        } catch (SQLException e) {
+            new PromptDialogController("SQL Error!", "Error occured while executing Query.\nSQL Error Code: " + e.getErrorCode());
+        }
+    }
+
+    private void updateRecord () {
+        Connection con = DBConnection.getConnection();
+        try {
+            PreparedStatement ps = con.prepareStatement("UPDATE item SET itemID = ?, itemName = ?," +
+                    "stock = ?, rentalOrSale = ?, salePrice = ?, rentRate = ?, photo = ?, ItemType_itemTypeId = ? WHERE itemID = "+Integer.valueOf(itemID.getText()));
+            ps.setInt(1, Integer.valueOf(itemID.getText()));
+            ps.setString(2, txtItemName.getText());
+            ps.setInt(3, Integer.valueOf(txtStock.getText()));
+
+            if(chkRent.isSelected() && chkSale.isSelected())
+                ps.setString(4, "Rental,Sale");
+            else if(chkSale.isSelected())
+                ps.setString(4, "Sale");
+            else if(chkRent.isSelected())
+                ps.setString(4, "Rental");
+
+            Double salePrice = 0.0;
+
+            if(!txtPrice.getText().equals("")) {
+                salePrice = Double.valueOf(txtPrice.getText());
+            }
+
+            Double rentPrice = 0.0;
+
+            if(!txtRentRate.getText().equals("")) {
+                rentPrice = Double.valueOf(txtRentRate.getText());
+            }
+
+            ps.setDouble(5, salePrice);
+            ps.setDouble(6, rentPrice);
+            ps.setString(7, imgPath);
+            ps.setInt(8, itemType.get(txtType.getValue()));
+
+            ps.executeUpdate();
+
+            new PromptDialogController("Operation Successful!", "Entry updated!");
+
+            reloadRecords();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            new PromptDialogController("SQL Error!", "Error occured while executing Query.\nSQL Error Code: " + e.getErrorCode());
+        }
+    }
+
     @FXML
-    void saveEntry(ActionEvent event) {
+    void btnSaveAction(ActionEvent event) {
         if (addFlag) {
-            boolean entryFlag = true;
-            if (txtItemName.getText().equals("")) {
-                txtItemName.setUnFocusColor(Color.web("red"));
-                entryFlag = false;
-            }
-
-            if(chkSale.isSelected() && txtPrice.getText().equals("")) {
-                txtPrice.setUnFocusColor(Color.web("red"));
-                entryFlag = false;
-            }
-
-            if(!chkRent.isSelected() && !chkSale.isSelected()) {
-                entryFlag = false;
-            }
-
-            if(chkRent.isSelected() && txtRentRate.getText().equals("")) {
-                txtRentRate.setUnFocusColor(Color.web("red"));
-                entryFlag = false;
-            }
-
-            if(txtType.getValue().equals("")) {
-                txtType.setUnFocusColor(Color.web("red"));
-                entryFlag = false;;
-            }
-            
-            if(txtStock.getText().equals("")) {
-                txtStock.setUnFocusColor(Color.web("red"));
-                entryFlag = false;;
-            }
-
-            if(entryFlag) {
+            boolean fieldsNotEmpty = checkFields();
+            if(fieldsNotEmpty) {
                 Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
                 alert.setTitle("Confirm Entry");
                 alert.setGraphic(new ImageView(this.getClass().getResource("/main/resources/icons/question (2).png").toString()));
@@ -666,79 +759,15 @@ public class InventoryController implements Initializable{
                 Optional<ButtonType> result = alert.showAndWait();
 
                 if (result.get() == ButtonType.OK) {
-                    Connection con = DBConnection.getConnection();
-
-                    try {
-                        PreparedStatement ps = con.prepareStatement("INSERT INTO item VALUES(?, ?, ?, ?, ?, ?, ?, ?)");
-
-                        ps.setInt(1, Integer.valueOf(itemID.getText()));
-                        ps.setString(2, txtItemName.getText());
-                        ps.setInt(3, Integer.valueOf(txtStock.getText()));
-
-                        if(chkRent.isSelected() && chkSale.isSelected())
-                            ps.setString(4, "Rental,Sale");
-                        else if(chkSale.isSelected())
-                            ps.setString(4, "Sale");
-                        else if(chkRent.isSelected())
-                            ps.setString(4, "Rental");
-
-                        Double salePrice = 0.0;
-
-                        if(!txtPrice.getText().equals("")) {
-                            salePrice = Double.valueOf(txtPrice.getText());
-                        }
-
-                        Double rentPrice = 0.0;
-
-                        if(!txtRentRate.getText().equals("")) {
-                            rentPrice = Double.valueOf(txtRentRate.getText());
-                        }
-
-                        ps.setDouble(5, salePrice);
-                        ps.setDouble(6, rentPrice);
-                        ps.setString(7, imgPath);
-                        ps.setInt(8, itemType.get(txtType.getValue()));
-
-                        ps.executeUpdate();
-
-                        new PromptDialogController("Operation Successful!", "New Item Added!");
-
-
-                    } catch (SQLException e) {
-                        new PromptDialogController("SQL Error!", "Error occured while executing Query.\nSQL Error Code: " + e.getErrorCode());
-                    }
+                    addRecordToDatabase();
                 }
             } else {
                 JFXSnackbar snackbar = new JFXSnackbar(itemPane);
                 snackbar.show("One or more fields are empty!", 3000);
             }
         } else {
-            boolean entryFlag = true;
-            if (txtItemName.getText().equals("")) {
-                txtItemName.setUnFocusColor(Color.web("red"));
-                entryFlag = false;
-            }
-
-            if(chkSale.isSelected() && txtPrice.getText().equals("")) {
-                txtPrice.setUnFocusColor(Color.web("red"));
-                entryFlag = false;
-            }
-
-            if(!chkRent.isSelected() && !chkSale.isSelected()) {
-                entryFlag = false;
-            }
-
-            if(chkRent.isSelected() && txtRentRate.getText().equals("")) {
-                txtRentRate.setUnFocusColor(Color.web("red"));
-                entryFlag = false;
-            }
-
-            if(txtType.getValue().equals("")) {
-                txtType.setUnFocusColor(Color.web("red"));
-                entryFlag = false;;
-            }
-
-            if(entryFlag) {
+            boolean fieldsNotEmpty = checkFields();
+            if(fieldsNotEmpty) {
                 Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
                 alert.setTitle("Confirm Edit");
                 alert.setGraphic(new ImageView(this.getClass().getResource("/main/resources/icons/question (2).png").toString()));
@@ -749,48 +778,7 @@ public class InventoryController implements Initializable{
                 Optional<ButtonType> result = alert.showAndWait();
 
                 if (result.get() == ButtonType.OK) {
-                    Connection con = DBConnection.getConnection();
-                    try {
-                        PreparedStatement ps = con.prepareStatement("UPDATE item SET itemID = ?, itemName = ?," +
-                                "stock = ?, rentalOrSale = ?, salePrice = ?, rentRate = ?, photo = ?, ItemType_itemTypeId = ? WHERE itemID = "+Integer.valueOf(itemID.getText()));
-                        ps.setInt(1, Integer.valueOf(itemID.getText()));
-                        ps.setString(2, txtItemName.getText());
-                        ps.setInt(3, Integer.valueOf(txtStock.getText()));
-
-                        if(chkRent.isSelected() && chkSale.isSelected())
-                            ps.setString(4, "Rental,Sale");
-                        else if(chkSale.isSelected())
-                            ps.setString(4, "Sale");
-                        else if(chkRent.isSelected())
-                            ps.setString(4, "Rental");
-
-                        Double salePrice = 0.0;
-
-                        if(!txtPrice.getText().equals("")) {
-                            salePrice = Double.valueOf(txtPrice.getText());
-                        }
-
-                        Double rentPrice = 0.0;
-
-                        if(!txtRentRate.getText().equals("")) {
-                            rentPrice = Double.valueOf(txtRentRate.getText());
-                        }
-
-                        ps.setDouble(5, salePrice);
-                        ps.setDouble(6, rentPrice);
-                        ps.setString(7, imgPath);
-                        ps.setInt(8, itemType.get(txtType.getValue()));
-
-                        ps.executeUpdate();
-
-                        new PromptDialogController("Operation Successful!", "Entry updated!");
-
-                        reloadRecords();
-
-                    } catch (SQLException e) {
-                        e.printStackTrace();
-                        new PromptDialogController("SQL Error!", "Error occured while executing Query.\nSQL Error Code: " + e.getErrorCode());
-                    }
+                    updateRecord();
                 }
             }
 

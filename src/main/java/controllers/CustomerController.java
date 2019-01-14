@@ -670,37 +670,102 @@ public class CustomerController implements Initializable {
         }
     }
 
+    private boolean checkFields() {
+        boolean entryFlag = true;
+        if (txtFName.getText().equals("")) {
+            txtFName.setUnFocusColor(Color.web("red"));
+            entryFlag = false;
+        }
+
+        if(txtLName.getText().equals("")) {
+            txtLName.setUnFocusColor(Color.web("red"));
+            entryFlag = false;
+        }
+
+        if(address.getText().equals("")) {
+            address.setUnFocusColor(Color.web("red"));
+            entryFlag = false;
+        }
+
+        if(phone.getText().equals("")) {
+            phone.setUnFocusColor(Color.web("red"));
+            entryFlag = false;
+        }
+
+        if(email.getText().equals("")) {
+            email.setUnFocusColor(Color.web("red"));
+            entryFlag = false;;
+        }
+
+        return entryFlag;
+    }
+
+    private void addRecordToDatabase() {
+        Connection con = DBConnection.getConnection();
+        try {
+            PreparedStatement ps = con.prepareStatement("INSERT INTO customers VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)");
+            ps.setInt(1, Integer.valueOf(customerID.getText()));
+            ps.setString(2, txtFName.getText());
+            ps.setString(3, txtLName.getText());
+            ps.setString(4, address.getText());
+            ps.setString(5, phone.getText());
+            ps.setString(6, email.getText());
+            ps.setString(7, imgPath);
+            if(radioMale.isSelected()) {
+                ps.setString(8, "Male");
+            } else if(radioFemale.isSelected()) {
+                ps.setString(8, "Female");
+            }
+
+            ps.setDate(9, Date.valueOf(LocalDate.now()));
+
+            ps.executeUpdate();
+
+            new PromptDialogController("Operation Successful!", "New Customer Added!");
+
+        } catch (SQLException e) {
+            new PromptDialogController("SQL Error!", "Error occured while executing Query.\nSQL Error Code: " + e.getErrorCode());
+        }
+    }
+
+    private void updateRecord() {
+        Connection con = DBConnection.getConnection();
+        try {
+            PreparedStatement ps = con.prepareStatement("UPDATE customers SET customerID = ?, firstName = ?, lastName = ?, address = ?," +
+                    "phone = ?, email = ?, photo = ?, gender = ?, memberSince = ? WHERE customerID =" + Integer.valueOf(customerID.getText()));
+
+            //Setting fields
+            ps.setInt(1, Integer.valueOf(customerID.getText()));
+            ps.setString(2, txtFName.getText());
+            ps.setString(3, txtLName.getText());
+            ps.setString(4, address.getText());
+            ps.setString(5, phone.getText());
+            ps.setString(6, email.getText());
+            //ps.setString(7, "null");
+            ps.setString(7, imgPath);
+            if (radioMale.isSelected()) {
+                ps.setString(8, "Male");
+            } else if (radioFemale.isSelected()) {
+                ps.setString(8, "Female");
+            }
+            ps.setDate(9, Date.valueOf(LocalDate.now()));
+
+            ps.executeUpdate();
+
+            new PromptDialogController("Operation Successful!", "The record is updated!");
+            reloadRecords();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            new PromptDialogController("SQL Error!", "Error occured while executing Query.\nSQL Error Code: " + e.getErrorCode());
+        }
+    }
+
     @FXML
-    void saveEntry(ActionEvent event) {
+    void btnSaveAction(ActionEvent event) {
         if (addFlag) {
-            //addFlag = false;
-            boolean entryFlag = true;
-            if (txtFName.getText().equals("")) {
-                txtFName.setUnFocusColor(Color.web("red"));
-                entryFlag = false;
-            }
-
-            if(txtLName.getText().equals("")) {
-                txtLName.setUnFocusColor(Color.web("red"));
-                entryFlag = false;
-            }
-
-            if(address.getText().equals("")) {
-                address.setUnFocusColor(Color.web("red"));
-                entryFlag = false;
-            }
-
-            if(phone.getText().equals("")) {
-                phone.setUnFocusColor(Color.web("red"));
-                entryFlag = false;
-            }
-
-            if(email.getText().equals("")) {
-                email.setUnFocusColor(Color.web("red"));
-                entryFlag = false;;
-            }
-
-            if(entryFlag) {
+            boolean fieldsNotEmpty = checkFields();
+            if(fieldsNotEmpty) {
                 Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
                 alert.setTitle("Confirm Entry");
                 alert.setGraphic(new ImageView(this.getClass().getResource("/main/resources/icons/question (2).png").toString()));
@@ -711,64 +776,15 @@ public class CustomerController implements Initializable {
                 Optional<ButtonType> result = alert.showAndWait();
 
                 if (result.get() == ButtonType.OK) {
-                    Connection con = DBConnection.getConnection();
-                    try {
-                        PreparedStatement ps = con.prepareStatement("INSERT INTO customers VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)");
-                        ps.setInt(1, Integer.valueOf(customerID.getText()));
-                        ps.setString(2, txtFName.getText());
-                        ps.setString(3, txtLName.getText());
-                        ps.setString(4, address.getText());
-                        ps.setString(5, phone.getText());
-                        ps.setString(6, email.getText());
-                        ps.setString(7, imgPath);
-                        if(radioMale.isSelected()) {
-                            ps.setString(8, "Male");
-                        } else if(radioFemale.isSelected()) {
-                            ps.setString(8, "Female");
-                        }
-
-                        ps.setDate(9, Date.valueOf(LocalDate.now()));
-
-                        ps.executeUpdate();
-
-                        new PromptDialogController("Operation Successful!", "New Customer Added!");
-
-                    } catch (SQLException e) {
-                        new PromptDialogController("SQL Error!", "Error occured while executing Query.\nSQL Error Code: " + e.getErrorCode());
-                    }
+                    addRecordToDatabase();
                 }
             } else {
                 JFXSnackbar snackbar = new JFXSnackbar(customerPane);
                 snackbar.show("One or more fields are empty!", 3000);
             }
         } else {
-            boolean entryFlag = true;
-            if (txtFName.getText().equals("")) {
-                txtFName.setUnFocusColor(Color.web("red"));
-                entryFlag = false;
-            }
-
-            if(txtLName.getText().equals("")) {
-                txtLName.setUnFocusColor(Color.web("red"));
-                entryFlag = false;
-            }
-
-            if(address.getText().equals("")) {
-                address.setUnFocusColor(Color.web("red"));
-                entryFlag = false;
-            }
-
-            if(phone.getText().equals("")) {
-                phone.setUnFocusColor(Color.web("red"));
-                entryFlag = false;
-            }
-
-            if(email.getText().equals("")) {
-                email.setUnFocusColor(Color.web("red"));
-                entryFlag = false;;
-            }
-
-            if(entryFlag) {
+            boolean fieldsNotEmpty = checkFields();
+            if(fieldsNotEmpty) {
                 Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
                 alert.setTitle("Confirm Edit");
                 alert.setGraphic(new ImageView(this.getClass().getResource("/main/resources/icons/question (2).png").toString()));
@@ -779,36 +795,7 @@ public class CustomerController implements Initializable {
                 Optional<ButtonType> result = alert.showAndWait();
 
                 if (result.get() == ButtonType.OK) {
-                    Connection con = DBConnection.getConnection();
-                    try {
-                        PreparedStatement ps = con.prepareStatement("UPDATE customers SET customerID = ?, firstName = ?, lastName = ?, address = ?," +
-                                "phone = ?, email = ?, photo = ?, gender = ?, memberSince = ? WHERE customerID =" + Integer.valueOf(customerID.getText()));
-
-                        //Setting fields
-                        ps.setInt(1, Integer.valueOf(customerID.getText()));
-                        ps.setString(2, txtFName.getText());
-                        ps.setString(3, txtLName.getText());
-                        ps.setString(4, address.getText());
-                        ps.setString(5, phone.getText());
-                        ps.setString(6, email.getText());
-                        //ps.setString(7, "null");
-                        ps.setString(7, imgPath);
-                        if (radioMale.isSelected()) {
-                            ps.setString(8, "Male");
-                        } else if (radioFemale.isSelected()) {
-                            ps.setString(8, "Female");
-                        }
-                        ps.setDate(9, Date.valueOf(LocalDate.now()));
-
-                        ps.executeUpdate();
-
-                        new PromptDialogController("Operation Successful!", "The record is updated!");
-                        reloadRecords();
-
-                    } catch (SQLException e) {
-                        e.printStackTrace();
-                        new PromptDialogController("SQL Error!", "Error occured while executing Query.\nSQL Error Code: " + e.getErrorCode());
-                    }
+                    updateRecord();
                 }
             }
 

@@ -153,7 +153,7 @@
                        <Cursor fx:constant="HAND" />
                     </cursor>
                  </JFXButton>
-                 <JFXButton fx:id="btnSave" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="387.0" layoutY="492.0" onAction="#saveEntry" prefHeight="61.0" prefWidth="59.0" ripplerFill="#c9c3c3" style="-fx-background-radius: 40 40 40 40;" stylesheets="@../css/customer.css">
+                 <JFXButton fx:id="btnSave" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="387.0" layoutY="492.0" onAction="#btnSaveAction" prefHeight="61.0" prefWidth="59.0" ripplerFill="#c9c3c3" style="-fx-background-radius: 40 40 40 40;" stylesheets="@../css/customer.css">
                     <cursor>
                        <Cursor fx:constant="HAND" />
                     </cursor>
