@@ -43,7 +43,7 @@ public class SellListController implements Initializable {
     @FXML
     private Label lblSellCount;
     @FXML
-    private Label lblDue, today;
+    private Label lblHeader, lblDue, today;
     @FXML
     private Label lblAmount;
     public static boolean todayFlag = false;
@@ -54,6 +54,7 @@ public class SellListController implements Initializable {
         Connection con = DBConnection.getConnection();
 
         if(todayFlag) {
+            lblHeader.setText("Today's Sells Report");
             try {
                 getSellsList = con.prepareStatement("SELECT * FROM purchases WHERE purchaseDate ='"+ Date.valueOf(LocalDate.now()) +"'");
                 showReport();

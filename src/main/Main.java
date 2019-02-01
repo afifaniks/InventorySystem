@@ -22,10 +22,8 @@ public class Main extends Application {
         try {
             root = FXMLLoader.load(getClass().getResource("/main/resources/view/login.fxml"));
             Scene scene = new Scene(root);
-
             String css = this.getClass().getResource("/main/resources/css/login.css").toExternalForm(); // Getting stylesheet
             scene.getStylesheets().add(css); // Adding stylesheet
-
             primaryStage.setTitle("Log In Prompt");
             primaryStage.setScene(scene);
             primaryStage.getIcons().add(new Image("/main/resources/icons/Accounts_main.png"));

@@ -143,11 +143,13 @@ public class AdministratorController implements Initializable {
 
     @FXML
     void totalRents(ActionEvent event) {
+        SellListController.todayFlag = false;
         loadWindow("Rental List", "/main/resources/view/rentallist.fxml");
     }
 
     @FXML
     void totalSell(ActionEvent event) {
+        SellListController.todayFlag = false;
         loadWindow("Sell List", "/main/resources/view/selllist.fxml");
     }
 

@@ -122,14 +122,10 @@ public class BaseController implements Initializable{
 
         // Checking which button is clicked from the map
         // and navigating to respective menu
-        for (String menu: FXML_URL.keySet()) {
-            if (btnText.equals(menu)) {
-                try {
-                    ctrlRightPane(FXML_URL.get(menu));
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
+        try {
+            ctrlRightPane(FXML_URL.get(btnText));
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 

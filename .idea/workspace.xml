@@ -11,28 +11,17 @@
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/AccountController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/AccountListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/AccountListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/main/java/controllers/BaseController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InventorySystem/main/java/controllers/BaseController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/main/java/controllers/BaseController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InventorySystem/main/java/controllers/BaseController$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/main/java/controllers/BaseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InventorySystem/main/java/controllers/BaseController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InventorySystem/main/java/controllers/TransactionListController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InventorySystem/main/java/controllers/TransactionListController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controllers/AdministratorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/AdministratorController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controllers/BaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/BaseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/CustomerPurchaseListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/CustomerPurchaseListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/CustomersRentalListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/CustomersRentalListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/DashboardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/DueUpdateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/DueUpdateController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/EmployeeListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/EmployeeListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/InitializerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/InitializerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/InventoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/InventoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ItemTypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ItemTypeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/LogInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/LogInController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/NewEmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/NewEmployeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/PromptDialogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/PromptDialogController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controllers/RentalListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/RentalListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/RentalsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/RentalsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controllers/SellListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/SellListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/SellsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/SellsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/TransactionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/TransactionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/TransactionListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/TransactionListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/rentallist.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/rentallist.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/selllist.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/selllist.fxml" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -258,13 +247,14 @@
     <session id="1136038920">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="28" />
+          <entry key="project.closed" value="33" />
           <entry key="project.open.time.100" value="1" />
           <entry key="project.open.time.106" value="1" />
           <entry key="project.open.time.110" value="1" />
           <entry key="project.open.time.111" value="1" />
           <entry key="project.open.time.123" value="1" />
           <entry key="project.open.time.131" value="1" />
+          <entry key="project.open.time.139" value="1" />
           <entry key="project.open.time.143" value="1" />
           <entry key="project.open.time.150" value="1" />
           <entry key="project.open.time.163" value="1" />
@@ -279,13 +269,14 @@
           <entry key="project.open.time.78" value="2" />
           <entry key="project.open.time.79" value="1" />
           <entry key="project.open.time.80" value="1" />
-          <entry key="project.open.time.86" value="1" />
+          <entry key="project.open.time.86" value="2" />
           <entry key="project.open.time.87" value="1" />
           <entry key="project.open.time.88" value="1" />
           <entry key="project.open.time.89" value="2" />
-          <entry key="project.open.time.91" value="1" />
+          <entry key="project.open.time.91" value="2" />
           <entry key="project.open.time.92" value="1" />
-          <entry key="project.opened" value="29" />
+          <entry key="project.open.time.98" value="1" />
+          <entry key="project.opened" value="33" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -293,20 +284,20 @@
           <entry key="class" value="1" />
           <entry key="css" value="6" />
           <entry key="fxml" value="10" />
-          <entry key="java" value="133" />
-          <entry key="png" value="3" />
+          <entry key="java" value="139" />
+          <entry key="png" value="4" />
           <entry key="properties" value="1" />
-          <entry key="uml" value="9" />
+          <entry key="uml" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="1" />
           <entry key="CSS" value="6" />
-          <entry key="Image" value="3" />
-          <entry key="JAVA" value="133" />
+          <entry key="Image" value="4" />
+          <entry key="JAVA" value="139" />
           <entry key="Properties" value="1" />
-          <entry key="UML" value="9" />
+          <entry key="UML" value="12" />
           <entry key="XML" value="10" />
         </counts>
       </usages-collector>
@@ -314,12 +305,12 @@
         <counts>
           <entry key="dummy" value="152" />
           <entry key="fxml" value="14" />
-          <entry key="java" value="10972" />
+          <entry key="java" value="11108" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="10969" />
+          <entry key="JAVA" value="11105" />
           <entry key="PLAIN_TEXT" value="152" />
           <entry key="SQL" value="3" />
           <entry key="XML" value="14" />
@@ -329,12 +320,13 @@
     <session id="-1144188519">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.24" value="1" />
           <entry key="project.open.time.53" value="1" />
           <entry key="project.open.time.57" value="1" />
+          <entry key="project.open.time.60" value="1" />
           <entry key="project.open.time.73" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -357,28 +349,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/ItemTypeController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="182" column="23" selection-start-line="182" selection-start-column="23" selection-end-line="182" selection-end-column="23" />
+            <state relative-caret-position="207">
+              <caret line="25" column="65" selection-start-line="25" selection-start-column="65" selection-end-line="25" selection-end-column="65" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/SellsController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/BaseController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-200">
-              <caret line="79" column="34" selection-start-line="79" selection-start-column="34" selection-end-line="79" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/TransactionController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4">
-              <caret line="49" column="25" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
+            <state relative-caret-position="-2425">
+              <caret line="107" column="23" selection-start-line="107" selection-start-column="23" selection-end-line="107" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -386,38 +369,95 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/TransactionListController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="93" column="9" selection-start-line="93" selection-start-column="9" selection-end-line="93" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/LogInController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="81" column="7" selection-start-line="81" selection-start-column="7" selection-end-line="81" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/controllers/NewEmployeeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="107">
+            <state relative-caret-position="821">
               <caret line="70" column="13" selection-start-line="70" selection-start-column="13" selection-end-line="70" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/PromptDialogController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/ItemTypeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
+            <state relative-caret-position="1594">
+              <caret line="182" column="23" selection-start-line="182" selection-start-column="23" selection-end-line="182" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/DashboardController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2479">
+              <caret line="56" column="37" lean-forward="true" selection-start-line="56" selection-start-column="37" selection-end-line="56" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/AdministratorController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="62">
+              <caret line="145" column="45" selection-start-line="145" selection-start-column="45" selection-end-line="145" selection-end-column="45" />
+              <folding>
+                <element signature="e#4530#4531#0" expanded="true" />
+                <element signature="e#4621#4622#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/tt.uml">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>JAVA</ID>
+              <OriginalElement />
+              <nodes>
+                <node x="0.0" y="675.0">main.java.others.Item</node>
+                <node x="395.0" y="300.0">main.java.controllers.InventoryController</node>
+                <node x="284.0" y="600.0">main.java.others.Account</node>
+                <node x="0.0" y="150.0">main.java.controllers.AdministratorController</node>
+                <node x="0.0" y="375.0">main.java.controllers.ItemTypeController</node>
+                <node x="0.0" y="75.0">main.java.controllers.TransactionListController</node>
+                <node x="264.0" y="0.0">main.java.controllers.CustomersRentalListController</node>
+                <node x="339.0" y="525.0">main.java.others.Customer</node>
+                <node x="226.0" y="75.0">main.java.controllers.NewEmployeeController</node>
+                <node x="219.0" y="150.0">main.java.controllers.EmployeeListController</node>
+                <node x="422.0" y="600.0">main.java.others.Transact</node>
+                <node x="366.0" y="450.0">main.java.controllers.LogInController</node>
+                <node x="484.0" y="525.0">main.java.others.Employee</node>
+                <node x="435.0" y="150.0">main.java.controllers.AccountListController</node>
+                <node x="198.0" y="300.0">main.java.controllers.RentalListController</node>
+                <node x="117.0" y="675.0">main.java.others.Rent</node>
+                <node x="560.0" y="600.0">main.Main</node>
+                <node x="0.0" y="225.0">main.java.controllers.TransactionController</node>
+                <node x="542.0" y="450.0">main.java.controllers.BaseController</node>
+                <node x="208.0" y="225.0">main.java.controllers.DueUpdateController</node>
+                <node x="0.0" y="300.0">main.java.controllers.CustomerController</node>
+                <node x="413.0" y="225.0">main.java.controllers.DashboardController</node>
+                <node x="0.0" y="450.0">main.java.controllers.RentalsController</node>
+                <node x="0.0" y="600.0">main.java.others.ItemType</node>
+                <node x="448.0" y="75.0">main.java.controllers.PromptDialogController</node>
+                <node x="170.0" y="525.0">main.java.controllers.SellsController</node>
+                <node x="0.0" y="0.0">main.java.controllers.CustomerPurchaseListController</node>
+                <node x="196.0" y="375.0">main.java.controllers.InitializerController</node>
+                <node x="143.0" y="600.0">main.java.others.Purchase</node>
+                <node x="184.0" y="450.0">main.java.controllers.SellListController</node>
+                <node x="0.0" y="525.0">main.java.others.DBConnection</node>
+                <node x="389.0" y="375.0">main.java.controllers.AccountController</node>
+              </nodes>
+              <notes />
+              <edges />
+              <settings layout="Hierarchic Group" zoom="0.9834482758620688" x="393.7221322323844" y="268.77980364656383" />
+              <SelectedNodes>
+                <node>main.java.controllers.TransactionListController</node>
+              </SelectedNodes>
+              <Categories />
+              <SCOPE>All</SCOPE>
+              <VISIBILITY>private</VISIBILITY>
             </state>
           </provider>
         </entry>
@@ -425,17 +465,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/controllers/RentalListController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-793">
-              <caret line="76" column="9" selection-start-line="76" selection-start-column="9" selection-end-line="76" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/RentalsController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="424" column="5" selection-start-line="424" selection-start-column="5" selection-end-line="424" selection-end-column="5" />
+            <state relative-caret-position="-1004">
+              <caret line="69" column="36" lean-forward="true" selection-start-line="69" selection-start-column="36" selection-end-line="69" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -443,8 +474,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/controllers/SellListController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-725">
-              <caret line="75" column="31" selection-start-line="75" selection-start-column="31" selection-end-line="75" selection-end-column="31" />
+            <state relative-caret-position="75">
+              <caret line="56" column="54" selection-start-line="56" selection-start-column="54" selection-end-line="56" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -542,7 +573,6 @@
         <option value="$PROJECT_DIR$/src/java/main/Main.java" />
         <option value="$PROJECT_DIR$/src/main/others/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/others/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/Twet.java" />
         <option value="$PROJECT_DIR$/src/main/resources/view/initializer.fxml" />
         <option value="$PROJECT_DIR$/src/main/resources/view/customer.fxml" />
@@ -550,8 +580,6 @@
         <option value="$PROJECT_DIR$/src/main/java/controllers/InventoryController.java" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/AccountController.java" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/AccountListController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controllers/AdministratorController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controllers/BaseController.java" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/CustomerPurchaseListController.java" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/CustomersRentalListController.java" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/DashboardController.java" />
@@ -562,12 +590,15 @@
         <option value="$PROJECT_DIR$/src/main/java/controllers/LogInController.java" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/NewEmployeeController.java" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/PromptDialogController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controllers/RentalListController.java" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/RentalsController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controllers/SellListController.java" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/SellsController.java" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/TransactionController.java" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/TransactionListController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/BaseController.java" />
+        <option value="$PROJECT_DIR$/src/main/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/SellListController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/AdministratorController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/RentalListController.java" />
       </list>
     </option>
   </component>
@@ -585,10 +616,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="392" />
-    <option name="y" value="201" />
-    <option name="width" value="902" />
-    <option name="height" value="500" />
+    <option name="x" value="397" />
+    <option name="y" value="487" />
+    <option name="width" value="894" />
+    <option name="height" value="502" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -601,17 +632,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="InventorySystem" type="58d84e3e:PackageViewProjectNode" />
-              <item name="InventorySystem" type="616d4139:PackageViewModuleNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -650,6 +670,14 @@
               <item name="InventorySystem" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="others" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="InventorySystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="InventorySystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -659,6 +687,17 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="view" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="InventorySystem" type="58d84e3e:PackageViewProjectNode" />
+              <item name="InventorySystem" type="616d4139:PackageViewModuleNode" />
             </path>
           </expand>
           <select />
@@ -689,10 +728,10 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/Progs/TeslaRentalInventory/src/fxml/initializer.fxml" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547485420545" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548958623890" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL&#10;Amazon Redshift" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.153125" />
@@ -916,7 +955,12 @@
       <workItem from="1547305232308" duration="5145000" />
       <workItem from="1547365103527" duration="6272000" />
       <workItem from="1547392438020" duration="9952000" />
-      <workItem from="1547480023450" duration="5307000" />
+      <workItem from="1547480023450" duration="5543000" />
+      <workItem from="1547562414919" duration="975000" />
+      <workItem from="1547734800289" duration="622000" />
+      <workItem from="1548490252654" duration="1124000" />
+      <workItem from="1548861419635" duration="1762000" />
+      <workItem from="1548949230493" duration="6672000" />
     </task>
     <task id="LOCAL-00001" summary="Multiple view added.">
       <created>1531118175694</created>
@@ -936,7 +980,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="551403000" />
+    <option name="totallyTimeSpent" value="562794000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -951,7 +995,7 @@
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.25113463" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.18003026" />
       <window_info id="Structure" order="1" weight="0.2647504" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="3" />
@@ -960,7 +1004,7 @@
       <window_info id="Image Layers" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329582" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3681672" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.61736333" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39865997" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1083,136 +1127,23 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/others/ItemType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/uml/class.uml">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement />
-          <nodes>
-            <node x="" y="">controller.InventoryGUI</node>
-            <node x="" y="">controller.NewEmployeeGUI</node>
-            <node x="" y="">controller.BaseGUI</node>
-            <node x="" y="">controller.CustomerGUI</node>
-            <node x="" y="">controller.RentalsGUI</node>
-            <node x="" y="">controller.SellListGUI</node>
-            <node x="" y="">main.Item</node>
-            <node x="" y="">controller.AccountListGUI</node>
-            <node x="" y="">main.Account</node>
-            <node x="" y="">controller.TransactionGUI</node>
-            <node x="" y="">controller.DueUpdateGUI</node>
-            <node x="" y="">controller.LogInGUI</node>
-            <node x="" y="">controller.PromptDialogGUI</node>
-            <node x="" y="">controller.EmployeeListGUI</node>
-            <node x="" y="">controller.AdministratorGUI</node>
-            <node x="" y="">controller.SellsGUI</node>
-            <node x="" y="">controller.TransactionListGUI</node>
-            <node x="" y="">main.Employee</node>
-            <node x="" y="">controller.ItemTypeGUI</node>
-            <node x="" y="">controller.CustomersRentalListGUI</node>
-            <node x="" y="">controller.DashboardGUI</node>
-            <node x="" y="">main.Rent</node>
-            <node x="" y="">main.ItemType</node>
-            <node x="" y="">main.Transact</node>
-            <node x="" y="">main.Main</node>
-            <node x="" y="">main.Customer</node>
-            <node x="" y="">main.Purchase</node>
-            <node x="" y="">controller.RentalListGUI</node>
-            <node x="" y="">controller.InitializerGUI</node>
-            <node x="" y="">controller.AccountGUI</node>
-            <node x="" y="">controller.CustomerPurchaseListGUI</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="0.605625717566016" x="861.0" y="323.0" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/uml/classdiagram.uml">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement />
-          <nodes>
-            <node x="" y="">controller.InventoryGUI</node>
-            <node x="" y="">controller.NewEmployeeGUI</node>
-            <node x="" y="">controller.BaseGUI</node>
-            <node x="" y="">controller.CustomerGUI</node>
-            <node x="" y="">controller.SellListGUI</node>
-            <node x="" y="">main.Item</node>
-            <node x="" y="">controller.AccountListGUI</node>
-            <node x="" y="">main.Account</node>
-            <node x="" y="">controller.TransactionGUI</node>
-            <node x="" y="">controller.DueUpdateGUI</node>
-            <node x="" y="">controller.LogInGUI</node>
-            <node x="" y="">controller.PromptDialogGUI</node>
-            <node x="" y="">controller.EmployeeListGUI</node>
-            <node x="" y="">controller.AdministratorGUI</node>
-            <node x="" y="">controller.SellsGUI</node>
-            <node x="" y="">controller.TransactionListGUI</node>
-            <node x="" y="">main.Employee</node>
-            <node x="" y="">controller.CustomersRentalListGUI</node>
-            <node x="" y="">controller.DashboardGUI</node>
-            <node x="" y="">main.Rent</node>
-            <node x="" y="">main.Transact</node>
-            <node x="" y="">main.Main</node>
-            <node x="" y="">main.Customer</node>
-            <node x="" y="">main.Purchase</node>
-            <node x="" y="">main.DBConnection</node>
-            <node x="" y="">controller.RentalListGUI</node>
-            <node x="" y="">controller.InitializerGUI</node>
-            <node x="" y="">controller.AccountGUI</node>
-            <node x="" y="">controller.CustomerPurchaseListGUI</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="0.48394495412844035" x="1080.0" y="395.0" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/uml/final.uml" />
     <entry file="file://$PROJECT_DIR$/src/main/java/others/test.uml" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/view/employeelist.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-408" />
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/view/dashboard.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
       <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/uml/classdiagram.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/javafx-src.zip!/javafx/application/Preloader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="27" column="7" lean-forward="true" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/jre/lib/ext/jfxrt.jar!/com/sun/deploy/uitoolkit/impl/fx/ui/FXDefaultPreloader.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-312">
-          <caret line="60" column="5" lean-forward="true" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/javafx-src.zip!/javafx/application/Preloader.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/jre/lib/ext/jfxrt.jar!/com/sun/deploy/uitoolkit/impl/fx/ui/FXDefaultPreloader.class" />
     <entry file="file://$PROJECT_DIR$/src/main/java/others/DBConnection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -1269,54 +1200,43 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/view/home.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/view/inventory.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/view/selllist.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/config.properties">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/view/test.fxml" />
     <entry file="file://$PROJECT_DIR$/src/main/java/others/TestController.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="32" column="32" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controllers/Foo.java" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/view/initializer.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
           <caret line="14" column="128" selection-start-line="14" selection-start-column="128" selection-end-line="14" selection-end-column="128" />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/view/customer.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="104">
           <caret line="155" column="167" lean-forward="true" selection-start-line="155" selection-start-column="167" selection-end-line="155" selection-end-column="167" />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controllers/CustomerController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
           <caret line="40" column="58" selection-start-line="40" selection-start-column="58" selection-end-line="40" selection-end-column="58" />
-          <folding>
-            <element signature="e#25227#26582#0" />
-            <element signature="e#26348#28058#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1324,9 +1244,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="471">
           <caret line="71" column="30" lean-forward="true" selection-start-line="71" selection-start-column="30" selection-end-line="71" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1334,25 +1251,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1718">
           <caret line="59" column="4" selection-start-line="59" selection-start-column="4" selection-end-line="59" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/AdministratorController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1993">
-          <caret line="50" column="4" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/BaseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="225" column="7" lean-forward="true" selection-start-line="225" selection-start-column="7" selection-end-line="225" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#6022#6023#0" expanded="true" />
-            <element signature="e#6064#6065#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1367,13 +1265,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="496">
           <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/DashboardController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="521">
-          <caret line="56" column="37" lean-forward="true" selection-start-line="56" selection-start-column="37" selection-end-line="56" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -1395,9 +1286,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-6800">
           <caret line="52" column="33" lean-forward="true" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1408,76 +1296,618 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/ItemTypeController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/SellsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="182" column="23" selection-start-line="182" selection-start-column="23" selection-end-line="182" selection-end-column="23" />
+        <state relative-caret-position="1300">
+          <caret line="79" column="34" selection-start-line="79" selection-start-column="34" selection-end-line="79" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/uml.uml">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement />
+          <nodes>
+            <node x="2465.7871774343266" y="280.0">main.java.others.Item</node>
+            <node x="234.92490118042008" y="280.0">main.java.others.Account</node>
+            <node x="2395.715748862898" y="470.0">main.java.controllers.InventoryController</node>
+            <node x="654.8535714285713" y="280.0">main.java.controllers.AdministratorController</node>
+            <node x="0.0" y="280.0">main.java.controllers.ItemTypeController</node>
+            <node x="2263.7871774343266" y="280.0">main.java.controllers.TransactionListController</node>
+            <node x="996.8733194869892" y="650.0">main.java.controllers.CustomersRentalListController</node>
+            <node x="309.2779247501471" y="650.0">main.java.others.Customer</node>
+            <node x="2066.7871774343266" y="280.0">main.java.controllers.NewEmployeeController</node>
+            <node x="1875.7871774343266" y="280.0">main.java.controllers.EmployeeListController</node>
+            <node x="2323.2871774343266" y="130.0">main.java.others.Transact</node>
+            <node x="1541.4670694869892" y="280.0">main.java.controllers.LogInController</node>
+            <node x="1945.0538441009935" y="130.0">main.java.others.Employee</node>
+            <node x="79.27792475014712" y="470.0">main.java.controllers.AccountListController</node>
+            <node x="1225.8733194869892" y="650.0">main.java.controllers.RentalListController</node>
+            <node x="1353.3189335220768" y="470.0">main.java.others.Rent</node>
+            <node x="1169.3189335220768" y="470.0">main.java.controllers.TransactionController</node>
+            <node x="1729.7871774343266" y="470.0">main.java.controllers.BaseController</node>
+            <node x="474.8535714285713" y="280.0">main.java.controllers.DueUpdateController</node>
+            <node x="927.6467056916983" y="760.0">main.java.controllers.DashboardController</node>
+            <node x="382.5677583232773" y="760.0">main.java.controllers.CustomerController</node>
+            <node x="26.049999999999727" y="130.0">main.java.others.ItemType</node>
+            <node x="862.3733194869892" y="0.0">main.java.controllers.PromptDialogController</node>
+            <node x="1397.8733194869892" y="650.0">main.java.controllers.RentalsController</node>
+            <node x="844.4588458027787" y="650.0">main.java.controllers.SellsController</node>
+            <node x="448.4588458027787" y="650.0">main.java.controllers.CustomerPurchaseListController</node>
+            <node x="683.7285714285713" y="470.0">main.java.others.Purchase</node>
+            <node x="1506.3376835220765" y="470.0">main.java.controllers.InitializerController</node>
+            <node x="687.4588458027787" y="650.0">main.java.controllers.SellListController</node>
+            <node x="923.8733194869892" y="130.0">main.java.others.DBConnection</node>
+            <node x="263.2779247501471" y="470.0">main.java.controllers.AccountController</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="main.java.controllers.CustomerController" target="main.java.controllers.CustomersRentalListController">
+              <point x="51.0" y="-15.0" />
+              <point x="510.0677583232773" y="720.0" />
+              <point x="1101.3733194869892" y="720.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="main.java.controllers.AccountController" target="main.java.others.Account">
+              <point x="-20.857142857142662" y="-15.0" />
+              <point x="315.42078189300446" y="360.0" />
+              <point x="307.9963297518485" y="360.0" />
+              <point x="26.57142857142844" y="15.0" />
+            </edge>
+            <edge source="main.java.controllers.ItemTypeController" target="main.java.others.DBConnection">
+              <point x="60.40000000000009" y="-15.0" />
+              <point x="135.9000000000001" y="190.0" />
+              <point x="927.1627931711998" y="190.0" />
+              <point x="-59.210526315789366" y="15.0" />
+            </edge>
+            <edge source="main.java.controllers.AccountListController" target="main.java.others.Account">
+              <point x="-32.80000000000018" y="-15.0" />
+              <point x="128.47792475014694" y="340.0" />
+              <point x="241.56775832327742" y="340.0" />
+              <point x="-39.85714285714266" y="15.0" />
+            </edge>
+            <edge source="main.java.controllers.AdministratorController" target="main.java.controllers.PromptDialogController">
+              <point x="-43.5" y="-15.0" />
+              <point x="698.3535714285713" y="100.0" />
+              <point x="931.1233194869892" y="100.0" />
+              <point x="-18.75" y="15.0" />
+            </edge>
+            <edge source="main.java.controllers.InventoryController" target="main.java.controllers.LogInController">
+              <point x="-64.7142857142857" y="-15.0" />
+              <point x="2406.5014631486124" y="430.0" />
+              <point x="1664.2795694869892" y="430.0" />
+              <point x="57.3125" y="15.0" />
+            </edge>
+            <edge source="main.java.controllers.SellsController" target="main.java.others.DBConnection">
+              <point x="23.25" y="-15.0" />
+              <point x="929.7088458027787" y="550.0" />
+              <point x="941.7317624694451" y="550.0" />
+              <point x="941.7317624694451" y="260.0" />
+              <point x="973.2154247501471" y="260.0" />
+              <point x="-13.157894736842081" y="15.0" />
+            </edge>
+            <edge source="main.java.controllers.RentalsController" target="main.java.others.DBConnection">
+              <point x="26.0625" y="-15.0" />
+              <point x="1493.4358194869892" y="630.0" />
+              <point x="1484.8376835220765" y="630.0" />
+              <point x="1484.8376835220765" y="230.0" />
+              <point x="1012.6891089606734" y="230.0" />
+              <point x="26.315789473684163" y="15.0" />
+            </edge>
+            <edge source="main.java.controllers.CustomersRentalListController" target="main.java.others.DBConnection">
+              <point x="-78.375" y="-15.0" />
+              <point x="1022.9983194869892" y="550.0" />
+              <point x="1052.4789537501163" y="550.0" />
+              <point x="1052.4789537501163" y="260.0" />
+              <point x="992.9522668554102" y="260.0" />
+              <point x="6.578947368421041" y="15.0" />
+            </edge>
+            <edge source="main.java.controllers.CustomerController" target="main.java.others.DBConnection">
+              <point x="34.0" y="-15.0" />
+              <point x="493.0677583232773" y="710.0" />
+              <point x="978.9588458027787" y="710.0" />
+              <point x="-6.578947368421041" y="15.0" />
+            </edge>
+            <edge source="main.java.controllers.TransactionController" target="main.java.others.DBConnection">
+              <point x="-54.33333333333326" y="-15.0" />
+              <point x="1196.4856001887433" y="400.0" />
+              <point x="1218.6873545747083" y="400.0" />
+              <point x="1218.6873545747083" y="240.0" />
+              <point x="1006.1101615922523" y="240.0" />
+              <point x="19.736842105263122" y="15.0" />
+            </edge>
+            <edge source="main.java.controllers.BaseController" target="main.java.controllers.LogInController">
+              <point x="0.0" y="-15.0" />
+              <point x="1792.2871774343266" y="440.0" />
+              <point x="1647.9045694869892" y="440.0" />
+              <point x="40.9375" y="15.0" />
+            </edge>
+            <edge source="main.java.controllers.SellListController" target="main.java.others.DBConnection">
+              <point x="51.375" y="-15.0" />
+              <point x="807.3338458027787" y="630.0" />
+              <point x="845.9587361536557" y="630.0" />
+              <point x="845.9587361536557" y="400.0" />
+              <point x="931.1430451127818" y="400.0" />
+              <point x="931.1430451127818" y="250.0" />
+              <point x="966.6364773817261" y="250.0" />
+              <point x="-19.736842105263122" y="15.0" />
+            </edge>
+            <edge source="main.java.controllers.CustomerPurchaseListController" target="main.java.others.DBConnection">
+              <point x="-82.125" y="-15.0" />
+              <point x="475.8338458027787" y="630.0" />
+              <point x="507.7355326974847" y="630.0" />
+              <point x="507.7355326974847" y="390.0" />
+              <point x="924.5640977443608" y="390.0" />
+              <point x="924.5640977443608" y="240.0" />
+              <point x="960.057530013305" y="240.0" />
+              <point x="-26.315789473684163" y="15.0" />
+            </edge>
+            <edge source="main.java.controllers.NewEmployeeController" target="main.java.controllers.PromptDialogController">
+              <point x="44.25" y="-15.0" />
+              <point x="2199.5371774343266" y="60.0" />
+              <point x="1018.6233194869892" y="60.0" />
+              <point x="68.75" y="15.0" />
+            </edge>
+            <edge source="main.java.controllers.EmployeeListController" target="main.java.others.Employee">
+              <point x="0.0" y="-15.0" />
+              <point x="-33.333333333333485" y="15.0" />
+            </edge>
+            <edge source="main.java.controllers.AccountController" target="main.java.controllers.LogInController">
+              <point x="62.57142857142844" y="-15.0" />
+              <point x="398.84935332157556" y="410.0" />
+              <point x="1549.6545694869892" y="410.0" />
+              <point x="-57.3125" y="15.0" />
+            </edge>
+            <edge source="main.java.controllers.RentalListController" target="main.java.others.Rent">
+              <point x="-19.0" y="-15.0" />
+              <point x="1282.8733194869892" y="610.0" />
+              <point x="1378.5189335220766" y="610.0" />
+              <point x="-10.799999999999955" y="15.0" />
+            </edge>
+            <edge source="main.java.controllers.RentalListController" target="main.java.others.DBConnection">
+              <point x="-57.0" y="-15.0" />
+              <point x="1244.8733194869892" y="550.0" />
+              <point x="1158.8189335220768" y="550.0" />
+              <point x="1158.8189335220768" y="250.0" />
+              <point x="999.5312142238313" y="250.0" />
+              <point x="13.157894736842081" y="15.0" />
+            </edge>
+            <edge source="main.java.controllers.TransactionListController" target="main.java.others.Transact">
+              <point x="-22.625" y="-15.0" />
+              <point x="2331.6621774343266" y="260.0" />
+              <point x="2338.7871774343266" y="260.0" />
+              <point x="-31.0" y="15.0" />
+            </edge>
+            <edge source="main.java.controllers.ItemTypeController" target="main.java.others.ItemType">
+              <point x="30.199999999999818" y="-15.0" />
+              <point x="105.69999999999982" y="260.0" />
+              <point x="107.71666666666624" y="260.0" />
+              <point x="32.666666666666515" y="15.0" />
+            </edge>
+            <edge source="main.java.controllers.AccountController" target="main.java.others.DBConnection">
+              <point x="41.71428571428578" y="-15.0" />
+              <point x="377.9922104644329" y="380.0" />
+              <point x="917.9851503759397" y="380.0" />
+              <point x="917.9851503759397" y="230.0" />
+              <point x="953.478582644884" y="230.0" />
+              <point x="-32.8947368421052" y="15.0" />
+            </edge>
+            <edge source="main.java.controllers.DashboardController" target="main.java.others.DBConnection">
+              <point x="0.0" y="-15.0" />
+              <point x="1006.6467056916983" y="710.0" />
+              <point x="986.3733194869892" y="710.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="main.java.controllers.EmployeeListController" target="main.java.controllers.PromptDialogController">
+              <point x="-34.19999999999982" y="-15.0" />
+              <point x="1927.0871774343268" y="260.0" />
+              <point x="1905.6371774343265" y="260.0" />
+              <point x="1905.6371774343265" y="70.0" />
+              <point x="1006.1233194869892" y="70.0" />
+              <point x="56.25" y="15.0" />
+            </edge>
+            <edge source="main.java.controllers.DueUpdateController" target="main.java.others.DBConnection">
+              <point x="40.0" y="-15.0" />
+              <point x="594.8535714285713" y="200.0" />
+              <point x="933.7417405396209" y="200.0" />
+              <point x="-52.631578947368325" y="15.0" />
+            </edge>
+            <edge source="main.java.controllers.LogInController" target="main.java.controllers.PromptDialogController">
+              <point x="32.75" y="-15.0" />
+              <point x="1639.7170694869892" y="90.0" />
+              <point x="981.1233194869892" y="90.0" />
+              <point x="31.25" y="15.0" />
+            </edge>
+            <edge source="main.java.controllers.InventoryController" target="main.java.others.DBConnection">
+              <point x="-43.14285714285711" y="-15.0" />
+              <point x="2428.0728917200413" y="420.0" />
+              <point x="1729.7555451127819" y="420.0" />
+              <point x="1729.7555451127819" y="210.0" />
+              <point x="1025.8470036975154" y="210.0" />
+              <point x="39.473684210526244" y="15.0" />
+            </edge>
+            <edge source="main.java.controllers.TransactionController" target="main.java.controllers.PromptDialogController">
+              <point x="0.0" y="-15.0" />
+              <point x="1250.8189335220768" y="100.0" />
+              <point x="968.6233194869892" y="100.0" />
+              <point x="18.75" y="15.0" />
+            </edge>
+            <edge source="main.java.controllers.SellsController" target="main.java.controllers.PromptDialogController">
+              <point x="7.75" y="-15.0" />
+              <point x="914.2088458027787" y="630.0" />
+              <point x="916.4588458027787" y="630.0" />
+              <point x="916.4588458027787" y="360.0" />
+              <point x="884.6927583232773" y="360.0" />
+              <point x="884.6927583232773" y="110.0" />
+              <point x="943.6233194869892" y="110.0" />
+              <point x="-6.25" y="15.0" />
+            </edge>
+            <edge source="main.java.controllers.EmployeeListController" target="main.java.others.DBConnection">
+              <point x="-68.40000000000009" y="-15.0" />
+              <point x="1892.8871774343265" y="200.0" />
+              <point x="1032.4259510659365" y="200.0" />
+              <point x="46.052631578947285" y="15.0" />
+            </edge>
+            <edge source="main.java.controllers.RentalsController" target="main.java.others.Rent">
+              <point x="-8.6875" y="-15.0" />
+              <point x="1458.6858194869892" y="530.0" />
+              <point x="1414.5189335220766" y="530.0" />
+              <point x="25.200000000000045" y="15.0" />
+            </edge>
+            <edge source="main.java.controllers.SellsController" target="main.java.others.Purchase">
+              <point x="-54.25" y="-15.0" />
+              <point x="852.2088458027787" y="610.0" />
+              <point x="746.1285714285714" y="610.0" />
+              <point x="14.399999999999977" y="15.0" />
+            </edge>
+            <edge source="main.java.controllers.RentalsController" target="main.java.controllers.PromptDialogController">
+              <point x="60.8125" y="-15.0" />
+              <point x="1528.1858194869892" y="630.0" />
+              <point x="1865.2871774343266" y="630.0" />
+              <point x="1865.2871774343266" y="80.0" />
+              <point x="993.6233194869892" y="80.0" />
+              <point x="43.75" y="15.0" />
+            </edge>
+            <edge source="main.java.controllers.ItemTypeController" target="main.java.controllers.PromptDialogController">
+              <point x="-60.40000000000009" y="-15.0" />
+              <point x="15.549999999999727" y="50.0" />
+              <point x="868.6233194869892" y="50.0" />
+              <point x="-81.25" y="15.0" />
+            </edge>
+            <edge source="main.java.controllers.DashboardController" target="main.java.controllers.SellListController">
+              <point x="-52.66666666666663" y="-15.0" />
+              <point x="953.9800390250317" y="700.0" />
+              <point x="755.9588458027787" y="700.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="main.java.controllers.AdministratorController" target="main.java.others.DBConnection">
+              <point x="43.5" y="-15.0" />
+              <point x="785.3535714285713" y="210.0" />
+              <point x="940.3206879080419" y="210.0" />
+              <point x="-46.052631578947285" y="15.0" />
+            </edge>
+            <edge source="main.java.controllers.CustomerPurchaseListController" target="main.java.others.Purchase">
+              <point x="-27.375" y="-15.0" />
+              <point x="530.5838458027787" y="600.0" />
+              <point x="688.5285714285712" y="600.0" />
+              <point x="-43.200000000000045" y="15.0" />
+            </edge>
+            <edge source="main.java.controllers.DashboardController" target="main.java.controllers.RentalListController">
+              <point x="52.66666666666663" y="-15.0" />
+              <point x="1059.313372358365" y="730.0" />
+              <point x="1301.8733194869892" y="730.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="main.java.controllers.TransactionController" target="main.java.controllers.LogInController">
+              <point x="54.33333333333326" y="-15.0" />
+              <point x="1305.1522668554098" y="420.0" />
+              <point x="1566.0295694869892" y="420.0" />
+              <point x="-40.9375" y="15.0" />
+            </edge>
+            <edge source="main.java.controllers.AccountListController" target="main.java.others.DBConnection">
+              <point x="65.59999999999991" y="-15.0" />
+              <point x="226.87792475014703" y="370.0" />
+              <point x="911.4062030075187" y="370.0" />
+              <point x="911.4062030075187" y="220.0" />
+              <point x="946.899635276463" y="220.0" />
+              <point x="-39.473684210526244" y="15.0" />
+            </edge>
+            <edge source="main.java.controllers.SellListController" target="main.java.others.Purchase">
+              <point x="-51.375" y="-15.0" />
+              <point x="704.5838458027787" y="630.0" />
+              <point x="717.3285714285714" y="630.0" />
+              <point x="-14.399999999999977" y="15.0" />
+            </edge>
+            <edge source="main.java.controllers.NewEmployeeController" target="main.java.others.DBConnection">
+              <point x="-44.25" y="-15.0" />
+              <point x="2111.0371774343266" y="190.0" />
+              <point x="1039.0048984343578" y="190.0" />
+              <point x="52.63157894736855" y="15.0" />
+            </edge>
+            <edge source="main.java.controllers.RentalsController" target="main.java.controllers.TransactionController">
+              <point x="-60.8125" y="-15.0" />
+              <point x="1406.5608194869892" y="560.0" />
+              <point x="1291.5689335220768" y="560.0" />
+              <point x="40.75" y="15.0" />
+            </edge>
+            <edge source="main.java.controllers.CustomersRentalListController" target="main.java.others.Rent">
+              <point x="26.125" y="-15.0" />
+              <point x="1127.4983194869892" y="590.0" />
+              <point x="1364.1189335220765" y="590.0" />
+              <point x="-25.200000000000045" y="15.0" />
+            </edge>
+            <edge source="main.java.controllers.SellsController" target="main.java.controllers.LogInController">
+              <point x="54.25" y="-15.0" />
+              <point x="960.7088458027787" y="570.0" />
+              <point x="1342.8189335220768" y="570.0" />
+              <point x="1342.8189335220768" y="430.0" />
+              <point x="1582.4045694869892" y="430.0" />
+              <point x="-24.5625" y="15.0" />
+            </edge>
+            <edge source="main.java.controllers.CustomerController" target="main.java.controllers.PromptDialogController">
+              <point x="0.0" y="-15.0" />
+              <point x="459.0677583232773" y="700.0" />
+              <point x="419.7779247501471" y="700.0" />
+              <point x="419.7779247501471" y="80.0" />
+              <point x="906.1233194869892" y="80.0" />
+              <point x="-43.75" y="15.0" />
+            </edge>
+            <edge source="main.java.controllers.CustomerController" target="main.java.controllers.CustomerPurchaseListController">
+              <point x="17.0" y="-15.0" />
+              <point x="476.0677583232773" y="700.0" />
+              <point x="557.9588458027787" y="700.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="main.java.controllers.TransactionListController" target="main.java.others.DBConnection">
+              <point x="-67.875" y="-15.0" />
+              <point x="2286.4121774343266" y="180.0" />
+              <point x="1045.5838458027788" y="180.0" />
+              <point x="59.21052631578959" y="15.0" />
+            </edge>
+            <edge source="main.java.others.DBConnection" target="main.java.controllers.PromptDialogController">
+              <point x="0.0" y="-15.0" />
+              <point x="986.3733194869892" y="110.0" />
+              <point x="956.1233194869892" y="110.0" />
+              <point x="6.25" y="15.0" />
+            </edge>
+            <edge source="main.java.controllers.AccountListController" target="main.java.controllers.PromptDialogController">
+              <point x="-65.59999999999991" y="-15.0" />
+              <point x="95.67792475014721" y="330.0" />
+              <point x="161.4999999999999" y="330.0" />
+              <point x="161.4999999999999" y="60.0" />
+              <point x="881.1233194869892" y="60.0" />
+              <point x="-68.75" y="15.0" />
+            </edge>
+            <edge source="main.java.controllers.InventoryController" target="main.java.others.Item">
+              <point x="21.571428571428584" y="-15.0" />
+              <point x="-9.0" y="15.0" />
+            </edge>
+            <edge source="main.java.controllers.InitializerController" target="main.java.controllers.LogInController">
+              <point x="-1.1368683772161603E-13" y="-15.0" />
+              <point x="1580.3376835220765" y="450.0" />
+              <point x="1615.1545694869892" y="450.0" />
+              <point x="8.1875" y="15.0" />
+            </edge>
+            <edge source="main.java.controllers.CustomerController" target="main.java.controllers.LogInController">
+              <point x="68.0" y="-15.0" />
+              <point x="527.0677583232773" y="740.0" />
+              <point x="1719.2871774343266" y="740.0" />
+              <point x="1719.2871774343266" y="450.0" />
+              <point x="1631.5295694869892" y="450.0" />
+              <point x="24.5625" y="15.0" />
+            </edge>
+            <edge source="main.java.controllers.LogInController" target="main.java.others.DBConnection">
+              <point x="-32.75" y="-15.0" />
+              <point x="1574.2170694869892" y="220.0" />
+              <point x="1019.2680563290944" y="220.0" />
+              <point x="32.8947368421052" y="15.0" />
+            </edge>
+            <edge source="main.java.controllers.AccountController" target="main.java.controllers.PromptDialogController">
+              <point x="20.857142857142662" y="-15.0" />
+              <point x="357.1350676072898" y="360.0" />
+              <point x="346.3313973591387" y="360.0" />
+              <point x="346.3313973591387" y="70.0" />
+              <point x="893.6233194869892" y="70.0" />
+              <point x="-56.25" y="15.0" />
+            </edge>
+            <edge source="main.java.controllers.CustomerController" target="main.java.others.Customer">
+              <point x="-51.0" y="-15.0" />
+              <point x="408.0677583232773" y="730.0" />
+              <point x="346.7779247501471" y="730.0" />
+              <point x="-12.5" y="15.0" />
+            </edge>
+            <edge source="main.java.controllers.RentalsController" target="main.java.controllers.LogInController">
+              <point x="43.4375" y="-15.0" />
+              <point x="1510.8108194869892" y="620.0" />
+              <point x="1495.8376835220765" y="620.0" />
+              <point x="1495.8376835220765" y="440.0" />
+              <point x="1598.7795694869892" y="440.0" />
+              <point x="-8.1875" y="15.0" />
+            </edge>
+            <edge source="main.java.controllers.DueUpdateController" target="main.java.controllers.PromptDialogController">
+              <point x="-40.0" y="-15.0" />
+              <point x="514.8535714285713" y="90.0" />
+              <point x="918.6233194869892" y="90.0" />
+              <point x="-31.25" y="15.0" />
+            </edge>
+            <edge source="main.java.controllers.SellsController" target="main.java.controllers.TransactionController">
+              <point x="38.75" y="-15.0" />
+              <point x="945.2088458027787" y="560.0" />
+              <point x="1210.0689335220768" y="560.0" />
+              <point x="-40.75" y="15.0" />
+            </edge>
+            <edge source="main.java.controllers.InventoryController" target="main.java.controllers.PromptDialogController">
+              <point x="-21.57142857142844" y="-15.0" />
+              <point x="2449.6443202914697" y="450.0" />
+              <point x="2455.2871774343266" y="450.0" />
+              <point x="2455.2871774343266" y="50.0" />
+              <point x="1031.1233194869892" y="50.0" />
+              <point x="81.25" y="15.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.8" x="187.0" y="253.0" />
+          <SelectedNodes>
+            <node>main.java.controllers.InventoryController</node>
+          </SelectedNodes>
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/TransactionListController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="446">
+          <caret line="85" column="16" selection-start-line="85" selection-start-column="16" selection-end-line="85" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controllers/LogInController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
+        <state relative-caret-position="521">
           <caret line="81" column="7" selection-start-line="81" selection-start-column="7" selection-end-line="81" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/NewEmployeeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="70" column="13" selection-start-line="70" selection-start-column="13" selection-end-line="70" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controllers/PromptDialogController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
+        <state relative-caret-position="375">
           <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/RentalListController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-793">
-          <caret line="76" column="9" selection-start-line="76" selection-start-column="9" selection-end-line="76" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/RentalsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="424" column="5" selection-start-line="424" selection-start-column="5" selection-end-line="424" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/SellListController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-725">
-          <caret line="75" column="31" selection-start-line="75" selection-start-column="31" selection-end-line="75" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/SellsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-200">
-          <caret line="79" column="34" selection-start-line="79" selection-start-column="34" selection-end-line="79" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controllers/TransactionController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4">
-          <caret line="49" column="25" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
+        <state relative-caret-position="4925">
+          <caret line="211" selection-start-line="211" selection-end-line="211" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/TransactionListController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/RentalsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="93" column="9" selection-start-line="93" selection-start-column="9" selection-end-line="93" selection-end-column="9" />
+        <state relative-caret-position="1421">
+          <caret line="424" column="5" selection-start-line="424" selection-start-column="5" selection-end-line="424" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/RentalListController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1004">
+          <caret line="69" column="36" lean-forward="true" selection-start-line="69" selection-start-column="36" selection-end-line="69" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/SellListController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="56" column="54" selection-start-line="56" selection-start-column="54" selection-end-line="56" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/NewEmployeeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="821">
+          <caret line="70" column="13" selection-start-line="70" selection-start-column="13" selection-end-line="70" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="25" column="65" selection-start-line="25" selection-start-column="65" selection-end-line="25" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/BaseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2425">
+          <caret line="107" column="23" selection-start-line="107" selection-start-column="23" selection-end-line="107" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/ItemTypeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1594">
+          <caret line="182" column="23" selection-start-line="182" selection-start-column="23" selection-end-line="182" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/DashboardController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2479">
+          <caret line="56" column="37" lean-forward="true" selection-start-line="56" selection-start-column="37" selection-end-line="56" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/AdministratorController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="145" column="45" selection-start-line="145" selection-start-column="45" selection-end-line="145" selection-end-column="45" />
+          <folding>
+            <element signature="e#4530#4531#0" expanded="true" />
+            <element signature="e#4621#4622#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/uml.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/tt.uml">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement />
+          <nodes>
+            <node x="0.0" y="675.0">main.java.others.Item</node>
+            <node x="395.0" y="300.0">main.java.controllers.InventoryController</node>
+            <node x="284.0" y="600.0">main.java.others.Account</node>
+            <node x="0.0" y="150.0">main.java.controllers.AdministratorController</node>
+            <node x="0.0" y="375.0">main.java.controllers.ItemTypeController</node>
+            <node x="0.0" y="75.0">main.java.controllers.TransactionListController</node>
+            <node x="264.0" y="0.0">main.java.controllers.CustomersRentalListController</node>
+            <node x="339.0" y="525.0">main.java.others.Customer</node>
+            <node x="226.0" y="75.0">main.java.controllers.NewEmployeeController</node>
+            <node x="219.0" y="150.0">main.java.controllers.EmployeeListController</node>
+            <node x="422.0" y="600.0">main.java.others.Transact</node>
+            <node x="366.0" y="450.0">main.java.controllers.LogInController</node>
+            <node x="484.0" y="525.0">main.java.others.Employee</node>
+            <node x="435.0" y="150.0">main.java.controllers.AccountListController</node>
+            <node x="198.0" y="300.0">main.java.controllers.RentalListController</node>
+            <node x="117.0" y="675.0">main.java.others.Rent</node>
+            <node x="560.0" y="600.0">main.Main</node>
+            <node x="0.0" y="225.0">main.java.controllers.TransactionController</node>
+            <node x="542.0" y="450.0">main.java.controllers.BaseController</node>
+            <node x="208.0" y="225.0">main.java.controllers.DueUpdateController</node>
+            <node x="0.0" y="300.0">main.java.controllers.CustomerController</node>
+            <node x="413.0" y="225.0">main.java.controllers.DashboardController</node>
+            <node x="0.0" y="450.0">main.java.controllers.RentalsController</node>
+            <node x="0.0" y="600.0">main.java.others.ItemType</node>
+            <node x="448.0" y="75.0">main.java.controllers.PromptDialogController</node>
+            <node x="170.0" y="525.0">main.java.controllers.SellsController</node>
+            <node x="0.0" y="0.0">main.java.controllers.CustomerPurchaseListController</node>
+            <node x="196.0" y="375.0">main.java.controllers.InitializerController</node>
+            <node x="143.0" y="600.0">main.java.others.Purchase</node>
+            <node x="184.0" y="450.0">main.java.controllers.SellListController</node>
+            <node x="0.0" y="525.0">main.java.others.DBConnection</node>
+            <node x="389.0" y="375.0">main.java.controllers.AccountController</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.9834482758620688" x="393.7221322323844" y="268.77980364656383" />
+          <SelectedNodes>
+            <node>main.java.controllers.TransactionListController</node>
+          </SelectedNodes>
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
         </state>
       </provider>
     </entry>

@@ -27,6 +27,8 @@ public class RentalListController implements Initializable {
     @FXML
     private Label lblDue;
     @FXML
+    private Label lblHeader;
+    @FXML
     private Label lblAmount;
     @FXML
     private Label today;
@@ -48,6 +50,7 @@ public class RentalListController implements Initializable {
     private TableColumn<Rent, Double> paid;
     @FXML
     private TableColumn<Rent, Double> due;
+
     public static boolean todayFlag = false;
     PreparedStatement getRentalList;
 
@@ -58,6 +61,7 @@ public class RentalListController implements Initializable {
         Connection con = DBConnection.getConnection();
 
         if(todayFlag) {
+            lblHeader.setText("Today's Rentals Report");
             try {
                 getRentalList = con.prepareStatement("SELECT * FROM rentals WHERE  rentalDate = '"+ Date.valueOf(LocalDate.now()) +"'");
                 showReport();

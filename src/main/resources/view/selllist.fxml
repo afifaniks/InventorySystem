@@ -60,7 +60,7 @@
       </Label>
       <AnchorPane layoutX="-9.0" layoutY="-9.0" prefHeight="85.0" prefWidth="1169.0" style="-fx-background-color: #253238;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label alignment="CENTER" layoutX="271.0" layoutY="6.0" prefHeight="72.0" prefWidth="566.0" text="Total Sells Report" textFill="WHITE" AnchorPane.leftAnchor="271.0" AnchorPane.rightAnchor="270.0">
+            <Label fx:id="lblHeader" alignment="CENTER" layoutX="271.0" layoutY="6.0" prefHeight="72.0" prefWidth="566.0" text="Total Sells Report" textFill="WHITE" AnchorPane.leftAnchor="271.0" AnchorPane.rightAnchor="270.0">
                <font>
                   <Font name="System Bold" size="33.0" />
                </font>
