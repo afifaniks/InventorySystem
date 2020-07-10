@@ -1,2 +1,0 @@
-java -jar TeslaRentalInventory.jar
-
