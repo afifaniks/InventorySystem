@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="teslarentalinventory@localhost" uuid="b41d40ed-0845-4871-8332-8970d1cc81df">
+    <data-source source="LOCAL" name="testdb@localhost" uuid="b41d40ed-0845-4871-8332-8970d1cc81df">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/teslarentalinventory</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306/testdb</jdbc-url>
       <driver-properties>
         <property name="autoReconnect" value="true" />
         <property name="zeroDateTimeBehavior" value="convertToNull" />

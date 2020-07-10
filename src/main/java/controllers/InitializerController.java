@@ -29,7 +29,7 @@ import java.util.TreeMap;
  **/
 public class InitializerController implements Initializable {
 
-    private static final int THREAD_SLEEP_INTERVAL = 100;
+    private static final int THREAD_SLEEP_INTERVAL = 50;
     @FXML
     private JFXProgressBar progressIndicator;
     @FXML
@@ -81,7 +81,7 @@ public class InitializerController implements Initializable {
             Connection connection = DBConnection.getConnection();
 
             //Creating OLs to save values from result set
-            ObservableList customersList = FXCollections.observableArrayList();
+            ObservableList<Customer> customersList = FXCollections.observableArrayList();
             ObservableList<Item> itemList = FXCollections.observableArrayList();
             ObservableList<String> itemTypeName = FXCollections.observableArrayList();
 
@@ -136,7 +136,7 @@ public class InitializerController implements Initializable {
             ArrayList<Integer> customerID = new ArrayList<>();
             TreeMap<String, Integer> itemTypeTree = new TreeMap<>();
 
-            //Getting values from customers result set
+            // Getting values from customers result set
             while(customerResultSet.next()) {
                 customerIDNameHolder.add(customerResultSet.getInt(1) + " | "
                         + customerResultSet.getString(2) + "  "
@@ -145,16 +145,18 @@ public class InitializerController implements Initializable {
                 customerName.add(customerResultSet.getString(2)); //Adding first Name
                 customerName.add(customerResultSet.getString(3)); //Adding last name
 
-                customersList.add(new Customer(
-                        customerResultSet.getInt(1),
-                        customerResultSet.getString(2),
-                        customerResultSet.getString(3),
-                        customerResultSet.getString(4),
-                        customerResultSet.getString(5),
-                        customerResultSet.getString(6),
-                        customerResultSet.getString(7),
-                        customerResultSet.getString(8),
-                        customerResultSet.getDate(9)));
+                Customer newCustomer = new Customer(
+                        customerResultSet.getInt("customerID"),
+                        customerResultSet.getString("firstName"),
+                        customerResultSet.getString("lastName"),
+                        customerResultSet.getString("address"),
+                        customerResultSet.getString("phone"),
+                        customerResultSet.getString("email"),
+                        customerResultSet.getString("photo"),
+                        customerResultSet.getString("gender"),
+                        customerResultSet.getDate("memberSince"));
+
+                customersList.add(newCustomer);
 
                 customerID.add(customerResultSet.getInt(1));
             }
