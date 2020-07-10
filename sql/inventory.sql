@@ -2,7 +2,7 @@ CREATE DATABASE  IF NOT EXISTS `inventory` /*!40100 DEFAULT CHARACTER SET utf8mb
 USE `inventory`;
 -- MySQL dump 10.13  Distrib 8.0.11, for Win64 (x86_64)
 --
--- Host: 127.0.0.1    Database: teslarentalinventory
+-- Host: localhost    Database: inventory
 -- ------------------------------------------------------
 -- Server version	8.0.11
 
@@ -64,7 +64,6 @@ CREATE TABLE `customers` (
   `address` varchar(100) NOT NULL,
   `phone` varchar(11) NOT NULL,
   `email` varchar(45) DEFAULT NULL,
-  `details` varchar(100) DEFAULT NULL,
   `photo` varchar(100) DEFAULT NULL,
   `gender` enum('Male','Female') NOT NULL,
   `memberSince` date DEFAULT NULL,
@@ -78,7 +77,7 @@ CREATE TABLE `customers` (
 
 LOCK TABLES `customers` WRITE;
 /*!40000 ALTER TABLE `customers` DISABLE KEYS */;
-INSERT INTO `customers` VALUES (1,'Dr. Professor','Karim','Dhaka','0188999999','dr.karim@gmail.com','null','file:/D:/Project_Final/IntellijIDEA/Images/customers/man3.jpg','Male','2018-08-11'),(2,'Faysal','Khan','Shukrabad','017222222','faysal@gmail.com','null','file:/D:/Project_Final/IntellijIDEA/Images/customers/man1.jpg','Male','2018-08-11'),(3,'Afif','Anik','Dhaka','01722562455','anik@gmail.com','null','file:/D:/Project_Final/IntellijIDEA/Images/customers/man2.jpg','Male','2018-08-11'),(4,'Jubayer','Ahmed','Dhaka','0199999999','jubaer@gmail.com','null','file:/D:/Project_Final/IntellijIDEA/Images/customers/man4.jpg','Male','2018-08-11'),(5,'Niloy','Mia','Jamalpur','01722265222','niloy@gmail.com','null','file:/D:/Project_Final/IntellijIDEA/Images/customers/man5.jpg','Male','2018-08-11'),(6,'Sadia','Zamal','Dhaka','0167799999','zamal@gmail.com','null','file:/D:/Project_Final/IntellijIDEA/Images/customers/woman1.jpg','Female','2018-08-11'),(7,'Hasina','Sheikh','Dhaka','0169999999','sheikh@gmail.com','null','file:/D:/Project_Final/IntellijIDEA/Images/customers/woman2.jpg','Female','2018-08-11'),(8,'John','Anderson','Dhaka','0188999999','john@gmail.com','null','file:/D:/Project_Final/IntellijIDEA/Images/customers/man5.jpg','Male','2018-08-11'),(9,'Imam','Rayhan','Chittagong','0155999999','imam@gmail.com','null','','Male','2018-10-01'),(10,'Babul','Kadir','Dhaka','0166999999','babul@gmail.com','null','','Male','2018-10-01'),(11,'Test','User','Dhaka','017888888','test@email.com','null','file:/C:/Users/daddy/Desktop/man2.jpg','Male','2018-08-10');
+INSERT INTO `customers` VALUES (1,'Dr. Professor','Karim','Dhaka','0188999999','dr.karim@gmail.com','file:/D:/Project_Final/IntellijIDEA/Images/customers/man3.jpg','Male','2018-08-11'),(2,'Faysal','Khan','Shukrabad','017222222','faysal@gmail.com','file:/D:/Project_Final/IntellijIDEA/Images/customers/man1.jpg','Male','2018-08-11'),(3,'Afif','Anik','Dhaka','01722562455','anik@gmail.com','file:/D:/Project_Final/IntellijIDEA/Images/customers/man2.jpg','Male','2018-08-11'),(4,'Jubayer','Ahmed','Dhaka','0199999999','jubaer@gmail.com','file:/D:/Project_Final/IntellijIDEA/Images/customers/man4.jpg','Male','2018-08-11'),(5,'Niloy','Mia','Jamalpur','01722265222','niloy@gmail.com','file:/D:/Project_Final/IntellijIDEA/Images/customers/man5.jpg','Male','2018-08-11'),(6,'Sadia','Zamal','Dhaka','0167799999','zamal@gmail.com','file:/D:/Project_Final/IntellijIDEA/Images/customers/woman1.jpg','Female','2018-08-11'),(7,'Hasina','Sheikh','Dhaka','0169999999','sheikh@gmail.com','file:/D:/Project_Final/IntellijIDEA/Images/customers/woman2.jpg','Female','2018-08-11'),(8,'John','Anderson','Dhaka','0188999999','john@gmail.com','file:/D:/Project_Final/IntellijIDEA/Images/customers/man5.jpg','Male','2018-08-11'),(9,'Imam','Rayhan','Chittagong','0155999999','imam@gmail.com','','Male','2018-10-01'),(10,'Babul','Kadir','Dhaka','0166999999','babul@gmail.com','','Male','2018-10-01'),(11,'Test','User','Dhaka','017888888','test@email.com','file:/C:/Users/daddy/Desktop/man2.jpg','Male','2018-08-10'),(12,'New','Guy','New','7567','jhnhgh',NULL,'Male','2020-07-10');
 /*!40000 ALTER TABLE `customers` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -113,7 +112,7 @@ CREATE TABLE `financialtronpurchase` (
 
 LOCK TABLES `financialtronpurchase` WRITE;
 /*!40000 ALTER TABLE `financialtronpurchase` DISABLE KEYS */;
-INSERT INTO `financialtronpurchase` VALUES (1,'2018-07-05',1,1,1,'admin'),(2,'2018-07-06',2,2,2,'admin'),(3,'2018-07-07',3,2,3,'admin'),(4,'2018-07-09',4,2,4,'admin'),(5,'2018-07-11',5,1,5,'admin'),(6,'2018-07-11',6,3,6,'admin'),(7,'2018-07-12',7,4,7,'admin'),(8,'2018-07-12',8,3,8,'admin'),(9,'2018-07-14',9,2,9,'admin'),(10,'2018-07-14',10,2,10,'admin'),(11,'2018-08-06',9,1,11,'admin'),(12,'2018-08-07',7,1,12,'admin'),(13,'2018-08-18',8,1,13,'admin'),(14,'2018-08-09',10,1,14,'admin'),(15,'2018-08-10',5,2,15,'admin'),(16,'2018-08-10',7,1,16,'employee'),(17,'2018-08-10',6,1,17,'admin'),(18,'2018-08-11',3,1,18,'admin'),(19,'2018-08-11',1,1,19,'admin'),(20,'2018-08-11',9,1,20,'admin'),(21,'2018-08-11',5,1,21,'admin');
+INSERT INTO `financialtronpurchase` VALUES (1,'2018-07-05',1,1,1,'admin'),(2,'2018-07-06',2,2,2,'admin'),(3,'2018-07-07',3,2,3,'admin'),(4,'2018-07-09',4,2,4,'admin'),(5,'2018-07-11',5,1,5,'admin'),(6,'2018-07-11',6,3,6,'admin'),(7,'2018-07-12',7,4,7,'admin'),(8,'2018-07-12',8,3,8,'admin'),(9,'2018-07-14',9,2,9,'admin'),(10,'2018-07-14',10,2,10,'admin'),(11,'2018-08-06',9,1,11,'admin'),(12,'2018-08-07',7,1,12,'admin'),(13,'2018-08-18',8,1,13,'admin'),(14,'2018-08-09',10,1,14,'admin'),(15,'2018-08-10',5,2,15,'admin'),(16,'2018-08-10',7,1,16,'employee'),(17,'2018-08-10',6,1,17,'admin'),(18,'2018-08-11',3,1,18,'admin'),(19,'2018-08-11',1,1,19,'admin'),(20,'2018-08-11',9,1,20,'admin'),(21,'2018-08-11',5,1,21,'admin'),(22,'2020-07-10',3,1,22,'admin');
 /*!40000 ALTER TABLE `financialtronpurchase` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -162,7 +161,6 @@ DROP TABLE IF EXISTS `item`;
 CREATE TABLE `item` (
   `itemID` int(11) NOT NULL,
   `itemName` varchar(45) NOT NULL,
-  `description` varchar(160) DEFAULT NULL,
   `stock` int(11) NOT NULL,
   `rentalOrSale` set('Rental','Sale') NOT NULL,
   `salePrice` double DEFAULT NULL,
@@ -181,7 +179,7 @@ CREATE TABLE `item` (
 
 LOCK TABLES `item` WRITE;
 /*!40000 ALTER TABLE `item` DISABLE KEYS */;
-INSERT INTO `item` VALUES (1,'Mobile','null',47,'Sale',2000,0,'file:/D:/Project_Final/IntellijIDEA/Images/items/mobile.jpg',1),(2,'Computer','null',29,'Sale',15000,0,'file:/D:/Project_Final/IntellijIDEA/Images/items/computer.jpg',1),(3,'Truc','null',9,'Rental',0,400,'file:/D:/Project_Final/IntellijIDEA/Images/items/truck.jpg',5),(4,'Electric Heater','null',4,'Rental,Sale',100,800,'file:/D:/Project_Final/IntellijIDEA/Images/items/heater.jpg',2),(5,'Drilling Machine','null',10,'Sale',100,0,'file:/D:/Project_Final/IntellijIDEA/Images/items/drill.png',3),(6,'SkateBoard','null',1,'Sale',100,0,'file:/D:/Project_Final/IntellijIDEA/Images/items/skate.jpg',7),(7,'Hammer','null',4,'Sale',60,0,'file:/D:/Project_Final/IntellijIDEA/Images/items/hammer.jpg',4),(8,'X-mas lights','null',39,'Rental',0,50,'file:/D:/Project_Final/IntellijIDEA/Images/items/xmas.jpg',9),(9,'Product 2','none',14,'Sale',70,0,NULL,6),(10,'Product 3','none',19,'Sale',90,0,NULL,6);
+INSERT INTO `item` VALUES (1,'Mobile',47,'Sale',2000,0,'file:/D:/Project_Final/IntellijIDEA/Images/items/mobile.jpg',1),(2,'Computer',29,'Sale',15000,0,'file:/D:/Project_Final/IntellijIDEA/Images/items/computer.jpg',1),(3,'Truc',9,'Rental',0,400,'file:/D:/Project_Final/IntellijIDEA/Images/items/truck.jpg',5),(4,'Electric Heater',4,'Rental,Sale',100,800,'file:/D:/Project_Final/IntellijIDEA/Images/items/heater.jpg',2),(5,'Drilling Machine',10,'Sale',100,0,'file:/D:/Project_Final/IntellijIDEA/Images/items/drill.png',3),(6,'SkateBoard',1,'Sale',100,0,'file:/D:/Project_Final/IntellijIDEA/Images/items/skate.jpg',7),(7,'Hammer',4,'Sale',60,0,'file:/D:/Project_Final/IntellijIDEA/Images/items/hammer.jpg',4),(8,'X-mas lights',39,'Rental',0,50,'file:/D:/Project_Final/IntellijIDEA/Images/items/xmas.jpg',9),(9,'Product 2',14,'Sale',70,0,NULL,6),(10,'Product 3',9,'Sale',90,0,NULL,6),(11,'hghf',20,'Sale',44,0,NULL,2);
 /*!40000 ALTER TABLE `item` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -239,7 +237,7 @@ CREATE TABLE `purchases` (
 
 LOCK TABLES `purchases` WRITE;
 /*!40000 ALTER TABLE `purchases` DISABLE KEYS */;
-INSERT INTO `purchases` VALUES (1,'2018-7-5',2,0,'admin',1,1,1000),(2,'2018-7-6',3,0,'admin',2,2,1210),(3,'2018-7-7',1,0,'admin',3,3,920),(4,'2018-7-8',5,10,'admin',3,4,100),(5,'2018-7-9',7,0,'admin',1,6,200),(6,'2018-7-11',7,0,'admin',4,8,600),(7,'2018-7-12',4,0,'admin',5,1,8030),(8,'2018-7-13',9,0,'admin',6,7,800),(9,'2018-7-14',2,0,'admin',7,5,900),(10,'2018-7-17',6,0,'admin',8,5,1120),(11,'2018-08-7',3,0,'admin',7,8,180),(12,'2018-08-8',7,0,'admin',6,6,700),(13,'2018-08-9',5,0,'admin',9,7,70),(14,'2018-08-10',3,0,'admin',4,9,300),(15,'2018-08-10',1,0,'admin',10,4,90),(16,'2018-08-10',3,0,'employee',7,6,180),(17,'2018-08-10',1,0,'admin',6,5,100),(18,'2018-08-11',1,0,'admin',9,2,70),(19,'2018-08-11',3,0,'admin',1,1,6000),(20,'2018-08-11',1,0,'admin',6,8,100),(21,'2018-08-11',1,0,'admin',2,4,15000);
+INSERT INTO `purchases` VALUES (1,'2018-7-5',2,0,'admin',1,1,1000),(2,'2018-7-6',3,0,'admin',2,2,1210),(3,'2018-7-7',1,0,'admin',3,3,920),(4,'2018-7-8',5,10,'admin',3,4,100),(5,'2018-7-9',7,0,'admin',1,6,200),(6,'2018-7-11',7,0,'admin',4,8,600),(7,'2018-7-12',4,0,'admin',5,1,8030),(8,'2018-7-13',9,0,'admin',6,7,800),(9,'2018-7-14',2,0,'admin',7,5,900),(10,'2018-7-17',6,0,'admin',8,5,1120),(11,'2018-08-7',3,0,'admin',7,8,180),(12,'2018-08-8',7,0,'admin',6,6,700),(13,'2018-08-9',5,0,'admin',9,7,70),(14,'2018-08-10',3,0,'admin',4,9,300),(15,'2018-08-10',1,0,'admin',10,4,90),(16,'2018-08-10',3,0,'employee',7,6,180),(17,'2018-08-10',1,0,'admin',6,5,100),(18,'2018-08-11',1,0,'admin',9,2,70),(19,'2018-08-11',3,0,'admin',1,1,6000),(20,'2018-08-11',1,0,'admin',6,8,100),(21,'2018-08-11',1,0,'admin',2,4,15000),(22,'2020-07-10',10,25,'admin',10,2,875);
 /*!40000 ALTER TABLE `purchases` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -359,4 +357,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-08-11 22:59:48
+-- Dump completed on 2020-07-10 23:53:22
