@@ -149,7 +149,7 @@ public class SellsController implements Initializable{
         PreparedStatement getSellsList = null;
         try {
             getSellsList = con.prepareStatement("SELECT * FROM purchases WHERE User_username ='"
-                    + LogInController.loggerUsername+"'");
+                    + LogInController.loggerUsername+ "'" + " ORDER BY(purchaseID) DESC");
 
             PreparedStatement ps = con.prepareStatement("SELECT MAX(purchaseID) FROM purchases");
             ResultSet rs = ps.executeQuery();

@@ -311,7 +311,7 @@ public class RentalsController implements Initializable {
             }
 
             PreparedStatement getRentalList = con.prepareStatement("SELECT * FROM rentals WHERE User_username ='"
-                    + LogInController.loggerUsername+"'");
+                    + LogInController.loggerUsername+"'" + " ORDER BY(rentalID) DESC");
             PreparedStatement getTodaysRent = con.prepareStatement("SELECT COUNT(*), SUM(paid) FROM rentals WHERE rentalDate = '"+ Date.valueOf(LocalDate.now()) + "'");
             ResultSet rentList = getRentalList.executeQuery();
             ObservableList<Rent> rentsListByUser = FXCollections.observableArrayList();

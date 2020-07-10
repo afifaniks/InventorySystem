@@ -89,9 +89,9 @@ public class InitializerController implements Initializable {
             PreparedStatement getItemList = connection.prepareStatement("SELECT *" +
                     "FROM item, itemtype WHERE item.ItemType_itemTypeId = itemtype.itemTypeId ORDER BY itemID");
             PreparedStatement getSellsList = connection.prepareStatement("SELECT * FROM purchases WHERE User_username ='"
-                    +sessionUser+"'");
+                    +sessionUser+"'" + " ORDER BY(purchaseID) DESC");
             PreparedStatement getRentalList = connection.prepareStatement("SELECT * FROM rentals WHERE User_username ='"
-                    +sessionUser+"'");
+                    +sessionUser+"'" + " ORDER BY(rentalID) DESC");
             PreparedStatement getAccountList = connection.prepareStatement("SELECT  customers.firstName, customers.lastName, accounts.acccountID, accounts.accountName, accounts.paymethod " +
                     "FROM accounts, customers WHERE User_username ='"
                     +sessionUser+"' AND Customers_customerID = customerID");
