@@ -16,17 +16,18 @@
 - Gluon Scene Builder
 
 ## Installation
-1. Make sure **MySQL** is installed and running at port **3306** with username **'root'** and password **'root'** 
-2. Open **MySQL Workbench** and login to your root account
-3. From **File** menu click **Open SQL Script**
-4. Navigate to: <code>../InventorySystem/sql</code> and select <code>inventory.sql</code> file
-5. From **Query** menu select **Execute All** and wait till it finishes
-6. Navigate to <code>InventorySystem/jar/</code>
-7. Open CMD/Terminal and type: <code>java -jar InventorySystem.jar</code>
-8. You're all set!
+1. Make sure **MySQL** is installed properly and running at port **3306** with username **'root'** and password **'root'** 
+2. <code>git clone https://github.com/afifaniks/InventorySystem.git</code>
+3. Open **MySQL Workbench** and login to your root account
+4. From **File** menu click **Open SQL Script**
+5. Navigate to: <code>../InventorySystem/sql</code> and select <code>inventory.sql</code> file
+6. From **Query** menu select **Execute All** and wait till it finishes
+7. Navigate to <code>InventorySystem/jar/</code>
+8. Open CMD/Terminal and type: <code>java -jar InventorySystem.jar</code>
+9. You're all set!
  
 **Watch this video for more:**
-[https://youtu.be/gJ8J3rzevB8](https://youtu.be/gJ8J3rzevB8)
+[https://youtu.be/Q35IDSXXz3Y](https://youtu.be/Q35IDSXXz3Y)
 
 ## Features
 - Dashboard
