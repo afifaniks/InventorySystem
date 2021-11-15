@@ -58,6 +58,6 @@ Prototypes:
 
 ![Dashboard](images/prototypes/Customers.png)
 
-**For any query contact through: https://afifaniks.me** 
+**For any query contact through: https://afifaniks.github.io** 
 
 
