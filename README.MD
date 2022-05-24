@@ -40,7 +40,7 @@
 
 ## CAUTION
 - MySQL Workbench should be installed in port **3306** with username **'root'** and password **'root'**
-- **JDK 8** should be installed and available to system path
+- **JDK 1.8** should be installed and available to system path
 
 
 ## Project Skeleton
