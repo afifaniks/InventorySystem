@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="mavenExecutorSetting">
+    <option name="visibleSettings">
+      <set>
+        <option value="PROFILES" />
+        <option value="OPTIONAL_JVM_OPTIONS" />
+        <option value="THREAD_COUNT" />
+        <option value="OFFLINE_MODE" />
+        <option value="ALWAYS_UPDATE_SNAPSHOT" />
+        <option value="SKIP_TESTS" />
+        <option value="FAVORITE" />
+      </set>
+    </option>
+    <option name="visibleSettingsNotInitYet" value="false" />
+  </component>
+</project>
